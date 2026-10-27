@@ -1,0 +1,27 @@
+name: Fetch promo assets
+# Runs when assets-request.json changes: downloads headshots and team logos and
+# commits them to the `assets` branch (the build sandbox can't reach the image CDNs).
+on:
+  push:
+    branches: [main]
+    paths: [assets-request.json, tools/fetch-assets.mjs]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/fetch-assets.mjs
+      - name: Commit to the assets branch
+        run: |
+          cd assets-out
+          git init -q -b assets
+          git config user.name war-room-recaps
+          git config user.email actions@users.noreply.github.com
+          git add -A && git commit -qm "Promo assets"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:assets
