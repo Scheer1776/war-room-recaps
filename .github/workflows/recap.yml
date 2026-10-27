@@ -1,0 +1,56 @@
+name: Weekly HD recap
+
+# Tuesday morning UTC = Monday night Pacific, right after Monday Night Football.
+# Several tries so the recap lands soon after the last game ends (the script exits
+# quietly if games are still going or the week is already done).
+on:
+  schedule:
+    - cron: "10 4 * * 2"
+    - cron: "40 4 * * 2"
+    - cron: "15 5 * * 2"
+    - cron: "15 6 * * 2"
+    - cron: "30 8 * * 2"
+    - cron: "0 14 * * 2"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-render even if this week's recap exists"
+        type: boolean
+        default: false
+      week:
+        description: "Week number to recap (blank = latest finished week)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recap
+  cancel-in-progress: false
+
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci || npm install
+      - name: Chrome for HyperFrames
+        run: npx hyperframes browser ensure
+        env:
+          HYPERFRAMES_SKIP_SKILLS: "1"
+      - name: Render and publish
+        run: node render.mjs
+        env:
+          WARROOM_URL: https://war-room-self-one.vercel.app
+          ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ inputs.force && '1' || '' }}
+          WEEK: ${{ inputs.week }}
+          HYPERFRAMES_SKIP_SKILLS: "1"

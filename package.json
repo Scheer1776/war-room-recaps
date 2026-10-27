@@ -1,0 +1,9 @@
+{
+  "name": "war-room-recaps",
+  "private": true,
+  "type": "module",
+  "description": "Weekly HD recap videos for War Room leagues, rendered with HyperFrames on GitHub Actions after Monday Night Football.",
+  "scripts": { "render": "node render.mjs" },
+  "dependencies": { "gsap": "3.14.2", "hyperframes": "0.8.207" },
+  "engines": { "node": ">=22" }
+}
