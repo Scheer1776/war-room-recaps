@@ -21,6 +21,8 @@ const head = (id, lines, sub) => `<div class="head" id="${id}-head">${lines.map(
 const phone = (id, img, extra = "") => `<div class="phone" id="${id}-phone"><div class="screen"><img src="img/${img}.png" alt="">${extra}</div><div class="glare"></div></div>`;
 const call = (id, i, side, top, icon, text, cls = "") => `<div class="call ${side} ${cls}" id="${id}-c${i}" style="top:${top}px"><span class="ic">${icon}</span><span>${text}</span></div>`;
 
+// BEATS=file.json overrides scene lengths (in beats), e.g. to fit a voiceover.
+const OVB = process.env.BEATS ? JSON.parse(readFileSync(process.env.BEATS, "utf8")) : {};
 const S = []; // { id, beats, html, anim(t0) }
 S.push({ id: "hook", beats: 7, html: `
   <div class="slam" id="hook-a">STOP<br>GUESSING.</div>
@@ -42,7 +44,7 @@ const scene = (id, beats, lines, sub, img, calls, extraHtml = "", extraAnim = ()
     `tl.from("#${id}-head .w", { y: 90, opacity: 0, duration: .45, stagger: .055, ease: "power3.out" }, ${t + .05});`,
     lines && sub ? `tl.from("#${id}-sub", { opacity: 0, y: 20, duration: .4 }, ${t + .45});` : "",
     `tl.from("#${id}-phone", { y: 900, rotation: 7, duration: .85, ease: "expo.out" }, ${t + .2});`,
-    `tl.to("#${id}-phone", { y: -24, duration: ${(beats * BEAT - 1.1).toFixed(2)}, ease: "sine.inOut" }, ${t + 1.05});`,
+    `tl.to("#${id}-phone", { y: -24, duration: ${((OVB[id] || beats) * BEAT - 1.1).toFixed(2)}, ease: "sine.inOut" }, ${t + 1.05});`,
     ...calls.map((c, i) => `tl.from("#${id}-c${i}", { scale: .4, opacity: 0, x: ${c[0] === "l" ? -80 : 80}, duration: .5, ease: "back.out(1.8)" }, ${(t + 1.0 + i * .5).toFixed(2)});`),
     ...extraAnim(t)] });
 
@@ -99,6 +101,7 @@ S.push({ id: "outro", beats: 10, html: `
     `tl.to("#outro-cta", { scale: 1.06, duration: .27, yoyo: true, repeat: 7, ease: "sine.inOut" }, ${t + 2.4});`] });
 
 // Timeline: scenes back to back; a diagonal turf-stripe wipe covers each cut.
+for (const s of S) if (OVB[s.id]) s.beats = OVB[s.id];
 let t = 0; const parts = [], anims = [], wipes = [];
 const WC = ["#3DDB86", "#FF6B2C", "#FFC629", "#8CC4FF"];
 S.forEach((s, i) => {
