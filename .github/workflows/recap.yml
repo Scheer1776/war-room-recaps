@@ -39,6 +39,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci || npm install
+      - name: FFmpeg (video encoder)
+        run: command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
       - name: Chrome for HyperFrames
         run: npx hyperframes browser ensure
         env:
