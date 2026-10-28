@@ -26,7 +26,10 @@ export type Recap = z.infer<typeof recapSchema>;
 export const propsSchema = z.object({
   // Folder under public/ (local) or a full URL to the published week folder.
   source: z.string(),
-  // Display names for teams (public videos: swap names that shouldn't go on a brand account).
+  // Public videos: replace every real team name and the league name with neutral ones.
+  anonymize: z.boolean(),
+  leagueLabel: z.string(),
+  // Extra per-name swaps (used only when anonymize is off).
   nameOverrides: z.record(z.string(), z.string()),
   appUrl: z.string(),
   // Voiceover lines in <source>/vo/<scene>.mp3 with lengths in vo/durations.json.
@@ -48,3 +51,22 @@ export const cleanName = (name: string, overrides: Record<string, string>) => {
 
 export const asset = (source: string, file: string, staticFile: (p: string) => string) =>
   /^https?:/.test(source) ? `${source.replace(/\/$/, "")}/${file}` : staticFile(`${source}/${file}`);
+
+// Neutral stand-in names, handed out in standings order (first place gets the first name).
+export const STAND_INS = ["Blitz Brigade", "Red Zone Rebels", "Gridiron Gang", "Hail Marys", "Goal Line Stand", "Pick Six",
+  "Fourth and Long", "Two-Point Tries", "Hash Mark Heroes", "Waiver Wire Kings", "Field Goal Unit", "End Zone Elite",
+  "Pocket Passers", "Sunday Funday", "Air Raid", "Victory Formation", "Play Action", "Prevent Defense", "Onside Kick", "Clock Killers"];
+export const anonymizeRecap = (r: Recap, leagueLabel: string): Recap => {
+  const ids = [...r.standings.map(s => s.id)];
+  for (const g of r.games) for (const t of [g.win, g.lose]) if (!ids.includes(t.id)) ids.push(t.id);
+  const nm = new Map(ids.map((id, i) => [id, STAND_INS[i % STAND_INS.length]]));
+  const byName = new Map<string, string>();
+  for (const s of r.standings) byName.set(s.name, nm.get(s.id)!);
+  const t = <T extends { id: number; name: string }>(x: T): T => ({ ...x, name: nm.get(x.id) || "Team " + x.id });
+  const g = (x: Recap["games"][number]) => ({ ...x, win: t(x.win), lose: t(x.lose) });
+  return {
+    ...r, league: leagueLabel, games: r.games.map(g), high: t(r.high), low: t(r.low), close: g(r.close), blow: g(r.blow),
+    mvp: r.mvp && { ...r.mvp, team: t(r.mvp.team) }, blunder: r.blunder && { ...r.blunder, team: t(r.blunder.team) },
+    standings: r.standings.map(t), next: r.next && { ...r.next, a: byName.get(r.next.a) || "Team A", b: byName.get(r.next.b) || "Team B" },
+  };
+};

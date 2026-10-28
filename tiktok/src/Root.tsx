@@ -27,8 +27,9 @@ export const RemotionRoot: React.FC = () => (
     calculateMetadata={calculateMetadata}
     defaultProps={{
       source: "w7",
-      // Names that shouldn't appear on a public brand account.
-      nameOverrides: { "Veiny dih": "Team V", "Rigger JEW'Marr": "Team R", "Jacking Goff": "Team J" },
+      anonymize: true,
+      leagueLabel: "Our League",
+      nameOverrides: {},
       appUrl: "war-room-self-one.vercel.app",
       voice: true,
       music: "bed",

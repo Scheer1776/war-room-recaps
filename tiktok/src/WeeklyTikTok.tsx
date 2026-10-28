@@ -4,7 +4,7 @@ import { Audio } from "@remotion/media";
 import { TransitionSeries, linearTiming } from "@remotion/transitions";
 import { slide } from "@remotion/transitions/slide";
 import { fade } from "@remotion/transitions/fade";
-import { Props, asset, cleanName } from "./data";
+import { Props, anonymizeRecap, asset, cleanName } from "./data";
 import { Blunder, Cta, Extremes, Hook, Mvp, SceneProps, Scores, Standings } from "./scenes";
 
 export const FPS = 30;
@@ -32,7 +32,8 @@ export const totalFrames = (p: Props) => {
 export const WeeklyTikTok: React.FC<Props> = (p) => {
   const { durationInFrames } = useVideoConfig();
   if (!p.recap) return <AbsoluteFill style={{ background: "#04110B" }} />;
-  const sp: SceneProps = { r: p.recap, name: s => cleanName(s, p.nameOverrides), source: p.source, appUrl: p.appUrl, cue: (p.voice && p.voDur && p.voDur.hook) ? p.voDur.hook * 0.56 : 1.1 };
+  const r = p.anonymize ? anonymizeRecap(p.recap, p.leagueLabel) : p.recap;
+  const sp: SceneProps = { r, name: s => (p.anonymize ? s : cleanName(s, p.nameOverrides)), source: p.source, appUrl: p.appUrl, cue: (p.voice && p.voDur && p.voDur.hook) ? p.voDur.hook * 0.56 : 1.1 };
   const scenes = sceneList(p);
   return (
     <AbsoluteFill style={{ background: "#04110B" }}>
