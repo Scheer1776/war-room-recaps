@@ -1,0 +1,151 @@
+{
+ "season": "2026",
+ "week": 8,
+ "builtAt": "2026-10-28T15:51:00.995Z",
+ "players": [
+  {
+   "id": "13296",
+   "n": "Caleb Douglas",
+   "num": 7,
+   "pos": "WR",
+   "nfl": "MIA",
+   "adds": 2398536,
+   "proj": 5.4,
+   "opp": "NE",
+   "last": 20,
+   "inj": null
+  },
+  {
+   "id": "13424",
+   "n": "Seth McGowan",
+   "num": 20,
+   "pos": "RB",
+   "nfl": "IND",
+   "adds": 1405688,
+   "proj": 3.9,
+   "opp": "JAX",
+   "last": 5.3,
+   "inj": null
+  },
+  {
+   "id": "13298",
+   "n": "KC Concepcion Jr.",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "CLE",
+   "adds": 1006002,
+   "proj": 8,
+   "opp": "PIT",
+   "last": 19.2,
+   "inj": null
+  },
+  {
+   "id": "9480",
+   "n": "Brenton Strange",
+   "num": 85,
+   "pos": "TE",
+   "nfl": "JAX",
+   "adds": 856080,
+   "proj": 8.8,
+   "opp": "IND",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "6130",
+   "n": "Devin Singletary",
+   "num": 26,
+   "pos": "RB",
+   "nfl": "NYG",
+   "adds": 796716,
+   "proj": 0,
+   "opp": null,
+   "last": 13,
+   "inj": null
+  },
+  {
+   "id": "13345",
+   "n": "Jonah Coleman",
+   "num": 20,
+   "pos": "RB",
+   "nfl": "DEN",
+   "adds": 626102,
+   "proj": 9.2,
+   "opp": "KC",
+   "last": 7.9,
+   "inj": null
+  },
+  {
+   "id": "7561",
+   "n": "Elijah Mitchell",
+   "num": 38,
+   "pos": "RB",
+   "nfl": "PHI",
+   "adds": 621999,
+   "proj": 1.8,
+   "opp": "WAS",
+   "last": 4.9,
+   "inj": null
+  },
+  {
+   "id": "11783",
+   "n": "Ryan Flournoy",
+   "num": 19,
+   "pos": "WR",
+   "nfl": "DAL",
+   "adds": 619000,
+   "proj": 7,
+   "opp": "ARI",
+   "last": 9,
+   "inj": null
+  },
+  {
+   "id": "13414",
+   "n": "Kaelon Black",
+   "num": 26,
+   "pos": "RB",
+   "nfl": "SF",
+   "adds": 541415,
+   "proj": 0,
+   "opp": null,
+   "last": 10.4,
+   "inj": null
+  },
+  {
+   "id": "10213",
+   "n": "Tre Tucker",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "LV",
+   "adds": 496434,
+   "proj": 8.8,
+   "opp": "NYJ",
+   "last": 18.8,
+   "inj": null
+  },
+  {
+   "id": "13276",
+   "n": "Omar Cooper Jr.",
+   "num": 11,
+   "pos": "WR",
+   "nfl": "NYJ",
+   "adds": 446920,
+   "proj": 8.1,
+   "opp": "LV",
+   "last": 20,
+   "inj": null
+  },
+  {
+   "id": "13294",
+   "n": "Makai Lemon",
+   "num": 9,
+   "pos": "WR",
+   "nfl": "PHI",
+   "adds": 362400,
+   "proj": 6,
+   "opp": "WAS",
+   "last": 16.2,
+   "inj": null
+  }
+ ]
+}
