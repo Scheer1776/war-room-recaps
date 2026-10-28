@@ -3,8 +3,9 @@
 //  2. Loads each league from War Room, counts the final week into records, and reruns playoff odds.
 //  3. Builds a HyperFrames composition and renders it to MP4.
 //  4. Commits the MP4 to the public `media` branch (served by jsDelivr) and tells War Room about it.
-// Env: WARROOM_URL, ADMIN_KEY, ESPN_S2, ESPN_SWID, FORCE=1 (re-render), WEEK=N (override), DRY_RUN=1 (no publish)
-import { mkdirSync, writeFileSync, copyFileSync, readFileSync, existsSync, statSync } from "node:fs";
+// Env: WARROOM_URL, ADMIN_KEY, ESPN_S2, ESPN_SWID, FORCE=1 (re-render), WEEK=N (override), DRY_RUN=1 (no publish),
+//      DATA_ONLY=1 (skip the HD render; just publish the week's recap data + headshots for the TikTok cut)
+import { mkdirSync, writeFileSync, copyFileSync, readFileSync, existsSync, statSync, readdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -15,6 +16,7 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const APP = (process.env.WARROOM_URL || "https://war-room-self-one.vercel.app").replace(/\/$/, "");
 const FORCE = process.env.FORCE === "1" || process.env.FORCE === "true";
 const DRY = process.env.DRY_RUN === "1";
+const DATA_ONLY = process.env.DATA_ONLY === "1";
 const REPO = process.env.GITHUB_REPOSITORY || "";
 const log = (...a) => console.log("[recap]", ...a);
 
@@ -54,6 +56,22 @@ const LOGO_FIX = { WAS: "wsh" };
 const headUrl = (platform, id) => platform === "sleeper" ? `https://sleepercdn.com/content/nfl/players/${id}.jpg` : `https://a.espncdn.com/i/headshots/nfl/players/full/${id}.png`;
 const logoUrl = abbr => `https://a.espncdn.com/i/teamlogos/nfl/500/${(LOGO_FIX[abbr] || abbr).toLowerCase()}.png`;
 
+// The week's story as plain data (no rosters), for the vertical TikTok cut in tiktok/.
+function slimRecap(R, standings, odds) {
+  const p = r => r && { id: String(r.id), n: r.n, pos: r.pos, nfl: r.nfl, act: Math.round((r.act || 0) * 10) / 10 };
+  const t = x => x && { id: x.id, name: x.name, pts: Math.round(x.pts * 10) / 10, left: Math.round((x.left || 0) * 10) / 10 };
+  const g = x => x && { win: t(x.win), lose: t(x.lose), margin: Math.round(x.margin * 10) / 10 };
+  const top = x => { const s = (x.starters || []).filter(r => !r.empty).sort((a, b) => b.act - a.act)[0]; return p(s); };
+  return {
+    platform: R.platform, league: R.league, week: R.week, myTeamId: R.myTeamId,
+    games: R.games.map(g), high: { ...t(R.high), star: top(R.high) }, low: t(R.low), close: g(R.close), blow: g(R.blow),
+    mvp: R.mvp && { player: p(R.mvp.r), team: t(R.mvp.team) },
+    blunder: R.blunder && { team: t(R.blunder), bench: p(R.blunder.benchTop) },
+    standings: standings.map(s => ({ ...s, odds: Math.round((odds[s.id] || 0) * 10) / 10 })),
+    next: R.next && { week: R.next.week, a: R.next.a, b: R.next.b, pa: Math.round(R.next.pa * 10) / 10, pb: Math.round(R.next.pb * 10) / 10, wa: Math.round(R.next.wa * 1000) / 1000 }
+  };
+}
+
 async function renderLeague(cfg, mods) {
   const tag = `${cfg.platform}-${cfg.leagueId}`;
   let L = await loadLeague(cfg);
@@ -70,7 +88,7 @@ async function renderLeague(cfg, mods) {
     else week = L.week - 1;
   }
   if (!live || live.week !== week) live = await loadLive(cfg, L, week);
-  if (prev && prev.week >= week && !FORCE) { log(`${tag}: week ${week} HD recap already published.`); return null; }
+  if (prev && prev.week >= week && !FORCE && !DATA_ONLY) { log(`${tag}: week ${week} HD recap already published.`); return null; }
 
   // Count the week into records (no-op if ESPN/Sleeper already did) and rerun playoff odds.
   const medianWeeks = cfg.medianWeeks || [];
@@ -80,6 +98,18 @@ async function renderLeague(cfg, mods) {
   const R = mods.recap.computeRecap(L, live, week, odds);
   if (!R) { log(`${tag}: no results for week ${week}.`); return null; }
   log(`${tag}: week ${week}, ${R.games.length} games, records ${counted ? "updated here" : "already final on " + cfg.platform}.`);
+
+  const standingsAll = L.teams.map(t => ({ id: t.id, name: t.name, w: t.w, l: t.l, t: t.t, pf: Math.round(t.pf * 10) / 10 }))
+    .sort((a, b) => (b.w + b.t / 2) - (a.w + a.t / 2) || b.pf - a.pf);
+  const data = slimRecap(R, standingsAll, odds);
+  // Headshots + logos for the TikTok cut, saved next to the data.
+  const ddir = join(HERE, "out", "data", tag, "week-" + week); mkdirSync(join(ddir, "img"), { recursive: true });
+  for (const pl of [data.mvp && data.mvp.player, data.blunder && data.blunder.bench, data.high && data.high.star].filter(Boolean)) {
+    if (pl.pos !== "DST") await download(headUrl(R.platform, pl.id), join(ddir, "img", `h-${pl.id}.png`));
+    if (pl.nfl) await download(logoUrl(pl.nfl), join(ddir, "img", `l-${pl.nfl}.png`));
+  }
+  writeFileSync(join(ddir, "recap.json"), JSON.stringify(data, null, 1));
+  if (DATA_ONLY) return { tag, week, dataDir: ddir, dataOnly: true, league: L };
 
   // Build the composition folder.
   const dir = join(HERE, "build", tag + "-w" + week); mkdirSync(join(dir, "img"), { recursive: true }); mkdirSync(join(dir, "fonts"), { recursive: true });
@@ -132,9 +162,11 @@ for (const cfg of cfgs) {
   try {
     const r = await renderLeague(cfg, mods);
     if (!r) continue;
-    if (DRY || !REPO || !process.env.GITHUB_TOKEN) { log(`${r.tag}: dry run, not publishing. Video at ${r.out}`); continue; }
+    if (DRY || !REPO || !process.env.GITHUB_TOKEN) { log(`${r.tag}: dry run, not publishing. ${r.dataOnly ? "Data at " + r.dataDir : "Video at " + r.out}`); continue; }
+    const dataFiles = d => readdirSync(d, { recursive: true }).filter(f => statSync(join(d, f)).isFile()).map(f => ({ path: join(d, f), name: `${r.tag}/week-${r.week}/${f}` }));
+    if (r.dataOnly) { const urlOf = publishFiles(dataFiles(r.dataDir)); log(`${r.tag}: published week ${r.week} data → ${urlOf(`${r.tag}/week-${r.week}/recap.json`)}`); continue; }
     const vName = `${r.tag}/week-${r.week}.mp4`, pName = `${r.tag}/week-${r.week}.jpg`;
-    const urlOf = publishFiles([{ path: r.out, name: vName }, { path: r.poster, name: pName }]);
+    const urlOf = publishFiles([{ path: r.out, name: vName }, { path: r.poster, name: pName }, ...dataFiles(join(HERE, "out", "data", r.tag, "week-" + r.week))]);
     await json(`${APP}/api/hdrecap`, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-key": process.env.ADMIN_KEY || "" },
       body: JSON.stringify({ platform: cfg.platform, leagueId: r.league.leagueId, season: r.league.season, week: r.week, video: urlOf(vName), poster: urlOf(pName),
         standings: r.standings, countedHere: r.counted, createdAt: new Date().toISOString() }) });
