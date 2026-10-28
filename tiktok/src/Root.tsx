@@ -9,7 +9,9 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({ props }) =>
   await fontsReady;
   const res = await fetch(asset(props.source, "recap.json", staticFile));
   const recap = recapSchema.parse(await res.json());
-  const p = { ...props, recap };
+  let voDur: Record<string, number> | null = null;
+  if (props.voice) { try { const v = await fetch(asset(props.source, "vo/durations.json", staticFile)); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
+  const p = { ...props, recap, voDur };
   return { props: p, durationInFrames: totalFrames(p) };
 };
 
@@ -28,7 +30,10 @@ export const RemotionRoot: React.FC = () => (
       // Names that shouldn't appear on a public brand account.
       nameOverrides: { "Veiny dih": "Team V", "Rigger JEW'Marr": "Team R", "Jacking Goff": "Team J" },
       appUrl: "war-room-self-one.vercel.app",
+      voice: true,
+      music: "bed",
       recap: null,
+      voDur: null,
     }}
   />
 );

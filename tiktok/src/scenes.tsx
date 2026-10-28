@@ -3,7 +3,7 @@ import { AbsoluteFill, staticFile, useCurrentFrame, useVideoConfig, interpolate,
 import { Recap, asset } from "./data";
 import { BODY, C, DISPLAY, Face, Field, Glass, Kicker, SAFE, countUp, f1, initialsOf, useIn } from "./theme";
 
-export type SceneProps = { r: Recap; name: (s: string) => string; source: string; appUrl: string };
+export type SceneProps = { r: Recap; name: (s: string) => string; source: string; appUrl: string; cue: number };
 const head = (source: string, id: string) => asset(source, `img/h-${id}.png`, staticFile);
 const big: React.CSSProperties = { fontFamily: DISPLAY, fontWeight: 800, lineHeight: 0.92, textTransform: "uppercase", color: C.ink };
 const body: React.CSSProperties = { fontFamily: BODY, fontWeight: 600, color: C.dim };
@@ -15,11 +15,11 @@ export const hookFor = (r: Recap) => {
   if (b && (b.team.left || 0) >= 15) return "bench" as const;
   return "close" as const;
 };
-export const Hook: React.FC<SceneProps> = ({ r, name }) => {
+export const Hook: React.FC<SceneProps> = ({ r, name, cue }) => {
   const f = useCurrentFrame(); const { fps } = useVideoConfig();
   const kind = hookFor(r);
   const a = spring({ frame: f, fps, config: { damping: 14, mass: 0.6 } });
-  const b = useIn(Math.round(1.1 * fps), 12);
+  const b = useIn(Math.round(cue * fps), 12);
   const line1 = kind === "close" ? `Lost by ${f1(r.close.margin)}.` : kind === "topBench" ? `${f1(r.high.pts)} points.` : `${f1(r.blunder!.team.left || 0)} points.`;
   const sub1 = kind === "close" ? `${name(r.close.lose.name)} vs ${name(r.close.win.name)}` : kind === "topBench" ? "Top score in our league" : "Left on the bench";
   const line2 = kind === "topBench" ? `And still left ${f1(r.blunder!.team.left || 0)} on the bench` : kind === "bench" ? `by ${name(r.blunder!.team.name)}` : `Week ${r.week} was brutal`;

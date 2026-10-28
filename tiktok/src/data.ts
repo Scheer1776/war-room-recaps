@@ -29,7 +29,12 @@ export const propsSchema = z.object({
   // Display names for teams (public videos: swap names that shouldn't go on a brand account).
   nameOverrides: z.record(z.string(), z.string()),
   appUrl: z.string(),
+  // Voiceover lines in <source>/vo/<scene>.mp3 with lengths in vo/durations.json.
+  voice: z.boolean(),
+  // "bed" = built-in beat under the voice; "none" = no music, for adding a TikTok sound in the app.
+  music: z.enum(["bed", "none"]),
   recap: recapSchema.nullable(),
+  voDur: z.record(z.string(), z.number()).nullable(),
 });
 export type Props = z.infer<typeof propsSchema>;
 
