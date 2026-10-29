@@ -13,7 +13,7 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 - Every number must come from data pulled during the run (Sleeper API, the published recap, the app).
   Nothing is invented or "about right".
 - Keep text inside `SAFE` (top 230, right 160, bottom 420, left 80) so TikTok's buttons and caption cover nothing.
-- No imitating real people's voices. The voice is ElevenLabs "Larry" (`fIGaHjfrR8KmMy0vGEVJ`, eleven_v3).
+- No imitating real people's voices. Voices allowed: ElevenLabs "Larry" (`fIGaHjfrR8KmMy0vGEVJ`, eleven_v3) and Kokoro "am_michael" (free).
 - Never post anything. The owner posts by hand. Deliver the MP4s and a ready-to-paste caption.
 
 ## What makes these work
@@ -22,7 +22,7 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 - Motion in every scene: springs, a counter ticking up, an impact plus a shake, a kinetic word reveal.
   Nothing should sit still.
 - Give a verdict. ADD / FADE / TRAP stamps, START / SIT, WIN / LOSE. Opinions get comments.
-- Two renders every time: voice + beat, and voice only (the owner adds a trending sound in TikTok).
+- Two renders every time. On voiced days: voice + beat, and voice only. On music days: beat, and silent (the owner adds a trending sound in TikTok).
 - The caption is 1–2 punchy lines plus 4–6 hashtags (#fantasyfootball #fantasyfootballadvice #nfl
   #waiverwire #ff #fantasyfootballtips, rotating).
 
@@ -33,6 +33,34 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 - Make every caption different. Rotate the free-app angle into about every other caption, without naming competitor apps or using their hashtags:
   "Trade analyzer, trade finder, start/sit, waivers. $0." / "Stop paying for fantasy advice." /
   "The free fantasy app your league doesn't know about." / "Other apps charge $65 a year for this."
+
+## Voice budget (the owner's rule: stretch ElevenLabs across the month)
+- **Alternate days.** Voiced and **music-only** take turns. If the last Log row was voiced, today is music-only, and vice versa.
+- **Music-only videos** carry the story with big kinetic captions: one punchy line per beat (max ~7 words on screen),
+  words popping in on the beat, plus the verdict. They must make sense with the sound off. In the caption message,
+  suggest the kind of trending sound to add (for example "hype trap beat" or "suspense build into a drop").
+  Never download or bundle copyrighted music.
+- **Voiced days use ElevenLabs Larry** with `generations_count: 1` (the owner asked to save credits) as one take
+  for the whole script (~660 credits). After each voiced run, add its exact `credits` from the generation result to the ledger.
+- **Switch to Kokoro Michael** when the ledger shows less than 800 credits left this cycle, or when ElevenLabs
+  reports not enough credits. Never retry a failed ElevenLabs call.
+- **Kokoro pronunciation gate (required):**
+  1. `voice/setup.sh` once per session.
+  2. Write the scene lines to `lines.json` (`{"scene": "text"}`).
+  3. Run `voice/.venv/bin/python -I voice/kokoro_tts.py lines.json public/<dir>/vo/raw`.
+  4. Run `voice/.venv/bin/python -I voice/check_names.py lines.json public/<dir>/vo/raw`.
+  5. If a name or word is MISSING, add its phonemes to `voice/names.json` and re-run steps 3–4 (at most 3 tries).
+  6. If it still fails, make the day **music-only**. Never ship a mispronounced name.
+  7. Then run `./prep-vo.sh public/<dir>/vo` (it accepts mp3; convert wav with ffmpeg first).
+- ElevenLabs Larry is also checked: run `check_names.py` on his clips too. If a name is wrong there, fix the
+  spelling in the script for the next voiced day (don't regenerate the same day).
+
+### ElevenLabs credit ledger (Free plan: 10,000 credits a month)
+The owner checks the real balance at elevenlabs.io → Subscription. When the ledger total passes 10,000 or a new
+cycle starts, start a new block. A run can't see the real balance, so if ElevenLabs refuses for credits, note it here.
+| Date | Credits | Used this cycle | Note |
+|---|---|---|---|
+| 2026-10-28 | — | 4,068 | Owner's dashboard reading (2 takes/video before this rule) |
 
 ## Format rotation (pick the one used least recently that fits the calendar)
 | Format | Composition | Best days | Data |
@@ -45,6 +73,7 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
 | Feature demo: screen tour of one app tool on a phone mockup | *build* | any | mock server screenshots/recordings |
 | Quiz / "would you rather" poll: pause-to-answer, reveal | *build* | any | Sleeper stats |
+| Music-only cut of any format above: kinetic captions on the beat, no voice | any composition with `voice: false` + captions | music days | same as the format |
 
 When a run builds a new format, add it as its own composition in `src/`, reuse `theme.tsx`,
 and switch its row from *build* to the composition name.
@@ -52,7 +81,7 @@ and switch its row from *build* to the composition name.
 ## Production steps
 1. `cd tiktok && npm ci`. Data: `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt node scripts/waivers.mjs public/<dir>`
    (or the format's own data step).
-2. Script: one line per scene. Generate it as **one** ElevenLabs take with `[pause] [long pause]` between lines
+2. Voice (voiced days only; see Voice budget): one line per scene. Generate it as **one** ElevenLabs take with `[pause] [long pause]` between lines
    (the account rate-limits parallel calls; never retry a generation that started). Download, split on silences
    (`ffmpeg -af silencedetect=noise=-40dB:d=1.2`) into `public/<dir>/vo/raw/<scene>.mp3`, then run `./prep-vo.sh public/<dir>/vo`.
 3. Render with `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell --concurrency=2`.
@@ -61,6 +90,8 @@ and switch its row from *build* to the composition name.
 5. Send both MP4s plus the caption, commit the source (not `out/`), and update Log and Learnings.
 
 ## Learnings
+- Kokoro mispronounces some names (for example "Caleb Douglas") unless they get phonemes in `voice/names.json`; with them it passes the Whisper check.
+- Chatterbox (free) can't take phoneme hints, and spelling names by sound made it worse ("Kayla Duck Loose"). Don't use it.
 - Verdict stamps that overlap the stat card read as "stamped onto it". That works; keep the note line above the caption zone.
 - Splitting one long take keeps the voice consistent across scenes and costs about 660 credits per 35s video.
 - Players on bye show up in trending adds (Sleeper projection 0, opponent null). Calling those a TRAP is good content.
