@@ -1,0 +1,352 @@
+{
+ "season": "2026",
+ "week": 8,
+ "builtAt": "2026-10-29T16:35:33.708Z",
+ "rule": {
+  "wind": 15,
+  "precip": 0.1,
+  "snow": 0.1,
+  "cold": 25
+ },
+ "games": [
+  {
+   "home": "GB",
+   "away": "CAR",
+   "kick": "2026-10-30T00:15Z",
+   "venue": "Lambeau Field",
+   "kind": "good",
+   "why": [],
+   "temp": 50,
+   "wind": 6,
+   "windAvg": 6,
+   "gust": 18,
+   "pop": 0,
+   "precip": 0,
+   "snow": 0,
+   "text": "50°F · wind 6 mph"
+  },
+  {
+   "home": "BUF",
+   "away": "BAL",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "Highmark Stadium",
+   "kind": "good",
+   "why": [],
+   "temp": 59,
+   "wind": 4,
+   "windAvg": 4,
+   "gust": 11,
+   "pop": 0,
+   "precip": 0,
+   "snow": 0,
+   "text": "59°F · wind 4 mph"
+  },
+  {
+   "home": "CIN",
+   "away": "TEN",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "Paycor Stadium",
+   "kind": "good",
+   "why": [],
+   "temp": 65,
+   "wind": 2,
+   "windAvg": 2,
+   "gust": 5,
+   "pop": 34,
+   "precip": 0,
+   "snow": 0,
+   "text": "65°F · wind 2 mph · 34% rain"
+  },
+  {
+   "home": "DAL",
+   "away": "ARI",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "AT&T Stadium",
+   "kind": "dome",
+   "text": "Indoors"
+  },
+  {
+   "home": "DET",
+   "away": "MIN",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "Ford Field",
+   "kind": "dome",
+   "text": "Indoors"
+  },
+  {
+   "home": "NYJ",
+   "away": "LV",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "MetLife Stadium",
+   "kind": "good",
+   "why": [],
+   "temp": 59,
+   "wind": 6,
+   "windAvg": 5,
+   "gust": 8,
+   "pop": 0,
+   "precip": 0,
+   "snow": 0,
+   "text": "59°F · wind 6 mph"
+  },
+  {
+   "home": "PIT",
+   "away": "CLE",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "Acrisure Stadium",
+   "kind": "good",
+   "why": [],
+   "temp": 63,
+   "wind": 6,
+   "windAvg": 4,
+   "gust": 12,
+   "pop": 2,
+   "precip": 0,
+   "snow": 0,
+   "text": "63°F · wind 6 mph"
+  },
+  {
+   "home": "TB",
+   "away": "ATL",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "Raymond James Stadium",
+   "adj": {
+    "QB": 0.97,
+    "WR": 0.969,
+    "TE": 0.969,
+    "RB": 0.991,
+    "K": 0.984
+   },
+   "kind": "bad",
+   "why": [
+    "wind 15 mph"
+   ],
+   "temp": 83,
+   "wind": 15,
+   "windAvg": 14,
+   "gust": 19,
+   "pop": 63,
+   "precip": 0,
+   "snow": 0,
+   "text": "83°F · wind 15 mph · 63% rain",
+   "players": [
+    {
+     "id": "4892",
+     "n": "Baker Mayfield",
+     "num": 6,
+     "pos": "QB",
+     "nfl": "TB",
+     "proj": 16,
+     "mult": 0.97,
+     "wx": 15.5
+    },
+    {
+     "id": "11559",
+     "n": "Michael Penix Jr.",
+     "num": 9,
+     "pos": "QB",
+     "nfl": "ATL",
+     "proj": 14.5,
+     "mult": 0.97,
+     "wx": 14.1
+    },
+    {
+     "id": "8112",
+     "n": "Drake London",
+     "num": 5,
+     "pos": "WR",
+     "nfl": "ATL",
+     "proj": 13.8,
+     "mult": 0.969,
+     "wx": 13.4
+    },
+    {
+     "id": "9509",
+     "n": "Bijan Robinson",
+     "num": 7,
+     "pos": "RB",
+     "nfl": "ATL",
+     "proj": 19.2,
+     "mult": 0.991,
+     "wx": 19
+    }
+   ]
+  },
+  {
+   "home": "JAX",
+   "away": "IND",
+   "kick": "2026-11-01T18:00Z",
+   "venue": "EverBank Stadium",
+   "adj": {
+    "QB": 0.978,
+    "WR": 0.976,
+    "TE": 0.976,
+    "RB": 0.993,
+    "K": 0.988
+   },
+   "kind": "good",
+   "why": [],
+   "temp": 80,
+   "wind": 14,
+   "windAvg": 13,
+   "gust": 18,
+   "pop": 30,
+   "precip": 0.02,
+   "snow": 0,
+   "text": "80°F · wind 14 mph · 30% rain",
+   "players": [
+    {
+     "id": "7523",
+     "n": "Trevor Lawrence",
+     "num": 16,
+     "pos": "QB",
+     "nfl": "JAX",
+     "proj": 21.4,
+     "mult": 0.978,
+     "wx": 20.9
+    },
+    {
+     "id": "9487",
+     "n": "Parker Washington",
+     "num": 11,
+     "pos": "WR",
+     "nfl": "JAX",
+     "proj": 13.8,
+     "mult": 0.976,
+     "wx": 13.5
+    },
+    {
+     "id": "5870",
+     "n": "Daniel Jones",
+     "num": 17,
+     "pos": "QB",
+     "nfl": "IND",
+     "proj": 12,
+     "mult": 0.978,
+     "wx": 11.7
+    },
+    {
+     "id": "6813",
+     "n": "Jonathan Taylor",
+     "num": 28,
+     "pos": "RB",
+     "nfl": "IND",
+     "proj": 15.2,
+     "mult": 0.993,
+     "wx": 15.1
+    }
+   ]
+  },
+  {
+   "home": "LAR",
+   "away": "LAC",
+   "kick": "2026-11-01T21:05Z",
+   "venue": "SoFi Stadium",
+   "kind": "dome",
+   "text": "Indoors"
+  },
+  {
+   "home": "DEN",
+   "away": "KC",
+   "kick": "2026-11-01T21:25Z",
+   "venue": "Empower Field at Mile High",
+   "kind": "good",
+   "why": [],
+   "temp": 62,
+   "wind": 9,
+   "windAvg": 6,
+   "gust": 6,
+   "pop": 7,
+   "precip": 0,
+   "snow": 0,
+   "text": "62°F · wind 9 mph"
+  },
+  {
+   "home": "MIA",
+   "away": "NE",
+   "kick": "2026-11-01T21:25Z",
+   "venue": "Hard Rock Stadium",
+   "adj": {
+    "QB": 0.978,
+    "WR": 0.976,
+    "TE": 0.976,
+    "RB": 0.993,
+    "K": 0.988
+   },
+   "kind": "good",
+   "why": [],
+   "temp": 81,
+   "wind": 14,
+   "windAvg": 13,
+   "gust": 18,
+   "pop": 82,
+   "precip": 0,
+   "snow": 0,
+   "text": "81°F · wind 14 mph · 82% rain",
+   "players": [
+    {
+     "id": "11564",
+     "n": "Drake Maye",
+     "num": 10,
+     "pos": "QB",
+     "nfl": "NE",
+     "proj": 21.9,
+     "mult": 0.978,
+     "wx": 21.4
+    },
+    {
+     "id": "8161",
+     "n": "Malik Willis",
+     "num": 2,
+     "pos": "QB",
+     "nfl": "MIA",
+     "proj": 13.7,
+     "mult": 0.978,
+     "wx": 13.4
+    },
+    {
+     "id": "12495",
+     "n": "Ollie Gordon II",
+     "num": 0,
+     "pos": "RB",
+     "nfl": "MIA",
+     "proj": 12.1,
+     "mult": 0.993,
+     "wx": 12
+    }
+   ]
+  },
+  {
+   "home": "WAS",
+   "away": "PHI",
+   "kick": "2026-11-02T01:20Z",
+   "venue": "Northwest Stadium",
+   "kind": "good",
+   "why": [],
+   "temp": 52,
+   "wind": 4,
+   "windAvg": 4,
+   "gust": 6,
+   "pop": 0,
+   "precip": 0,
+   "snow": 0,
+   "text": "52°F · wind 4 mph"
+  },
+  {
+   "home": "SEA",
+   "away": "CHI",
+   "kick": "2026-11-03T01:15Z",
+   "venue": "Lumen Field",
+   "kind": "good",
+   "why": [],
+   "temp": 47,
+   "wind": 4,
+   "windAvg": 4,
+   "gust": 7,
+   "pop": 9,
+   "precip": 0,
+   "snow": 0,
+   "text": "47°F · wind 4 mph"
+  }
+ ]
+}

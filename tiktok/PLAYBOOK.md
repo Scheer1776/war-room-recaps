@@ -85,7 +85,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | Weekly league recap: blunders, MVP, scores, playoff odds | `WeeklyTikTok` | Tue | recap.json from the recap-data workflow, `anonymize: true` |
 | Start/Sit showdown: coin-flip pairs (projections within 0.3), tiebreaker = last-3-weeks form, START / SIT stamps | `StartSit` | Thu–Sat | `scripts/startsit.mjs` (Sleeper projections + last 3 weeks of stats) |
 | Bench-points shame: "you left X on your bench" + the app's max-lineup feature | *build* | Mon–Tue | recap.json bench data (anonymized) |
-| Weather game alert: wind/rain games that change projections | *build* | Fri–Sat | the app's weather factors (lib/weather.js) |
+| Weather game alert: weather board of every game, one slide per flagged game (proj → with weather), verdict | `WeatherSlides` (carousel; one frame = one slide) | Thu–Sat | `scripts/weather.mjs <war-room-web> public/<dir>` (the app's lib/weather.js + Sleeper projections) |
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
 | Feature demo: screen tour of one app tool on a phone mockup | *build* | any | mock server screenshots/recordings |
 | Quiz / "would you rather" poll: pause-to-answer, reveal | *build* | any | Sleeper stats |
@@ -127,6 +127,13 @@ and switch its row from *build* to the composition name.
   delayed (≤1.5s) so the spoken verdict lands with the stamp.
 - Sleeper's projection rows carry `date`; check it for Thursday games. A player who plays tonight ("decide now") is a free urgency hook.
 
+- Node's fetch can't reach api.open-meteo.com here (connect timeout, no proxy); `scripts/weather.mjs` routes the app's
+  fetches through curl with `--retry`, because open-meteo also answers 429 every other call. Without the retry,
+  lib/weather.js silently falls back to ESPN's text forecast and no multipliers come out: check the output has `{"QB":...}` lines.
+- A "nothing to fear" week is still content: lead with how small the worst hit is (−0.5 pts) and stamp IGNORE / PLAY YOUR GUYS.
+  The forecast's rain % and inches disagree often (MIA 82% but <0.1 in); that gap is a good "twist" line.
+- Carousel stills: put stamps in their own band under the data card (top ~1300); stamps overlapping the last data row hid a name.
+
 ## Log
 | Date | Format | Notes |
 |---|---|---|
@@ -135,3 +142,4 @@ and switch its row from *build* to the composition name.
 | 2026-10-28 | Waiver Heat (week 8) | Douglas FADE, Coleman ADD, Singletary TRAP (bye), Strange ADD, Tucker ADD |
 | 2026-10-29 | Start/Sit Showdown (week 8), NEW `StartSit` | No-voice (music-only). Cook START / Henry SIT, Daniels START / Young SIT (TNF), Cousins START / Mahomes SIT; hook "SIT MAHOMES?" + 3D coin flip |
 | 2026-10-29 | Start/Sit Showdown (week 8), voiced redo | First VoiceStudio video: War Room Announcer (VoxCPM2) on all 5 lines, names passed; music bed at 0.16 |
+| 2026-10-29 | Photo carousel, NEW Weather game alert (`WeatherSlides`, week 8) | No-voice, 7 slides. Hook "−0.5" (Mayfield, ATL@TB storm game); board 3 domes / 8 clear / 3 hits; TB START 'EM ANYWAY, MIA IGNORE THE RAIN ICON, JAX NON-FACTOR; 11/14 PLAY YOUR GUYS |

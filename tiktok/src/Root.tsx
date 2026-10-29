@@ -5,6 +5,14 @@ import { FPS, WeeklyTikTok, totalFrames } from "./WeeklyTikTok";
 import { fontsReady } from "./theme";
 import { WaiverHeat, WaiverProps, waiverFrames, waiverSchema } from "./WaiverHeat";
 import { StartSit, StartSitProps, startSitFrames, startSitSchema } from "./StartSit";
+import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
+
+const weatherMeta: CalculateMetadataFunction<WeatherProps> = async ({ props }) => {
+  await fontsReady;
+  const d = await (await fetch(staticFile(`${props.source}/weather.json`))).json();
+  const p = { ...props, week: d.week, games: d.games };
+  return { props: p, durationInFrames: weatherSlides(p) };
+};
 
 const startSitMeta: CalculateMetadataFunction<StartSitProps> = async ({ props }) => {
   await fontsReady;
@@ -107,6 +115,29 @@ export const RemotionRoot: React.FC = () => (
       voice: false,
       voDur: null,
       players: null,
+    }}
+  />
+  <Composition
+    id="WeatherSlides"
+    component={WeatherSlides}
+    schema={weatherSchema}
+    width={1080}
+    height={1920}
+    fps={FPS}
+    durationInFrames={7}
+    calculateMetadata={weatherMeta}
+    defaultProps={{
+      source: "wx8",
+      week: 8,
+      hook: { player: "Baker Mayfield" },
+      spots: [
+        { home: "TB", title: "THE STORM GAME", twist: "The only game this week that trips War Room's bad-weather line (15 mph wind).", verdict: "START 'EM ANYWAY" },
+        { home: "MIA", title: "THE RAIN ICON GAME", twist: "82% rain chance, but the forecast is under 0.1 inch of rain. Only the wind counts.", verdict: "IGNORE THE RAIN ICON" },
+        { home: "JAX", title: "THE BREEZY ONE", twist: "Gusts to 18 mph. A small trim for the passing game, nothing more.", verdict: "NON-FACTOR" },
+      ],
+      appShot: "app/app-matchup.png",
+      appScroll: 470,
+      games: null,
     }}
   />
   </>
