@@ -56,6 +56,9 @@ The goal is new War Room users, so every video ends by showing the app and "Link
   **VoxCPM2** engine (Apache-2.0, commercial OK). It's a saved clone profile made from an original VoxCPM2 voice design
   (reference: `Documents-WarRoom/03_announcer.wav`). Only usable when the PC is on and linked; render one clip per scene,
   save to `C:\Users\ms980\OneDrive\Desktop\Documents-WarRoom`, stage, then the same `check_names.py` + `prep-vo.sh` gate.
+  Speed: VoxCPM2 runs on the 4060 (CUDA) but fills ~7.4 of its 8 GB, so warm renders take ~7x the clip length
+  (3.3s line = 22s) and the first one after loading takes ~70s. Keep only VoxCPM2 loaded (Settings > Compute device >
+  Memory management) and nothing else on the GPU; with other engines loaded it was twice as slow.
   Never use VoiceStudio's default engine (OmniVoice) or anything with a red licence badge: CC-BY-NC, not for War Room.
 - ElevenLabs Larry is also checked: run `check_names.py` on his clips too. If a name is wrong there, fix the
   spelling in the script for the next voiced day (don't regenerate the same day).
