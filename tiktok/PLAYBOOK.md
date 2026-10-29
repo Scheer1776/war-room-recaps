@@ -75,7 +75,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 |---|---|---|---|
 | Waiver Heat: most-added players, ADD / FADE / TRAP stamps | `WaiverHeat` | Mon–Wed | `scripts/waivers.mjs` (Sleeper trending + projections) |
 | Weekly league recap: blunders, MVP, scores, playoff odds | `WeeklyTikTok` | Tue | recap.json from the recap-data workflow, `anonymize: true` |
-| Start/Sit showdown: two players head to head, one winner | *build* | Thu–Sat | Sleeper projections + Vegas totals / weather |
+| Start/Sit showdown: coin-flip pairs (projections within 0.3), tiebreaker = last-3-weeks form, START / SIT stamps | `StartSit` | Thu–Sat | `scripts/startsit.mjs` (Sleeper projections + last 3 weeks of stats) |
 | Bench-points shame: "you left X on your bench" + the app's max-lineup feature | *build* | Mon–Tue | recap.json bench data (anonymized) |
 | Weather game alert: wind/rain games that change projections | *build* | Fri–Sat | the app's weather factors (lib/weather.js) |
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
@@ -93,7 +93,9 @@ and switch its row from *build* to the composition name.
 2. Voice (voiced days only; see Voice budget): one line per scene. Generate it as **one** ElevenLabs take with `[pause] [long pause]` between lines
    (the account rate-limits parallel calls; never retry a generation that started). Download, split on silences
    (`ffmpeg -af silencedetect=noise=-40dB:d=1.2`) into `public/<dir>/vo/raw/<scene>.mp3`, then run `./prep-vo.sh public/<dir>/vo`.
-3. Render with `--browser-executable=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell --concurrency=2`.
+3. Render with `--browser-executable=<headless shell> --concurrency=2`. The path changes with the image: it was
+   `/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`, on 2026-10-29 it was
+   `/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`. Run `ls /opt/pw-browsers` first.
 4. QA: pull 5–7 frames with ffmpeg into one strip and look at it. Check safe zones, that stamps and verdicts
    land, that no real league names appear and that no text overflows.
 5. Send both MP4s plus the caption, commit the source (not `out/`), and update Log and Learnings.
@@ -105,9 +107,17 @@ and switch its row from *build* to the composition name.
 - Splitting one long take keeps the voice consistent across scenes and costs about 660 credits per 35s video.
 - Players on bye show up in trending adds (Sleeper projection 0, opponent null). Calling those a TRAP is good content.
 
+- Music-only cuts land harder when scenes start on the beat: `StartSit` places every scene on a multiple of one beat
+  (112 BPM = 16.07 frames) with plain Sequences instead of TransitionSeries, and a 1-frame white/turf flash on each cut.
+  `public/beat40.wav` is the same original beat rendered 40s long (`beat.wav` is 30s with a fade-out, which dips when looped).
+- Verdict stamps must not cover the player's name. On a 470px card, put the stamp low-left over the form bars (they were
+  already on screen for 4 beats) and let the loser card go grayscale; the winner card glows.
+- Sleeper's projection rows carry `date`; check it for Thursday games. A player who plays tonight ("decide now") is a free urgency hook.
+
 ## Log
 | Date | Format | Notes |
 |---|---|---|
 | 2026-10-27 | Weekly recap (week 7) | First video; anonymized after review |
 | 2026-10-28 | Photo carousel (Waiver Heat stills) | 7 slides from WaiverHeat frames 140/345/503/632/778/871/1055; no voice |
 | 2026-10-28 | Waiver Heat (week 8) | Douglas FADE, Coleman ADD, Singletary TRAP (bye), Strange ADD, Tucker ADD |
+| 2026-10-29 | Start/Sit Showdown (week 8), NEW `StartSit` | No-voice (music-only). Cook START / Henry SIT, Daniels START / Young SIT (TNF), Cousins START / Mahomes SIT; hook "SIT MAHOMES?" + 3D coin flip |

@@ -1,0 +1,4038 @@
+{
+ "season": "2026",
+ "week": 8,
+ "builtAt": "2026-10-29T14:49:36.883Z",
+ "players": [
+  {
+   "id": "11646",
+   "n": "Jalen Coker",
+   "num": 18,
+   "pos": "WR",
+   "nfl": "CAR",
+   "opp": "GB",
+   "proj": 13.1,
+   "adp": 12,
+   "last": [
+    12.7,
+    1.4
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 7
+  },
+  {
+   "id": "2505",
+   "n": "Darren Waller",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "CAR",
+   "opp": "GB",
+   "proj": 6.2,
+   "adp": 23,
+   "last": [
+    0,
+    11.5
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 5.8
+  },
+  {
+   "id": "6804",
+   "n": "Jordan Love",
+   "num": 10,
+   "pos": "QB",
+   "nfl": "GB",
+   "opp": "CAR",
+   "proj": 17.1,
+   "adp": 11,
+   "last": [
+    25.3,
+    21.2,
+    18
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 21.5
+  },
+  {
+   "id": "8167",
+   "n": "Christian Watson",
+   "num": 9,
+   "pos": "WR",
+   "nfl": "GB",
+   "opp": "CAR",
+   "proj": 13.9,
+   "adp": 13,
+   "last": [
+    29.3,
+    7.9,
+    8.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 15.1
+  },
+  {
+   "id": "9228",
+   "n": "Bryce Young",
+   "num": 9,
+   "pos": "QB",
+   "nfl": "CAR",
+   "opp": "GB",
+   "proj": 18,
+   "adp": 9,
+   "last": [
+    19.8,
+    7.4
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 13.6
+  },
+  {
+   "id": "7594",
+   "n": "Chuba Hubbard",
+   "num": 30,
+   "pos": "RB",
+   "nfl": "CAR",
+   "opp": "GB",
+   "proj": 15.1,
+   "adp": 7,
+   "last": [
+    18.6,
+    8
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 13.3
+  },
+  {
+   "id": "9484",
+   "n": "Tucker Kraft",
+   "num": 85,
+   "pos": "TE",
+   "nfl": "GB",
+   "opp": "CAR",
+   "proj": 8.6,
+   "adp": 8,
+   "last": [
+    9.1,
+    6.2,
+    12.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 9.4
+  },
+  {
+   "id": "11581",
+   "n": "MarShawn Lloyd",
+   "num": 32,
+   "pos": "RB",
+   "nfl": "GB",
+   "opp": "CAR",
+   "proj": 6.1,
+   "adp": 42,
+   "last": [
+    16.2,
+    1,
+    4.5
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 7.2
+  },
+  {
+   "id": "12526",
+   "n": "Tetairoa McMillan",
+   "num": 4,
+   "pos": "WR",
+   "nfl": "CAR",
+   "opp": "GB",
+   "proj": 12.2,
+   "adp": 16,
+   "last": [
+    11.6,
+    6
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 8.8
+  },
+  {
+   "id": "10213",
+   "n": "Tre Tucker",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "LV",
+   "opp": "NYJ",
+   "proj": 8.8,
+   "adp": 30,
+   "last": [
+    5.5,
+    24.2,
+    18.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 16.2
+  },
+  {
+   "id": "12507",
+   "n": "Omarion Hampton",
+   "num": 8,
+   "pos": "RB",
+   "nfl": "LAC",
+   "opp": "LAR",
+   "proj": 9.3,
+   "adp": 25,
+   "last": [
+    4.4,
+    5.9
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 5.2
+  },
+  {
+   "id": "12529",
+   "n": "TreVeyon Henderson",
+   "num": 32,
+   "pos": "RB",
+   "nfl": "NE",
+   "opp": "MIA",
+   "proj": 6.7,
+   "adp": 38,
+   "last": [
+    4.3,
+    2.5,
+    3.3
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 3.4
+  },
+  {
+   "id": "3214",
+   "n": "Hunter Henry",
+   "num": 85,
+   "pos": "TE",
+   "nfl": "NE",
+   "opp": "MIA",
+   "proj": 7.6,
+   "adp": 15,
+   "last": [
+    11.9,
+    12.8,
+    10.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11.8
+  },
+  {
+   "id": "421",
+   "n": "Matthew Stafford",
+   "num": 9,
+   "pos": "QB",
+   "nfl": "LAR",
+   "opp": "LAC",
+   "proj": 16.1,
+   "adp": 18,
+   "last": [
+    27.3,
+    16.9,
+    18.5
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 20.9
+  },
+  {
+   "id": "5846",
+   "n": "DK Metcalf",
+   "num": 4,
+   "pos": "WR",
+   "nfl": "PIT",
+   "opp": "CLE",
+   "proj": 9.7,
+   "adp": 25,
+   "last": [
+    3.8,
+    14.8,
+    6.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 8.4
+  },
+  {
+   "id": "6770",
+   "n": "Joe Burrow",
+   "num": 9,
+   "pos": "QB",
+   "nfl": "CIN",
+   "opp": "TEN",
+   "proj": 21.4,
+   "adp": 4,
+   "last": [
+    24.6,
+    28.9
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 26.8
+  },
+  {
+   "id": "6797",
+   "n": "Justin Herbert",
+   "num": 10,
+   "pos": "QB",
+   "nfl": "LAC",
+   "opp": "LAR",
+   "proj": 13.5,
+   "adp": 27,
+   "last": [
+    11.2,
+    9.8
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 10.5
+  },
+  {
+   "id": "7021",
+   "n": "Rico Dowdle",
+   "num": 13,
+   "pos": "RB",
+   "nfl": "PIT",
+   "opp": "CLE",
+   "proj": 7.9,
+   "adp": 31,
+   "last": [
+    6.4,
+    11.6
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 9
+  },
+  {
+   "id": "7588",
+   "n": "Javonte Williams",
+   "num": 33,
+   "pos": "RB",
+   "nfl": "DAL",
+   "opp": "ARI",
+   "proj": 17.5,
+   "adp": 5,
+   "last": [
+    13.2,
+    12,
+    21.5
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 15.6
+  },
+  {
+   "id": "7611",
+   "n": "Rhamondre Stevenson",
+   "num": 38,
+   "pos": "RB",
+   "nfl": "NE",
+   "opp": "MIA",
+   "proj": 9.3,
+   "adp": 23,
+   "last": [
+    16,
+    3.6,
+    20
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 13.2
+  },
+  {
+   "id": "8136",
+   "n": "Rachaad White",
+   "num": 1,
+   "pos": "RB",
+   "nfl": "WAS",
+   "opp": "PHI",
+   "proj": 9.7,
+   "adp": 22,
+   "last": [
+    2.5,
+    13.7
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 8.1
+  },
+  {
+   "id": "8146",
+   "n": "Garrett Wilson",
+   "num": 5,
+   "pos": "WR",
+   "nfl": "NYJ",
+   "opp": "LV",
+   "proj": 13.7,
+   "adp": 9,
+   "last": [
+    19.9,
+    6.4,
+    3.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 10
+  },
+  {
+   "id": "9480",
+   "n": "Brenton Strange",
+   "num": 85,
+   "pos": "TE",
+   "nfl": "JAX",
+   "opp": "IND",
+   "proj": 8.8,
+   "adp": 7,
+   "last": [
+    10.3,
+    6.9
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 8.6
+  },
+  {
+   "id": "9501",
+   "n": "DeMario Douglas",
+   "num": 3,
+   "pos": "WR",
+   "nfl": "NE",
+   "opp": "MIA",
+   "proj": 6.6,
+   "adp": 48,
+   "last": [
+    20.5,
+    16.1,
+    3.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 13.5
+  },
+  {
+   "id": "11566",
+   "n": "Jayden Daniels",
+   "num": 5,
+   "pos": "QB",
+   "nfl": "WAS",
+   "opp": "PHI",
+   "proj": 18.1,
+   "adp": 8,
+   "last": [
+    32.3,
+    21
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 26.6
+  },
+  {
+   "id": "1166",
+   "n": "Kirk Cousins",
+   "num": 8,
+   "pos": "QB",
+   "nfl": "LV",
+   "opp": "NYJ",
+   "proj": 16.8,
+   "adp": 14,
+   "last": [
+    13.7,
+    19.5,
+    20.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 17.9
+  },
+  {
+   "id": "12495",
+   "n": "Ollie Gordon II",
+   "num": 0,
+   "pos": "RB",
+   "nfl": "MIA",
+   "opp": "NE",
+   "proj": 12.1,
+   "adp": 17,
+   "last": [
+    14.8,
+    16.8
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 15.8
+  },
+  {
+   "id": "3271",
+   "n": "Tyler Higbee",
+   "num": 89,
+   "pos": "TE",
+   "nfl": "LAR",
+   "opp": "LAC",
+   "proj": 6.8,
+   "adp": 18,
+   "last": [
+    10.8,
+    2.2,
+    2.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 5.1
+  },
+  {
+   "id": "3294",
+   "n": "Dak Prescott",
+   "num": 4,
+   "pos": "QB",
+   "nfl": "DAL",
+   "opp": "ARI",
+   "proj": 22.7,
+   "adp": 2,
+   "last": [
+    14.6,
+    13,
+    23.3
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 17
+  },
+  {
+   "id": "5967",
+   "n": "Tony Pollard",
+   "num": 20,
+   "pos": "RB",
+   "nfl": "TEN",
+   "opp": "CIN",
+   "proj": 11.3,
+   "adp": 18,
+   "last": [
+    5.2,
+    7.6,
+    35
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 15.9
+  },
+  {
+   "id": "6813",
+   "n": "Jonathan Taylor",
+   "num": 28,
+   "pos": "RB",
+   "nfl": "IND",
+   "opp": "JAX",
+   "proj": 15.2,
+   "adp": 10,
+   "last": [
+    9.7,
+    20.1,
+    18
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 15.9
+  },
+  {
+   "id": "8112",
+   "n": "Drake London",
+   "num": 5,
+   "pos": "WR",
+   "nfl": "ATL",
+   "opp": "TB",
+   "proj": 13.8,
+   "adp": 8,
+   "last": [
+    15.3,
+    10.2,
+    16.1
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 13.9
+  },
+  {
+   "id": "8151",
+   "n": "Kenneth Walker III",
+   "num": 9,
+   "pos": "RB",
+   "nfl": "KC",
+   "opp": "DEN",
+   "proj": 18.9,
+   "adp": 3,
+   "last": [
+    26.9,
+    7.7
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 17.3
+  },
+  {
+   "id": "8161",
+   "n": "Malik Willis",
+   "num": 2,
+   "pos": "QB",
+   "nfl": "MIA",
+   "opp": "NE",
+   "proj": 13.7,
+   "adp": 25,
+   "last": [
+    20.9,
+    26
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 23.4
+  },
+  {
+   "id": "8228",
+   "n": "Jaylen Warren",
+   "num": 30,
+   "pos": "RB",
+   "nfl": "PIT",
+   "opp": "CLE",
+   "proj": 13.4,
+   "adp": 14,
+   "last": [
+    33.8,
+    8.8,
+    15.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 19.3
+  },
+  {
+   "id": "96",
+   "n": "Aaron Rodgers",
+   "num": 8,
+   "pos": "QB",
+   "nfl": "PIT",
+   "opp": "CLE",
+   "proj": 16.1,
+   "adp": 17,
+   "last": [
+    22,
+    17,
+    13.1
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 17.4
+  },
+  {
+   "id": "11559",
+   "n": "Michael Penix Jr.",
+   "num": 9,
+   "pos": "QB",
+   "nfl": "ATL",
+   "opp": "TB",
+   "proj": 14.5,
+   "adp": 21,
+   "last": [
+    14.4,
+    23.1,
+    20.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 19.3
+  },
+  {
+   "id": "11624",
+   "n": "Xavier Worthy",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "KC",
+   "opp": "DEN",
+   "proj": 7.4,
+   "adp": 45,
+   "last": [
+    10.8,
+    2.6
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 6.7
+  },
+  {
+   "id": "11647",
+   "n": "Kimani Vidal",
+   "num": 28,
+   "pos": "RB",
+   "nfl": "LAC",
+   "opp": "LAR",
+   "proj": 6.2,
+   "adp": 40,
+   "last": [
+    12.1,
+    5.5
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 8.8
+  },
+  {
+   "id": "12490",
+   "n": "Bhayshul Tuten",
+   "num": 33,
+   "pos": "RB",
+   "nfl": "JAX",
+   "opp": "IND",
+   "proj": 13.5,
+   "adp": 15,
+   "last": [
+    10.6,
+    22.7
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 16.6
+  },
+  {
+   "id": "13274",
+   "n": "Germie Bernard",
+   "num": 17,
+   "pos": "WR",
+   "nfl": "PIT",
+   "opp": "CLE",
+   "proj": 8.3,
+   "adp": 33,
+   "last": [
+    11.4,
+    20.2,
+    4.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11.9
+  },
+  {
+   "id": "13276",
+   "n": "Omar Cooper Jr.",
+   "num": 11,
+   "pos": "WR",
+   "nfl": "NYJ",
+   "opp": "LV",
+   "proj": 8.2,
+   "adp": 39,
+   "last": [
+    19.3,
+    20
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 19.6
+  },
+  {
+   "id": "13298",
+   "n": "KC Concepcion Jr.",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "CLE",
+   "opp": "PIT",
+   "proj": 8.2,
+   "adp": 34,
+   "last": [
+    1,
+    5.9,
+    19.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 8.7
+  },
+  {
+   "id": "13330",
+   "n": "Kenyon Sadiq",
+   "num": 16,
+   "pos": "TE",
+   "nfl": "NYJ",
+   "opp": "LV",
+   "proj": 7.3,
+   "adp": 17,
+   "last": [
+    -0.7,
+    1.7,
+    1.1
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 0.7
+  },
+  {
+   "id": "13346",
+   "n": "Denzel Boston",
+   "num": 12,
+   "pos": "WR",
+   "nfl": "CLE",
+   "opp": "PIT",
+   "proj": 9.2,
+   "adp": 31,
+   "last": [
+    12.1,
+    2,
+    4.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 6.1
+  },
+  {
+   "id": "1373",
+   "n": "Geno Smith",
+   "num": 7,
+   "pos": "QB",
+   "nfl": "NYJ",
+   "opp": "LV",
+   "proj": 16.9,
+   "adp": 12,
+   "last": [
+    10,
+    13,
+    24.5
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 15.8
+  },
+  {
+   "id": "3198",
+   "n": "Derrick Henry",
+   "num": 22,
+   "pos": "RB",
+   "nfl": "BAL",
+   "opp": "BUF",
+   "proj": 15.2,
+   "adp": 13,
+   "last": [
+    20.5,
+    4.5,
+    5.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 10.1
+  },
+  {
+   "id": "3257",
+   "n": "Jacoby Brissett",
+   "num": 7,
+   "pos": "QB",
+   "nfl": "ARI",
+   "opp": "DAL",
+   "proj": 18.7,
+   "adp": 7,
+   "last": [
+    25.8,
+    7.9,
+    16.5
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 16.7
+  },
+  {
+   "id": "4017",
+   "n": "Deshaun Watson",
+   "num": 4,
+   "pos": "QB",
+   "nfl": "CLE",
+   "opp": "PIT",
+   "proj": 13.9,
+   "adp": 24,
+   "last": [
+    12.2,
+    9.5,
+    19.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 13.6
+  },
+  {
+   "id": "4147",
+   "n": "Samaje Perine",
+   "num": 34,
+   "pos": "RB",
+   "nfl": "CIN",
+   "opp": "TEN",
+   "proj": 6.2,
+   "adp": 39,
+   "last": [
+    14.8,
+    7.6
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 11.2
+  },
+  {
+   "id": "4454",
+   "n": "Kendrick Bourne",
+   "num": 17,
+   "pos": "WR",
+   "nfl": "ARI",
+   "opp": "DAL",
+   "proj": 7.7,
+   "adp": 40,
+   "last": [
+    9.5,
+    7.2,
+    2.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 6.4
+  },
+  {
+   "id": "5844",
+   "n": "T.J. Hockenson",
+   "num": 87,
+   "pos": "TE",
+   "nfl": "MIN",
+   "opp": "DET",
+   "proj": 8.8,
+   "adp": 4,
+   "last": [
+    1.2,
+    11.5
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 6.3
+  },
+  {
+   "id": "7553",
+   "n": "Kyle Pitts Sr.",
+   "num": 8,
+   "pos": "TE",
+   "nfl": "ATL",
+   "opp": "TB",
+   "proj": 6.7,
+   "adp": 21,
+   "last": [
+    12.7,
+    20.5,
+    10.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 14.6
+  },
+  {
+   "id": "7600",
+   "n": "Pat Freiermuth",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "PIT",
+   "opp": "CLE",
+   "proj": 7.7,
+   "adp": 14,
+   "last": [
+    19,
+    2.1,
+    3
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 8
+  },
+  {
+   "id": "8111",
+   "n": "Cade Otton",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "TB",
+   "opp": "ATL",
+   "proj": 6.2,
+   "adp": 22,
+   "last": [
+    4,
+    0.9,
+    0
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 1.6
+  },
+  {
+   "id": "8122",
+   "n": "Zonovan Knight",
+   "num": 20,
+   "pos": "RB",
+   "nfl": "ARI",
+   "opp": "DAL",
+   "proj": 6.6,
+   "adp": 37,
+   "last": [
+    0.8,
+    10.8,
+    7.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 6.5
+  },
+  {
+   "id": "8134",
+   "n": "Khalil Shakir",
+   "num": 10,
+   "pos": "WR",
+   "nfl": "BUF",
+   "opp": "BAL",
+   "proj": 7.5,
+   "adp": 42,
+   "last": [
+    9.5,
+    11.4
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 10.4
+  },
+  {
+   "id": "9230",
+   "n": "Tanner McKee",
+   "num": 16,
+   "pos": "QB",
+   "nfl": "PHI",
+   "opp": "WAS",
+   "proj": 13.6,
+   "adp": 26,
+   "last": [
+    12.6,
+    11.5
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 12.1
+  },
+  {
+   "id": "9500",
+   "n": "Josh Downs",
+   "num": 2,
+   "pos": "WR",
+   "nfl": "IND",
+   "opp": "JAX",
+   "proj": 8.1,
+   "adp": 38,
+   "last": [
+    6.2,
+    6.7,
+    2.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 5.2
+  },
+  {
+   "id": "10859",
+   "n": "Sam LaPorta",
+   "num": 87,
+   "pos": "TE",
+   "nfl": "DET",
+   "opp": "MIN",
+   "proj": 9,
+   "adp": 5,
+   "last": [
+    17.3,
+    2.3
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 9.8
+  },
+  {
+   "id": "11563",
+   "n": "Bo Nix",
+   "num": 10,
+   "pos": "QB",
+   "nfl": "DEN",
+   "opp": "KC",
+   "proj": 14,
+   "adp": 23,
+   "last": [
+    7.9,
+    4.5,
+    26.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 12.9
+  },
+  {
+   "id": "11584",
+   "n": "Bucky Irving",
+   "num": 7,
+   "pos": "RB",
+   "nfl": "TB",
+   "opp": "ATL",
+   "proj": 14.9,
+   "adp": 9,
+   "last": [
+    30.5,
+    5.9,
+    23.5
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 20
+  },
+  {
+   "id": "11586",
+   "n": "Blake Corum",
+   "num": 24,
+   "pos": "RB",
+   "nfl": "LAR",
+   "opp": "LAC",
+   "proj": 7.1,
+   "adp": 36,
+   "last": [
+    14.7,
+    13,
+    16.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 14.8
+  },
+  {
+   "id": "12512",
+   "n": "Quinshon Judkins",
+   "num": 10,
+   "pos": "RB",
+   "nfl": "CLE",
+   "opp": "PIT",
+   "proj": 9.2,
+   "adp": 24,
+   "last": [
+    6.5,
+    22.9
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 14.7
+  },
+  {
+   "id": "12522",
+   "n": "Cam Ward",
+   "num": 1,
+   "pos": "QB",
+   "nfl": "TEN",
+   "opp": "CIN",
+   "proj": 14.1,
+   "adp": 22,
+   "last": [
+    6,
+    7.8,
+    6.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 6.8
+  },
+  {
+   "id": "12527",
+   "n": "Ashton Jeanty",
+   "num": 2,
+   "pos": "RB",
+   "nfl": "LV",
+   "opp": "NYJ",
+   "proj": 14.5,
+   "adp": 8,
+   "last": [
+    9.2,
+    13.8,
+    17.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 13.5
+  },
+  {
+   "id": "5870",
+   "n": "Daniel Jones",
+   "num": 17,
+   "pos": "QB",
+   "nfl": "IND",
+   "opp": "JAX",
+   "proj": 11.9,
+   "adp": 28,
+   "last": [
+    11.1,
+    15.8,
+    4.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 10.5
+  },
+  {
+   "id": "7523",
+   "n": "Trevor Lawrence",
+   "num": 16,
+   "pos": "QB",
+   "nfl": "JAX",
+   "opp": "IND",
+   "proj": 21.4,
+   "adp": 5,
+   "last": [
+    22.7,
+    28.3
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 25.5
+  },
+  {
+   "id": "8138",
+   "n": "James Cook III",
+   "num": 4,
+   "pos": "RB",
+   "nfl": "BUF",
+   "opp": "BAL",
+   "proj": 15.3,
+   "adp": 11,
+   "last": [
+    22.3,
+    22.8
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 22.6
+  },
+  {
+   "id": "8150",
+   "n": "Kyren Williams",
+   "num": 23,
+   "pos": "RB",
+   "nfl": "LAR",
+   "opp": "LAC",
+   "proj": 18.3,
+   "adp": 4,
+   "last": [
+    16.6,
+    8.2,
+    17.1
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 14
+  },
+  {
+   "id": "9224",
+   "n": "Chase Brown",
+   "num": 30,
+   "pos": "RB",
+   "nfl": "CIN",
+   "opp": "TEN",
+   "proj": 15.7,
+   "adp": 6,
+   "last": [
+    5.5,
+    7.8
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 6.7
+  },
+  {
+   "id": "9997",
+   "n": "Zay Flowers",
+   "num": 4,
+   "pos": "WR",
+   "nfl": "BAL",
+   "opp": "BUF",
+   "proj": 15.6,
+   "adp": 5,
+   "last": [
+    10.6,
+    9.7,
+    23.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 14.7
+  },
+  {
+   "id": "11783",
+   "n": "Ryan Flournoy",
+   "num": 19,
+   "pos": "WR",
+   "nfl": "DAL",
+   "opp": "ARI",
+   "proj": 7.1,
+   "adp": 46,
+   "last": [
+    10.5,
+    13.5,
+    9
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11
+  },
+  {
+   "id": "12489",
+   "n": "RJ Harvey",
+   "num": 12,
+   "pos": "RB",
+   "nfl": "DEN",
+   "opp": "KC",
+   "proj": 6.7,
+   "adp": 32,
+   "last": [
+    0.7,
+    13.1,
+    13
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 8.9
+  },
+  {
+   "id": "12506",
+   "n": "Harold Fannin Jr.",
+   "num": 44,
+   "pos": "TE",
+   "nfl": "CLE",
+   "opp": "PIT",
+   "proj": 8.7,
+   "adp": 9,
+   "last": [
+    0.9,
+    1.4,
+    10.1
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 4.1
+  },
+  {
+   "id": "13294",
+   "n": "Makai Lemon",
+   "num": 9,
+   "pos": "WR",
+   "nfl": "PHI",
+   "opp": "WAS",
+   "proj": 6.4,
+   "adp": 47,
+   "last": [
+    6.8,
+    3.4,
+    16.2
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 8.8
+  },
+  {
+   "id": "1479",
+   "n": "Keenan Allen",
+   "num": 10,
+   "pos": "WR",
+   "nfl": "IND",
+   "opp": "JAX",
+   "proj": 7.4,
+   "adp": 41,
+   "last": [
+    7,
+    12.2,
+    4.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 7.9
+  },
+  {
+   "id": "3163",
+   "n": "Jared Goff",
+   "num": 16,
+   "pos": "QB",
+   "nfl": "DET",
+   "opp": "MIN",
+   "proj": 16.3,
+   "adp": 16,
+   "last": [
+    28.9,
+    18
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 23.4
+  },
+  {
+   "id": "4984",
+   "n": "Josh Allen",
+   "num": 17,
+   "pos": "QB",
+   "nfl": "BUF",
+   "opp": "BAL",
+   "proj": 24.5,
+   "adp": 1,
+   "last": [
+    31.5,
+    18.3
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 24.9
+  },
+  {
+   "id": "6794",
+   "n": "Justin Jefferson",
+   "num": 18,
+   "pos": "WR",
+   "nfl": "MIN",
+   "opp": "DET",
+   "proj": 15.1,
+   "adp": 6,
+   "last": [
+    15.8,
+    6.4
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 11.1
+  },
+  {
+   "id": "8126",
+   "n": "Wan'Dale Robinson",
+   "num": 4,
+   "pos": "WR",
+   "nfl": "TEN",
+   "opp": "CIN",
+   "proj": 9,
+   "adp": 28,
+   "last": [
+    8.3,
+    3.7,
+    2.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 4.9
+  },
+  {
+   "id": "9509",
+   "n": "Bijan Robinson",
+   "num": 7,
+   "pos": "RB",
+   "nfl": "ATL",
+   "opp": "TB",
+   "proj": 19.2,
+   "adp": 2,
+   "last": [
+    13.8,
+    6.3,
+    14.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11.6
+  },
+  {
+   "id": "11564",
+   "n": "Drake Maye",
+   "num": 10,
+   "pos": "QB",
+   "nfl": "NE",
+   "opp": "MIA",
+   "proj": 21.9,
+   "adp": 3,
+   "last": [
+    39.5,
+    23.8,
+    28.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 30.6
+  },
+  {
+   "id": "11637",
+   "n": "Keon Coleman",
+   "num": 0,
+   "pos": "WR",
+   "nfl": "BUF",
+   "opp": "BAL",
+   "proj": 6.4,
+   "adp": 50,
+   "last": [
+    7.2,
+    13.9
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 10.6
+  },
+  {
+   "id": "13301",
+   "n": "Antonio Williams",
+   "num": 14,
+   "pos": "WR",
+   "nfl": "WAS",
+   "opp": "PHI",
+   "proj": 6.5,
+   "adp": 49,
+   "last": [
+    4.6,
+    6.5
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 5.5
+  },
+  {
+   "id": "1466",
+   "n": "Travis Kelce",
+   "num": 87,
+   "pos": "TE",
+   "nfl": "KC",
+   "opp": "DEN",
+   "proj": 9.3,
+   "adp": 3,
+   "last": [
+    7.3,
+    6.4
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 6.8
+  },
+  {
+   "id": "4037",
+   "n": "Chris Godwin Jr.",
+   "num": 14,
+   "pos": "WR",
+   "nfl": "TB",
+   "opp": "ATL",
+   "proj": 8.2,
+   "adp": 35,
+   "last": [
+    5.5,
+    5.7,
+    4.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 5.3
+  },
+  {
+   "id": "4046",
+   "n": "Patrick Mahomes",
+   "num": 15,
+   "pos": "QB",
+   "nfl": "KC",
+   "opp": "DEN",
+   "proj": 16.8,
+   "adp": 13,
+   "last": [
+    11.5,
+    7
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 9.3
+  },
+  {
+   "id": "4993",
+   "n": "Mike Gesicki",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "CIN",
+   "opp": "TEN",
+   "proj": 6.8,
+   "adp": 20,
+   "last": [
+    6.9,
+    7.1
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 7
+  },
+  {
+   "id": "5012",
+   "n": "Mark Andrews",
+   "num": 89,
+   "pos": "TE",
+   "nfl": "BAL",
+   "opp": "BUF",
+   "proj": 7.3,
+   "adp": 16,
+   "last": [
+    2.8,
+    0.9,
+    3.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 2.5
+  },
+  {
+   "id": "5022",
+   "n": "Dallas Goedert",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "PHI",
+   "opp": "WAS",
+   "proj": 8.5,
+   "adp": 11,
+   "last": [
+    6.8,
+    9.1,
+    7.3
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 7.7
+  },
+  {
+   "id": "5849",
+   "n": "Kyler Murray",
+   "num": 1,
+   "pos": "QB",
+   "nfl": "MIN",
+   "opp": "DET",
+   "proj": 17.4,
+   "adp": 10,
+   "last": [
+    18.3,
+    13.9
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 16.1
+  },
+  {
+   "id": "6786",
+   "n": "CeeDee Lamb",
+   "num": 88,
+   "pos": "WR",
+   "nfl": "DAL",
+   "opp": "ARI",
+   "proj": 19,
+   "adp": 2,
+   "last": [
+    1.9,
+    11.5,
+    21.9
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11.8
+  },
+  {
+   "id": "6801",
+   "n": "Tee Higgins",
+   "num": 5,
+   "pos": "WR",
+   "nfl": "CIN",
+   "opp": "TEN",
+   "proj": 13.7,
+   "adp": 10,
+   "last": [
+    3.2,
+    23.8
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 13.5
+  },
+  {
+   "id": "8110",
+   "n": "Jake Ferguson",
+   "num": 87,
+   "pos": "TE",
+   "nfl": "DAL",
+   "opp": "ARI",
+   "proj": 8.1,
+   "adp": 13,
+   "last": [
+    3.4,
+    2.3,
+    0
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 1.9
+  },
+  {
+   "id": "8130",
+   "n": "Trey McBride",
+   "num": 85,
+   "pos": "TE",
+   "nfl": "ARI",
+   "opp": "DAL",
+   "proj": 15.3,
+   "adp": 1,
+   "last": [
+    17.1,
+    8.8,
+    22.1
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 16
+  },
+  {
+   "id": "8148",
+   "n": "Jameson Williams",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "DET",
+   "opp": "MIN",
+   "proj": 8.5,
+   "adp": 37,
+   "last": [
+    17.7,
+    23.6
+   ],
+   "weeks": [
+    5,
+    7
+   ],
+   "avg": 20.6
+  },
+  {
+   "id": "9487",
+   "n": "Parker Washington",
+   "num": 11,
+   "pos": "WR",
+   "nfl": "JAX",
+   "opp": "IND",
+   "proj": 13.8,
+   "adp": 11,
+   "last": [
+    27.4,
+    8.4
+   ],
+   "weeks": [
+    5,
+    6
+   ],
+   "avg": 17.9
+  },
+  {
+   "id": "9493",
+   "n": "Puka Nacua",
+   "num": 12,
+   "pos": "WR",
+   "nfl": "LAR",
+   "opp": "LAC",
+   "proj": 18.1,
+   "adp": 3,
+   "last": [
+    29.2,
+    11,
+    17.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 19.3
+  },
+  {
+   "id": "11560",
+   "n": "Caleb Williams",
+   "num": 18,
+   "pos": "QB",
+   "nfl": "CHI",
+   "opp": "SEA",
+   "proj": 15.8,
+   "adp": 20,
+   "last": [
+    16.5,
+    22.1
+   ],
+   "weeks": [
+    6,
+    7
+   ],
+   "avg": 19.3
+  },
+  {
+   "id": "12519",
+   "n": "Luther Burden III",
+   "num": 10,
+   "pos": "WR",
+   "nfl": "CHI",
+   "opp": "SEA",
+   "proj": 10,
+   "adp": 22,
+   "last": [
+    6.9,
+    13.5,
+    21.7
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 14
+  },
+  {
+   "id": "11435",
+   "n": "Emanuel Wilson",
+   "num": 23,
+   "pos": "RB",
+   "nfl": "SEA",
+   "opp": "CHI",
+   "proj": 7.4,
+   "adp": 33,
+   "last": [
+    12.2,
+    5.2,
+    18
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11.8
+  },
+  {
+   "id": "12517",
+   "n": "Colston Loveland",
+   "num": 84,
+   "pos": "TE",
+   "nfl": "CHI",
+   "opp": "SEA",
+   "proj": 7.7,
+   "adp": 12,
+   "last": [
+    2.9,
+    15.5,
+    16.4
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 11.6
+  },
+  {
+   "id": "4943",
+   "n": "Sam Darnold",
+   "num": 14,
+   "pos": "QB",
+   "nfl": "SEA",
+   "opp": "CHI",
+   "proj": 16.3,
+   "adp": 15,
+   "last": [
+    10.3,
+    13,
+    15
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 12.8
+  },
+  {
+   "id": "6790",
+   "n": "D'Andre Swift",
+   "num": 4,
+   "pos": "RB",
+   "nfl": "CHI",
+   "opp": "SEA",
+   "proj": 11.8,
+   "adp": 16,
+   "last": [
+    15.3,
+    21,
+    17
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 17.8
+  },
+  {
+   "id": "4039",
+   "n": "Cooper Kupp",
+   "num": 10,
+   "pos": "WR",
+   "nfl": "SEA",
+   "opp": "CHI",
+   "proj": 6.2,
+   "adp": 51,
+   "last": [
+    2.5,
+    7.5,
+    3
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 4.3
+  },
+  {
+   "id": "9488",
+   "n": "Jaxon Smith-Njigba",
+   "num": 11,
+   "pos": "WR",
+   "nfl": "SEA",
+   "opp": "CHI",
+   "proj": 21.4,
+   "adp": 1,
+   "last": [
+    20.3,
+    19.4,
+    26.8
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 22.2
+  },
+  {
+   "id": "11603",
+   "n": "AJ Barner",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "SEA",
+   "opp": "CHI",
+   "proj": 6.8,
+   "adp": 19,
+   "last": [
+    3.5,
+    3.1,
+    6.6
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 4.4
+  },
+  {
+   "id": "11620",
+   "n": "Rome Odunze",
+   "num": 15,
+   "pos": "WR",
+   "nfl": "CHI",
+   "opp": "SEA",
+   "proj": 8.4,
+   "adp": 36,
+   "last": [
+    3.5,
+    5.4,
+    8.9
+   ],
+   "weeks": [
+    5,
+    6,
+    7
+   ],
+   "avg": 5.9
+  }
+ ],
+ "pairs": [
+  {
+   "pos": "WR",
+   "gap": 0.3,
+   "form": 15.3,
+   "a": {
+    "id": "8148",
+    "n": "Jameson Williams",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "DET",
+    "opp": "MIN",
+    "proj": 8.5,
+    "adp": 37,
+    "last": [
+     17.7,
+     23.6
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 20.6
+   },
+   "b": {
+    "id": "4037",
+    "n": "Chris Godwin Jr.",
+    "num": 14,
+    "pos": "WR",
+    "nfl": "TB",
+    "opp": "ATL",
+    "proj": 8.2,
+    "adp": 35,
+    "last": [
+     5.5,
+     5.7,
+     4.7
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.3
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 14.7,
+   "a": {
+    "id": "8148",
+    "n": "Jameson Williams",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "DET",
+    "opp": "MIN",
+    "proj": 8.5,
+    "adp": 37,
+    "last": [
+     17.7,
+     23.6
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 20.6
+   },
+   "b": {
+    "id": "11620",
+    "n": "Rome Odunze",
+    "num": 15,
+    "pos": "WR",
+    "nfl": "CHI",
+    "opp": "SEA",
+    "proj": 8.4,
+    "adp": 36,
+    "last": [
+     3.5,
+     5.4,
+     8.9
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.9
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 14.4,
+   "a": {
+    "id": "13276",
+    "n": "Omar Cooper Jr.",
+    "num": 11,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 8.2,
+    "adp": 39,
+    "last": [
+     19.3,
+     20
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 19.6
+   },
+   "b": {
+    "id": "9500",
+    "n": "Josh Downs",
+    "num": 2,
+    "pos": "WR",
+    "nfl": "IND",
+    "opp": "JAX",
+    "proj": 8.1,
+    "adp": 38,
+    "last": [
+     6.2,
+     6.7,
+     2.8
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.2
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0,
+   "form": 14.3,
+   "a": {
+    "id": "13276",
+    "n": "Omar Cooper Jr.",
+    "num": 11,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 8.2,
+    "adp": 39,
+    "last": [
+     19.3,
+     20
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 19.6
+   },
+   "b": {
+    "id": "4037",
+    "n": "Chris Godwin Jr.",
+    "num": 14,
+    "pos": "WR",
+    "nfl": "TB",
+    "opp": "ATL",
+    "proj": 8.2,
+    "adp": 35,
+    "last": [
+     5.5,
+     5.7,
+     4.7
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.3
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.2,
+   "form": 13.7,
+   "a": {
+    "id": "11620",
+    "n": "Rome Odunze",
+    "num": 15,
+    "pos": "WR",
+    "nfl": "CHI",
+    "opp": "SEA",
+    "proj": 8.4,
+    "adp": 36,
+    "last": [
+     3.5,
+     5.4,
+     8.9
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.9
+   },
+   "b": {
+    "id": "13276",
+    "n": "Omar Cooper Jr.",
+    "num": 11,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 8.2,
+    "adp": 39,
+    "last": [
+     19.3,
+     20
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 19.6
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0.1,
+   "form": 13,
+   "a": {
+    "id": "11566",
+    "n": "Jayden Daniels",
+    "num": 5,
+    "pos": "QB",
+    "nfl": "WAS",
+    "opp": "PHI",
+    "proj": 18.1,
+    "adp": 8,
+    "last": [
+     32.3,
+     21
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 26.6
+   },
+   "b": {
+    "id": "9228",
+    "n": "Bryce Young",
+    "num": 9,
+    "pos": "QB",
+    "nfl": "CAR",
+    "opp": "GB",
+    "proj": 18,
+    "adp": 9,
+    "last": [
+     19.8,
+     7.4
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 13.6
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.1,
+   "form": 12.5,
+   "a": {
+    "id": "8138",
+    "n": "James Cook III",
+    "num": 4,
+    "pos": "RB",
+    "nfl": "BUF",
+    "opp": "BAL",
+    "proj": 15.3,
+    "adp": 11,
+    "last": [
+     22.3,
+     22.8
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 22.6
+   },
+   "b": {
+    "id": "3198",
+    "n": "Derrick Henry",
+    "num": 22,
+    "pos": "RB",
+    "nfl": "BAL",
+    "opp": "BUF",
+    "proj": 15.2,
+    "adp": 13,
+    "last": [
+     20.5,
+     4.5,
+     5.4
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 10.1
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0.3,
+   "form": 12.2,
+   "a": {
+    "id": "6804",
+    "n": "Jordan Love",
+    "num": 10,
+    "pos": "QB",
+    "nfl": "GB",
+    "opp": "CAR",
+    "proj": 17.1,
+    "adp": 11,
+    "last": [
+     25.3,
+     21.2,
+     18
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 21.5
+   },
+   "b": {
+    "id": "4046",
+    "n": "Patrick Mahomes",
+    "num": 15,
+    "pos": "QB",
+    "nfl": "KC",
+    "opp": "DEN",
+    "proj": 16.8,
+    "adp": 13,
+    "last": [
+     11.5,
+     7
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 9.3
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.3,
+   "form": 11.9,
+   "a": {
+    "id": "8148",
+    "n": "Jameson Williams",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "DET",
+    "opp": "MIN",
+    "proj": 8.5,
+    "adp": 37,
+    "last": [
+     17.7,
+     23.6
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 20.6
+   },
+   "b": {
+    "id": "13298",
+    "n": "KC Concepcion Jr.",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "CLE",
+    "opp": "PIT",
+    "proj": 8.2,
+    "adp": 34,
+    "last": [
+     1,
+     5.9,
+     19.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 8.7
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.2,
+   "form": 11.3,
+   "a": {
+    "id": "8126",
+    "n": "Wan'Dale Robinson",
+    "num": 4,
+    "pos": "WR",
+    "nfl": "TEN",
+    "opp": "CIN",
+    "proj": 9,
+    "adp": 28,
+    "last": [
+     8.3,
+     3.7,
+     2.7
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 4.9
+   },
+   "b": {
+    "id": "10213",
+    "n": "Tre Tucker",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "LV",
+    "opp": "NYJ",
+    "proj": 8.8,
+    "adp": 30,
+    "last": [
+     5.5,
+     24.2,
+     18.8
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 16.2
+   }
+  },
+  {
+   "pos": "TE",
+   "gap": 0.3,
+   "form": 11.1,
+   "a": {
+    "id": "3214",
+    "n": "Hunter Henry",
+    "num": 85,
+    "pos": "TE",
+    "nfl": "NE",
+    "opp": "MIA",
+    "proj": 7.6,
+    "adp": 15,
+    "last": [
+     11.9,
+     12.8,
+     10.6
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.8
+   },
+   "b": {
+    "id": "13330",
+    "n": "Kenyon Sadiq",
+    "num": 16,
+    "pos": "TE",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 7.3,
+    "adp": 17,
+    "last": [
+     -0.7,
+     1.7,
+     1.1
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 0.7
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0,
+   "form": 10.9,
+   "a": {
+    "id": "13276",
+    "n": "Omar Cooper Jr.",
+    "num": 11,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 8.2,
+    "adp": 39,
+    "last": [
+     19.3,
+     20
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 19.6
+   },
+   "b": {
+    "id": "13298",
+    "n": "KC Concepcion Jr.",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "CLE",
+    "opp": "PIT",
+    "proj": 8.2,
+    "adp": 34,
+    "last": [
+     1,
+     5.9,
+     19.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 8.7
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0,
+   "form": 10.6,
+   "a": {
+    "id": "3163",
+    "n": "Jared Goff",
+    "num": 16,
+    "pos": "QB",
+    "nfl": "DET",
+    "opp": "MIN",
+    "proj": 16.3,
+    "adp": 16,
+    "last": [
+     28.9,
+     18
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 23.4
+   },
+   "b": {
+    "id": "4943",
+    "n": "Sam Darnold",
+    "num": 14,
+    "pos": "QB",
+    "nfl": "SEA",
+    "opp": "CHI",
+    "proj": 16.3,
+    "adp": 15,
+    "last": [
+     10.3,
+     13,
+     15
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 12.8
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.3,
+   "form": 9.9,
+   "a": {
+    "id": "3198",
+    "n": "Derrick Henry",
+    "num": 22,
+    "pos": "RB",
+    "nfl": "BAL",
+    "opp": "BUF",
+    "proj": 15.2,
+    "adp": 13,
+    "last": [
+     20.5,
+     4.5,
+     5.4
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 10.1
+   },
+   "b": {
+    "id": "11584",
+    "n": "Bucky Irving",
+    "num": 7,
+    "pos": "RB",
+    "nfl": "TB",
+    "opp": "ATL",
+    "proj": 14.9,
+    "adp": 9,
+    "last": [
+     30.5,
+     5.9,
+     23.5
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 20
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.1,
+   "form": 9.5,
+   "a": {
+    "id": "12507",
+    "n": "Omarion Hampton",
+    "num": 8,
+    "pos": "RB",
+    "nfl": "LAC",
+    "opp": "LAR",
+    "proj": 9.3,
+    "adp": 25,
+    "last": [
+     4.4,
+     5.9
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 5.2
+   },
+   "b": {
+    "id": "12512",
+    "n": "Quinshon Judkins",
+    "num": 10,
+    "pos": "RB",
+    "nfl": "CLE",
+    "opp": "PIT",
+    "proj": 9.2,
+    "adp": 24,
+    "last": [
+     6.5,
+     22.9
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 14.7
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.2,
+   "form": 9.3,
+   "a": {
+    "id": "8138",
+    "n": "James Cook III",
+    "num": 4,
+    "pos": "RB",
+    "nfl": "BUF",
+    "opp": "BAL",
+    "proj": 15.3,
+    "adp": 11,
+    "last": [
+     22.3,
+     22.8
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 22.6
+   },
+   "b": {
+    "id": "7594",
+    "n": "Chuba Hubbard",
+    "num": 30,
+    "pos": "RB",
+    "nfl": "CAR",
+    "opp": "GB",
+    "proj": 15.1,
+    "adp": 7,
+    "last": [
+     18.6,
+     8
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 13.3
+   }
+  },
+  {
+   "pos": "TE",
+   "gap": 0.3,
+   "form": 9.3,
+   "a": {
+    "id": "3214",
+    "n": "Hunter Henry",
+    "num": 85,
+    "pos": "TE",
+    "nfl": "NE",
+    "opp": "MIA",
+    "proj": 7.6,
+    "adp": 15,
+    "last": [
+     11.9,
+     12.8,
+     10.6
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.8
+   },
+   "b": {
+    "id": "5012",
+    "n": "Mark Andrews",
+    "num": 89,
+    "pos": "TE",
+    "nfl": "BAL",
+    "opp": "BUF",
+    "proj": 7.3,
+    "adp": 16,
+    "last": [
+     2.8,
+     0.9,
+     3.8
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 2.5
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.2,
+   "form": 8.7,
+   "a": {
+    "id": "8148",
+    "n": "Jameson Williams",
+    "num": 1,
+    "pos": "WR",
+    "nfl": "DET",
+    "opp": "MIN",
+    "proj": 8.5,
+    "adp": 37,
+    "last": [
+     17.7,
+     23.6
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 20.6
+   },
+   "b": {
+    "id": "13274",
+    "n": "Germie Bernard",
+    "num": 17,
+    "pos": "WR",
+    "nfl": "PIT",
+    "opp": "CLE",
+    "proj": 8.3,
+    "adp": 33,
+    "last": [
+     11.4,
+     20.2,
+     4.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.9
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0,
+   "form": 8.6,
+   "a": {
+    "id": "1166",
+    "n": "Kirk Cousins",
+    "num": 8,
+    "pos": "QB",
+    "nfl": "LV",
+    "opp": "NYJ",
+    "proj": 16.8,
+    "adp": 14,
+    "last": [
+     13.7,
+     19.5,
+     20.4
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 17.9
+   },
+   "b": {
+    "id": "4046",
+    "n": "Patrick Mahomes",
+    "num": 15,
+    "pos": "QB",
+    "nfl": "KC",
+    "opp": "DEN",
+    "proj": 16.8,
+    "adp": 13,
+    "last": [
+     11.5,
+     7
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 9.3
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0.2,
+   "form": 8.1,
+   "a": {
+    "id": "4943",
+    "n": "Sam Darnold",
+    "num": 14,
+    "pos": "QB",
+    "nfl": "SEA",
+    "opp": "CHI",
+    "proj": 16.3,
+    "adp": 15,
+    "last": [
+     10.3,
+     13,
+     15
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 12.8
+   },
+   "b": {
+    "id": "421",
+    "n": "Matthew Stafford",
+    "num": 9,
+    "pos": "QB",
+    "nfl": "LAR",
+    "opp": "LAC",
+    "proj": 16.1,
+    "adp": 18,
+    "last": [
+     27.3,
+     16.9,
+     18.5
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 20.9
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0,
+   "form": 8,
+   "a": {
+    "id": "12507",
+    "n": "Omarion Hampton",
+    "num": 8,
+    "pos": "RB",
+    "nfl": "LAC",
+    "opp": "LAR",
+    "proj": 9.3,
+    "adp": 25,
+    "last": [
+     4.4,
+     5.9
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 5.2
+   },
+   "b": {
+    "id": "7611",
+    "n": "Rhamondre Stevenson",
+    "num": 38,
+    "pos": "RB",
+    "nfl": "NE",
+    "opp": "MIA",
+    "proj": 9.3,
+    "adp": 23,
+    "last": [
+     16,
+     3.6,
+     20
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 13.2
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 8,
+   "a": {
+    "id": "9501",
+    "n": "DeMario Douglas",
+    "num": 3,
+    "pos": "WR",
+    "nfl": "NE",
+    "opp": "MIA",
+    "proj": 6.6,
+    "adp": 48,
+    "last": [
+     20.5,
+     16.1,
+     3.8
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 13.5
+   },
+   "b": {
+    "id": "13301",
+    "n": "Antonio Williams",
+    "num": 14,
+    "pos": "WR",
+    "nfl": "WAS",
+    "opp": "PHI",
+    "proj": 6.5,
+    "adp": 49,
+    "last": [
+     4.6,
+     6.5
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 5.5
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 7.9,
+   "a": {
+    "id": "9487",
+    "n": "Parker Washington",
+    "num": 11,
+    "pos": "WR",
+    "nfl": "JAX",
+    "opp": "IND",
+    "proj": 13.8,
+    "adp": 11,
+    "last": [
+     27.4,
+     8.4
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 17.9
+   },
+   "b": {
+    "id": "8146",
+    "n": "Garrett Wilson",
+    "num": 5,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 13.7,
+    "adp": 9,
+    "last": [
+     19.9,
+     6.4,
+     3.6
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 10
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 7.7,
+   "a": {
+    "id": "13274",
+    "n": "Germie Bernard",
+    "num": 17,
+    "pos": "WR",
+    "nfl": "PIT",
+    "opp": "CLE",
+    "proj": 8.3,
+    "adp": 33,
+    "last": [
+     11.4,
+     20.2,
+     4.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.9
+   },
+   "b": {
+    "id": "13276",
+    "n": "Omar Cooper Jr.",
+    "num": 11,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 8.2,
+    "adp": 39,
+    "last": [
+     19.3,
+     20
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 19.6
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.1,
+   "form": 6.7,
+   "a": {
+    "id": "8138",
+    "n": "James Cook III",
+    "num": 4,
+    "pos": "RB",
+    "nfl": "BUF",
+    "opp": "BAL",
+    "proj": 15.3,
+    "adp": 11,
+    "last": [
+     22.3,
+     22.8
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 22.6
+   },
+   "b": {
+    "id": "6813",
+    "n": "Jonathan Taylor",
+    "num": 28,
+    "pos": "RB",
+    "nfl": "IND",
+    "opp": "JAX",
+    "proj": 15.2,
+    "adp": 10,
+    "last": [
+     9.7,
+     20.1,
+     18
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 15.9
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.2,
+   "form": 6.7,
+   "a": {
+    "id": "7594",
+    "n": "Chuba Hubbard",
+    "num": 30,
+    "pos": "RB",
+    "nfl": "CAR",
+    "opp": "GB",
+    "proj": 15.1,
+    "adp": 7,
+    "last": [
+     18.6,
+     8
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 13.3
+   },
+   "b": {
+    "id": "11584",
+    "n": "Bucky Irving",
+    "num": 7,
+    "pos": "RB",
+    "nfl": "TB",
+    "opp": "ATL",
+    "proj": 14.9,
+    "adp": 9,
+    "last": [
+     30.5,
+     5.9,
+     23.5
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 20
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.2,
+   "form": 6.7,
+   "a": {
+    "id": "13274",
+    "n": "Germie Bernard",
+    "num": 17,
+    "pos": "WR",
+    "nfl": "PIT",
+    "opp": "CLE",
+    "proj": 8.3,
+    "adp": 33,
+    "last": [
+     11.4,
+     20.2,
+     4.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.9
+   },
+   "b": {
+    "id": "9500",
+    "n": "Josh Downs",
+    "num": 2,
+    "pos": "WR",
+    "nfl": "IND",
+    "opp": "JAX",
+    "proj": 8.1,
+    "adp": 38,
+    "last": [
+     6.2,
+     6.7,
+     2.8
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.2
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 6.6,
+   "a": {
+    "id": "13274",
+    "n": "Germie Bernard",
+    "num": 17,
+    "pos": "WR",
+    "nfl": "PIT",
+    "opp": "CLE",
+    "proj": 8.3,
+    "adp": 33,
+    "last": [
+     11.4,
+     20.2,
+     4.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.9
+   },
+   "b": {
+    "id": "4037",
+    "n": "Chris Godwin Jr.",
+    "num": 14,
+    "pos": "WR",
+    "nfl": "TB",
+    "opp": "ATL",
+    "proj": 8.2,
+    "adp": 35,
+    "last": [
+     5.5,
+     5.7,
+     4.7
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.3
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0.1,
+   "form": 6.5,
+   "a": {
+    "id": "1373",
+    "n": "Geno Smith",
+    "num": 7,
+    "pos": "QB",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 16.9,
+    "adp": 12,
+    "last": [
+     10,
+     13,
+     24.5
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 15.8
+   },
+   "b": {
+    "id": "4046",
+    "n": "Patrick Mahomes",
+    "num": 15,
+    "pos": "QB",
+    "nfl": "KC",
+    "opp": "DEN",
+    "proj": 16.8,
+    "adp": 13,
+    "last": [
+     11.5,
+     7
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 9.3
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.2,
+   "form": 6.3,
+   "a": {
+    "id": "11637",
+    "n": "Keon Coleman",
+    "num": 0,
+    "pos": "WR",
+    "nfl": "BUF",
+    "opp": "BAL",
+    "proj": 6.4,
+    "adp": 50,
+    "last": [
+     7.2,
+     13.9
+    ],
+    "weeks": [
+     5,
+     6
+    ],
+    "avg": 10.6
+   },
+   "b": {
+    "id": "4039",
+    "n": "Cooper Kupp",
+    "num": 10,
+    "pos": "WR",
+    "nfl": "SEA",
+    "opp": "CHI",
+    "proj": 6.2,
+    "adp": 51,
+    "last": [
+     2.5,
+     7.5,
+     3
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 4.3
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.1,
+   "form": 6,
+   "a": {
+    "id": "11620",
+    "n": "Rome Odunze",
+    "num": 15,
+    "pos": "WR",
+    "nfl": "CHI",
+    "opp": "SEA",
+    "proj": 8.4,
+    "adp": 36,
+    "last": [
+     3.5,
+     5.4,
+     8.9
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 5.9
+   },
+   "b": {
+    "id": "13274",
+    "n": "Germie Bernard",
+    "num": 17,
+    "pos": "WR",
+    "nfl": "PIT",
+    "opp": "CLE",
+    "proj": 8.3,
+    "adp": 33,
+    "last": [
+     11.4,
+     20.2,
+     4.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.9
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0,
+   "form": 5.8,
+   "a": {
+    "id": "6813",
+    "n": "Jonathan Taylor",
+    "num": 28,
+    "pos": "RB",
+    "nfl": "IND",
+    "opp": "JAX",
+    "proj": 15.2,
+    "adp": 10,
+    "last": [
+     9.7,
+     20.1,
+     18
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 15.9
+   },
+   "b": {
+    "id": "3198",
+    "n": "Derrick Henry",
+    "num": 22,
+    "pos": "RB",
+    "nfl": "BAL",
+    "opp": "BUF",
+    "proj": 15.2,
+    "adp": 13,
+    "last": [
+     20.5,
+     4.5,
+     5.4
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 10.1
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0.2,
+   "form": 5.7,
+   "a": {
+    "id": "6804",
+    "n": "Jordan Love",
+    "num": 10,
+    "pos": "QB",
+    "nfl": "GB",
+    "opp": "CAR",
+    "proj": 17.1,
+    "adp": 11,
+    "last": [
+     25.3,
+     21.2,
+     18
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 21.5
+   },
+   "b": {
+    "id": "1373",
+    "n": "Geno Smith",
+    "num": 7,
+    "pos": "QB",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 16.9,
+    "adp": 12,
+    "last": [
+     10,
+     13,
+     24.5
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 15.8
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0.3,
+   "form": 5.7,
+   "a": {
+    "id": "9509",
+    "n": "Bijan Robinson",
+    "num": 7,
+    "pos": "RB",
+    "nfl": "ATL",
+    "opp": "TB",
+    "proj": 19.2,
+    "adp": 2,
+    "last": [
+     13.8,
+     6.3,
+     14.7
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 11.6
+   },
+   "b": {
+    "id": "8151",
+    "n": "Kenneth Walker III",
+    "num": 9,
+    "pos": "RB",
+    "nfl": "KC",
+    "opp": "DEN",
+    "proj": 18.9,
+    "adp": 3,
+    "last": [
+     26.9,
+     7.7
+    ],
+    "weeks": [
+     6,
+     7
+    ],
+    "avg": 17.3
+   }
+  },
+  {
+   "pos": "TE",
+   "gap": 0.3,
+   "form": 5.7,
+   "a": {
+    "id": "10859",
+    "n": "Sam LaPorta",
+    "num": 87,
+    "pos": "TE",
+    "nfl": "DET",
+    "opp": "MIN",
+    "proj": 9,
+    "adp": 5,
+    "last": [
+     17.3,
+     2.3
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 9.8
+   },
+   "b": {
+    "id": "12506",
+    "n": "Harold Fannin Jr.",
+    "num": 44,
+    "pos": "TE",
+    "nfl": "CLE",
+    "opp": "PIT",
+    "proj": 8.7,
+    "adp": 9,
+    "last": [
+     0.9,
+     1.4,
+     10.1
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 4.1
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.3,
+   "form": 5.6,
+   "a": {
+    "id": "12519",
+    "n": "Luther Burden III",
+    "num": 10,
+    "pos": "WR",
+    "nfl": "CHI",
+    "opp": "SEA",
+    "proj": 10,
+    "adp": 22,
+    "last": [
+     6.9,
+     13.5,
+     21.7
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 14
+   },
+   "b": {
+    "id": "5846",
+    "n": "DK Metcalf",
+    "num": 4,
+    "pos": "WR",
+    "nfl": "PIT",
+    "opp": "CLE",
+    "proj": 9.7,
+    "adp": 25,
+    "last": [
+     3.8,
+     14.8,
+     6.6
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 8.4
+   }
+  },
+  {
+   "pos": "RB",
+   "gap": 0,
+   "form": 5.5,
+   "a": {
+    "id": "12529",
+    "n": "TreVeyon Henderson",
+    "num": 32,
+    "pos": "RB",
+    "nfl": "NE",
+    "opp": "MIA",
+    "proj": 6.7,
+    "adp": 38,
+    "last": [
+     4.3,
+     2.5,
+     3.3
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 3.4
+   },
+   "b": {
+    "id": "12489",
+    "n": "RJ Harvey",
+    "num": 12,
+    "pos": "RB",
+    "nfl": "DEN",
+    "opp": "KC",
+    "proj": 6.7,
+    "adp": 32,
+    "last": [
+     0.7,
+     13.1,
+     13
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 8.9
+   }
+  },
+  {
+   "pos": "QB",
+   "gap": 0.3,
+   "form": 5.4,
+   "a": {
+    "id": "5849",
+    "n": "Kyler Murray",
+    "num": 1,
+    "pos": "QB",
+    "nfl": "MIN",
+    "opp": "DET",
+    "proj": 17.4,
+    "adp": 10,
+    "last": [
+     18.3,
+     13.9
+    ],
+    "weeks": [
+     5,
+     7
+    ],
+    "avg": 16.1
+   },
+   "b": {
+    "id": "6804",
+    "n": "Jordan Love",
+    "num": 10,
+    "pos": "QB",
+    "nfl": "GB",
+    "opp": "CAR",
+    "proj": 17.1,
+    "adp": 11,
+    "last": [
+     25.3,
+     21.2,
+     18
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 21.5
+   }
+  },
+  {
+   "pos": "TE",
+   "gap": 0.1,
+   "form": 5.3,
+   "a": {
+    "id": "12506",
+    "n": "Harold Fannin Jr.",
+    "num": 44,
+    "pos": "TE",
+    "nfl": "CLE",
+    "opp": "PIT",
+    "proj": 8.7,
+    "adp": 9,
+    "last": [
+     0.9,
+     1.4,
+     10.1
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 4.1
+   },
+   "b": {
+    "id": "9484",
+    "n": "Tucker Kraft",
+    "num": 85,
+    "pos": "TE",
+    "nfl": "GB",
+    "opp": "CAR",
+    "proj": 8.6,
+    "adp": 8,
+    "last": [
+     9.1,
+     6.2,
+     12.8
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 9.4
+   }
+  },
+  {
+   "pos": "WR",
+   "gap": 0.2,
+   "form": 5.1,
+   "a": {
+    "id": "8167",
+    "n": "Christian Watson",
+    "num": 9,
+    "pos": "WR",
+    "nfl": "GB",
+    "opp": "CAR",
+    "proj": 13.9,
+    "adp": 13,
+    "last": [
+     29.3,
+     7.9,
+     8.2
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 15.1
+   },
+   "b": {
+    "id": "8146",
+    "n": "Garrett Wilson",
+    "num": 5,
+    "pos": "WR",
+    "nfl": "NYJ",
+    "opp": "LV",
+    "proj": 13.7,
+    "adp": 9,
+    "last": [
+     19.9,
+     6.4,
+     3.6
+    ],
+    "weeks": [
+     5,
+     6,
+     7
+    ],
+    "avg": 10
+   }
+  }
+ ]
+}

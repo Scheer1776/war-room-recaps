@@ -4,6 +4,14 @@ import { Props, propsSchema, recapSchema, asset } from "./data";
 import { FPS, WeeklyTikTok, totalFrames } from "./WeeklyTikTok";
 import { fontsReady } from "./theme";
 import { WaiverHeat, WaiverProps, waiverFrames, waiverSchema } from "./WaiverHeat";
+import { StartSit, StartSitProps, startSitFrames, startSitSchema } from "./StartSit";
+
+const startSitMeta: CalculateMetadataFunction<StartSitProps> = async ({ props }) => {
+  await fontsReady;
+  const d = await (await fetch(staticFile(`${props.source}/startsit.json`))).json();
+  const p = { ...props, week: d.week, players: d.players };
+  return { props: p, durationInFrames: startSitFrames(p) };
+};
 
 const waiverMeta: CalculateMetadataFunction<WaiverProps> = async ({ props }) => {
   await fontsReady;
@@ -72,6 +80,29 @@ export const RemotionRoot: React.FC = () => (
       music: "bed",
       players: null,
       voDur: null,
+    }}
+  />
+  <Composition
+    id="StartSit"
+    component={StartSit}
+    schema={startSitSchema}
+    width={1080}
+    height={1920}
+    fps={FPS}
+    durationInFrames={1000}
+    calculateMetadata={startSitMeta}
+    defaultProps={{
+      source: "ss8",
+      week: 8,
+      hook: ["SIT", "MAHOMES?", "3 COIN-FLIP START/SITS", "WEEK 8 · PROJECTIONS TIED"],
+      duels: [
+        { top: "8138", bottom: "3198", win: "8138", say: ["SAME GAME. TWO RBs.", "WHO EATS?"], verdict: "START COOK." },
+        { top: "9228", bottom: "11566", win: "11566", say: ["YOUNG PLAYS TONIGHT.", "DECIDE NOW."], verdict: "START DANIELS." },
+        { top: "4046", bottom: "1166", win: "1166", say: ["THE BIG ONE.", "BOTH PROJECT 16.8"], verdict: "SIT MAHOMES." },
+      ],
+      appShot: "app/app-matchup.png",
+      music: "bed",
+      players: null,
     }}
   />
   </>
