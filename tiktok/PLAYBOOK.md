@@ -55,6 +55,14 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 - ElevenLabs Larry is also checked: run `check_names.py` on his clips too. If a name is wrong there, fix the
   spelling in the script for the next voiced day (don't regenerate the same day).
 
+### Song pick (every music-only video and every carousel)
+- Each run, look up what's trending **this week** (tokchart.com/tiktok-trending-sounds, buffer.com/resources/trending-songs-tiktok,
+  metricool.com/tiktok-songs) and recommend ONE specific sound by exact name and artist, with one line on why it fits
+  (energy, a "reveal" beat drop, a ranking or "fact" trend). Give a backup pick.
+- Prefer sounds whose trend matches the post (ranking trends for lists, ominous or reveal sounds for a TRAP or FADE,
+  hype for ADD). Tell the owner to tap the sound in TikTok's sound picker. Never download or bundle the music.
+- Carousel slides need a "swipe" cue on the hook slide and must make sense in order without sound.
+
 ### ElevenLabs credit ledger (Free plan: 10,000 credits a month)
 The owner checks the real balance at elevenlabs.io → Subscription. When the ledger total passes 10,000 or a new
 cycle starts, start a new block. A run can't see the real balance, so if ElevenLabs refuses for credits, note it here.
@@ -73,6 +81,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
 | Feature demo: screen tour of one app tool on a phone mockup | *build* | any | mock server screenshots/recordings |
 | Quiz / "would you rather" poll: pause-to-answer, reveal | *build* | any | Sleeper stats |
+| **Photo carousel** (TikTok photo post): 5–8 still slides, a hook slide, one slide per player or point, the app slide last | `npx remotion still <Comp> --frame=N` on any composition at its "landed" frames, or a dedicated slides composition | music days, about 2 a week | same as the format |
 | Music-only cut of any format above: kinetic captions on the beat, no voice | any composition with `voice: false` + captions | music days | same as the format |
 
 When a run builds a new format, add it as its own composition in `src/`, reuse `theme.tsx`,
@@ -100,4 +109,5 @@ and switch its row from *build* to the composition name.
 | Date | Format | Notes |
 |---|---|---|
 | 2026-10-27 | Weekly recap (week 7) | First video; anonymized after review |
+| 2026-10-28 | Photo carousel (Waiver Heat stills) | 7 slides from WaiverHeat frames 140/345/503/632/778/871/1055; no voice |
 | 2026-10-28 | Waiver Heat (week 8) | Douglas FADE, Coleman ADD, Singletary TRAP (bye), Strange ADD, Tucker ADD |
