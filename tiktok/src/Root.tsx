@@ -9,7 +9,9 @@ import { StartSit, StartSitProps, startSitFrames, startSitSchema } from "./Start
 const startSitMeta: CalculateMetadataFunction<StartSitProps> = async ({ props }) => {
   await fontsReady;
   const d = await (await fetch(staticFile(`${props.source}/startsit.json`))).json();
-  const p = { ...props, week: d.week, players: d.players };
+  let voDur: Record<string, number> | null = null;
+  if (props.voice) { try { const v = await fetch(staticFile(`${props.source}/vo/durations.json`)); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
+  const p = { ...props, week: d.week, players: d.players, voDur };
   return { props: p, durationInFrames: startSitFrames(p) };
 };
 
@@ -102,6 +104,8 @@ export const RemotionRoot: React.FC = () => (
       ],
       appShot: "app/app-matchup.png",
       music: "bed",
+      voice: false,
+      voDur: null,
       players: null,
     }}
   />

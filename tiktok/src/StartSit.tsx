@@ -18,15 +18,19 @@ export const startSitSchema = z.object({
   duels: z.array(duel),
   appShot: z.string(),
   music: z.enum(["bed", "none"]),
+  // Voiceover: clips <source>/vo/{hook,d1,d2,d3,cta}.mp3 (see prep-vo.sh). The hook gets one extra beat to fit the line.
+  voice: z.boolean().default(false),
+  voDur: z.record(z.string(), z.number()).nullable().default(null),
   players: z.array(pl).nullable(),
 });
 export type StartSitProps = z.infer<typeof startSitSchema>;
 
 // beat.wav is 112 BPM: one beat = 16.07 frames. Scenes start on beats so the cuts hit the kick.
 const FPS = 30, BEAT = (60 / 112) * FPS;
-const HOOK = 8, DUEL = 16, CTA = 11;
-const startBeat = (i: number) => HOOK + i * DUEL;
-export const startSitFrames = (p: StartSitProps) => Math.round((HOOK + p.duels.length * DUEL + CTA) * BEAT);
+const DUEL = 16, CTA = 11;
+const hookBeats = (p: StartSitProps) => (p.voice ? 9 : 8);
+const startBeat = (p: StartSitProps, i: number) => hookBeats(p) + i * DUEL;
+export const startSitFrames = (p: StartSitProps) => Math.round((hookBeats(p) + p.duels.length * DUEL + CTA) * BEAT);
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 // Local frame of beat k inside a scene that starts at global beat s.
 const bt = (s: number, k: number) => Math.round((s + k) * BEAT) - Math.round(s * BEAT);
@@ -188,7 +192,7 @@ const Duel: React.FC<{ p: StartSitProps; d: StartSitProps["duels"][number]; i: n
   const { fps } = useVideoConfig();
   const by = new Map(p.players!.map(x => [x.id, x]));
   const A = by.get(d.top)!, B = by.get(d.bottom)!;
-  const s0 = startBeat(i);
+  const s0 = startBeat(p, i);
   const b = (k: number) => bt(s0, k);
   const max = Math.max(...A.last, ...B.last, A.proj, B.proj);
   const vs = spring({ frame: f - b(2), fps, config: { damping: 9, stiffness: 200 } });
@@ -227,7 +231,7 @@ const Duel: React.FC<{ p: StartSitProps; d: StartSitProps["duels"][number]; i: n
 const Cta: React.FC<{ p: StartSitProps; dur: number }> = ({ p, dur }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const s0 = startBeat(p.duels.length);
+  const s0 = startBeat(p, p.duels.length);
   const b = (k: number) => bt(s0, k);
   const up = spring({ frame: f - b(2), fps, config: { damping: 16, stiffness: 90 } });
   const scroll = interpolate(f, [b(3), dur], [0, -900], clamp);
@@ -258,17 +262,24 @@ export const StartSit: React.FC<StartSitProps> = (p) => {
   const { durationInFrames } = useVideoConfig();
   if (!p.players) return <AbsoluteFill style={{ background: "#04110B" }} />;
   const at = (beat: number) => Math.round(beat * BEAT);
-  const ctaFrom = at(startBeat(p.duels.length));
+  const ctaFrom = at(startBeat(p, p.duels.length));
+  // Duel lines are delayed (up to 1.5s) so the spoken verdict lands with the START/SIT stamp (beat 12).
+  const voFrom = (name: string) => {
+    const d = p.voDur?.[name];
+    if (!name.startsWith("d") || !d) return 3;
+    return Math.max(3, Math.min(45, Math.round((12 * BEAT) / FPS * FPS + 15 - d * FPS)));
+  };
+  const vo = (name: string) => (p.voice ? <Sequence from={voFrom(name)} layout="none"><Audio src={staticFile(`${p.source}/vo/${name}.mp3`)} /></Sequence> : null);
   return (
     <AbsoluteFill style={{ background: "#04110B" }}>
-      <Sequence name="hook" durationInFrames={at(HOOK)}><Hook p={p} /></Sequence>
+      <Sequence name="hook" durationInFrames={at(hookBeats(p))}><Hook p={p} />{vo("hook")}</Sequence>
       {p.duels.map((d, i) => (
-        <Sequence key={i} name={`duel-${i + 1}`} from={at(startBeat(i))} durationInFrames={at(startBeat(i + 1)) - at(startBeat(i))}><Duel p={p} d={d} i={i} /></Sequence>
+        <Sequence key={i} name={`duel-${i + 1}`} from={at(startBeat(p, i))} durationInFrames={at(startBeat(p, i + 1)) - at(startBeat(p, i))}><Duel p={p} d={d} i={i} />{vo(`d${i + 1}`)}</Sequence>
       ))}
-      <Sequence name="cta" from={ctaFrom}><Cta p={p} dur={durationInFrames - ctaFrom} /></Sequence>
+      <Sequence name="cta" from={ctaFrom}><Cta p={p} dur={durationInFrames - ctaFrom} />{vo("cta")}</Sequence>
       {p.music === "bed" ? (
         <Interactive.Div name="Music">
-          <Audio src={staticFile("beat40.wav")} loop volume={(f) => interpolate(f, [0, 4, durationInFrames - 20, durationInFrames], [0, 0.6, 0.6, 0], clamp)} />
+          <Audio src={staticFile("beat40.wav")} loop volume={(f) => interpolate(f, [0, 4, durationInFrames - 20, durationInFrames], [0, p.voice ? 0.16 : 0.6, p.voice ? 0.16 : 0.6, 0], clamp)} />
         </Interactive.Div>
       ) : null}
     </AbsoluteFill>

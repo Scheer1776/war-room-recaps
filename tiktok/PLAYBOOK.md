@@ -52,6 +52,11 @@ The goal is new War Room users, so every video ends by showing the app and "Link
   5. If a name or word is MISSING, add its phonemes to `voice/names.json` and re-run steps 3–4 (at most 3 tries).
   6. If it still fails, make the day **music-only**. Never ship a mispronounced name.
   7. Then run `./prep-vo.sh public/<dir>/vo` (it accepts mp3; convert wav with ffmpeg first).
+- **VoiceStudio "War Room Announcer" (owner's pick, 2026-10-29)** runs on the owner's PC (RTX 4060) in VoiceStudio with the
+  **VoxCPM2** engine (Apache-2.0, commercial OK). It's a saved clone profile made from an original VoxCPM2 voice design
+  (reference: `Documents-WarRoom/03_announcer.wav`). Only usable when the PC is on and linked; render one clip per scene,
+  save to `C:\Users\ms980\OneDrive\Desktop\Documents-WarRoom`, stage, then the same `check_names.py` + `prep-vo.sh` gate.
+  Never use VoiceStudio's default engine (OmniVoice) or anything with a red licence badge: CC-BY-NC, not for War Room.
 - ElevenLabs Larry is also checked: run `check_names.py` on his clips too. If a name is wrong there, fix the
   spelling in the script for the next voiced day (don't regenerate the same day).
 
@@ -112,6 +117,11 @@ and switch its row from *build* to the composition name.
   `public/beat40.wav` is the same original beat rendered 40s long (`beat.wav` is 30s with a fade-out, which dips when looped).
 - Verdict stamps must not cover the player's name. On a 470px card, put the stamp low-left over the form bars (they were
   already on screen for 4 beats) and let the loser card go grayscale; the winner card glows.
+- VoiceStudio voice design gives a different speaker on every render; lock a voice by cloning one good take into a profile.
+  VoxCPM2 ignores ALL CAPS emphasis (flatter, not louder); write normal punctuation and use "..." for a beat before verdicts.
+  Expressiveness check without listening: pitch SD in semitones (Larry ~5, the Announcer 3–4.6, flat TTS ~1.5).
+- `StartSit` takes `voice: true`: clips `<source>/vo/{hook,d1,d2,d3,cta}.mp3`, hook gets 9 beats, and duel lines are
+  delayed (≤1.5s) so the spoken verdict lands with the stamp.
 - Sleeper's projection rows carry `date`; check it for Thursday games. A player who plays tonight ("decide now") is a free urgency hook.
 
 ## Log
@@ -121,3 +131,4 @@ and switch its row from *build* to the composition name.
 | 2026-10-28 | Photo carousel (Waiver Heat stills) | 7 slides from WaiverHeat frames 140/345/503/632/778/871/1055; no voice |
 | 2026-10-28 | Waiver Heat (week 8) | Douglas FADE, Coleman ADD, Singletary TRAP (bye), Strange ADD, Tucker ADD |
 | 2026-10-29 | Start/Sit Showdown (week 8), NEW `StartSit` | No-voice (music-only). Cook START / Henry SIT, Daniels START / Young SIT (TNF), Cousins START / Mahomes SIT; hook "SIT MAHOMES?" + 3D coin flip |
+| 2026-10-29 | Start/Sit Showdown (week 8), voiced redo | First VoiceStudio video: War Room Announcer (VoxCPM2) on all 5 lines, names passed; music bed at 0.16 |
