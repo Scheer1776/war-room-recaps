@@ -1,6 +1,6 @@
 # War Room TikTok playbook
 
-A new marketing video every 3 days. Each run reads this file, picks a format it didn't use last time,
+A new marketing video every day (10:47am PT). Each run reads this file, picks a format it didn't use last time,
 builds and renders it, adds what it learned to **Learnings**, and logs it in **Log**.
 The goal is new War Room users, so every video ends by showing the app and "Link in bio".
 
@@ -25,6 +25,14 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 - Two renders every time: voice + beat, and voice only (the owner adds a trending sound in TikTok).
 - The caption is 1–2 punchy lines plus 4–6 hashtags (#fantasyfootball #fantasyfootballadvice #nfl
   #waiverwire #ff #fantasyfootballtips, rotating).
+
+## Daily cadence
+- Never repeat the previous day's format, and use no format more than twice in any 7 days.
+- Vary the hook type day to day: a big number, a hot take, a question, a "you're doing this wrong" line, or a quiz.
+- When a format clearly fits the calendar, use it: Mon–Tue blowups and recaps, Wed waivers, Thu–Sat start/sit and weather, Sun morning last-minute calls.
+- Make every caption different. Rotate the free-app angle into about every other caption, without naming competitor apps or using their hashtags:
+  "Trade analyzer, trade finder, start/sit, waivers. $0." / "Stop paying for fantasy advice." /
+  "The free fantasy app your league doesn't know about." / "Other apps charge $65 a year for this."
 
 ## Format rotation (pick the one used least recently that fits the calendar)
 | Format | Composition | Best days | Data |
