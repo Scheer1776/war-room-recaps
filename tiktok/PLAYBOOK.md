@@ -180,6 +180,15 @@ and switch its row from *build* to the composition name.
   `clips\build-clip-library.ps1` from `clips\wishlist.txt` (copies in tiktok/clips/). A run with the PC link: read
   index.tsv, stage the clip it needs, cut it with the square-over-blur treatment (see PlayerHype / henry-stiffarm-916.mp4).
   Without the PC link, no clips: fall back to photos. Never commit video files to the repo.
+- **Narrator style the owner wants (2026-10-30, ref: @youbuilddifferent "How a pit in your backyard becomes an ocean"):**
+  Voice: AI male narrator, mid-baritone (median ~124 Hz), very expressive (pitch SD ~6.9 semitones vs ~1.5 for flat TTS),
+  FAST: ~250 words/min while speaking, almost no gaps between sentences, only ~6 real pauses in 72 s (before twists).
+  Sits over a low music bed (~8 dB under the voice). Clean isolated samples: `Documents-WarRoom\voice-ref-clean-13s.wav`
+  (for cloning) and `voice-ref-clean-full.wav`.
+  Script shape matters as much as the voice: second person ("You dig a giant hole..."), one cause → consequence chain
+  told in short sentences, each step opened with "So," / "Then," / "But", escalation to a disaster, and a deadpan
+  twist close ("You just built an ocean. Well, kinda."). For War Room: "You start Mahomes. So, you..." chains, ending
+  on a deadpan line that lands on the app.
 - **Effects stack (2026-10-30):** `src/fx.tsx` wraps `@remotion/effects` (glow, chromatic aberration, shatter, light leak) through
   `HtmlInCanvas`, `@remotion/three` for the 3D phone, `@remotion/noise` particles. Needs `--gl=swangle` (set in remotion.config.ts;
   "angle" has no GPU here). `HtmlInCanvas` can't be nested (Chrome 153 in this image), so a shattering block uses CSS text-shadow glow, not `Neon`.
