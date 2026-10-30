@@ -190,7 +190,7 @@ export const RemotionRoot: React.FC = () => (
     fps={FPS}
     durationInFrames={1000}
     calculateMetadata={showcaseMeta}
-    defaultProps={{ source: "show1", voice: false, music: "bed", wx: { game: "ATL @ TB", wind: 15, pop: 63, passPct: 3.1 }, voDur: null }}
+    defaultProps={{ source: "show2", voice: true, music: "none", wx: { game: "ATL @ TB", wind: 15, pop: 63, passPct: 3.1 }, voDur: null, clips: { startsit: { file: "cook.mp4", key: 1.6 }, redzone: { file: "mahomes.mp4", key: 2.6 }, waivers: { file: "nabers.mp4", key: 2.0 } } }}
   />
   <Composition
     id="GameRecap"

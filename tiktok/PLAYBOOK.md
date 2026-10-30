@@ -230,6 +230,10 @@ and switch its row from *build* to the composition name.
   told in short sentences, each step opened with "So," / "Then," / "But", escalation to a disaster, and a deadpan
   twist close ("You just built an ocean. Well, kinda."). For War Room: "You start Mahomes. So, you..." chains, ending
   on a deadpan line that lands on the app.
+- **Showcase v2 (2026-10-30):** `PhoneScene` takes `clip` + `source`: the clip plays full-bleed under the headline, then tucks to
+  a 400 px card bottom-right as the phone lands; the stamp moves up/left when a clip is present. `prep-vo.sh` now keeps internal
+  pauses up to 0.8 s (it used to cut them to 0.28 s, which silently removed every beat pace.py added). The audit measures pauses
+  from the waveform, not whisper word edges (whisper smears a word over inserted silence and reports a 0 s gap).
 - **Effects stack (2026-10-30):** `src/fx.tsx` wraps `@remotion/effects` (glow, chromatic aberration, shatter, light leak) through
   `HtmlInCanvas`, `@remotion/three` for the 3D phone, `@remotion/noise` particles. Needs `--gl=swangle` (set in remotion.config.ts;
   "angle" has no GPU here). `HtmlInCanvas` can't be nested (Chrome 153 in this image), so a shattering block uses CSS text-shadow glow, not `Neon`.
@@ -255,4 +259,5 @@ and switch its row from *build* to the composition name.
 | 2026-10-29 | Photo carousel, NEW Weather game alert (`WeatherSlides`, week 8) | No-voice, 7 slides. Hook "−0.5" (Mayfield, ATL@TB storm game); board 3 domes / 8 clear / 3 hits; TB START 'EM ANYWAY, MIA IGNORE THE RAIN ICON, JAX NON-FACTOR; 11/14 PLAY YOUR GUYS |
 | 2026-10-30 | Showcase (features, NEW `Showcase`) | Voiced: War Room Announcer (VoiceStudio), voice-only (owner dropped the beat mix). QR + URL closer. $65→$0 shatter, 3D phones, 10,000-season swarm |
 | 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |
+| 2026-10-30 | Showcase v2 (9 features; NEW Start/Sit + Waivers scenes; clip layer) | Voiced: War Room Narrator (first full video), voice-only. Clips: Cook 41-yd TD, Mahomes truck-stick TD, Nabers moss (clip-library). Audit PASS (pace WARN: fast mid-line flow, by design) |
 | 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |

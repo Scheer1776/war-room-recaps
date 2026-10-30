@@ -120,11 +120,24 @@ def check_voice(vo, script, names):
     s2h = {}
     for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, toks, hw, autojunk=False).get_opcodes():
         for k in range(i2 - i1): s2h[i1 + k] = (j1 + min(k, j2 - j1 - 1)) if j2 > j1 else None
+    # measure real silence from the waveform (whisper's word edges smear over inserted silence)
+    import librosa, tempfile
+    wav = vo
+    if str(vo).lower().endswith((".mp4", ".mov", ".webm", ".mkv")):
+        wav = pathlib.Path(tempfile.mkdtemp()) / "vo.wav"; subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(vo), "-vn", "-ac", "1", "-ar", "16000", str(wav)], check=True)
+    y, sr = librosa.load(str(wav), sr=16000); hop = 160
+    db = 20 * np.log10(librosa.feature.rms(y=y, frame_length=400, hop_length=hop)[0] + 1e-9)
+    floor = np.percentile(db, 20); thr = max(floor + 8, db.max() - 38)
+    def longest_quiet(t0, t1):
+        a, b = int(t0 * sr / hop), int(t1 * sr / hop); q = db[a:b] < thr
+        best = run = 0
+        for v in q: run = run + 1 if v else 0; best = max(best, run)
+        return best * hop / sr
     short_beats, short_sent = [], []
     for si, g in sorted(need.items()):
         hi = s2h.get(si)
         if hi is None or hi >= len(words) - 1: continue
-        have = words[hi + 1].start - words[hi].end
+        have = longest_quiet(words[hi].start + 0.05, words[hi + 1].end)
         if have + 1e-3 < g: (short_beats if g >= 0.45 else short_sent).append(f"after '{words[hi].word.strip()}' {have:.2f}s")
     st = "FAIL" if short_beats or dead or not (130 <= wpm <= 270) else ("WARN" if short_sent else "PASS")
     msg = f"{wpm:.0f} wpm; beats before twists: {'OK' if not short_beats else 'MISSING ' + '; '.join(short_beats)}"

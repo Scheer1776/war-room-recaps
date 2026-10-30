@@ -1,0 +1,38 @@
+{
+ "video": "out/showcase-v2.mp4",
+ "audio": "voice",
+ "script": "You pay sixty-five dollars a year for a fantasy app. Then you find out this one does it all... for free. You want a trade. So, it searches every roster in your league, and finds deals the other guy actually says yes to. You're stuck on a coin flip. So, it breaks the tie with real numbers. Start Cook. Sit Henry. Decided. Sunday hits. It shows you every game live, and exactly which of your players are on the field, right now. Then, it plays your season ten thousand times... and tells you your playoff odds, every single week. Wind, rain and cold are baked into every projection. One tap, and your best lineup is set. Waiver night. It shows you who everyone's adding, and who's a trap. And when the week's over, it makes a forty-five second recap video, right on your phone. Send it to the group chat. War Room. Any ESPN or Sleeper league. Free. Well... obviously.",
+ "names": [
+  "ESPN",
+  "Sleeper",
+  "Cook",
+  "Henry"
+ ],
+ "endCard": 3.5,
+ "clips": [
+  {
+   "src": "public/show2/cook.mp4",
+   "at": 11.25,
+   "dur": 2.8,
+   "clipStart": 0,
+   "keyAt": 1.6,
+   "label": "Cook"
+  },
+  {
+   "src": "public/show2/mahomes.mp4",
+   "at": 17.19,
+   "dur": 3.8,
+   "clipStart": 0,
+   "keyAt": 2.6,
+   "label": "Mahomes"
+  },
+  {
+   "src": "public/show2/nabers.mp4",
+   "at": 34.18,
+   "dur": 3.2,
+   "clipStart": 0,
+   "keyAt": 2.0,
+   "label": "Nabers"
+  }
+ ]
+}

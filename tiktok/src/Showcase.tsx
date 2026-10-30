@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Interactive, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Interactive, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { z } from "zod";
 import { BODY, C, DISPLAY, Field, Glass, SAFE, AppLink } from "./theme";
@@ -14,6 +14,8 @@ export const showcaseSchema = z.object({
   // Real weather numbers from scripts/weather.mjs (the one flagged game of the week).
   wx: z.object({ game: z.string(), wind: z.number(), pop: z.number(), passPct: z.number() }),
   voDur: z.record(z.string(), z.number()).nullable(),
+  // Optional real game clips: scene id -> { file under public/<source>/, hold = seconds of clip before the phone slides back }
+  clips: z.record(z.string(), z.object({ file: z.string(), key: z.number() })).nullable().default(null),
 });
 export type ShowcaseProps = z.infer<typeof showcaseSchema>;
 
@@ -21,10 +23,10 @@ const FPS = 30;
 // lightLeak() hue shift that turns the stock leak into the house green/gold.
 const HUE = 0;
 export const SCENES = [
-  { id: "hook", base: 4.2 }, { id: "finder", base: 5.2 }, { id: "redzone", base: 4.8 }, { id: "odds", base: 5.2 },
-  { id: "weather", base: 5.2 }, { id: "recap", base: 5 }, { id: "cta", base: 5.6 },
+  { id: "hook", base: 4.2 }, { id: "finder", base: 5.2 }, { id: "startsit", base: 5.0 }, { id: "redzone", base: 4.8 }, { id: "odds", base: 5.2 },
+  { id: "weather", base: 5.2 }, { id: "waivers", base: 4.8 }, { id: "recap", base: 5 }, { id: "cta", base: 5.6 },
 ];
-const secs = (p: ShowcaseProps, s: { id: string; base: number }) => { const d = p.voice && p.voDur ? p.voDur[s.id] : undefined; return d ? Math.max(s.base, d + (s.id === "cta" ? 1.0 : 0.6)) : s.base; };
+const secs = (p: ShowcaseProps, s: { id: string; base: number }) => { const d = p.voice && p.voDur ? p.voDur[s.id] : undefined; return d ? Math.max(s.id === "cta" ? 5.6 : 3.8, d + (s.id === "cta" ? 1.2 : 0.35)) : s.base; };
 export const showcaseFrames = (p: ShowcaseProps) => SCENES.reduce((n, s) => n + Math.round(secs(p, s) * FPS), 0);
 
 const L = SAFE.left, R = SAFE.right, T = SAFE.top;
@@ -78,10 +80,11 @@ const Hook: React.FC<{ dur: number }> = ({ dur }) => {
 };
 
 // Phone scene scaffold: kicker, 3D phone swinging in from the right, captions under the safe top.
-const PhoneScene: React.FC<{ i: number; kicker: string; color: string; shot: string; crop?: number; lines: [string, string]; stamp?: string; children?: React.ReactNode; dur: number }> = ({ i, kicker, color, shot, crop = 0.6, lines, stamp, children, dur }) => {
+const PhoneScene: React.FC<{ i: number; kicker: string; color: string; shot: string; crop?: number; lines: [string, string]; stamp?: string; children?: React.ReactNode; dur: number; clip?: { file: string; key: number } | null; source?: string }> = ({ i, kicker, color, shot, crop = 0.6, lines, stamp, children, dur, clip, source }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const inn = spring({ frame: f - 2, fps, config: { damping: 16, stiffness: 70, mass: 1.1 } });
+  const phoneAt = clip ? Math.min(Math.round(dur * 0.55), Math.round((clip.key + 1.2) * fps)) : 2;
+  const inn = spring({ frame: f - phoneAt, fps, config: { damping: 16, stiffness: 70, mass: 1.1 } });
   const yaw = -1.3 + 1.05 * inn + Math.sin(f / 26) * 0.08;
   const y = (1 - inn) * -2.5 + Math.sin(f / 22) * 0.05;
   const stampAt = Math.round(dur * 0.62);
@@ -89,6 +92,7 @@ const PhoneScene: React.FC<{ i: number; kicker: string; color: string; shot: str
     <AbsoluteFill>
       <Field /><Glow color={color} y="100%" o={0.28} />
       <Particles n={40} color={color} seed={kicker} speed={1.2} size={7} opacity={0.6} />
+      {clip && source ? <Sequence from={0} layout="none"><ClipLayer source={source} clip={clip} color={color} dur={dur} /></Sequence> : null}
       <Kicker text={kicker} i={i} n={SCENES.length - 2} color={color} top={T - 50} left={L} right={R} />
       <div style={{ position: "absolute", top: T, left: L, right: R }}>
         <Kinetic text={lines[0]} at={4} size={96} align="left" accent={color} />
@@ -96,7 +100,7 @@ const PhoneScene: React.FC<{ i: number; kicker: string; color: string; shot: str
       </div>
       <Phone3D src={shot} yaw={yaw} pitch={0.1} y={y} scale={1.0} crop={crop} glowColor={color} height={1250} style={{ top: 540, left: -190 }} />
       {children}
-      {stamp ? <div style={{ position: "absolute", left: L, right: R, top: 1330, display: "flex", justifyContent: "center" }}><Stamp text={stamp} color={color} at={stampAt} size={Math.min(96, Math.floor(820 / (stamp.length * 0.5)))} /></div> : null}
+      {stamp ? <div style={{ position: "absolute", left: L, right: clip ? 480 : R, top: clip ? 1250 : 1330, display: "flex", justifyContent: "center" }}><Stamp text={stamp} color={color} at={stampAt} size={Math.min(96, Math.floor(820 / (stamp.length * 0.5)))} /></div> : null}
       <Flash at={0} peak={0.5} />
     </AbsoluteFill>
   );
@@ -121,13 +125,66 @@ const Finder: React.FC<{ dur: number }> = ({ dur }) => {
   );
 };
 
+// Start/Sit: two player cards on the phone, a coin that flips and lands, START stamps.
+const StartSit: React.FC<{ p: ShowcaseProps; dur: number }> = ({ p, dur }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const flip = interpolate(f, [10, 52], [0, 6 * Math.PI], clamp);
+  const land = spring({ frame: f - 52, fps, config: { damping: 10, stiffness: 180 } });
+  const rows = [["COOK", "22.6", true], ["HENRY", "10.1", false]];
+  return (
+    <PhoneScene i={1} kicker="Start / Sit" color={C.turf} shot="app/startsit-vp.png" crop={0.72} clip={p.clips?.startsit} source={p.source} lines={["STOP FLIPPING *COINS*", "EVERY TIE, BROKEN WITH NUMBERS"]} stamp="DECIDED." dur={dur}>
+      <div style={{ position: "absolute", left: 600, top: 980, width: 150, height: 150, borderRadius: 75, background: `radial-gradient(circle at 35% 35%, #fff2a8, ${C.gold} 55%, #a3771a)`, boxShadow: `0 20px 50px -10px rgba(0,0,0,0.8), 0 0 50px ${C.gold}66`, transform: `rotateX(${flip}rad) scale(${0.8 + 0.2 * land})`, display: "grid", placeItems: "center", fontFamily: DISPLAY, fontWeight: 800, fontSize: 64, color: "#3a2a05", opacity: f < 60 ? 1 : interpolate(f, [60, 72], [1, 0], clamp) }}>?</div>
+      <div style={{ position: "absolute", left: 560, top: 1000, display: "flex", flexDirection: "column", gap: 16, opacity: interpolate(f, [62, 72], [0, 1], clamp) }}>
+        {rows.map(([n, v, ok], k) => (
+          <div key={k} style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: DISPLAY, fontWeight: 800, color: C.ink, fontSize: 40, translate: `${(1 - spring({ frame: f - 64 - k * 8, fps, config: { damping: 14, stiffness: 150 } })) * 400}px 0` }}>
+            <span style={{ padding: "4px 14px", borderRadius: 10, background: ok ? C.turf : C.red, color: "#04110B", fontSize: 30 }}>{ok ? "START" : "SIT"}</span>{n}<span style={{ color: C.dim, fontSize: 32 }}>avg {v}</span>
+          </div>
+        ))}
+      </div>
+    </PhoneScene>
+  );
+};
+
+// Waivers: trending-adds counter spinning up and a heat bar filling, "2.4M added" style.
+const Waivers: React.FC<{ p: ShowcaseProps; dur: number }> = ({ p, dur }) => {
+  const f = useCurrentFrame();
+  const adds = useCount(14, 50, 2400000);
+  const heat = interpolate(f, [20, 70], [0, 1], { ...clamp, easing: (x) => 1 - Math.pow(1 - x, 3) });
+  return (
+    <PhoneScene i={5} kicker="Waiver wire" color={C.pylon} shot="app/app-waivers.png" crop={0.7} clip={p.clips?.waivers} source={p.source} lines={["WHO EVERYONE'S *ADDING*", "AND WHO'S A TRAP"]} stamp="ADD · FADE · TRAP" dur={dur}>
+      <div style={{ position: "absolute", right: R, top: 1010, textAlign: "right" }}>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 120, lineHeight: 0.9, color: C.pylon, fontVariantNumeric: "tabular-nums" }}>{(adds / 1e6).toFixed(1)}M</div>
+        <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 30, letterSpacing: 4, color: C.dim }}>ADDS THIS WEEK</div>
+        <div style={{ marginTop: 18, width: 380, height: 16, borderRadius: 8, background: "rgba(255,255,255,0.12)", overflow: "hidden", marginLeft: "auto" }}><div style={{ width: `${heat * 100}%`, height: "100%", background: `linear-gradient(90deg, ${C.gold}, ${C.pylon}, ${C.red})` }} /></div>
+      </div>
+    </PhoneScene>
+  );
+};
+
+// Real game clip for a feature scene: full-bleed for the first part of the scene, then it tucks into a card so the phone can land.
+const ClipLayer: React.FC<{ source: string; clip: { file: string; key: number }; color: string; dur: number }> = ({ source, clip, color, dur }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const tuckAt = Math.min(Math.round(dur * 0.55), Math.round((clip.key + 1.2) * fps));
+  const t = spring({ frame: f - tuckAt, fps, config: { damping: 18, stiffness: 90 } });
+  const w = interpolate(t, [0, 1], [1080, 400]), h = interpolate(t, [0, 1], [1920, 400]);
+  const x = interpolate(t, [0, 1], [0, 1080 - SAFE.right - 400]), y = interpolate(t, [0, 1], [0, 1400]);
+  return (
+    <div style={{ position: "absolute", left: x, top: y, width: w, height: h, borderRadius: t * 40, overflow: "hidden", boxShadow: t > 0.1 ? `0 0 0 4px ${color}, 0 40px 80px -30px rgba(0,0,0,0.9)` : undefined, zIndex: 2 }}>
+      <OffthreadVideo src={staticFile(`${source}/${clip.file}`)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      <div style={{ position: "absolute", inset: 0, background: `linear-gradient(180deg, rgba(4,17,11,${0.55 * (1 - t)}) 0%, transparent 30%, transparent 70%, rgba(4,17,11,${0.6 * (1 - t)}) 100%)` }} />
+    </div>
+  );
+};
+
 // Red Zone: a pulsing live badge and "on the field" chips sliding in from the left.
-const RedZone: React.FC<{ dur: number }> = ({ dur }) => {
+const RedZone: React.FC<{ p: ShowcaseProps; dur: number }> = ({ p, dur }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const chips = ["YOUR RB · 1st & goal", "THEIR WR · red zone", "YOUR QB · 2-min drill"];
   return (
-    <PhoneScene i={1} kicker="Red Zone · live" color={C.red} shot="app/redzone-vp.png" crop={0.7} lines={["EVERY GAME *LIVE*", "WHO'S ON THE FIELD RIGHT NOW"]} stamp="NEVER MISS A TD" dur={dur}>
+    <PhoneScene i={2} kicker="Red Zone · live" color={C.red} shot="app/redzone-vp.png" crop={0.7} clip={p.clips?.redzone} source={p.source} lines={["EVERY GAME *LIVE*", "WHO'S ON THE FIELD RIGHT NOW"]} stamp="NEVER MISS A TD" dur={dur}>
       <div style={{ position: "absolute", left: 540, top: 1040, display: "flex", flexDirection: "column", gap: 14 }}>
         {chips.map((c, k) => {
           const s = spring({ frame: f - 30 - k * 9, fps, config: { damping: 13, stiffness: 160 } });
@@ -148,7 +205,7 @@ const Odds: React.FC<{ dur: number }> = ({ dur }) => {
   return (
     <AbsoluteFill>
       <Field /><Glow color={C.slate} y="0%" o={0.25} />
-      <Kicker text="Playoff odds" i={2} n={SCENES.length - 2} color={C.slate} top={T - 50} left={L} right={R} />
+      <Kicker text="Playoff odds" i={3} n={SCENES.length - 2} color={C.slate} top={T - 50} left={L} right={R} />
       <AbsoluteFill style={{ translate: useShake(44, 18) }}>
         <Neon height={330} color={C.slate} radius={44} intensity={1.5} split={done ? 0 : 6} style={{ top: T - 20, left: 0 }}>
           <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", fontFamily: DISPLAY, fontWeight: 800, fontSize: 290, lineHeight: 0.9, color: C.ink, fontVariantNumeric: "tabular-nums", letterSpacing: -6 }}>{Math.round(n).toLocaleString("en-US")}</div>
@@ -180,7 +237,7 @@ const Weather: React.FC<{ p: ShowcaseProps; dur: number }> = ({ p, dur }) => {
   const wind = useCount(8, 26, p.wx.wind), pct = useCount(30, 24, p.wx.passPct);
   const rain = Array.from({ length: 50 }, (_, i) => i);
   return (
-    <PhoneScene i={3} kicker={`Weather · ${p.wx.game}`} color={C.slate} shot="app/matchup-vp.png" crop={0.7} lines={["WIND. RAIN. COLD.", "BAKED INTO *EVERY* PROJECTION"]} stamp="ONE TAP. BEST LINEUP" dur={dur}>
+    <PhoneScene i={4} kicker={`Weather · ${p.wx.game}`} color={C.slate} shot="app/matchup-vp.png" crop={0.7} lines={["WIND. RAIN. COLD.", "BAKED INTO *EVERY* PROJECTION"]} stamp="ONE TAP. BEST LINEUP" dur={dur}>
       <AbsoluteFill style={{ pointerEvents: "none", opacity: 0.5 }}>
         {rain.map(i => { const y = ((f * 26 + i * 97) % 2100) - 100, x = (i * 131) % W; return <div key={i} style={{ position: "absolute", left: x, top: y, width: 3, height: 70, background: `linear-gradient(${C.slate}, transparent)`, rotate: "12deg" }} />; })}
       </AbsoluteFill>
@@ -200,7 +257,7 @@ const Recap: React.FC<{ dur: number }> = ({ dur }) => {
   const { fps } = useVideoConfig();
   const bubbles = [{ t: "who's making the recap this week", me: false, at: 24 }, { t: "▶ War Room · Week 8 recap · 0:45", me: true, at: 42, video: true }, { t: "bro it roasted my bench 💀", me: false, at: 66 }];
   return (
-    <PhoneScene i={4} kicker="Recap video" color={C.pylon} shot="app/home-vp.png" crop={0.7} lines={["A 45-SECOND RECAP VIDEO", "MADE ON YOUR PHONE. SEND IT."]} stamp="GROUP CHAT GOLD" dur={dur}>
+    <PhoneScene i={6} kicker="Recap video" color={C.pylon} shot="app/home-vp.png" crop={0.7} lines={["A 45-SECOND RECAP VIDEO", "MADE ON YOUR PHONE. SEND IT."]} stamp="GROUP CHAT GOLD" dur={dur}>
       <div style={{ position: "absolute", left: 470, right: R, top: 980, display: "flex", flexDirection: "column", gap: 14 }}>
         {bubbles.map((b, k) => {
           const s = spring({ frame: f - b.at, fps, config: { damping: 12, stiffness: 180 } });
@@ -245,8 +302,8 @@ export const Showcase: React.FC<ShowcaseProps> = (p) => {
   const { durationInFrames } = useVideoConfig();
   let from = 0;
   const seqs = SCENES.map((s) => { const d = Math.round(secs(p, s) * FPS); const x = { ...s, from, d }; from += d; return x; });
-  const body = (id: string, d: number) => id === "hook" ? <Hook dur={d} /> : id === "finder" ? <Finder dur={d} /> : id === "redzone" ? <RedZone dur={d} /> : id === "odds" ? <Odds dur={d} />
-    : id === "weather" ? <Weather p={p} dur={d} /> : id === "recap" ? <Recap dur={d} /> : <Cta dur={d} />;
+  const body = (id: string, d: number) => id === "hook" ? <Hook dur={d} /> : id === "finder" ? <Finder dur={d} /> : id === "startsit" ? <StartSit p={p} dur={d} /> : id === "redzone" ? <RedZone p={p} dur={d} /> : id === "odds" ? <Odds dur={d} />
+    : id === "weather" ? <Weather p={p} dur={d} /> : id === "waivers" ? <Waivers p={p} dur={d} /> : id === "recap" ? <Recap dur={d} /> : <Cta dur={d} />;
   return (
     <AbsoluteFill style={{ background: "#04110B" }}>
       {seqs.map(s => (
