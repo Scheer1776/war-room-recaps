@@ -8,6 +8,7 @@ import { StartSit, StartSitProps, startSitFrames, startSitSchema } from "./Start
 import { Showcase, ShowcaseProps, showcaseFrames, showcaseSchema } from "./Showcase";
 import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./GameRecap";
 import { BrollExample, PlayAnimExample } from "./Examples";
+import { RankSlides, RankProps, rankSchema, rankSlides } from "./RankSlides";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
 
 const showcaseMeta: CalculateMetadataFunction<ShowcaseProps> = async ({ props }) => {
@@ -62,6 +63,19 @@ const calculateMetadata: CalculateMetadataFunction<Props> = async ({ props }) =>
   return { props: p, durationInFrames: totalFrames(p) };
 };
 
+const rankMeta: CalculateMetadataFunction<RankProps> = async ({ props }) => {
+  await fontsReady;
+  const d = await fetch(staticFile(`${props.source}/rankings.json`)).then((r) => r.json());
+  const key = props.metricKey;
+  let pages = props.pages, risers = props.risers;
+  if (!pages.length) {
+    const rows = key === "value" ? d.tradeValue : d.weekRank[props.sub.split(" ")[0]] || d.tradeValue;
+    pages = [{ heading: "1–10", rows: rows.slice(0, 10) }, { heading: "11–20", rows: rows.slice(10, 20) }];
+    risers = { heading: "STOCK UP · last 3 weeks vs season", rows: d.risers.slice(0, 6) };
+  }
+  const p = { ...props, pages, risers, week: d.week };
+  return { props: p, durationInFrames: rankSlides(p), fps: 1 };
+};
 export const RemotionRoot: React.FC = () => (
   <>
   <Composition
@@ -190,5 +204,7 @@ export const RemotionRoot: React.FC = () => (
   <Composition id="BrollExample" component={BrollExample} fps={30} width={1080} height={1920} durationInFrames={300} defaultProps={{ src: null }} />
   <Composition id="PlayAnimExample" component={PlayAnimExample} fps={30} width={1080} height={1920} durationInFrames={300}
     defaultProps={{ nfl: "GB", opp: "CAR", player: "Matthew Golden", num: 0, stat: "13 targets · 79 yds · TD", stamp: "BUY BEFORE YOUR LEAGUE NOTICES." }} />
+  <Composition id="RankSlides" component={RankSlides} fps={1} width={1080} height={1920} durationInFrames={5} schema={rankSchema} calculateMetadata={rankMeta}
+    defaultProps={{ source: "rank9", title: ["TRADE", "VALUE"], sub: "Week 8 · RB / WR / TE", metric: "VALUE", metricKey: "value", pages: [], risers: null, appShot: "app/finder-vp.png", week: 8 }} />
   </>
 );

@@ -103,6 +103,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | Weekly league recap: blunders, MVP, scores, playoff odds | `WeeklyTikTok` | Tue | recap.json from the recap-data workflow, `anonymize: true` |
 | Start/Sit showdown: coin-flip pairs (projections within 0.3), tiebreaker = last-3-weeks form, START / SIT stamps | `StartSit` | Thu–Sat | `scripts/startsit.mjs` (Sleeper projections + last 3 weeks of stats) |
 | Bench-points shame: "you left X on your bench" + the app's max-lineup feature | *build* | Mon–Tue | recap.json bench data (anonymized) |
+| **Rank Slides** (ranked-list carousel, like @fantasyteamup's "TRADE VALUE" / "WEEK N RANKINGS" / "STOCK UP" posts): cover with the #1 player's jersey tile and a two-word title, two slides of 10 ranked rows (jersey tile, name, pos·team, number + bar, trend arrow), a risers slide, the app slide | `RankSlides` (carousel; one frame = one slide; `metricKey` value/proj/avg; `sub` starting with a position, e.g. "WR · Week 9", picks that position's weekly ranking) | any day, 2–3 a week in rotation with the other carousels: trade value (Tue/Wed), position rankings (Thu/Fri), stock up/down (Mon) | `scripts/rankings.mjs public/<dir>` (Sleeper season stats + projections; value = 0.45·season avg + 0.3·last-3 + 0.25·this-week proj, 99 = best flex asset) |
 | Weather game alert: weather board of every game, one slide per flagged game (proj → with weather), verdict | `WeatherSlides` (carousel; one frame = one slide) | Thu–Sat | `scripts/weather.mjs <war-room-web> public/<dir>` (the app's lib/weather.js + Sleeper projections) |
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
 | Feature demo: screen tour of one app tool on a phone mockup | *build* (see `Showcase` for the 3D phone) | any | mock server screenshots/recordings |
@@ -157,6 +158,7 @@ and switch its row from *build* to the composition name.
   lib/weather.js silently falls back to ESPN's text forecast and no multipliers come out: check the output has `{"QB":...}` lines.
 - A "nothing to fear" week is still content: lead with how small the worst hit is (−0.5 pts) and stamp IGNORE / PLAY YOUR GUYS.
   The forecast's rain % and inches disagree often (MIA 82% but <0.1 in); that gap is a good "twist" line.
+- Rank Slides tables: 10 rows of 86 px from top 500 end at 1460, the footnote sits at 1530 (under TikTok's caption only on long captions). Never name a React prop `key` (React eats it; it cost a render).
 - Carousel stills: put stamps in their own band under the data card (top ~1300); stamps overlapping the last data row hid a name.
 
 - **Owner decisions (2026-10-30):** no more voice+beat mix; every video is voice-only (owner adds a TikTok sound). Every closer
