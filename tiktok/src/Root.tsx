@@ -205,6 +205,6 @@ export const RemotionRoot: React.FC = () => (
   <Composition id="PlayAnimExample" component={PlayAnimExample} fps={30} width={1080} height={1920} durationInFrames={300}
     defaultProps={{ nfl: "GB", opp: "CAR", player: "Matthew Golden", num: 0, stat: "13 targets · 79 yds · TD", stamp: "BUY BEFORE YOUR LEAGUE NOTICES." }} />
   <Composition id="RankSlides" component={RankSlides} fps={1} width={1080} height={1920} durationInFrames={5} schema={rankSchema} calculateMetadata={rankMeta}
-    defaultProps={{ source: "rank9", title: ["TRADE", "VALUE"], sub: "Week 8 · RB / WR / TE", metric: "VALUE", metricKey: "value", pages: [], risers: null, appShot: "app/finder-vp.png", week: 8 }} />
+    defaultProps={{ source: "rank9", title: ["TRADE", "VALUE"], sub: "Week 8 · RB / WR / TE", metric: "VALUE", metricKey: "value", pages: [], risers: null, appShot: "app/finder-vp.png", week: 8, photos: true }} />
   </>
 );

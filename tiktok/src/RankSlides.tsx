@@ -18,19 +18,28 @@ export const rankSchema = z.object({
   risers: z.object({ heading: z.string(), rows: z.array(row) }).nullable(),
   appShot: z.string(),
   week: z.number(),
+  photos: z.boolean(), // real headshots from public/<source>/h/<id>.jpg (owner's call, 2026-10-30)
 });
 export type RankProps = z.infer<typeof rankSchema>;
 export const rankSlides = (p: RankProps) => 1 + p.pages.length + (p.risers ? 1 : 0) + 1;
 
 const Wd = 1080 - SAFE.left - SAFE.right;
-const Jersey: React.FC<{ r: Row; size: number; glow?: boolean }> = ({ r, size, glow }) => {
+const Jersey: React.FC<{ r: Row; size: number; glow?: boolean; photo?: string | null }> = ({ r, size, glow, photo }) => {
   const col = teamColor(r.nfl);
   return (
-    <div style={{ width: size, height: size, borderRadius: size * 0.22, background: `linear-gradient(160deg, ${col}, ${col}99)`, display: "grid", placeItems: "center", boxShadow: glow ? `0 0 ${size * 0.5}px ${col}88, inset 0 0 0 3px rgba(255,255,255,0.25)` : "inset 0 0 0 2px rgba(255,255,255,0.2)", flex: "none" }}>
-      <span style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: size * 0.56, color: "#fff", lineHeight: 1, textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>{r.num ?? r.pos}</span>
+    <div style={{ width: size, height: size, borderRadius: size * 0.22, background: `linear-gradient(160deg, ${col}, ${col}99)`, display: "grid", placeItems: "center", boxShadow: glow ? `0 0 ${size * 0.5}px ${col}88, inset 0 0 0 3px rgba(255,255,255,0.25)` : "inset 0 0 0 2px rgba(255,255,255,0.2)", flex: "none", position: "relative", overflow: "hidden" }}>
+      {photo ? (
+        <>
+          <Img src={photo} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 12%", transform: "scale(1.15)", transformOrigin: "50% 30%" }} />
+          <span style={{ position: "absolute", right: size * 0.06, bottom: size * 0.03, fontFamily: DISPLAY, fontWeight: 800, fontSize: size * 0.26, color: "#fff", lineHeight: 1, textShadow: "0 2px 8px rgba(0,0,0,0.8)" }}>{r.num ?? ""}</span>
+        </>
+      ) : (
+        <span style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: size * 0.56, color: "#fff", lineHeight: 1, textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>{r.num ?? r.pos}</span>
+      )}
     </div>
   );
 };
+const photoOf = (p: RankProps, r: Row) => (p.photos ? staticFile(`${p.source}/h/${r.id}.jpg`) : null);
 const Arrow: React.FC<{ t: string }> = ({ t }) => <span style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 34, color: t === "up" ? C.turf : t === "down" ? C.red : C.dim }}>{t === "up" ? "▲" : t === "down" ? "▼" : "—"}</span>;
 
 const Header: React.FC<{ p: RankProps; heading: string; i: number; n: number }> = ({ p, heading, i, n }) => (
@@ -53,7 +62,7 @@ const Table: React.FC<{ p: RankProps; rows: Row[]; start: number }> = ({ p, rows
       {rows.map((r, i) => (
         <Glass key={r.id} style={{ display: "grid", gridTemplateColumns: "70px 96px 1fr 150px 60px", gap: 14, alignItems: "center", padding: "10px 16px", marginBottom: 10, height: 86 }}>
           <span style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 52, color: start + i <= 3 ? C.gold : C.ink }}>{start + i}</span>
-          <Jersey r={r} size={72} />
+          <Jersey r={r} size={72} photo={photoOf(p, r)} />
           <div style={{ minWidth: 0 }}>
             <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 42, lineHeight: 1, color: C.ink, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.n.toUpperCase()}</div>
             <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.dim, marginTop: 4 }}>{r.pos} · {r.nfl}{p.metricKey === "proj" ? ` · ${r.opp}` : ` · avg ${r.avg}`}</div>
@@ -80,7 +89,12 @@ export const RankSlides: React.FC<RankProps> = (p) => {
       <>
         <AbsoluteFill style={{ background: `radial-gradient(900px 900px at 50% 42%, ${col}55, transparent 70%)` }} />
         <div style={{ position: "absolute", top: 330, left: 0, width: 1080, display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <Jersey r={top} size={520} glow />
+          {p.photos ? (
+            <div style={{ width: 760, height: 560, position: "relative" }}>
+              <div style={{ position: "absolute", left: 130, top: 60, width: 500, height: 500, borderRadius: 250, background: `radial-gradient(circle, ${col} 0%, ${col}66 55%, transparent 72%)`, filter: "blur(10px)" }} />
+              <Img src={photoOf(p, top)!} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", objectPosition: "50% 100%", filter: "drop-shadow(0 30px 50px rgba(0,0,0,0.7))" }} />
+            </div>
+          ) : <Jersey r={top} size={520} glow />}
           <div style={{ marginTop: 26, fontFamily: DISPLAY, fontWeight: 800, fontSize: 60, color: C.ink }}>{top.n.toUpperCase()}</div>
           <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 32, color: C.dim }}>#1 · {top.pos} · {top.nfl} · {p.metric} {top[p.metricKey]}</div>
         </div>
@@ -103,7 +117,7 @@ export const RankSlides: React.FC<RankProps> = (p) => {
         <div style={{ position: "absolute", top: 520, left: SAFE.left, width: Wd }}>
           {p.risers.rows.map((r) => (
             <Glass key={r.id} style={{ display: "grid", gridTemplateColumns: "96px 1fr 260px", gap: 16, alignItems: "center", padding: "14px 18px", marginBottom: 14 }}>
-              <Jersey r={r} size={76} />
+              <Jersey r={r} size={76} photo={photoOf(p, r)} />
               <div><div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 44, lineHeight: 1, color: C.ink }}>{r.n.toUpperCase()}</div><div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.dim, marginTop: 4 }}>{r.pos} · {r.nfl} · season avg {r.avg}</div></div>
               <div style={{ textAlign: "right", fontFamily: DISPLAY, fontWeight: 800, fontSize: 44, color: C.turf }}>{r.avg} → {r.l3}<div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 24, color: C.dim }}>LAST 3 WEEKS</div></div>
             </Glass>

@@ -47,6 +47,10 @@ const tradeValue = flex.slice(0, 20).map(r => ({ ...strip(r), value: Math.round(
 const weekRank = Object.fromEntries(POS.map(P => [P, healthy.filter(r => r.pos === P && r.opp !== "BYE").sort((a, b) => b.proj - a.proj).slice(0, 20).map(strip)]));
 const risers = healthy.filter(r => r.pos !== "QB" && r.l3 - r.avg >= 4 && r.avg >= 6).sort((a, b) => (b.l3 - b.avg) - (a.l3 - a.avg)).slice(0, 10).map(strip);
 const fallers = healthy.filter(r => r.pos !== "QB" && r.avg - r.l3 >= 4 && r.avg >= 10).sort((a, b) => (b.avg - b.l3) - (a.avg - a.l3)).slice(0, 10).map(strip);
+// headshots for everyone on the slides (Sleeper CDN; transparent PNGs)
+mkdirSync(`${out}/h`, { recursive: true });
+const want = new Set([...tradeValue, ...risers, ...fallers, ...Object.values(weekRank).flat()].map(r => r.id));
+await Promise.all([...want].map(async id => { try { const b = await fetch(`https://sleepercdn.com/content/nfl/players/${id}.jpg`); if (b.ok) writeFileSync(`${out}/h/${id}.jpg`, Buffer.from(await b.arrayBuffer())); } catch {} }));
 writeFileSync(`${out}/rankings.json`, JSON.stringify({ season, week, through: last, builtAt: new Date().toISOString(), tradeValue, weekRank, risers, fallers }, null, 1));
 console.log(`week ${week} (stats through ${last})\nTRADE VALUE: ` + tradeValue.slice(0, 12).map(r => `${r.n} ${r.pos} ${r.nfl} ${r.value} (${r.avg}/${r.l3}/${r.proj})`).join(" | "));
 console.log("RISERS: " + risers.slice(0, 6).map(r => `${r.n} ${r.avg}→${r.l3}`).join(" | "));

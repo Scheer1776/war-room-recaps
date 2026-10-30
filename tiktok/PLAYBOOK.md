@@ -9,8 +9,10 @@ The goal is new War Room users, so every video ends by showing the app and "Link
 - **No real fantasy-league names.** No team names or league names from the owner's ESPN league (several are
   offensive puns). The weekly recap uses `anonymize: true`. App screenshots come from the mock server
   (`MOCK=1`, sample league with clean names).
-- Real NFL players and real stats are fine. Use jersey numbers and team colors, not ESPN or Sleeper headshots
-  (we don't have rights to use those in ads).
+- Real NFL players and real stats are fine. **Owner's decision (2026-10-30): real player photos and clips are allowed**
+  (Sleeper headshots `https://sleepercdn.com/content/nfl/players/<id>.jpg`, team logos; stitching the NFL's own TikTok posts).
+  The owner accepts takedown risk and will deal with it if it comes. Fall back to jersey tiles only when a photo is missing.
+  Rank Slides: `photos: true`; put headshots in `public/<dir>/h/<id>.jpg` (scripts fetch them).
 - Every number must come from data pulled during the run (Sleeper API, the published recap, the app).
   Nothing is invented or "about right".
 - Keep text inside `SAFE` (top 230, right 160, bottom 420, left 80) so TikTok's buttons and caption cover nothing.
@@ -169,7 +171,7 @@ and switch its row from *build* to the composition name.
   both takes, so that name needs the owner's ear. A wrong word in a clip can be cut with ffmpeg `aselect` by word timestamps
   (done for "rookie") instead of a re-record.
 - **Fact check names and tenure**, not just pronunciation: Matthew Golden was a 2025 first-rounder, not a rookie in 2026.
-- **Footage:** never NFL game clips (league enforces; the posts advertise an app). Two sanctioned looks exist as examples:
+- **Footage:** the owner OK'd real photos/clips (see Hard rules). Two extra looks exist as examples:
   `Broll` layer in src/Examples.tsx (licensed stock MP4 under public/broll/, or the procedural stadium stand-in) and the
   animated schematic play (`PlayAnimExample`). The owner likes both; use the B-roll layer behind kinetic text and an animated
   play when a post turns on one moment. For a real highlight, the owner stitches the NFL's own TikTok post by hand.
