@@ -175,6 +175,11 @@ and switch its row from *build* to the composition name.
   `Broll` layer in src/Examples.tsx (licensed stock MP4 under public/broll/, or the procedural stadium stand-in) and the
   animated schematic play (`PlayAnimExample`). The owner likes both; use the B-roll layer behind kinetic text and an animated
   play when a post turns on one moment. For a real highlight, the owner stitches the NFL's own TikTok post by hand.
+- **Clip library (2026-10-30):** NFL-channel highlight clips (< 2 min, 720p) live on the owner's PC in
+  `Documents-WarRoom\clips\library\`, listed in `clips\index.tsv` (date, duration, YouTube id, url, title). Built by
+  `clips\build-clip-library.ps1` from `clips\wishlist.txt` (copies in tiktok/clips/). A run with the PC link: read
+  index.tsv, stage the clip it needs, cut it with the square-over-blur treatment (see PlayerHype / henry-stiffarm-916.mp4).
+  Without the PC link, no clips: fall back to photos. Never commit video files to the repo.
 - **Effects stack (2026-10-30):** `src/fx.tsx` wraps `@remotion/effects` (glow, chromatic aberration, shatter, light leak) through
   `HtmlInCanvas`, `@remotion/three` for the 3D phone, `@remotion/noise` particles. Needs `--gl=swangle` (set in remotion.config.ts;
   "angle" has no GPU here). `HtmlInCanvas` can't be nested (Chrome 153 in this image), so a shattering block uses CSS text-shadow glow, not `Neon`.

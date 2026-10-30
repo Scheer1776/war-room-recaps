@@ -1,0 +1,32 @@
+# One search per line. ytsearchN = how many results to check; only NFL-channel clips under 2 minutes are kept.
+# Add a line any time (a player, a specific play, or a direct video URL) and re-run; already-downloaded clips are skipped.
+ytsearch4:Derrick Henry Can't-Miss Play
+ytsearch4:Derrick Henry stiff arm
+ytsearch3:Jahmyr Gibbs Can't-Miss Play
+ytsearch3:Bijan Robinson Can't-Miss Play
+ytsearch3:Saquon Barkley Can't-Miss Play
+ytsearch3:Christian McCaffrey Can't-Miss Play
+ytsearch3:De'Von Achane Can't-Miss Play
+ytsearch3:Jonathan Taylor Can't-Miss Play
+ytsearch3:Ashton Jeanty Can't-Miss Play
+ytsearch3:Kenneth Walker Can't-Miss Play
+ytsearch3:James Cook Can't-Miss Play
+ytsearch3:Ja'Marr Chase Can't-Miss Play
+ytsearch3:Justin Jefferson Can't-Miss Play
+ytsearch3:CeeDee Lamb Can't-Miss Play
+ytsearch3:Jaxon Smith-Njigba Can't-Miss Play
+ytsearch3:Puka Nacua Can't-Miss Play
+ytsearch3:Amon-Ra St. Brown Can't-Miss Play
+ytsearch3:Malik Nabers Can't-Miss Play
+ytsearch3:Tyreek Hill Can't-Miss Play
+ytsearch3:Brock Bowers Can't-Miss Play
+ytsearch3:Trey McBride Can't-Miss Play
+ytsearch3:Travis Kelce Can't-Miss Play
+ytsearch3:Josh Allen Can't-Miss Play
+ytsearch3:Lamar Jackson Can't-Miss Play
+ytsearch3:Jalen Hurts Can't-Miss Play
+ytsearch3:Jayden Daniels Can't-Miss Play
+ytsearch3:Patrick Mahomes Can't-Miss Play
+ytsearch3:Joe Burrow Can't-Miss Play
+ytsearch3:Jordan Love Can't-Miss Play
+ytsearch3:Bryce Young Can't-Miss Play
