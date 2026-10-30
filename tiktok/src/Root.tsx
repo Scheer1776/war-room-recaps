@@ -5,8 +5,26 @@ import { FPS, WeeklyTikTok, totalFrames } from "./WeeklyTikTok";
 import { fontsReady } from "./theme";
 import { WaiverHeat, WaiverProps, waiverFrames, waiverSchema } from "./WaiverHeat";
 import { StartSit, StartSitProps, startSitFrames, startSitSchema } from "./StartSit";
+import { Showcase, ShowcaseProps, showcaseFrames, showcaseSchema } from "./Showcase";
+import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./GameRecap";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
 
+const showcaseMeta: CalculateMetadataFunction<ShowcaseProps> = async ({ props }) => {
+  await fontsReady;
+  let voDur: Record<string, number> | null = null;
+  if (props.voice) { try { const v = await fetch(staticFile(`${props.source}/vo/durations.json`)); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
+  const p = { ...props, voDur };
+  return { props: p, durationInFrames: showcaseFrames(p) };
+};
+const recapGameMeta: CalculateMetadataFunction<RecapGameProps> = async ({ props }) => {
+  await fontsReady;
+  const game = await (await fetch(staticFile(`${props.source}/game.json`))).json();
+  const players = await (await fetch(staticFile(`${props.source}/players.json`))).json();
+  let voDur: Record<string, number> | null = null;
+  if (props.voice) { try { const v = await fetch(staticFile(`${props.source}/vo/durations.json`)); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
+  const p = { ...props, game, players, voDur };
+  return { props: p, durationInFrames: recapGameFrames(p) };
+};
 const weatherMeta: CalculateMetadataFunction<WeatherProps> = async ({ props }) => {
   await fontsReady;
   const d = await (await fetch(staticFile(`${props.source}/weather.json`))).json();
@@ -138,6 +156,34 @@ export const RemotionRoot: React.FC = () => (
       appShot: "app/app-matchup.png",
       appScroll: 470,
       games: null,
+    }}
+  />
+  <Composition
+    id="Showcase"
+    component={Showcase}
+    schema={showcaseSchema}
+    width={1080}
+    height={1920}
+    fps={FPS}
+    durationInFrames={1000}
+    calculateMetadata={showcaseMeta}
+    defaultProps={{ source: "show1", voice: false, music: "bed", wx: { game: "ATL @ TB", wind: 15, pop: 63, passPct: 3.1 }, voDur: null }}
+  />
+  <Composition
+    id="GameRecap"
+    component={GameRecap}
+    schema={recapGameSchema}
+    width={1080}
+    height={1920}
+    fps={FPS}
+    durationInFrames={1000}
+    calculateMetadata={recapGameMeta}
+    defaultProps={{
+      source: "tnf8", voice: false, music: "bed",
+      call: { id: "9228", said: "YESTERDAY WE SAID *SIT* BRYCE YOUNG." },
+      studs: ["6804", "7594", "5850"], surprise: "12501", busts: ["9228", "12526", "13545"],
+      verdict: { id: "12501", stamp: "BUY NOW", why: "13 TARGETS DOESN'T LIE. GET HIM BEFORE YOUR LEAGUE DOES." },
+      appShot: "app/redzone-vp.png", game: null, players: null, voDur: null,
     }}
   />
   </>

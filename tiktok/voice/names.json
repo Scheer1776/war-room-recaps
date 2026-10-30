@@ -2,6 +2,11 @@
   "_note": "Kokoro phonemes (misaki US set: A=ay as in 'day', O=oh, I=eye, W=ow, Y=oy; ˈ before the stressed vowel). Add every player name that a check fails on, then re-run.",
   "kokoro": {
     "Caleb": "kˈAləb",
-    "Douglas": "dˈʌɡləs"
+    "Douglas": "dˈʌɡləs",
+    "Tetairoa": "tɛtˌaɪɹˈOə",
+    "McMillan": "məkmˈɪlən",
+    "Chuba": "ʧˈubə",
+    "Smack": "smˈæk",
+    "Golden": "ɡˈOldən"
   }
 }

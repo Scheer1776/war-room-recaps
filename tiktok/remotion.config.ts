@@ -11,3 +11,5 @@ Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
 Config.setDefaultPremountInSeconds(2);
+// WebGL (HtmlInCanvas effects, three.js) renders with SwANGLE in this sandbox; "angle" has no GPU here.
+Config.setChromiumOpenGlRenderer("swangle");

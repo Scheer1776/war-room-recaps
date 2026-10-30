@@ -1,0 +1,89 @@
+{
+ "week": 8,
+ "kick": "2026-10-30T00:15Z",
+ "away": "CAR",
+ "home": "GB",
+ "awayScore": 19,
+ "homeScore": 27,
+ "homeMinWin": 0.476,
+ "scoring": [
+  {
+   "q": 1,
+   "clock": "11:43",
+   "team": "CAR",
+   "text": "Ryan Fitzgerald 39 Yd Field Goal ",
+   "away": 3,
+   "home": 0
+  },
+  {
+   "q": 1,
+   "clock": "5:08",
+   "team": "GB",
+   "text": "Tucker Kraft 12 Yd pass from Jordan Love (Trey Smack PAT Failed)",
+   "away": 3,
+   "home": 6
+  },
+  {
+   "q": 2,
+   "clock": "14:57",
+   "team": "CAR",
+   "text": "Chuba Hubbard 1 Yd Rush (Ryan Fitzgerald Kick)",
+   "away": 10,
+   "home": 6
+  },
+  {
+   "q": 2,
+   "clock": "6:33",
+   "team": "GB",
+   "text": "Josh Jacobs 1 Yd Rush (Trey Smack Kick)",
+   "away": 10,
+   "home": 13
+  },
+  {
+   "q": 2,
+   "clock": "1:46",
+   "team": "GB",
+   "text": "Matthew Golden 24 Yd pass from Jordan Love (Trey Smack Kick)",
+   "away": 10,
+   "home": 20
+  },
+  {
+   "q": 3,
+   "clock": "7:30",
+   "team": "GB",
+   "text": "Josh Jacobs 4 Yd pass from Jordan Love (Trey Smack Kick)",
+   "away": 10,
+   "home": 27
+  },
+  {
+   "q": 3,
+   "clock": "4:07",
+   "team": "CAR",
+   "text": "Ryan Fitzgerald 50 Yd Field Goal",
+   "away": 13,
+   "home": 27
+  },
+  {
+   "q": 4,
+   "clock": "5:37",
+   "team": "CAR",
+   "text": "Jalen Coker 26 Yd pass from Bryce Young (Two-Point Pass Conversion Failed)",
+   "away": 19,
+   "home": 27
+  }
+ ],
+ "linescores": {
+  "GB": [
+   6,
+   14,
+   7,
+   0
+  ],
+  "CAR": [
+   3,
+   7,
+   3,
+   6
+  ]
+ }
+}

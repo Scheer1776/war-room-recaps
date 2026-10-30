@@ -4,6 +4,17 @@ A new marketing video every day (10:47am PT). Each run reads this file, picks a 
 builds and renders it, adds what it learned to **Learnings**, and logs it in **Log**.
 The goal is new War Room users, so every video ends by showing the app and "Link in bio".
 
+## VOICE QUEUE (do this first when the PC is linked)
+Two finished videos are waiting for the War Room Announcer. A run with the PC link records them before anything else:
+1. Lines: `public/show1/lines.json` (Showcase, 7 scenes) and `public/tnf8/lines.json` (GameRecap, 7 scenes). One VoiceStudio clip per
+   line, saved as `show1_<scene>.wav` / `tnf8_<scene>.wav`, staged, converted to `public/<dir>/vo/raw/<scene>.mp3`, then
+   `voice/.venv/bin/python -I voice/check_names.py public/<dir>/lines.json public/<dir>/vo/raw` and `./prep-vo.sh public/<dir>/vo`.
+2. Render once per video with the voice and no bed, then mix the bed in with ffmpeg (a second WebGL render costs ~30 min here):
+   `npx remotion render Showcase out/showcase-vo.mp4 --props='{"voice":true,"music":"none"}' --browser-executable=... --concurrency=2`
+   `ffmpeg -i out/showcase-vo.mp4 -stream_loop -1 -i public/beat40.wav -filter_complex "[1:a]volume=0.16[b];[0:a][b]amix=inputs=2:duration=first:normalize=0" -c:v copy -c:a aac -b:a 192k out/showcase-vo-beat.mp4`
+   Same for `GameRecap` → `out/tnf8-vo.mp4`.
+3. Deliver both pairs, log them below as voiced (Announcer), then delete this section.
+
 ## Hard rules
 - **No real fantasy-league names.** No team names or league names from the owner's ESPN league (several are
   offensive puns). The weekly recap uses `anonymize: true`. App screenshots come from the mock server
@@ -87,7 +98,9 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | Bench-points shame: "you left X on your bench" + the app's max-lineup feature | *build* | Mon–Tue | recap.json bench data (anonymized) |
 | Weather game alert: weather board of every game, one slide per flagged game (proj → with weather), verdict | `WeatherSlides` (carousel; one frame = one slide) | Thu–Sat | `scripts/weather.mjs <war-room-web> public/<dir>` (the app's lib/weather.js + Sleeper projections) |
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
-| Feature demo: screen tour of one app tool on a phone mockup | *build* | any | mock server screenshots/recordings |
+| Feature demo: screen tour of one app tool on a phone mockup | *build* (see `Showcase` for the 3D phone) | any | mock server screenshots/recordings |
+| **Showcase**: the tools you can't get elsewhere, one scene each, $65→$0 shatter hook, 3D phone per feature | `Showcase` (src/fx.tsx effects) | any, about once a month | mock screenshots (`public/app/*-vp.png`) + the week's weather numbers |
+| **Game recap** (TNF / MNF): the call we made, final + win-prob dip, studs, surprise, busts, verdict | `GameRecap` | Fri (TNF), Tue (MNF) | ESPN scoreboard + summary (score, linescores, win probability) and Sleeper week stats → `public/<dir>/game.json`, `players.json` |
 | Quiz / "would you rather" poll: pause-to-answer, reveal | *build* | any | Sleeper stats |
 | **Photo carousel** (TikTok photo post): 5–8 still slides, a hook slide, one slide per player or point, the app slide last | `npx remotion still <Comp> --frame=N` on any composition at its "landed" frames, or a dedicated slides composition | music days, about 2 a week | same as the format |
 | Music-only cut of any format above: kinetic captions on the beat, no voice | any composition with `voice: false` + captions | music days | same as the format |
@@ -134,6 +147,14 @@ and switch its row from *build* to the composition name.
   The forecast's rain % and inches disagree often (MIA 82% but <0.1 in); that gap is a good "twist" line.
 - Carousel stills: put stamps in their own band under the data card (top ~1300); stamps overlapping the last data row hid a name.
 
+- **Effects stack (2026-10-30):** `src/fx.tsx` wraps `@remotion/effects` (glow, chromatic aberration, shatter, light leak) through
+  `HtmlInCanvas`, `@remotion/three` for the 3D phone, `@remotion/noise` particles. Needs `--gl=swangle` (set in remotion.config.ts;
+  "angle" has no GPU here). `HtmlInCanvas` can't be nested (Chrome 153 in this image), so a shattering block uses CSS text-shadow glow, not `Neon`.
+- Three.js textures must be loaded *before* `<ThreeCanvas>` mounts (Remotion only repaints it when the frame changes); `Phone3D` does that.
+- WebGL renders are slow on 2 CPUs (~30 min for 35 s). Render each video once and derive the other audio mix with ffmpeg
+  (`-an` for silent; `amix` with beat40.wav at 0.16 for voice+bed). `lightLeak` seeds differ a lot in color: seed 2 is warm gold, 4/5/6/9 come out purple.
+- A game recap writes itself from yesterday's call: when a START/SIT pick plays on TNF, the hook is "we told you" (or "we were wrong").
+
 ## Log
 | Date | Format | Notes |
 |---|---|---|
@@ -143,3 +164,5 @@ and switch its row from *build* to the composition name.
 | 2026-10-29 | Start/Sit Showdown (week 8), NEW `StartSit` | No-voice (music-only). Cook START / Henry SIT, Daniels START / Young SIT (TNF), Cousins START / Mahomes SIT; hook "SIT MAHOMES?" + 3D coin flip |
 | 2026-10-29 | Start/Sit Showdown (week 8), voiced redo | First VoiceStudio video: War Room Announcer (VoxCPM2) on all 5 lines, names passed; music bed at 0.16 |
 | 2026-10-29 | Photo carousel, NEW Weather game alert (`WeatherSlides`, week 8) | No-voice, 7 slides. Hook "−0.5" (Mayfield, ATL@TB storm game); board 3 domes / 8 clear / 3 hits; TB START 'EM ANYWAY, MIA IGNORE THE RAIN ICON, JAX NON-FACTOR; 11/14 PLAY YOUR GUYS |
+| 2026-10-30 | Showcase (features, NEW `Showcase`) | Music-only render delivered; Announcer voice queued (VOICE QUEUE). $65→$0 shatter, 3D phones, 10,000-season swarm |
+| 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Music-only render delivered; Announcer voice queued. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY |
