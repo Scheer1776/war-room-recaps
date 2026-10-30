@@ -1,0 +1,47 @@
+name: TikTok stats (for the daily post)
+
+# Pulls view/like/comment/share counts for every War Room TikTok (official Display API, read-only)
+# and publishes tiktok/stats.json to the media branch, where the daily TikTok task reads it.
+on:
+  schedule:
+    - cron: "17 13 * * *" # 6:17am Pacific, before the 7:38am post task
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok-stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch stats
+        id: fetch
+        run: |
+          python3 -I tiktok/stats/tiktok_stats.py fetch stats.json 2> fetch.err || { cat fetch.err >&2; exit 1; }
+          cat fetch.err >&2; grep -o 'NEW_REFRESH_TOKEN=.*' fetch.err >> "$GITHUB_OUTPUT" || true
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+      - name: Rotate the refresh token secret (needs the optional SECRETS_PAT secret; otherwise re-run `exchange` yearly)
+        if: steps.fetch.outputs.NEW_REFRESH_TOKEN != ''
+        continue-on-error: true
+        run: gh secret set TIKTOK_REFRESH_TOKEN --body "$NEW"
+        env:
+          NEW: ${{ steps.fetch.outputs.NEW_REFRESH_TOKEN }}
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+      - name: Publish to media branch
+        run: |
+          git fetch origin media
+          git worktree add media origin/media
+          mkdir -p media/tiktok && cp stats.json media/tiktok/stats.json
+          cd media
+          git -c user.name=github-actions -c user.email=actions@users.noreply.github.com add tiktok/stats.json
+          git -c user.name=github-actions -c user.email=actions@users.noreply.github.com commit -qm "TikTok stats $(date -u +%F)" || exit 0
+          git push origin HEAD:media

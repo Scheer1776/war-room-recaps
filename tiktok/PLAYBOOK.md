@@ -89,6 +89,23 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 |---|---|---|---|
 | 2026-10-28 | — | 4,068 | Owner's dashboard reading (2 takes/video before this rule) |
 
+## TikTok stats (official Display API, read-only) — use them to pick what to make next
+- `tiktok/stats.json` on the `media` branch (raw: `https://raw.githubusercontent.com/Scheer1776/war-room-recaps/media/tiktok/stats.json`),
+  refreshed daily at 6:17am Pacific by `.github/workflows/tiktok-stats.yml` from `tiktok/stats/tiktok_stats.py`.
+  Fields per video: views, likes, comments, shares, age_hours, views_per_hour, engagement_pct; plus top_by_views / top_by_engagement.
+- Each run: fetch it first. If it's missing or older than 3 days, say so in the delivery message and carry on.
+- Match videos to Log rows by posted date and title. Then:
+  - Repeat what wins: the format of the top-2 by views_per_hour (videos < 72 h old) is the first choice for the next
+    *video* day; the hook style of the top engagement_pct video is the first choice for the next hook.
+  - Retire what loses: a format whose last two posts are both under half the median views is skipped for a week.
+  - Voiced vs no-voice: compare median views of each over the last 14 days; if one is 1.5x the other, lean that way (budget permitting).
+  - Note the read in the Log row ("stats: Quiz 2.1k views/h, carousel 0.4k → Quiz again") and add a Learning when something surprises.
+- Setup (one time, owner): developers.tiktok.com → create app "War Room stats" (Web; redirect URI
+  `https://war-room-self-one.vercel.app/tiktok-auth`), add Login Kit + Display API with scopes `user.info.basic,video.list`,
+  submit for review. Then with the client key/secret: `python3 -I tiktok/stats/tiktok_stats.py auth-url` → open, Allow, copy
+  `code` from the redirect URL → `python3 -I tiktok/stats/tiktok_stats.py exchange CODE` → store `TIKTOK_CLIENT_KEY`,
+  `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN` as repo Actions secrets. Run the workflow once by hand to check.
+
 ## Format rotation (pick the one used least recently that fits the calendar)
 | Format | Composition | Best days | Data |
 |---|---|---|---|
