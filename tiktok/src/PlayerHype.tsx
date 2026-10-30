@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { z } from "zod";
 import { AppLink, BODY, C, DISPLAY, Field, Glass, SAFE, teamColor } from "./theme";
 import { Flash, Kinetic, Particles, Slam, Stamp, W, clamp } from "./fx";
@@ -11,6 +11,7 @@ export const hypeSchema = z.object({
   source: z.string(),
   player: z.string(), nick: z.string(), nfl: z.string(), opp: z.string(), num: z.number(),
   photo: z.string(), clip: z.string().nullable(), clipFrom: z.number(), // seconds into the clip to start
+  hitAt: z.number(), // frames after the clip starts when the big moment lands (impact boom)
   line1: z.string(), line2: z.string(), // the clip captions
   stats: z.array(z.object({ v: z.number(), label: z.string(), dec: z.number() })),
   quiet: z.array(z.number()), quietLabel: z.string(), hungry: z.string(),
@@ -39,6 +40,9 @@ export const PlayerHype: React.FC<HypeProps> = (p) => {
   const shake = scene === 0 && sf < 8 ? `translate(${(8 - sf) * (sf % 2 ? 6 : -6)}px, 0)` : undefined;
   return (
     <AbsoluteFill style={{ background: C.bg2, transform: shake }}>
+      <Audio src={staticFile("beat40.wav")} loop volume={(t) => interpolate(t, [0, 4, hypeFrames - 24, hypeFrames], [0, 0.6, 0.6, 0], clamp)} />
+      <Sequence from={0} durationInFrames={40}><Audio src={staticFile(`${p.source}/boom.wav`)} volume={0.9} /></Sequence>
+      {p.clip && <Sequence from={T[1] + p.hitAt} durationInFrames={40}><Audio src={staticFile(`${p.source}/boom.wav`)} volume={1} /></Sequence>}
       <Field />
       <Particles n={80} color={col} seed="hype" speed={1.6} size={8} />
       {scene === 0 && (
@@ -57,7 +61,7 @@ export const PlayerHype: React.FC<HypeProps> = (p) => {
         <>
           {p.clip ? (
             <AbsoluteFill style={{ overflow: "hidden" }}>
-              <OffthreadVideo src={staticFile(`${p.source}/${p.clip}`)} startFrom={Math.round(p.clipFrom * fps)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <Sequence from={T[1]} layout="none"><OffthreadVideo src={staticFile(`${p.source}/${p.clip}`)} startFrom={Math.round(p.clipFrom * fps)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} /></Sequence>
               <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(4,17,11,0.55) 0%, transparent 22%, transparent 78%, rgba(4,17,11,0.6) 100%)" }} />
             </AbsoluteFill>
           ) : (
