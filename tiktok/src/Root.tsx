@@ -9,6 +9,7 @@ import { Showcase, ShowcaseProps, showcaseFrames, showcaseSchema } from "./Showc
 import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./GameRecap";
 import { BrollExample, PlayAnimExample } from "./Examples";
 import { RankSlides, RankProps, rankSchema, rankSlides } from "./RankSlides";
+import { PlayerHype, hypeFrames, hypeSchema } from "./PlayerHype";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
 
 const showcaseMeta: CalculateMetadataFunction<ShowcaseProps> = async ({ props }) => {
@@ -206,5 +207,11 @@ export const RemotionRoot: React.FC = () => (
     defaultProps={{ nfl: "GB", opp: "CAR", player: "Matthew Golden", num: 0, stat: "13 targets · 79 yds · TD", stamp: "BUY BEFORE YOUR LEAGUE NOTICES." }} />
   <Composition id="RankSlides" component={RankSlides} fps={1} width={1080} height={1920} durationInFrames={5} schema={rankSchema} calculateMetadata={rankMeta}
     defaultProps={{ source: "rank9", title: ["TRADE", "VALUE"], sub: "Week 8 · RB / WR / TE", metric: "VALUE", metricKey: "value", pages: [], risers: null, appShot: "app/finder-vp.png", week: 8, photos: true }} />
+  <Composition id="PlayerHype" component={PlayerHype} fps={30} width={1080} height={1920} durationInFrames={hypeFrames} schema={hypeSchema}
+    defaultProps={{ source: "hype", player: "Derrick Henry", nick: "King Henry", nfl: "BAL", opp: "BUF", num: 22, photo: "henry.jpg", clip: null, clipFrom: 0,
+      line1: "HE PUTS *GROWN MEN* IN THE GROUND.", line2: "STIFF ARM *SEASON.*",
+      stats: [{ v: 579, label: "rush yards, 7 games", dec: 0 }, { v: 7, label: "touchdowns", dec: 0 }, { v: 34.8, label: "week 1 vs IND", dec: 1 }],
+      quiet: [4.5, 5.4], quietLabel: "TWO *QUIET* WEEKS.", hungry: "THE KING IS HUNGRY.",
+      game: "Sunday", proj: 15.2, projYds: 77, stamp: "START HIM. OBVIOUSLY.", appShot: "app/startsit-vp.png" }} />
   </>
 );
