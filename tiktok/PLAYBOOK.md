@@ -4,16 +4,6 @@ A new marketing video every day (10:47am PT). Each run reads this file, picks a 
 builds and renders it, adds what it learned to **Learnings**, and logs it in **Log**.
 The goal is new War Room users, so every video ends by showing the app and "Link in bio".
 
-## VOICE QUEUE (do this first when the PC is linked)
-Two finished videos are waiting for the War Room Announcer. A run with the PC link records them before anything else:
-1. Lines: `public/show1/lines.json` (Showcase, 7 scenes) and `public/tnf8/lines.json` (GameRecap, 7 scenes). One VoiceStudio clip per
-   line, saved as `show1_<scene>.wav` / `tnf8_<scene>.wav`, staged, converted to `public/<dir>/vo/raw/<scene>.mp3`, then
-   `voice/.venv/bin/python -I voice/check_names.py public/<dir>/lines.json public/<dir>/vo/raw` and `./prep-vo.sh public/<dir>/vo`.
-2. Render once per video with the voice and no bed, then mix the bed in with ffmpeg (a second WebGL render costs ~30 min here):
-   `npx remotion render Showcase out/showcase-vo.mp4 --props='{"voice":true,"music":"none"}' --browser-executable=... --concurrency=2`
-   `ffmpeg -i out/showcase-vo.mp4 -stream_loop -1 -i public/beat40.wav -filter_complex "[1:a]volume=0.16[b];[0:a][b]amix=inputs=2:duration=first:normalize=0" -c:v copy -c:a aac -b:a 192k out/showcase-vo-beat.mp4`
-   Same for `GameRecap` → `out/tnf8-vo.mp4`.
-3. Deliver both pairs (SendUserFile and the `Completed Videos` folder on the PC, production step 6: `2026-10-30 showcase announcer beat.mp4`, `... voice-only.mp4`, `2026-10-30 tnf-recap car-gb announcer beat.mp4`, `... voice-only.mp4`), log them below as voiced (Announcer), then delete this section.
 
 ## Hard rules
 - **No real fantasy-league names.** No team names or league names from the owner's ESPN league (several are
@@ -169,6 +159,18 @@ and switch its row from *build* to the composition name.
   The forecast's rain % and inches disagree often (MIA 82% but <0.1 in); that gap is a good "twist" line.
 - Carousel stills: put stamps in their own band under the data card (top ~1300); stamps overlapping the last data row hid a name.
 
+- **Owner decisions (2026-10-30):** no more voice+beat mix; every video is voice-only (owner adds a TikTok sound). Every closer
+  shows the QR code + URL (`AppLink` in theme.tsx) for ≥3.5 s and never says "link in bio" (there is none yet). Rendered
+  files are voice-only unless told otherwise.
+- `check_names.py` stops transcribing at a long pause (it heard only "The studs"); when a clip is flagged, re-transcribe the
+  tail before re-recording. Whisper hears "Chuba Hubbard" cleanly; "Tetairoa" comes out as "Tetiuroa"/"Ted Tiroa" from
+  both takes, so that name needs the owner's ear. A wrong word in a clip can be cut with ffmpeg `aselect` by word timestamps
+  (done for "rookie") instead of a re-record.
+- **Fact check names and tenure**, not just pronunciation: Matthew Golden was a 2025 first-rounder, not a rookie in 2026.
+- **Footage:** never NFL game clips (league enforces; the posts advertise an app). Two sanctioned looks exist as examples:
+  `Broll` layer in src/Examples.tsx (licensed stock MP4 under public/broll/, or the procedural stadium stand-in) and the
+  animated schematic play (`PlayAnimExample`). The owner likes both; use the B-roll layer behind kinetic text and an animated
+  play when a post turns on one moment. For a real highlight, the owner stitches the NFL's own TikTok post by hand.
 - **Effects stack (2026-10-30):** `src/fx.tsx` wraps `@remotion/effects` (glow, chromatic aberration, shatter, light leak) through
   `HtmlInCanvas`, `@remotion/three` for the 3D phone, `@remotion/noise` particles. Needs `--gl=swangle` (set in remotion.config.ts;
   "angle" has no GPU here). `HtmlInCanvas` can't be nested (Chrome 153 in this image), so a shattering block uses CSS text-shadow glow, not `Neon`.
@@ -186,5 +188,5 @@ and switch its row from *build* to the composition name.
 | 2026-10-29 | Start/Sit Showdown (week 8), NEW `StartSit` | No-voice (music-only). Cook START / Henry SIT, Daniels START / Young SIT (TNF), Cousins START / Mahomes SIT; hook "SIT MAHOMES?" + 3D coin flip |
 | 2026-10-29 | Start/Sit Showdown (week 8), voiced redo | First VoiceStudio video: War Room Announcer (VoxCPM2) on all 5 lines, names passed; music bed at 0.16 |
 | 2026-10-29 | Photo carousel, NEW Weather game alert (`WeatherSlides`, week 8) | No-voice, 7 slides. Hook "−0.5" (Mayfield, ATL@TB storm game); board 3 domes / 8 clear / 3 hits; TB START 'EM ANYWAY, MIA IGNORE THE RAIN ICON, JAX NON-FACTOR; 11/14 PLAY YOUR GUYS |
-| 2026-10-30 | Showcase (features, NEW `Showcase`) | Music-only render delivered; Announcer voice queued (VOICE QUEUE). $65→$0 shatter, 3D phones, 10,000-season swarm |
-| 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Music-only render delivered; Announcer voice queued. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY |
+| 2026-10-30 | Showcase (features, NEW `Showcase`) | Voiced: War Room Announcer (VoiceStudio), voice-only (owner dropped the beat mix). QR + URL closer. $65→$0 shatter, 3D phones, 10,000-season swarm |
+| 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |

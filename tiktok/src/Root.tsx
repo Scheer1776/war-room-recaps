@@ -7,6 +7,7 @@ import { WaiverHeat, WaiverProps, waiverFrames, waiverSchema } from "./WaiverHea
 import { StartSit, StartSitProps, startSitFrames, startSitSchema } from "./StartSit";
 import { Showcase, ShowcaseProps, showcaseFrames, showcaseSchema } from "./Showcase";
 import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./GameRecap";
+import { BrollExample, PlayAnimExample } from "./Examples";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
 
 const showcaseMeta: CalculateMetadataFunction<ShowcaseProps> = async ({ props }) => {
@@ -186,5 +187,8 @@ export const RemotionRoot: React.FC = () => (
       appShot: "app/redzone-vp.png", game: null, players: null, voDur: null,
     }}
   />
+  <Composition id="BrollExample" component={BrollExample} fps={30} width={1080} height={1920} durationInFrames={300} defaultProps={{ src: null }} />
+  <Composition id="PlayAnimExample" component={PlayAnimExample} fps={30} width={1080} height={1920} durationInFrames={300}
+    defaultProps={{ nfl: "GB", opp: "CAR", player: "Matthew Golden", num: 0, stat: "13 targets · 79 yds · TD", stamp: "BUY BEFORE YOUR LEAGUE NOTICES." }} />
   </>
 );
