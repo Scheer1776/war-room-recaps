@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Img, Interactive, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { z } from "zod";
-import { BODY, C, DISPLAY, Field, Glass, SAFE, f1, teamColor } from "./theme";
+import { BODY, C, DISPLAY, Field, Glass, SAFE, f1, teamColor, AppLink } from "./theme";
 
 // "Start/Sit Showdown": coin-flip start/sits. Two players at one position with (nearly) tied Sleeper projections,
 // broken by recent form; one gets START, the other SIT. Built music-first: every cut and caption word lands on the beat.
@@ -243,15 +243,15 @@ const Cta: React.FC<{ p: StartSitProps; dur: number }> = ({ p, dur }) => {
       <div style={{ position: "absolute", top: SAFE.top, left: SAFE.left, right: SAFE.right, textAlign: "center", fontFamily: DISPLAY, fontWeight: 800, fontSize: 104, lineHeight: 0.95, color: C.ink }}>
         <Slam at={b(0)}>STOP FLIPPING</Slam><br /><Slam at={b(1)} style={{ color: C.gold }}>COINS.</Slam>
       </div>
-      <div style={{ position: "absolute", left: cx - 230, top: 480, width: 460, height: 860, borderRadius: 64, background: "#050a07", padding: 16,
+      <div style={{ position: "absolute", left: cx - 200, top: 470, width: 400, height: 640, borderRadius: 56, background: "#050a07", padding: 16,
         boxShadow: `0 0 0 4px rgba(255,255,255,0.18), 0 60px 120px -30px rgba(0,0,0,0.9), 0 0 120px -40px ${C.turf}`, translate: `0 ${(1 - up) * 1100}px`, rotate: `${(1 - up) * 8}deg` }}>
         <div style={{ width: "100%", height: "100%", borderRadius: 50, overflow: "hidden", position: "relative" }}>
           <Img src={staticFile(p.appShot)} style={{ width: "100%", position: "absolute", top: scroll }} />
         </div>
       </div>
-      <div style={{ position: "absolute", left: SAFE.left, right: SAFE.right, top: 1352, textAlign: "center" }}>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 76, lineHeight: 1, color: C.gold }}><Slam at={b(4)}>WAR ROOM · FREE</Slam></div>
-        <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 40, color: C.ink, marginTop: 8, opacity: interpolate(f, [b(5), b(5) + 8], [0, 1], clamp) }}>Start/sit for your league · Link in bio</div>
+      <div style={{ position: "absolute", left: SAFE.left, right: SAFE.right, top: 1100, textAlign: "center" }}>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 70, lineHeight: 1, color: C.gold }}><Slam at={b(3)}>WAR ROOM · FREE</Slam></div>
+        <div style={{ marginTop: 14, display: "flex", justifyContent: "center" }}><AppLink at={Math.round(b(4))} size={220} /></div>
       </div>
       <Flash at={0} />
     </AbsoluteFill>

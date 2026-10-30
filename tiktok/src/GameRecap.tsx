@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Interactive, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { z } from "zod";
-import { BODY, C, DISPLAY, Field, Glass, SAFE, f1, teamColor } from "./theme";
+import { BODY, C, DISPLAY, Field, Glass, SAFE, f1, teamColor, AppLink } from "./theme";
 import { Flash, Kicker, Kinetic, Leak, Neon, Particles, Phone3D, Shatter, Slam, Stamp, W, clamp, useCount, useShake } from "./fx";
 
 // "Game Recap": one NFL game (Thursday night) from the fantasy angle: the call we made, the score, studs, the surprise,
@@ -26,7 +26,7 @@ export const recapGameSchema = z.object({
 export type RecapGameProps = z.infer<typeof recapGameSchema>;
 
 const FPS = 30;
-export const RSCENES = [{ id: "hook", base: 4.6 }, { id: "score", base: 4.6 }, { id: "studs", base: 5.2 }, { id: "surprise", base: 4.8 }, { id: "busts", base: 5 }, { id: "verdict", base: 4.6 }, { id: "cta", base: 4.6 }];
+export const RSCENES = [{ id: "hook", base: 4.6 }, { id: "score", base: 4.6 }, { id: "studs", base: 5.2 }, { id: "surprise", base: 4.8 }, { id: "busts", base: 5 }, { id: "verdict", base: 4.6 }, { id: "cta", base: 5.6 }];
 const secs = (p: RecapGameProps, s: { id: string; base: number }) => { const d = p.voice && p.voDur ? p.voDur[s.id] : undefined; return d ? Math.max(s.base, d + (s.id === "cta" ? 1.0 : 0.6)) : s.base; };
 export const recapGameFrames = (p: RecapGameProps) => RSCENES.reduce((n, s) => n + Math.round(secs(p, s) * FPS), 0);
 
@@ -290,10 +290,10 @@ const Cta: React.FC<{ p: RecapGameProps; dur: number }> = ({ p }) => {
         <Kinetic text="YOUR PLAYERS, ON THE FIELD, RIGHT NOW" at={14} size={56} color={C.dim} align="left" />
       </div>
       <Phone3D src={p.appShot} yaw={-1.2 + 1.0 * inn + Math.sin(f / 26) * 0.08} pitch={0.1} y={(1 - inn) * -2.5 + Math.sin(f / 22) * 0.05} scale={1.0} crop={0.7} glowColor={C.red} height={1250} style={{ top: 540, left: -250 }} />
-      <div style={{ position: "absolute", right: R, top: 1000, textAlign: "right" }}>
+      <div style={{ position: "absolute", right: R, top: 880, textAlign: "right" }}>
         <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 84, lineHeight: 1, color: C.gold }}><Slam at={30}>WAR ROOM</Slam></div>
         <div style={{ marginTop: 16 }}><Stamp text="FREE" color={C.turf} at={40} size={120} rot={-8} /></div>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 64, color: C.ink, marginTop: 24, opacity: interpolate(f, [54, 66], [0, 1], clamp) }}>LINK IN BIO</div>
+        <div style={{ marginTop: 20, display: "flex", justifyContent: "flex-end" }}><AppLink at={38} size={250} align="right" /></div>
       </div>
       <Leak at={4} dur={50} seed={2} opacity={0.25} />
       <Flash at={0} color={C.turf} peak={0.6} />

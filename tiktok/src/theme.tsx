@@ -72,3 +72,22 @@ export const Kicker: React.FC<{ league: string; week: number; label: string; col
 
 export const initialsOf = (n: string) => n.split(/\s+/).map(s => s[0]).join("").slice(0, 2).toUpperCase();
 export const f1 = (v: number) => (Math.round(v * 10) / 10).toFixed(1);
+
+// App link block for every closer: scannable QR on a white card plus the URL in big type.
+// Shown from frame `at`; keep the scene running >= 3.5 s past it so viewers can scan it.
+export const APP_URL = "war-room-self-one.vercel.app";
+export const AppLink: React.FC<{ at: number; size?: number; align?: "center" | "right" | "left"; style?: React.CSSProperties }> = ({ at, size = 300, align = "center", style }) => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [at, at + 8], [0, 1], clamp);
+  const pop = interpolate(f, [at, at + 14], [0.7, 1], { ...clamp, easing: ease });
+  const items = align === "right" ? "flex-end" : align === "left" ? "flex-start" : "center";
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: items, gap: 14, opacity: o, scale: `${pop}`, ...style }}>
+      <div style={{ background: "#fff", borderRadius: 28, padding: 14, boxShadow: `0 0 0 4px ${C.turf}, 0 30px 60px -20px rgba(0,0,0,0.8)` }}>
+        <Img src={staticFile("qr.png")} style={{ width: size, height: size, display: "block" }} />
+      </div>
+      <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: Math.round(size * 0.19), letterSpacing: -0.5, color: C.ink, textAlign: align, lineHeight: 1 }}>{APP_URL}</div>
+      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: Math.round(size * 0.11), color: C.dim, textAlign: align }}>SCAN OR TYPE IT IN · FREE</div>
+    </div>
+  );
+};

@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Interactive, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { z } from "zod";
-import { BODY, C, DISPLAY, Field, Glass, SAFE } from "./theme";
+import { BODY, C, DISPLAY, Field, Glass, SAFE, AppLink } from "./theme";
 import { Flash, Kicker, Kinetic, Leak, Neon, Particles, Phone3D, Shatter, Slam, Stamp, W, clamp, useCount, useShake } from "./fx";
 
 // "Showcase": the features you can't get anywhere else, one scene each, voiced by the War Room Announcer
@@ -22,7 +22,7 @@ const FPS = 30;
 const HUE = 0;
 export const SCENES = [
   { id: "hook", base: 4.2 }, { id: "finder", base: 5.2 }, { id: "redzone", base: 4.8 }, { id: "odds", base: 5.2 },
-  { id: "weather", base: 5.2 }, { id: "recap", base: 5 }, { id: "cta", base: 4.8 },
+  { id: "weather", base: 5.2 }, { id: "recap", base: 5 }, { id: "cta", base: 5.6 },
 ];
 const secs = (p: ShowcaseProps, s: { id: string; base: number }) => { const d = p.voice && p.voDur ? p.voDur[s.id] : undefined; return d ? Math.max(s.base, d + (s.id === "cta" ? 1.0 : 0.6)) : s.base; };
 export const showcaseFrames = (p: ShowcaseProps) => SCENES.reduce((n, s) => n + Math.round(secs(p, s) * FPS), 0);
@@ -232,10 +232,9 @@ const Cta: React.FC<{ dur: number }> = ({ dur }) => {
       </div>
       <div style={{ position: "absolute", top: 830, left: L, right: R, textAlign: "center" }}>
         <Kinetic text="ANY ESPN OR SLEEPER LEAGUE" at={18} size={72} color={C.dim} />
-        <div style={{ marginTop: 30, display: "flex", justifyContent: "center" }}><Stamp text="FREE" color={C.gold} at={30} size={200} rot={-8} /></div>
-        <div style={{ marginTop: 40, fontFamily: DISPLAY, fontWeight: 800, fontSize: 92, color: C.ink, opacity: interpolate(f, [48, 60], [0, 1], clamp), translate: `0 ${(1 - up) * 60}px` }}>LINK IN BIO</div>
-        <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 36, color: C.dim, marginTop: 8, opacity: interpolate(f, [56, 68], [0, 1], clamp) }}>war-room-self-one.vercel.app</div>
+        <div style={{ marginTop: 10, display: "flex", justifyContent: "center" }}><Stamp text="FREE" color={C.gold} at={30} size={150} rot={-8} /></div>
       </div>
+      <div style={{ position: "absolute", left: 0, width: W, top: 1090, display: "flex", justifyContent: "center", translate: `0 ${(1 - up) * 60}px` }}><AppLink at={38} size={270} /></div>
       <Leak at={4} dur={Math.max(40, dur - 10)} seed={5} hue={HUE} opacity={0.25} />
       <Flash at={0} color={C.turf} peak={0.7} />
     </AbsoluteFill>
