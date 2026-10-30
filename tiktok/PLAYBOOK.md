@@ -13,7 +13,7 @@ Two finished videos are waiting for the War Room Announcer. A run with the PC li
    `npx remotion render Showcase out/showcase-vo.mp4 --props='{"voice":true,"music":"none"}' --browser-executable=... --concurrency=2`
    `ffmpeg -i out/showcase-vo.mp4 -stream_loop -1 -i public/beat40.wav -filter_complex "[1:a]volume=0.16[b];[0:a][b]amix=inputs=2:duration=first:normalize=0" -c:v copy -c:a aac -b:a 192k out/showcase-vo-beat.mp4`
    Same for `GameRecap` → `out/tnf8-vo.mp4`.
-3. Deliver both pairs, log them below as voiced (Announcer), then delete this section.
+3. Deliver both pairs (SendUserFile and the `Completed Videos` folder on the PC, production step 6: `2026-10-30 showcase announcer beat.mp4`, `... voice-only.mp4`, `2026-10-30 tnf-recap car-gb announcer beat.mp4`, `... voice-only.mp4`), log them below as voiced (Announcer), then delete this section.
 
 ## Hard rules
 - **No real fantasy-league names.** No team names or league names from the owner's ESPN league (several are
@@ -120,6 +120,11 @@ and switch its row from *build* to the composition name.
 4. QA: pull 5–7 frames with ffmpeg into one strip and look at it. Check safe zones, that stamps and verdicts
    land, that no real league names appear and that no text overflows.
 5. Send both MP4s plus the caption, commit the source (not `out/`), and update Log and Learnings.
+6. **Save the finished files to the owner's PC** whenever the run has the PC link (`mcp__remote-devices__*` tools present):
+   `device_commit_files` into `C:\Users\ms980\OneDrive\Desktop\Completed Videos` (create it if missing). Name every file with
+   the date first: `2026-10-31 waiver-heat w9 beat.mp4`, `2026-10-31 waiver-heat w9 silent.mp4`, `2026-10-31 weather-carousel 01.png`.
+   Never overwrite a file there (add ` v2`). If the folder can't be written, say so in one line; with no PC link, skip silently.
+   Tell the owner the folder and file names in the delivery message. (Owner's request, 2026-10-30.)
 
 ## Learnings
 - Kokoro mispronounces some names (for example "Caleb Douglas") unless they get phonemes in `voice/names.json`; with them it passes the Whisper check.
