@@ -261,3 +261,16 @@ and switch its row from *build* to the composition name.
 | 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |
 | 2026-10-30 | Showcase v2 (9 features; NEW Start/Sit + Waivers scenes; clip layer) | Voiced: War Room Narrator (first full video), voice-only. Clips: Cook 41-yd TD, Mahomes truck-stick TD, Nabers moss (clip-library). Audit PASS (pace WARN: fast mid-line flow, by design) |
 | 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |
+
+## League Recap (in-app weekly video, every league) — added 2026-10-30
+- Composition `LeagueRecap` (src/LeagueRecap.tsx): real league/team names (it is FOR the league), house effects (kinetic
+  type, slams, stamps, particles, counters, headshots), no WebGL → ~40 s renders in ~3 min on 2 cores, ~1.5–2 min on a runner.
+- Pipeline: app registers every loaded league at `/api/recaps` (Sleeper + public ESPN automatically; private ESPN after the
+  owner taps "Make our weekly recap", codes encrypted with RECAP_KEY). `.github/workflows/league-recaps.yml` polls every
+  5 min from 8:40 pm PT Monday (`gate.mjs`: ESPN scoreboard all final + not-yet-done marker), then fans out render jobs
+  (3 leagues per job, up to 20 parallel free / 40 on Pro; `REGISTRY=1 CHUNK/OF` in render.mjs with `ENGINE=remotion`).
+  Each league is published to the media branch (push retries on conflict) and POSTed to `/api/hdrecap`. Finish job writes
+  `recaps/weekly/<season>-w<N>.done`. Published leagues are skipped on re-polls, so failures retry themselves.
+- Narration: eight shared Announcer lines in public/recapvo/lines.json (record once; see its README). Never per-league TTS.
+- Secrets the workflow needs: ADMIN_KEY (already), and RECAP_KEY on Vercel (any long random string) for private leagues.
+- Known limit: GitHub cron can start 3–10 min late under load; the 5-minute polls make that the only delay.

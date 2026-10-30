@@ -1,0 +1,328 @@
+{
+ "platform": "espn",
+ "league": "Ball on the Spectrum",
+ "week": 7,
+ "myTeamId": 11,
+ "games": [
+  {
+   "win": {
+    "id": 11,
+    "name": "🥜So Much I Phillip Rivers",
+    "pts": 156.2,
+    "left": 28.4
+   },
+   "lose": {
+    "id": 6,
+    "name": "Jacking Goff",
+    "pts": 125.5,
+    "left": 5.2
+   },
+   "margin": 30.7
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "PUKACHUUUUU",
+    "pts": 138,
+    "left": 12
+   },
+   "lose": {
+    "id": 2,
+    "name": "DIGGA D",
+    "pts": 113.1,
+    "left": 21.6
+   },
+   "margin": 24.9
+  },
+  {
+   "win": {
+    "id": 13,
+    "name": "Nerdy Diggers",
+    "pts": 136.6,
+    "left": 4.3
+   },
+   "lose": {
+    "id": 9,
+    "name": "Skattebubu",
+    "pts": 112.6,
+    "left": 11.1
+   },
+   "margin": 24
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Veiny dih",
+    "pts": 129.5,
+    "left": 13.9
+   },
+   "lose": {
+    "id": 5,
+    "name": "Rigger JEW'Marr",
+    "pts": 103.6,
+    "left": 5.2
+   },
+   "margin": 25.9
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Herbo the Turbo",
+    "pts": 124.3,
+    "left": 19.1
+   },
+   "lose": {
+    "id": 7,
+    "name": "Injured Team Enjoy Free Win",
+    "pts": 98.6,
+    "left": 20.7
+   },
+   "margin": 25.7
+  },
+  {
+   "win": {
+    "id": 12,
+    "name": "See Y'all at the Casino ",
+    "pts": 117.8,
+    "left": 0
+   },
+   "lose": {
+    "id": 14,
+    "name": "Rugntuggies",
+    "pts": 65.3,
+    "left": 0
+   },
+   "margin": 52.5
+  },
+  {
+   "win": {
+    "id": 16,
+    "name": "Prime Time Miggy",
+    "pts": 98.6,
+    "left": 20.7
+   },
+   "lose": {
+    "id": 15,
+    "name": "Strib Club💈",
+    "pts": 97.4,
+    "left": 15.6
+   },
+   "margin": 1.3
+  }
+ ],
+ "high": {
+  "id": 11,
+  "name": "🥜So Much I Phillip Rivers",
+  "pts": 156.2,
+  "left": 28.4,
+  "star": {
+   "id": "3915511",
+   "n": "Joe Burrow",
+   "pos": "QB",
+   "nfl": "CIN",
+   "act": 39.6
+  }
+ },
+ "low": {
+  "id": 14,
+  "name": "Rugntuggies",
+  "pts": 65.3,
+  "left": 0
+ },
+ "close": {
+  "win": {
+   "id": 16,
+   "name": "Prime Time Miggy",
+   "pts": 98.6,
+   "left": 20.7
+  },
+  "lose": {
+   "id": 15,
+   "name": "Strib Club💈",
+   "pts": 97.4,
+   "left": 15.6
+  },
+  "margin": 1.3
+ },
+ "blow": {
+  "win": {
+   "id": 12,
+   "name": "See Y'all at the Casino ",
+   "pts": 117.8,
+   "left": 0
+  },
+  "lose": {
+   "id": 14,
+   "name": "Rugntuggies",
+   "pts": 65.3,
+   "left": 0
+  },
+  "margin": 52.5
+ },
+ "mvp": {
+  "player": {
+   "id": "3915511",
+   "n": "Joe Burrow",
+   "pos": "QB",
+   "nfl": "CIN",
+   "act": 39.6
+  },
+  "team": {
+   "id": 11,
+   "name": "🥜So Much I Phillip Rivers",
+   "pts": 156.2,
+   "left": 28.4
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 11,
+   "name": "🥜So Much I Phillip Rivers",
+   "pts": 156.2,
+   "left": 28.4
+  },
+  "bench": {
+   "id": "4429096",
+   "n": "Blake Corum",
+   "pos": "RB",
+   "nfl": "LAR",
+   "act": 20.1
+  }
+ },
+ "standings": [
+  {
+   "id": 13,
+   "name": "Nerdy Diggers",
+   "w": 6,
+   "l": 1,
+   "t": 0,
+   "pf": 914.2,
+   "odds": 99.7
+  },
+  {
+   "id": 11,
+   "name": "🥜So Much I Phillip Rivers",
+   "w": 5,
+   "l": 2,
+   "t": 0,
+   "pf": 944.3,
+   "odds": 97.7
+  },
+  {
+   "id": 4,
+   "name": "Veiny dih",
+   "w": 5,
+   "l": 2,
+   "t": 0,
+   "pf": 876.9,
+   "odds": 91.5
+  },
+  {
+   "id": 5,
+   "name": "Rigger JEW'Marr",
+   "w": 4,
+   "l": 3,
+   "t": 0,
+   "pf": 911.5,
+   "odds": 97.5
+  },
+  {
+   "id": 6,
+   "name": "Jacking Goff",
+   "w": 4,
+   "l": 3,
+   "t": 0,
+   "pf": 891.6,
+   "odds": 71.1
+  },
+  {
+   "id": 16,
+   "name": "Prime Time Miggy",
+   "w": 4,
+   "l": 3,
+   "t": 0,
+   "pf": 809.5,
+   "odds": 70
+  },
+  {
+   "id": 7,
+   "name": "Injured Team Enjoy Free Win",
+   "w": 4,
+   "l": 3,
+   "t": 0,
+   "pf": 781.3,
+   "odds": 63
+  },
+  {
+   "id": 2,
+   "name": "DIGGA D",
+   "w": 3,
+   "l": 4,
+   "t": 0,
+   "pf": 813.5,
+   "odds": 36.4
+  },
+  {
+   "id": 10,
+   "name": "Herbo the Turbo",
+   "w": 3,
+   "l": 4,
+   "t": 0,
+   "pf": 781.2,
+   "odds": 19.6
+  },
+  {
+   "id": 12,
+   "name": "See Y'all at the Casino ",
+   "w": 3,
+   "l": 4,
+   "t": 0,
+   "pf": 685.2,
+   "odds": 25.3
+  },
+  {
+   "id": 9,
+   "name": "Skattebubu",
+   "w": 2,
+   "l": 5,
+   "t": 0,
+   "pf": 773.4,
+   "odds": 14.4
+  },
+  {
+   "id": 15,
+   "name": "Strib Club💈",
+   "w": 2,
+   "l": 5,
+   "t": 0,
+   "pf": 772.3,
+   "odds": 3.7
+  },
+  {
+   "id": 1,
+   "name": "PUKACHUUUUU",
+   "w": 2,
+   "l": 5,
+   "t": 0,
+   "pf": 763.4,
+   "odds": 9.4
+  },
+  {
+   "id": 14,
+   "name": "Rugntuggies",
+   "w": 2,
+   "l": 5,
+   "t": 0,
+   "pf": 712.2,
+   "odds": 0.8
+  }
+ ],
+ "next": {
+  "week": 8,
+  "a": "Veiny dih",
+  "b": "Nerdy Diggers",
+  "pa": 130.3,
+  "pb": 139.5,
+  "wa": 0.4
+ }
+}

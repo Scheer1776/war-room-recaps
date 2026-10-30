@@ -1,0 +1,112 @@
+name: League recaps (every league, after Monday night)
+
+# Polls every 5 minutes from 8:40 pm Pacific on Monday (03:40 UTC in PDT, 04:40 UTC in PST) until the last NFL game
+# of the week is final, then renders a recap for every league registered through the app (/api/recaps), in parallel.
+# Each render job takes a few leagues (~2 min per league on a 4-core runner), so 100 leagues finish in ~10-12 minutes
+# on the free 20-job concurrency. Leagues already published this week are skipped, so a re-poll only retries stragglers.
+on:
+  schedule:
+    - cron: "40,45,50,55 3 * * 2"
+    - cron: "*/5 4,5,6 * * 2"
+    - cron: "0,30 7,8 * * 2"
+    - cron: "0 10,14 * * 2"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Render now even if games are still going / this week already exists"
+        type: boolean
+        default: false
+      week:
+        description: "Week number to recap (blank = latest finished week)"
+        required: false
+      max_jobs:
+        description: "Max parallel render jobs (20 on the free plan, 40 on Pro)"
+        default: "20"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: league-recaps
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+      jobs: ${{ steps.g.outputs.jobs }}
+      chunks: ${{ steps.g.outputs.chunks }}
+      week: ${{ steps.g.outputs.week }}
+      season: ${{ steps.g.outputs.season }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: gate.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: g
+        run: node gate.mjs
+        env:
+          WARROOM_URL: https://war-room-self-one.vercel.app
+          ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ inputs.force && '1' || '' }}
+          MAX_JOBS: ${{ inputs.max_jobs || '20' }}
+
+  render:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 40
+      matrix:
+        chunk: ${{ fromJSON(needs.gate.outputs.chunks) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Cache Remotion deps + headless Chrome
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            tiktok/node_modules
+            node_modules
+          key: recaps-${{ runner.os }}-${{ hashFiles('package-lock.json', 'tiktok/package-lock.json') }}
+      - name: Install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          npm ci --ignore-scripts || npm install --ignore-scripts
+          cd tiktok && (npm ci || npm install) && npx remotion browser ensure
+      - name: Render and publish this chunk
+        run: node render.mjs
+        env:
+          ENGINE: remotion
+          REGISTRY: "1"
+          CHUNK: ${{ matrix.chunk }}
+          OF: ${{ needs.gate.outputs.jobs }}
+          WARROOM_URL: https://war-room-self-one.vercel.app
+          ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ inputs.force && '1' || '' }}
+          WEEK: ${{ inputs.week }}
+          REMOTION_CONCURRENCY: "4"
+
+  finish:
+    needs: [gate, render]
+    if: needs.gate.outputs.go == 'true' && needs.render.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Mark the week done on the media branch
+        run: |
+          git clone --depth 1 --branch media "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" media
+          cd media && mkdir -p recaps/weekly && date -u > "recaps/weekly/${{ needs.gate.outputs.season }}-w${{ needs.gate.outputs.week }}.done"
+          git config user.name war-room-recaps && git config user.email actions@users.noreply.github.com
+          git add -A && git commit -m "Week ${{ needs.gate.outputs.week }} recaps done" && git push origin HEAD:media

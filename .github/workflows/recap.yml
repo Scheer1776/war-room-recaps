@@ -3,14 +3,9 @@ name: Weekly HD recap
 # Tuesday morning UTC = Monday night Pacific, right after Monday Night Football.
 # Several tries so the recap lands soon after the last game ends (the script exits
 # quietly if games are still going or the week is already done).
+# Schedule moved to league-recaps.yml (2026-10-30): every registered league, polled from 8:40 pm PT, Remotion house
+# style. This HyperFrames workflow stays for manual runs only.
 on:
-  schedule:
-    - cron: "10 4 * * 2"
-    - cron: "40 4 * * 2"
-    - cron: "15 5 * * 2"
-    - cron: "15 6 * * 2"
-    - cron: "30 8 * * 2"
-    - cron: "0 14 * * 2"
   workflow_dispatch:
     inputs:
       force:

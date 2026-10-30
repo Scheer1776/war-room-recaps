@@ -5,6 +5,9 @@
 //  4. Commits the MP4 to the public `media` branch (served by jsDelivr) and tells War Room about it.
 // Env: WARROOM_URL, ADMIN_KEY, ESPN_S2, ESPN_SWID, FORCE=1 (re-render), WEEK=N (override), DRY_RUN=1 (no publish),
 //      DATA_ONLY=1 (skip the HD render; just publish the week's recap data + headshots for the TikTok cut)
+//      ENGINE=remotion (render tiktok/src/LeagueRecap.tsx, the 2026-10-30 house style, instead of the HyperFrames composition)
+//      LEAGUES_JSON='[...]' (league list inline, e.g. a chunk of the /api/recaps registry; entries may carry espnS2/swid)
+//      REGISTRY=1 CHUNK=i OF=n (pull the league list from /api/recaps with ADMIN_KEY and take chunk i of n)
 import { mkdirSync, writeFileSync, copyFileSync, readFileSync, existsSync, statSync, readdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join, dirname } from "node:path";
@@ -17,6 +20,7 @@ const APP = (process.env.WARROOM_URL || "https://war-room-self-one.vercel.app").
 const FORCE = process.env.FORCE === "1" || process.env.FORCE === "true";
 const DRY = process.env.DRY_RUN === "1";
 const DATA_ONLY = process.env.DATA_ONLY === "1";
+const REMOTION = process.env.ENGINE === "remotion";
 const REPO = process.env.GITHUB_REPOSITORY || "";
 const log = (...a) => console.log("[recap]", ...a);
 
@@ -41,15 +45,17 @@ async function loadAppModules(dir) {
   return { model: await import(pathToFileURL(join(dir, "model.mjs"))), recap: await import(pathToFileURL(join(dir, "recap.mjs"))) };
 }
 
+// Private-league cookies: inline on the entry (from the /api/recaps registry) or from the named env vars.
+const cookies = cfg => ({ espnS2: cfg.espnS2 || process.env[cfg.s2Env || "ESPN_S2"] || "", swid: cfg.swid || process.env[cfg.swidEnv || "ESPN_SWID"] || "" });
 async function loadLeague(cfg) {
   if (cfg.platform === "sleeper") return json(`${APP}/api/sleeper?username=${encodeURIComponent(cfg.username)}&league=${encodeURIComponent(cfg.leagueId)}`);
   return json(`${APP}/api/espn`, { method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ leagueId: cfg.leagueId, season: cfg.season, espnS2: process.env[cfg.s2Env || "ESPN_S2"], swid: process.env[cfg.swidEnv || "ESPN_SWID"], teamId: cfg.teamId }) });
+    body: JSON.stringify({ leagueId: cfg.leagueId, season: cfg.season, ...cookies(cfg), teamId: cfg.teamId }) });
 }
 async function loadLive(cfg, L, week) {
   if (cfg.platform === "sleeper") return json(`${APP}/api/live?platform=sleeper&league=${encodeURIComponent(L.leagueId)}&week=${week}`);
   return json(`${APP}/api/live`, { method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ platform: "espn", leagueId: cfg.leagueId, season: L.season, espnS2: process.env[cfg.s2Env || "ESPN_S2"], swid: process.env[cfg.swidEnv || "ESPN_SWID"], week }) });
+    body: JSON.stringify({ platform: "espn", leagueId: cfg.leagueId, season: L.season, ...cookies(cfg), week }) });
 }
 
 const LOGO_FIX = { WAS: "wsh" };
@@ -110,6 +116,24 @@ async function renderLeague(cfg, mods) {
   }
   writeFileSync(join(ddir, "recap.json"), JSON.stringify(data, null, 1));
   if (DATA_ONLY) return { tag, week, dataDir: ddir, dataOnly: true, league: L };
+  const standings = L.teams.map(t => ({ id: t.id, name: t.name, w: t.w, l: t.l, t: t.t, pf: Math.round(t.pf * 10) / 10, odds: Math.round((odds[t.id] || 0) * 10) / 10 }))
+    .sort((a, b) => (b.w + b.t / 2) - (a.w + a.t / 2) || b.pf - a.pf);
+
+  if (REMOTION) {
+    // The Remotion cut reads its data from tiktok/public/<source>/, so stage the week's data there and render.
+    const tk = join(HERE, "tiktok"), src = `lr/${tag}-w${week}`, pub = join(tk, "public", src);
+    mkdirSync(join(pub, "img"), { recursive: true });
+    for (const f of readdirSync(ddir, { recursive: true })) if (statSync(join(ddir, f)).isFile()) { mkdirSync(dirname(join(pub, f)), { recursive: true }); copyFileSync(join(ddir, f), join(pub, f)); }
+    const out = join(HERE, "out", `${tag}-week-${week}.mp4`); mkdirSync(dirname(out), { recursive: true });
+    const browser = process.env.REMOTION_BROWSER ? ["--browser-executable=" + process.env.REMOTION_BROWSER] : [];
+    const t0 = Date.now();
+    execFileSync("npx", ["remotion", "render", "LeagueRecap", out, `--props=${JSON.stringify({ source: src, voice: existsSync(join(tk, "public", "recapvo", "durations.json")) })}`,
+      "--concurrency=" + (process.env.REMOTION_CONCURRENCY || "4"), "--log=error", ...browser], { stdio: "inherit", cwd: tk, env: process.env });
+    const poster = out.replace(/\.mp4$/, ".jpg");
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-ss", "1.5", "-i", out, "-frames:v", "1", "-vf", "scale=540:960", poster]);
+    log(`${tag}: rendered ${(statSync(out).size / 1e6).toFixed(1)} MB in ${((Date.now() - t0) / 1000).toFixed(0)} s (Remotion).`);
+    return { tag, week, out, poster, standings, league: L, counted };
+  }
 
   // Build the composition folder.
   const dir = join(HERE, "build", tag + "-w" + week); mkdirSync(join(dir, "img"), { recursive: true }); mkdirSync(join(dir, "fonts"), { recursive: true });
@@ -133,8 +157,6 @@ async function renderLeague(cfg, mods) {
   execFileSync("ffmpeg", ["-v", "error", "-y", "-ss", "2", "-i", out, "-frames:v", "1", "-vf", "scale=540:960", poster]);
   log(`${tag}: rendered ${(statSync(out).size / 1e6).toFixed(1)} MB, ${total.toFixed(1)} s.`);
 
-  const standings = L.teams.map(t => ({ id: t.id, name: t.name, w: t.w, l: t.l, t: t.t, pf: Math.round(t.pf * 10) / 10, odds: Math.round((odds[t.id] || 0) * 10) / 10 }))
-    .sort((a, b) => (b.w + b.t / 2) - (a.w + a.t / 2) || b.pf - a.pf);
   return { tag, week, out, poster, standings, league: L, counted };
 }
 
@@ -150,12 +172,27 @@ function publishFiles(files) {
   const g = (...a) => execFileSync("git", a, { cwd: media, stdio: "inherit" });
   g("config", "user.name", "war-room-recaps"); g("config", "user.email", "actions@users.noreply.github.com");
   g("add", "-A"); try { g("commit", "-m", "Add recap " + files.map(f => f.name).join(", ")); } catch { /* nothing new */ }
-  g("push", "origin", "HEAD:media");
+  // Many leagues publish in parallel after Monday night, so rebase onto whatever landed first and try again.
+  for (let i = 0; ; i++) {
+    try { g("push", "origin", "HEAD:media"); break; }
+    catch (e) { if (i >= 8) throw e; execFileSync("sleep", [String(3 + Math.floor(Math.random() * 10))]); g("fetch", "origin", "media"); g("rebase", "origin/media"); }
+  }
   const commit = execFileSync("git", ["rev-parse", "HEAD"], { cwd: media }).toString().trim();
   return name => `https://cdn.jsdelivr.net/gh/${REPO}@${commit}/recaps/${name}`;
 }
 
-const cfgs = JSON.parse(readFileSync(process.env.LEAGUES_FILE || join(HERE, "leagues.json"), "utf8"));
+async function leagueList() {
+  if (process.env.LEAGUES_JSON) return JSON.parse(process.env.LEAGUES_JSON);
+  if (process.env.REGISTRY === "1") {
+    const all = await json(`${APP}/api/recaps`, { headers: { "x-admin-key": process.env.ADMIN_KEY || "" } });
+    const i = Number(process.env.CHUNK || 0), n = Math.max(1, Number(process.env.OF || 1));
+    const mine = all.filter((_, k) => k % n === i);
+    log(`registry: ${all.length} leagues, this job takes ${mine.length} (chunk ${i + 1}/${n}).`);
+    return mine;
+  }
+  return JSON.parse(readFileSync(process.env.LEAGUES_FILE || join(HERE, "leagues.json"), "utf8"));
+}
+const cfgs = await leagueList();
 const mods = await loadAppModules(join(HERE, ".app"));
 let failures = 0;
 for (const cfg of cfgs) {

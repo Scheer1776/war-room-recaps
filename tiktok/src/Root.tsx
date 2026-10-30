@@ -10,6 +10,7 @@ import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./G
 import { BrollExample, PlayAnimExample } from "./Examples";
 import { RankSlides, RankProps, rankSchema, rankSlides } from "./RankSlides";
 import { PlayerHype, hypeFrames, hypeSchema } from "./PlayerHype";
+import { LeagueRecap, LeagueRecapProps, leagueRecapFrames, leagueRecapSchema } from "./LeagueRecap";
 import { Quiz, QuizProps, quizFrames, quizSchema } from "./Quiz";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
 
@@ -83,6 +84,15 @@ const rankMeta: CalculateMetadataFunction<RankProps> = async ({ props }) => {
   }
   const p = { ...props, pages, risers, week: d.week };
   return { props: p, durationInFrames: rankSlides(p), fps: 1 };
+};
+const leagueRecapMeta: CalculateMetadataFunction<LeagueRecapProps> = async ({ props }) => {
+  await fontsReady;
+  const src = /^https?:/.test(props.source) ? `${props.source.replace(/\/$/, "")}/recap.json` : staticFile(`${props.source}/recap.json`);
+  const recap = props.recap || await fetch(src).then((r) => r.json());
+  let voDur = props.voDur;
+  if (props.voice && !voDur) { try { const v = await fetch(staticFile("recapvo/durations.json")); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
+  const p = { ...props, recap, voDur };
+  return { props: p, durationInFrames: leagueRecapFrames(p) };
 };
 export const RemotionRoot: React.FC = () => (
   <>
@@ -232,5 +242,7 @@ export const RemotionRoot: React.FC = () => (
       verdict: ["DRAFT-DAY *NAMES* LIE.", "USAGE DOESN'T.", "HOW MANY DID YOU GET? *COMMENT* 0-3"],
       appShot: "app/home-vp.png", music: "bed", players: null,
     }} />
+  <Composition id="LeagueRecap" component={LeagueRecap} fps={30} width={1080} height={1920} durationInFrames={1200} schema={leagueRecapSchema} calculateMetadata={leagueRecapMeta}
+    defaultProps={{ source: "lr7", recap: null, nameOverrides: {}, appUrl: "war-room-self-one.vercel.app", voice: false, voDur: null, music: "bed" }} />
   </>
 );
