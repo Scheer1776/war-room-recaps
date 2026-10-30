@@ -5,6 +5,44 @@ builds and renders it, adds what it learned to **Learnings**, and logs it in **L
 The goal is new War Room users, so every video ends by showing the app and "Link in bio".
 
 
+## Edit audit (MANDATORY before delivering any video) — 2026-10-30
+`audit/audit.py <manifest.json>` checks the render and exits 1 on any FAIL. Fix, re-render, re-audit until it passes; never
+deliver a video whose last audit failed. Write one manifest per video in `audit/manifests/` (format in audit.py's docstring).
+- **Clip sync:** for every clip give `at`/`dur` (where it sits in the video), `clipStart` and `keyAt` (seconds into the clip
+  where the big moment happens — find it from a timestamped contact sheet: `ffmpeg -ss A -t 1.5 -i clip -vf "fps=10,
+  drawtext=text='%{pts\:flt}'...,tile=6x2"`). The audit matches frames to prove the clip really plays from clipStart and
+  that the moment has >= 0.8 s of lead-in and >= 1.0 s after it. (It caught the Henry v1 bug: clip 2.98 s late.)
+  In Remotion, a clip inside a scene MUST sit in `<Sequence from={sceneStart}>`, or it plays on the global clock.
+- **Voice:** give `vo` (the voice track before mixing) and the exact `script`. Checks: every name heard (no hints given to
+  the transcriber), a real pause after every sentence, a beat (>= 0.45 s) before every "...", 130–270 wpm, no dead air.
+- **End card:** `endCard: 3.5` — the QR must decode across the last 3.5 s.
+- **Audio:** `audio: "voice" | "music" | "silent"` — silent deliveries must have no track; nothing may clip.
+- Attach the `.audit.png` contact sheet view to your own QA; mention the audit result in one line of the delivery message.
+
+## Voices: pacing and emotion — 2026-10-30
+- Two voices, both VoiceStudio (VoxCPM2) on the owner's PC: **War Room Announcer** (hype, sports-radio) and **War Room
+  Narrator** (fast second-person storytelling, see the narrator spec). Alternate them on voiced days; Narrator for story
+  scripts ("You draft…"), Announcer for rankings, recaps and start/sit.
+- Render ONE clip per sentence or short line, never a whole script in one take: each line gets its own intonation and
+  ending, which is where emotion comes from. Render the punchline/verdict as its own clip.
+- Write emotion into the words: short sentences, a question, an interjection ("Obviously.", "Yeah.", "Wait."), "..."
+  before the twist. No ALL CAPS (VoxCPM2 goes flat on them).
+- Assemble with `audit/pace.py lines --lines lines.json --clips vo/raw --out vo/full.wav` (0.30 s between lines, 0.65 s
+  before a line starting with "..."), or `pace.py take` to re-space a single long take. Then audit.
+- Names: every new name goes in voice/names.json with a respelling if needed ("Teh-tie-row-uh"); if the audit can't hear a
+  name, respell it in the script and re-render just that line (max 2 tries, then cut the name from the line).
+
+## Clips and photos in daily runs — 2026-10-30
+- Player photos are allowed (owner's call): Sleeper headshots `https://sleepercdn.com/content/nfl/players/<id>.jpg` work from
+  the cloud, no PC needed. Use them on covers, cards and rows.
+- Clips: use them as much as possible. They live on the owner's PC (`Documents-WarRoom\clips\library`, listed in
+  `clips\index.tsv`); a run with the PC link reads index.tsv with device_stage_files, stages the clips it needs and cuts
+  them square-over-blur (`ffmpeg ... crop=ih:ih,scale=1080:1080 over a blurred 1080x1920`, 0.75x for the big moment).
+  No PC link → no clips that day: photos instead, and say so in one line.
+- If a player has no clip, add a wishlist line (`ytsearch3:<Player> Can't-Miss Play`) to clips\wishlist.txt via
+  device_commit_files so the owner's next library run fetches it.
+- Save every delivered file to `Documents-WarRoom\Completed Videos\` with a dated name when the PC is linked.
+
 ## Hard rules
 - **No real fantasy-league names.** No team names or league names from the owner's ESPN league (several are
   offensive puns). The weekly recap uses `anonymize: true`. App screenshots come from the mock server
