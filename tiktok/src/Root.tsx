@@ -10,6 +10,7 @@ import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./G
 import { BrollExample, PlayAnimExample } from "./Examples";
 import { RankSlides, RankProps, rankSchema, rankSlides } from "./RankSlides";
 import { PlayerHype, hypeFrames, hypeSchema } from "./PlayerHype";
+import { Quiz, QuizProps, quizFrames, quizSchema } from "./Quiz";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
 
 const showcaseMeta: CalculateMetadataFunction<ShowcaseProps> = async ({ props }) => {
@@ -27,6 +28,12 @@ const recapGameMeta: CalculateMetadataFunction<RecapGameProps> = async ({ props 
   if (props.voice) { try { const v = await fetch(staticFile(`${props.source}/vo/durations.json`)); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
   const p = { ...props, game, players, voDur };
   return { props: p, durationInFrames: recapGameFrames(p) };
+};
+const quizMeta: CalculateMetadataFunction<QuizProps> = async ({ props }) => {
+  await fontsReady;
+  const d = await (await fetch(staticFile(`${props.source}/quiz.json`))).json();
+  const p = { ...props, players: d.players };
+  return { props: p, durationInFrames: quizFrames(p) };
 };
 const weatherMeta: CalculateMetadataFunction<WeatherProps> = async ({ props }) => {
   await fontsReady;
@@ -213,5 +220,17 @@ export const RemotionRoot: React.FC = () => (
       stats: [{ v: 579, label: "rush yards, 7 games", dec: 0 }, { v: 7, label: "touchdowns", dec: 0 }, { v: 34.8, label: "week 1 vs IND", dec: 1 }],
       quiet: [4.5, 5.4], quietLabel: "TWO *QUIET* WEEKS.", hungry: "THE KING IS HUNGRY.",
       game: "Sunday", proj: 15.2, projYds: 77, stamp: "START HIM. OBVIOUSLY.", appShot: "app/startsit-vp.png" }} />
+  <Composition id="Quiz" component={Quiz} fps={30} width={1080} height={1920} durationInFrames={1000} schema={quizSchema} calculateMetadata={quizMeta}
+    defaultProps={{
+      source: "quiz8",
+      hook: ["3 QUESTIONS.", "LAST 3 WEEKS.", "PAUSE & GUESS", "COMMENT YOUR SCORE /3"],
+      questions: [
+        { q: ["RB · WEEKS 5-7", "MOST *TOUCHES* SINCE WEEK 5?"], metric: "touches", unit: "TOUCHES", dec: 0, ids: ["9509", "11584", "3198", "6813"], answer: "11584", stamp: "WORKHORSE", fact: "*69* TOUCHES IN 3 GAMES. *23* A WEEK." },
+        { q: ["QB · WEEKS 5-7", "MOST FANTASY *POINTS* PER GAME?"], metric: "ppg", unit: "PTS / GAME", dec: 1, ids: ["4984", "6770", "11564", "4046"], answer: "11564", stamp: "QB1", fact: "MAYE *30.6* A GAME. MAHOMES *9.2*." },
+        { q: ["TE · WEEKS 5-7", "WHO'S THE TOP *TIGHT END?*"], metric: "pts", unit: "PTS · HALF-PPR", dec: 1, ids: ["8130", "8131", "11604", "4217"], answer: "8131", stamp: "TE1", fact: "LIKELY *50.0* POINTS. BOWERS *38.3*." },
+      ],
+      verdict: ["DRAFT-DAY *NAMES* LIE.", "USAGE DOESN'T.", "HOW MANY DID YOU GET? *COMMENT* 0-3"],
+      appShot: "app/home-vp.png", music: "bed", players: null,
+    }} />
   </>
 );

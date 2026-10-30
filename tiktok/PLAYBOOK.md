@@ -149,7 +149,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | Feature demo: screen tour of one app tool on a phone mockup | *build* (see `Showcase` for the 3D phone) | any | mock server screenshots/recordings |
 | **Showcase**: the tools you can't get elsewhere, one scene each, $65→$0 shatter hook, 3D phone per feature | `Showcase` (src/fx.tsx effects) | any, about once a month | mock screenshots (`public/app/*-vp.png`) + the week's weather numbers |
 | **Game recap** (TNF / MNF): the call we made, final + win-prob dip, studs, surprise, busts, verdict | `GameRecap` | Fri (TNF), Tue (MNF) | ESPN scoreboard + summary (score, linescores, win probability) and Sleeper week stats → `public/<dir>/game.json`, `players.json` |
-| Quiz / "would you rather" poll: pause-to-answer, reveal | *build* | any | Sleeper stats |
+| **Quiz** "Pause & Guess": 3 multiple-choice questions on the last 3 weeks (4 jersey tiles each), a 3-2-1 countdown ring + PAUSE NOW, value race, X-outs, stamp on the answer, "comment your score" verdict | `Quiz` (music-first; `scripts/quiz.mjs public/<dir>` builds leaderboards: touches, pts, ppg, tgt) | any (Fri–Sat between start/sit days; comment bait) | Sleeper stats weeks N-3..N-1 + projections |
 | **Photo carousel** (TikTok photo post): 5–8 still slides, a hook slide, one slide per player or point, the app slide last | `npx remotion still <Comp> --frame=N` on any composition at its "landed" frames, or a dedicated slides composition | music days, about 2 a week | same as the format |
 | Music-only cut of any format above: kinetic captions on the beat, no voice | any composition with `voice: false` + captions | music days | same as the format |
 
@@ -237,6 +237,12 @@ and switch its row from *build* to the composition name.
 - WebGL renders are slow on 2 CPUs (~30 min for 35 s). Render each video once and derive the other audio mix with ffmpeg
   (`-an` for silent; `amix` with beat40.wav at 0.16 for voice+bed). `lightLeak` seeds differ a lot in color: seed 2 is warm gold, 4/5/6/9 come out purple.
 - A game recap writes itself from yesterday's call: when a START/SIT pick plays on TNF, the hook is "we told you" (or "we were wrong").
+- **Quiz (2026-10-30):** a "pause now" quiz needs the countdown to sit over the tile grid, not beside it, and the four
+  values must count up *before* the X-outs (lowest first, one per half-beat) so the reveal reads as a race, not a cut.
+  Jersey numbers on 410px tiles collide with names: keep the number top-right, dim it at the reveal and put the value
+  counter in its spot. Questions where the "famous" option loses (Mahomes 9.2 ppg, Kittle vs Likely) are the comment bait.
+- Non-WebGL 40 s renders still take ~28 min on 2 CPUs; start the render in the background (`nohup … &`) right after
+  the still QA and do the PLAYBOOK/caption work while it runs.
 
 ## Log
 | Date | Format | Notes |
@@ -249,3 +255,4 @@ and switch its row from *build* to the composition name.
 | 2026-10-29 | Photo carousel, NEW Weather game alert (`WeatherSlides`, week 8) | No-voice, 7 slides. Hook "−0.5" (Mayfield, ATL@TB storm game); board 3 domes / 8 clear / 3 hits; TB START 'EM ANYWAY, MIA IGNORE THE RAIN ICON, JAX NON-FACTOR; 11/14 PLAY YOUR GUYS |
 | 2026-10-30 | Showcase (features, NEW `Showcase`) | Voiced: War Room Announcer (VoiceStudio), voice-only (owner dropped the beat mix). QR + URL closer. $65→$0 shatter, 3D phones, 10,000-season swarm |
 | 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |
+| 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |
