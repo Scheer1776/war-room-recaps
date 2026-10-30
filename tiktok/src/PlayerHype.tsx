@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { z } from "zod";
 import { AppLink, BODY, C, DISPLAY, Field, Glass, SAFE, teamColor } from "./theme";
-import { Flash, Kinetic, Particles, Slam, Stamp, W, clamp, useCount } from "./fx";
+import { Flash, Kinetic, Particles, Slam, Stamp, W, clamp } from "./fx";
 import { Broll } from "./Examples";
 
 // "Player Hype": a 25 s pre-game hype cut for one player on the owner's team. Real clip in the middle when
@@ -47,7 +47,7 @@ export const PlayerHype: React.FC<HypeProps> = (p) => {
           <div style={{ position: "absolute", top: SAFE.top, left: SAFE.left, right: SAFE.right, textAlign: "center" }}>
             <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 200, lineHeight: 0.86, color: C.ink, textShadow: `0 0 80px ${col}` }}><Slam at={2}>{p.nick.toUpperCase()}</Slam></div>
           </div>
-          <div style={{ position: "absolute", top: 1250, left: SAFE.left, right: SAFE.right, textAlign: "center" }}>
+          <div style={{ position: "absolute", top: 1430, left: SAFE.left, right: SAFE.right, textAlign: "center" }}>
             <Kinetic text={`${p.nfl} vs ${p.opp} · ${p.game}`} at={30} size={64} color={C.gold} />
           </div>
           <Flash at={0} color={col} peak={0.8} />
@@ -58,16 +58,16 @@ export const PlayerHype: React.FC<HypeProps> = (p) => {
           {p.clip ? (
             <AbsoluteFill style={{ overflow: "hidden" }}>
               <OffthreadVideo src={staticFile(`${p.source}/${p.clip}`)} startFrom={Math.round(p.clipFrom * fps)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(4,17,11,0.75) 0%, transparent 35%, transparent 65%, rgba(4,17,11,0.85) 100%)" }} />
+              <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(4,17,11,0.55) 0%, transparent 22%, transparent 78%, rgba(4,17,11,0.6) 100%)" }} />
             </AbsoluteFill>
           ) : (
             <><Broll src={null} from={T[1]} dim={0.4} /><Photo src={photo} col={col} f={f} /></>
           )}
           <div style={{ position: "absolute", top: SAFE.top, left: SAFE.left, right: SAFE.right }}>
-            <Kinetic text={p.line1} at={T[1] + 6} size={104} align="left" accent={C.gold} />
+            <Kinetic text={p.line1} at={T[1] + 6} size={78} align="left" accent={C.gold} />
           </div>
-          <div style={{ position: "absolute", top: 1200, left: SAFE.left, right: SAFE.right }}>
-            <Kinetic text={p.line2} at={T[1] + 70} size={84} align="left" color={C.ink} accent={col} />
+          <div style={{ position: "absolute", top: 1490, left: SAFE.left, right: SAFE.right }}>
+            <Kinetic text={p.line2} at={T[1] + 70} size={72} align="left" color={C.ink} accent={C.gold} />
           </div>
           <Flash at={T[1]} color="#fff" peak={0.5} />
         </>
@@ -79,7 +79,7 @@ export const PlayerHype: React.FC<HypeProps> = (p) => {
           </div>
           <div style={{ position: "absolute", top: 520, left: SAFE.left, width: W - SAFE.left - SAFE.right, display: "flex", flexDirection: "column", gap: 22 }}>
             {p.stats.map((s, i) => {
-              const v = useCount(T[2] + 12 + i * 22, 40, s.v);
+              const v = interpolate(f, [T[2] + 12 + i * 22, T[2] + 52 + i * 22], [0, s.v], { ...clamp, easing: (x) => 1 - Math.pow(1 - x, 4) });
               const inn = spring({ frame: f - (T[2] + 10 + i * 22), fps, config: { damping: 14, stiffness: 90 } });
               return (
                 <Glass key={i} style={{ padding: "22px 36px", display: "flex", alignItems: "baseline", justifyContent: "space-between", translate: `${(1 - inn) * -200}px 0`, opacity: inn }}>
