@@ -183,7 +183,10 @@ and switch its row from *build* to the composition name.
 - **Narrator style the owner wants (2026-10-30, ref: @youbuilddifferent "How a pit in your backyard becomes an ocean"):**
   Voice: AI male narrator, mid-baritone (median ~124 Hz), very expressive (pitch SD ~6.9 semitones vs ~1.5 for flat TTS),
   FAST: ~250 words/min while speaking, almost no gaps between sentences, only ~6 real pauses in 72 s (before twists).
-  Sits over a low music bed (~8 dB under the voice). Clean isolated samples: `Documents-WarRoom\voice-ref-clean-13s.wav`
+  Sits over a low music bed (~8 dB under the voice).
+  **Cloned 2026-10-30 as VoiceStudio profile "War Room Narrator"** (VoxCPM2, from voice-ref-clean-13s.wav). Test take on a
+  Henry script: 203 wpm overall vs the reference's 205, median pitch 148 vs 144 Hz, every word heard right. It doesn't pause
+  on "..." on its own: add the beat-before-the-twist in the edit (insert ~0.4 s of silence). Clean isolated samples: `Documents-WarRoom\voice-ref-clean-13s.wav`
   (for cloning) and `voice-ref-clean-full.wav`.
   Script shape matters as much as the voice: second person ("You dig a giant hole..."), one cause → consequence chain
   told in short sentences, each step opened with "So," / "Then," / "But", escalation to a disaster, and a deadpan
