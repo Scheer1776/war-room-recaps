@@ -1,0 +1,827 @@
+{
+ "season": 2026,
+ "week": 8,
+ "sunday": [
+  {
+   "id": "401873035",
+   "date": "2026-11-02T01:20Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "PHI",
+    "s": 10,
+    "name": "Eagles"
+   },
+   "home": {
+    "t": "WSH",
+    "s": 27,
+    "name": "Commanders"
+   }
+  },
+  {
+   "id": "401873026",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "BAL",
+    "s": 10,
+    "name": "Ravens"
+   },
+   "home": {
+    "t": "BUF",
+    "s": 36,
+    "name": "Bills"
+   }
+  },
+  {
+   "id": "401873031",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final/OT",
+   "ot": true,
+   "away": {
+    "t": "TEN",
+    "s": 36,
+    "name": "Titans"
+   },
+   "home": {
+    "t": "CIN",
+    "s": 43,
+    "name": "Bengals"
+   }
+  },
+  {
+   "id": "401873024",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final/OT",
+   "ot": true,
+   "away": {
+    "t": "ARI",
+    "s": 33,
+    "name": "Cardinals"
+   },
+   "home": {
+    "t": "DAL",
+    "s": 30,
+    "name": "Cowboys"
+   }
+  },
+  {
+   "id": "401873030",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "MIN",
+    "s": 15,
+    "name": "Vikings"
+   },
+   "home": {
+    "t": "DET",
+    "s": 19,
+    "name": "Lions"
+   }
+  },
+  {
+   "id": "401873029",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "LV",
+    "s": 38,
+    "name": "Raiders"
+   },
+   "home": {
+    "t": "NYJ",
+    "s": 33,
+    "name": "Jets"
+   }
+  },
+  {
+   "id": "401873027",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "CLE",
+    "s": 6,
+    "name": "Browns"
+   },
+   "home": {
+    "t": "PIT",
+    "s": 27,
+    "name": "Steelers"
+   }
+  },
+  {
+   "id": "401873025",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "ATL",
+    "s": 0,
+    "name": "Falcons"
+   },
+   "home": {
+    "t": "TB",
+    "s": 16,
+    "name": "Buccaneers"
+   }
+  },
+  {
+   "id": "401873028",
+   "date": "2026-11-01T18:00Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "IND",
+    "s": 7,
+    "name": "Colts"
+   },
+   "home": {
+    "t": "JAX",
+    "s": 42,
+    "name": "Jaguars"
+   }
+  },
+  {
+   "id": "401873032",
+   "date": "2026-11-01T21:05Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "LAC",
+    "s": 9,
+    "name": "Chargers"
+   },
+   "home": {
+    "t": "LAR",
+    "s": 24,
+    "name": "Rams"
+   }
+  },
+  {
+   "id": "401873033",
+   "date": "2026-11-01T21:25Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "KC",
+    "s": 24,
+    "name": "Chiefs"
+   },
+   "home": {
+    "t": "DEN",
+    "s": 28,
+    "name": "Broncos"
+   }
+  },
+  {
+   "id": "401873034",
+   "date": "2026-11-01T21:25Z",
+   "state": "post",
+   "detail": "Final",
+   "ot": false,
+   "away": {
+    "t": "NE",
+    "s": 24,
+    "name": "Patriots"
+   },
+   "home": {
+    "t": "MIA",
+    "s": 19,
+    "name": "Dolphins"
+   }
+  }
+ ],
+ "top": [
+  {
+   "id": "6770",
+   "n": "Joe Burrow",
+   "last": "Burrow",
+   "pos": "QB",
+   "team": "CIN",
+   "num": 9,
+   "pts": 42.5,
+   "proj": 22,
+   "line": "462 pass yds · 5 TD · 1 rush TD",
+   "s": {
+    "pass_yd": 462,
+    "pass_td": 5,
+    "rush_yd": 10,
+    "rush_td": 1,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": 20.5
+  },
+  {
+   "id": "6801",
+   "n": "Tee Higgins",
+   "last": "Higgins",
+   "pos": "WR",
+   "team": "CIN",
+   "num": 5,
+   "pts": 37.5,
+   "proj": 16,
+   "line": "10 rec · 155 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 10,
+    "rec_yd": 155,
+    "rec_td": 2
+   },
+   "diff": 21.5
+  },
+  {
+   "id": "8132",
+   "n": "Tyler Allgeier",
+   "last": "Allgeier",
+   "pos": "RB",
+   "team": "ARI",
+   "num": 22,
+   "pts": 36.1,
+   "proj": 8.4,
+   "line": "147 rush yds · 5 rec · 44 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 147,
+    "rush_td": 1,
+    "rec": 5,
+    "rec_yd": 44,
+    "rec_td": 1
+   },
+   "diff": 27.7
+  },
+  {
+   "id": "7564",
+   "n": "Ja'Marr Chase",
+   "last": "Chase",
+   "pos": "WR",
+   "team": "CIN",
+   "num": 1,
+   "pts": 31.1,
+   "proj": 19.8,
+   "line": "11 rec · 141 rec yds · 1 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 11,
+    "rec_yd": 141,
+    "rec_td": 1
+   },
+   "diff": 11.3
+  },
+  {
+   "id": "12490",
+   "n": "Bhayshul Tuten",
+   "last": "Tuten",
+   "pos": "RB",
+   "team": "JAX",
+   "num": 33,
+   "pts": 29.9,
+   "proj": 15.3,
+   "line": "104 rush yds · 2 rec · 55 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 104,
+    "rush_td": 1,
+    "rec": 2,
+    "rec_yd": 55,
+    "rec_td": 1
+   },
+   "diff": 14.6
+  },
+  {
+   "id": "5967",
+   "n": "Tony Pollard",
+   "last": "Pollard",
+   "pos": "RB",
+   "team": "TEN",
+   "num": 20,
+   "pts": 28.7,
+   "proj": 14.3,
+   "line": "117 rush yds · 3 rec · 20 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 117,
+    "rush_td": 2,
+    "rec": 3,
+    "rec_yd": 20,
+    "rec_td": 0
+   },
+   "diff": 14.4
+  },
+  {
+   "id": "11604",
+   "n": "Brock Bowers",
+   "last": "Bowers",
+   "pos": "TE",
+   "team": "LV",
+   "num": 89,
+   "pts": 28.2,
+   "proj": 17.1,
+   "line": "7 rec · 92 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 7,
+    "rec_yd": 92,
+    "rec_td": 2
+   },
+   "diff": 11.1
+  },
+  {
+   "id": "1166",
+   "n": "Kirk Cousins",
+   "last": "Cousins",
+   "pos": "QB",
+   "team": "LV",
+   "num": 8,
+   "pts": 28.2,
+   "proj": 16.9,
+   "line": "247 pass yds · 3 TD · 1 rush TD",
+   "s": {
+    "pass_yd": 247,
+    "pass_td": 3,
+    "rush_yd": 3,
+    "rush_td": 1,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": 11.3
+  },
+  {
+   "id": "4984",
+   "n": "Josh Allen",
+   "last": "Allen",
+   "pos": "QB",
+   "team": "BUF",
+   "num": 17,
+   "pts": 27.6,
+   "proj": 24.5,
+   "line": "289 pass yds · 2 TD · 30 rush yds · 1 rush TD",
+   "s": {
+    "pass_yd": 289,
+    "pass_td": 2,
+    "rush_yd": 30,
+    "rush_td": 1,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": 3.1
+  },
+  {
+   "id": "11625",
+   "n": "Adonai Mitchell",
+   "last": "Mitchell",
+   "pos": "WR",
+   "team": "NYJ",
+   "num": 15,
+   "pts": 27.2,
+   "proj": 5.6,
+   "line": "7 rec · 142 rec yds · 1 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 7,
+    "rec_yd": 142,
+    "rec_td": 1
+   },
+   "diff": 21.6
+  },
+  {
+   "id": "10232",
+   "n": "Michael Wilson",
+   "last": "Wilson",
+   "pos": "WR",
+   "team": "ARI",
+   "num": 14,
+   "pts": 26.8,
+   "proj": 15.4,
+   "line": "17 rush yds · 8 rec · 111 rec yds · 1 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 17,
+    "rush_td": 0,
+    "rec": 8,
+    "rec_yd": 111,
+    "rec_td": 1
+   },
+   "diff": 11.4
+  },
+  {
+   "id": "12522",
+   "n": "Cam Ward",
+   "last": "Ward",
+   "pos": "QB",
+   "team": "TEN",
+   "num": 1,
+   "pts": 26.3,
+   "proj": 12.7,
+   "line": "304 pass yds · 2 TD · 41 rush yds",
+   "s": {
+    "pass_yd": 304,
+    "pass_td": 2,
+    "rush_yd": 41,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": 13.6
+  }
+ ],
+ "beat": [
+  {
+   "id": "8132",
+   "n": "Tyler Allgeier",
+   "last": "Allgeier",
+   "pos": "RB",
+   "team": "ARI",
+   "num": 22,
+   "pts": 36.1,
+   "proj": 8.4,
+   "line": "147 rush yds · 5 rec · 44 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 147,
+    "rush_td": 1,
+    "rec": 5,
+    "rec_yd": 44,
+    "rec_td": 1
+   },
+   "diff": 27.7
+  },
+  {
+   "id": "11625",
+   "n": "Adonai Mitchell",
+   "last": "Mitchell",
+   "pos": "WR",
+   "team": "NYJ",
+   "num": 15,
+   "pts": 27.2,
+   "proj": 5.6,
+   "line": "7 rec · 142 rec yds · 1 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 7,
+    "rec_yd": 142,
+    "rec_td": 1
+   },
+   "diff": 21.6
+  },
+  {
+   "id": "6801",
+   "n": "Tee Higgins",
+   "last": "Higgins",
+   "pos": "WR",
+   "team": "CIN",
+   "num": 5,
+   "pts": 37.5,
+   "proj": 16,
+   "line": "10 rec · 155 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 10,
+    "rec_yd": 155,
+    "rec_td": 2
+   },
+   "diff": 21.5
+  },
+  {
+   "id": "6770",
+   "n": "Joe Burrow",
+   "last": "Burrow",
+   "pos": "QB",
+   "team": "CIN",
+   "num": 9,
+   "pts": 42.5,
+   "proj": 22,
+   "line": "462 pass yds · 5 TD · 1 rush TD",
+   "s": {
+    "pass_yd": 462,
+    "pass_td": 5,
+    "rush_yd": 10,
+    "rush_td": 1,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": 20.5
+  },
+  {
+   "id": "12490",
+   "n": "Bhayshul Tuten",
+   "last": "Tuten",
+   "pos": "RB",
+   "team": "JAX",
+   "num": 33,
+   "pts": 29.9,
+   "proj": 15.3,
+   "line": "104 rush yds · 2 rec · 55 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 104,
+    "rush_td": 1,
+    "rec": 2,
+    "rec_yd": 55,
+    "rec_td": 1
+   },
+   "diff": 14.6
+  },
+  {
+   "id": "5967",
+   "n": "Tony Pollard",
+   "last": "Pollard",
+   "pos": "RB",
+   "team": "TEN",
+   "num": 20,
+   "pts": 28.7,
+   "proj": 14.3,
+   "line": "117 rush yds · 3 rec · 20 rec yds · 2 TD",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 117,
+    "rush_td": 2,
+    "rec": 3,
+    "rec_yd": 20,
+    "rec_td": 0
+   },
+   "diff": 14.4
+  },
+  {
+   "id": "12522",
+   "n": "Cam Ward",
+   "last": "Ward",
+   "pos": "QB",
+   "team": "TEN",
+   "num": 1,
+   "pts": 26.3,
+   "proj": 12.7,
+   "line": "304 pass yds · 2 TD · 41 rush yds",
+   "s": {
+    "pass_yd": 304,
+    "pass_td": 2,
+    "rush_yd": 41,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": 13.6
+  },
+  {
+   "id": "12506",
+   "n": "Harold Fannin Jr.",
+   "last": "Fannin Jr.",
+   "pos": "TE",
+   "team": "CLE",
+   "num": 44,
+   "pts": 23.4,
+   "proj": 10.6,
+   "line": "10 rec · 154 rec yds",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 10,
+    "rec_yd": 154,
+    "rec_td": 0
+   },
+   "diff": 12.8
+  }
+ ],
+ "bust": [
+  {
+   "id": "8112",
+   "n": "Drake London",
+   "last": "London",
+   "pos": "WR",
+   "team": "ATL",
+   "num": 5,
+   "pts": 1.8,
+   "proj": 16.5,
+   "line": "1 rec · 8 rec yds",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 1,
+    "rec_yd": 8,
+    "rec_td": 0
+   },
+   "diff": -14.7
+  },
+  {
+   "id": "9509",
+   "n": "Bijan Robinson",
+   "last": "Robinson",
+   "pos": "RB",
+   "team": "ATL",
+   "num": 7,
+   "pts": 7.6,
+   "proj": 21.9,
+   "line": "76 rush yds",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 76,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": -14.3
+  },
+  {
+   "id": "4892",
+   "n": "Baker Mayfield",
+   "last": "Mayfield",
+   "pos": "QB",
+   "team": "TB",
+   "num": 6,
+   "pts": 1.4,
+   "proj": 15.3,
+   "line": "",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 14,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": -13.9
+  },
+  {
+   "id": "3257",
+   "n": "Jacoby Brissett",
+   "last": "Brissett",
+   "pos": "QB",
+   "team": "ARI",
+   "num": 7,
+   "pts": 4.5,
+   "proj": 18.3,
+   "line": "119 pass yds",
+   "s": {
+    "pass_yd": 119,
+    "pass_td": 0,
+    "rush_yd": 7,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": -13.8
+  },
+  {
+   "id": "7588",
+   "n": "Javonte Williams",
+   "last": "Williams",
+   "pos": "RB",
+   "team": "DAL",
+   "num": 33,
+   "pts": 6.7,
+   "proj": 19.8,
+   "line": "56 rush yds · 1 rec · 1 rec yds",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 56,
+    "rush_td": 0,
+    "rec": 1,
+    "rec_yd": 1,
+    "rec_td": 0
+   },
+   "diff": -13.1
+  },
+  {
+   "id": "11559",
+   "n": "Michael Penix Jr.",
+   "last": "Penix Jr.",
+   "pos": "QB",
+   "team": "ATL",
+   "num": 9,
+   "pts": 2.1,
+   "proj": 14.4,
+   "line": "125 pass yds",
+   "s": {
+    "pass_yd": 125,
+    "pass_td": 0,
+    "rush_yd": 11,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": -12.3
+  },
+  {
+   "id": "9487",
+   "n": "Parker Washington",
+   "last": "Washington",
+   "pos": "WR",
+   "team": "JAX",
+   "num": 11,
+   "pts": 3.6,
+   "proj": 15,
+   "line": "1 rec · 16 rec yds",
+   "s": {
+    "pass_yd": 0,
+    "pass_td": 0,
+    "rush_yd": 10,
+    "rush_td": 0,
+    "rec": 1,
+    "rec_yd": 16,
+    "rec_td": 0
+   },
+   "diff": -11.4
+  },
+  {
+   "id": "96",
+   "n": "Aaron Rodgers",
+   "last": "Rodgers",
+   "pos": "QB",
+   "team": "PIT",
+   "num": 8,
+   "pts": 5.9,
+   "proj": 15.8,
+   "line": "172 pass yds",
+   "s": {
+    "pass_yd": 172,
+    "pass_td": 0,
+    "rush_yd": 0,
+    "rush_td": 0,
+    "rec": 0,
+    "rec_yd": 0,
+    "rec_td": 0
+   },
+   "diff": -9.9
+  }
+ ],
+ "gameOf": {
+  "96": "401873027",
+  "1166": "401873029",
+  "3257": "401873024",
+  "4892": "401873025",
+  "4984": "401873026",
+  "5967": "401873031",
+  "6770": "401873031",
+  "6801": "401873031",
+  "7564": "401873031",
+  "7588": "401873024",
+  "8112": "401873025",
+  "8132": "401873024",
+  "9487": "401873028",
+  "9509": "401873025",
+  "10232": "401873024",
+  "11559": "401873025",
+  "11604": "401873029",
+  "11625": "401873029",
+  "12490": "401873028",
+  "12506": "401873027",
+  "12522": "401873031"
+ }
+}

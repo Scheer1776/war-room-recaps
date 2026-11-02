@@ -150,6 +150,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | **Showcase**: the tools you can't get elsewhere, one scene each, $65→$0 shatter hook, 3D phone per feature | `Showcase` (src/fx.tsx effects) | any, about once a month | mock screenshots (`public/app/*-vp.png`) + the week's weather numbers |
 | **Game recap** (TNF / MNF): the call we made, final + win-prob dip, studs, surprise, busts, verdict | `GameRecap` | Fri (TNF), Tue (MNF) | ESPN scoreboard + summary (score, linescores, win probability) and Sleeper week stats → `public/<dir>/game.json`, `players.json` |
 | **Quiz** "Pause & Guess": 3 multiple-choice questions on the last 3 weeks (4 jersey tiles each), a 3-2-1 countdown ring + PAUSE NOW, value race, X-outs, stamp on the answer, "comment your score" verdict | `Quiz` (music-first; `scripts/quiz.mjs public/<dir>` builds leaderboards: touches, pts, ppg, tgt) | any (Fri–Sat between start/sit days; comment bait) | Sleeper stats weeks N-3..N-1 + projections |
+| **Sunday Recap** (clip-first, the night of): the day's real highlights full-bleed, one storyline per scene with a stat card (headshot, PPR counter, proj chip, stamp): biggest score, OT/stat tiles, boom-vs-projection waiver heroes, the team-wide bust with a giant number, every Sunday final, QR closer | `SundayRecap` (data-driven: `public/<dir>/plan.json`) | Sun night (after SNF) / Mon morning | `scripts/sunday.mjs public/<dir>` (ESPN scoreboard + Sleeper PPR stats vs projections: top, beat, bust + headshots); clips from that night's NFL uploads (`Documents-WarRoom\sun8-clips.bat` pattern) cut with `clips/cut.py` |
 | **Photo carousel** (TikTok photo post): 5–8 still slides, a hook slide, one slide per player or point, the app slide last | `npx remotion still <Comp> --frame=N` on any composition at its "landed" frames, or a dedicated slides composition | music days, about 2 a week | same as the format |
 | Music-only cut of any format above: kinetic captions on the beat, no voice | any composition with `voice: false` + captions | music days | same as the format |
 
@@ -247,6 +248,18 @@ and switch its row from *build* to the composition name.
   counter in its spot. Questions where the "famous" option loses (Mahomes 9.2 ppg, Kittle vs Likely) are the comment bait.
 - Non-WebGL 40 s renders still take ~28 min on 2 CPUs; start the render in the background (`nohup … &`) right after
   the still QA and do the PLAYBOOK/caption work while it runs.
+- 2026-11-01 Same-night clips: the NFL posts single plays, player "best plays" reels and game packages to YouTube within
+  ~1–3 h of the final whistle. The reliable source is the channel's own tabs, not search (this yt-dlp has no `ytsearchdate:`):
+  `yt-dlp https://www.youtube.com/@NFL/videos` (and `/shorts`) `--dateafter <today> --break-match-filters "upload_date >= <today>"
+  --match-filter "duration <= 1200 & title ~= '(?i)(Burrow|Higgins|...)'"`. Shorts arrive vertical (no blur needed).
+- 2026-11-01 Finding a play inside a 10–15 min game package: transcribe its commentary with faster-whisper (segments with
+  timestamps) and search the player's name ("Mitchell… Touchdown" at 6:09), then a 5 fps contact sheet of that window.
+- 2026-11-01 VoiceStudio Save-as can truncate the typed name (sun8_bust → sun.wav, sun8_scores → su.wav) when a folder with
+  the same prefix exists (sun8\). List the folder after recording and map stragglers by save time; avoid name prefixes that
+  match a folder.
+- 2026-11-01 Props filled by calculateMetadata skip zod `.default()`s: guard optional fields with `??` in the component.
+  The cloud browser path moves between containers; find it with `ls /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/`.
+  `--concurrency` may not exceed the core count (2).
 
 ## Log
 | Date | Format | Notes |
@@ -261,6 +274,7 @@ and switch its row from *build* to the composition name.
 | 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |
 | 2026-10-30 | Showcase v2 (9 features; NEW Start/Sit + Waivers scenes; clip layer) | Voiced: War Room Narrator (first full video), voice-only. Clips: Cook 41-yd TD, Mahomes truck-stick TD, Nabers moss (clip-library). Audit PASS (pace WARN: fast mid-line flow, by design) |
 | 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |
+| 2026-11-01 | Sunday Recap week 8 (NEW `SundayRecap`) | Voiced: War Room Announcer, voice-only + silent. Same-night clips scraped from the NFL channel on the PC: Burrow→Chase deep TD, Burrow OT TD (Short), Higgins corner catch, Allgeier 63-yd TD, Mitchell 4th-down TD, Penix INT (ATL 0). Burrow 42.5, Higgins 37.5, Allgeier 36.1 (proj 8.4), Mitchell 27.2 (proj 5.6), ATL shut out (Bijan 7.6, London 1.8), 12 finals. QR closer |
 
 ## League Recap (in-app weekly video, every league) — added 2026-10-30
 - Composition `LeagueRecap` (src/LeagueRecap.tsx): real league/team names (it is FOR the league), house effects (kinetic

@@ -4,3 +4,5 @@ out
 .DS_Store
 .env
 voice/.venv
+public/*/clips/
+public/recapvo/vo/

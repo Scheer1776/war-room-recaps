@@ -10,6 +10,7 @@ import { GameRecap, RecapGameProps, recapGameFrames, recapGameSchema } from "./G
 import { BrollExample, PlayAnimExample } from "./Examples";
 import { RankSlides, RankProps, rankSchema, rankSlides } from "./RankSlides";
 import { PlayerHype, hypeFrames, hypeSchema } from "./PlayerHype";
+import { SundayRecap, SundayProps, sundayFrames, sundaySchema } from "./SundayRecap";
 import { LeagueRecap, LeagueRecapProps, leagueRecapFrames, leagueRecapSchema } from "./LeagueRecap";
 import { Quiz, QuizProps, quizFrames, quizSchema } from "./Quiz";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
@@ -93,6 +94,12 @@ const leagueRecapMeta: CalculateMetadataFunction<LeagueRecapProps> = async ({ pr
   if (props.voice && !voDur) { try { const v = await fetch(staticFile("recapvo/durations.json")); if (v.ok) voDur = await v.json(); } catch { voDur = null; } }
   const p = { ...props, recap, voDur };
   return { props: p, durationInFrames: leagueRecapFrames(p) };
+};
+const sundayMeta: CalculateMetadataFunction<SundayProps> = async ({ props }) => {
+  await fontsReady;
+  const plan = await fetch(staticFile(`${props.source}/plan.json`)).then((r) => r.json());
+  const p = { ...plan, ...props, scenes: plan.scenes, scores: plan.scores, voDur: props.voice ? plan.voDur : null };
+  return { props: p, durationInFrames: sundayFrames(p) };
 };
 export const RemotionRoot: React.FC = () => (
   <>
@@ -244,5 +251,7 @@ export const RemotionRoot: React.FC = () => (
     }} />
   <Composition id="LeagueRecap" component={LeagueRecap} fps={30} width={1080} height={1920} durationInFrames={1200} schema={leagueRecapSchema} calculateMetadata={leagueRecapMeta}
     defaultProps={{ source: "lr7", recap: null, nameOverrides: {}, appUrl: "war-room-self-one.vercel.app", voice: false, voDur: null, music: "bed" }} />
+  <Composition id="SundayRecap" component={SundayRecap} fps={30} width={1080} height={1920} durationInFrames={1050} schema={sundaySchema} calculateMetadata={sundayMeta}
+    defaultProps={{ source: "sun8", week: 8, voice: true, voDur: null, scenes: [], scores: [] }} />
   </>
 );

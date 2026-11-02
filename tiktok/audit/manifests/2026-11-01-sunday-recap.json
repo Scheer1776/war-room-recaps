@@ -1,0 +1,67 @@
+{
+ "video": "out/sun8/sunday-recap-voice.mp4",
+ "audio": "voice",
+ "vo": "out/sun8/vo-track.wav",
+ "script": "Joe Burrow just dropped forty-two and a half fantasy points. Four hundred sixty-two yards. Six touchdowns. And the Bengals won it in overtime. Tee Higgins rode shotgun... thirty-seven and a half. Tyler Allgeier was projected for eight. He gave you thirty-six. Adonai Mitchell? Projected under six... twenty-seven. And Atlanta... got shut out. Bijan, under eight. Drake London, under two. Two overtime games. Jacksonville by thirty-five. That's your Sunday. Who's still alive in your league? Find out free, on War Room.",
+ "names": [
+  "Joe Burrow",
+  "Tee Higgins",
+  "Tyler Allgeier",
+  "Adonai Mitchell",
+  "Bijan",
+  "Drake London",
+  "Atlanta",
+  "Jacksonville"
+ ],
+ "endCard": 3.5,
+ "clips": [
+  {
+   "src": "public/sun8/clips/hook.mp4",
+   "at": 0.0,
+   "dur": 4.2,
+   "clipStart": 0,
+   "keyAt": 3.0,
+   "label": "hook"
+  },
+  {
+   "src": "public/sun8/clips/burrow.mp4",
+   "at": 4.2,
+   "dur": 4.6,
+   "clipStart": 0,
+   "keyAt": 3.0,
+   "label": "burrow"
+  },
+  {
+   "src": "public/sun8/clips/higgins.mp4",
+   "at": 8.8,
+   "dur": 4.4,
+   "clipStart": 0,
+   "keyAt": 3.3,
+   "label": "higgins"
+  },
+  {
+   "src": "public/sun8/clips/allgeier.mp4",
+   "at": 13.2,
+   "dur": 4.4,
+   "clipStart": 0,
+   "keyAt": 2.7,
+   "label": "allgeier"
+  },
+  {
+   "src": "public/sun8/clips/mitchell.mp4",
+   "at": 17.6,
+   "dur": 4.0,
+   "clipStart": 0,
+   "keyAt": 2.6,
+   "label": "mitchell"
+  },
+  {
+   "src": "public/sun8/clips/bust.mp4",
+   "at": 21.6,
+   "dur": 4.8,
+   "clipStart": 0,
+   "keyAt": 1.9,
+   "label": "bust"
+  }
+ ]
+}
