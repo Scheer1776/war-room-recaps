@@ -12,6 +12,10 @@ import json, re, subprocess, sys, pathlib
 story_p, take = pathlib.Path(sys.argv[1]), sys.argv[2]
 st = json.loads(story_p.read_text()); d = story_p.parent
 full = d / "vo" / "full.mp3"
+# 1) remove VoxCPM2's steady vocoder tones first (owner heard "high pitched ringing", 2026-11-02: 6000 Hz + others)
+clean = d / "vo" / "take-clean.wav"
+subprocess.run([sys.executable, "-I", str(pathlib.Path(__file__).resolve().parent.parent / "voice" / "dering.py"), take, str(clean)], check=True)
+take = str(clean)
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", take, "-af",
                 "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,adelay=150|150,loudnorm=I=-14:TP=-1.5:LRA=9",
                 "-ar", "44100", "-ac", "1", "-b:a", "192k", str(full)], check=True)
@@ -25,8 +29,15 @@ def find(seq, after):
         if nw[i:i + len(seq)] == seq: return i
     raise SystemExit(f"anchor {seq} not found after word {after}: ...{' '.join(nw[after:after + 25])}")
 starts, i = [0.0], 0
+def find_any(anchor, after):
+    """anchor = ["first", "words"] or a list of alternatives [["bs", "on"], ["b", "zahn"]] (whisper hears names differently run to run)"""
+    alts = anchor if anchor and isinstance(anchor[0], list) else [anchor]
+    for a in alts:
+        try: return find(a, after)
+        except SystemExit as e: err = e
+    raise err
 for sc in st["scenes"][1:]:
-    i = find(sc["anchor"], i); starts.append(round(max(0, w[i].start - 0.12) * 30) / 30)
+    i = find_any(sc["anchor"], i); starts.append(round(max(0, w[i].start - 0.12) * 30) / 30)
 ends = starts[1:] + [round((w[-1].end + 2.3) * 30) / 30]
 dur = lambda f: float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f], capture_output=True, text=True).stdout)
 bad = 0; scenes = []

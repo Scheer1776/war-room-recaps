@@ -20,6 +20,10 @@ deliver a video whose last audit failed. Write one manifest per video in `audit/
 - Attach the `.audit.png` contact sheet view to your own QA; mention the audit result in one line of the delivery message.
 
 ## Voices: pacing, flow and pronunciation — rewritten 2026-11-01 (owner: "choppy, weird pauses"; Allgeier said wrong)
+- **De-ring every VoiceStudio take (owner, 2026-11-02: "high pitched ringing the whole way through").** VoxCPM2 leaves
+  steady vocoder tones (a 6000 Hz whine at -34 dB, plus 12000/15600/15800 Hz). `python3 -I voice/dering.py <take> <out>`
+  notches only those lines (voice level changes < 0.1 dB, timing unchanged); scripts/sunday-plan.py runs it automatically.
+  The audit's RINGING check fails any steady tone louder than -65 dB.
 - **Fast path (2026-11-02):** `python3 -I voice/say.py "<real-spelling script>"` prints the VoiceStudio text with sourced
   respellings swapped in and lists names with no sourced pronunciation (cut those from the voice, show them on screen).
   Sources: voice/names.json (hand-checked) + voice/pronounce-bank.json (every name token of the top ~300 players, each with

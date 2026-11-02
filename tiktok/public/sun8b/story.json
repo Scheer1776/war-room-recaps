@@ -169,8 +169,17 @@
    "id": "bust2",
    "kind": "bust",
    "anchor": [
-    "bs",
-    "on"
+    [
+     "bs",
+     "on"
+    ],
+    [
+     "b",
+     "zahn"
+    ],
+    [
+     "bijan"
+    ]
    ],
    "title": "FANTASY *DAMAGE*",
    "color": "red",

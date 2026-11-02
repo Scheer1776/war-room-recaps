@@ -194,6 +194,16 @@ def check_audio(video, kind):
     mean = float(re.search(r"mean_volume: (-?[\d.]+)", out).group(1)); peak = float(re.search(r"max_volume: (-?[\d.]+)", out).group(1))
     st = "FAIL" if mean < -40 or peak > -0.3 else "PASS"
     add("AUDIO", st, f"{kind}: mean {mean:.1f} dB, peak {peak:.1f} dB" + (" (near silent)" if mean < -40 else "") + (" (clipping)" if peak > -0.3 else ""))
+    # RINGING (owner, 2026-11-02: "a high pitched ringing the whole way through"): VoxCPM2 leaves steady vocoder tones
+    # (6000 Hz and other multiples of 200 Hz). Any narrow tone that sits on one frequency through most of the video FAILS;
+    # fix with voice/dering.py on the raw take (scripts/sunday-plan.py runs it automatically).
+    import tempfile, sys as _s
+    _s.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "voice"))
+    import dering
+    w = pathlib.Path(tempfile.mkdtemp()) / "a.wav"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-vn", "-ac", "1", "-ar", "48000", str(w)], check=True)
+    t = dering.tones(str(w))
+    add("RINGING", "FAIL" if t else "PASS", f"steady tones at {[f for f, _ in t]} Hz: run voice/dering.py on the take" if t else "no steady high-pitched tones in the audio")
 
 def contact_sheet(video, out):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-vf", "fps=1,scale=180:-1,tile=10x4", "-frames:v", "1", str(out)])
