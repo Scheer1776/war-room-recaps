@@ -32,24 +32,13 @@
    ]
   },
   {
-   "token": "Braelon",
-   "players": [
-    "Braelon Allen"
-   ]
-  },
-  {
    "token": "Malik",
    "players": [
     "Malik Nabers",
     "Malik Washington"
    ],
-   "why": "source covers only Malik Willis"
-  },
-  {
-   "token": "Quinshon",
-   "players": [
-    "Quinshon Judkins"
-   ]
+   "why": "source covers only Malik Willis",
+   "note": "Malik Nabers = muh-LEEK (LSU 2023 game notes); Malik Washington unsourced, so the token stays unsourced"
   },
   {
    "token": "Juwan",
@@ -61,18 +50,6 @@
    "token": "MarShawn",
    "players": [
     "MarShawn Lloyd"
-   ]
-  },
-  {
-   "token": "Rachaad",
-   "players": [
-    "Rachaad White"
-   ]
-  },
-  {
-   "token": "Germie",
-   "players": [
-    "Germie Bernard"
    ]
   },
   {
@@ -94,33 +71,9 @@
    ]
   },
   {
-   "token": "Mayer",
-   "players": [
-    "Michael Mayer"
-   ]
-  },
-  {
-   "token": "Makai",
-   "players": [
-    "Makai Lemon"
-   ]
-  },
-  {
    "token": "Stefon",
    "players": [
     "Stefon Diggs"
-   ]
-  },
-  {
-   "token": "Efton",
-   "players": [
-    "Efton Chism III"
-   ]
-  },
-  {
-   "token": "Chism",
-   "players": [
-    "Efton Chism III"
    ]
   },
   {
@@ -136,45 +89,15 @@
    ]
   },
   {
-   "token": "Roschon",
-   "players": [
-    "Roschon Johnson"
-   ]
-  },
-  {
    "token": "Rashod",
    "players": [
     "Rashod Bateman"
    ]
   },
   {
-   "token": "Rashee",
-   "players": [
-    "Rashee Rice"
-   ]
-  },
-  {
-   "token": "Kimani",
-   "players": [
-    "Kimani Vidal"
-   ]
-  },
-  {
    "token": "Laquon",
    "players": [
     "Laquon Treadwell"
-   ]
-  },
-  {
-   "token": "Raridon",
-   "players": [
-    "Eli Raridon"
-   ]
-  },
-  {
-   "token": "Dowdle",
-   "players": [
-    "Rico Dowdle"
    ]
   },
   {
@@ -187,18 +110,6 @@
    "token": "Dameon",
    "players": [
     "Dameon Pierce"
-   ]
-  },
-  {
-   "token": "Ja'Kobi",
-   "players": [
-    "Ja'Kobi Lane"
-   ]
-  },
-  {
-   "token": "Kaelon",
-   "players": [
-    "Kaelon Black"
    ]
   },
   {
@@ -217,18 +128,6 @@
    "token": "Devontez",
    "players": [
     "Devontez Walker"
-   ]
-  },
-  {
-   "token": "Savion",
-   "players": [
-    "Savion Williams"
-   ]
-  },
-  {
-   "token": "Jeudy",
-   "players": [
-    "Jerry Jeudy"
    ]
   },
   {
@@ -265,12 +164,6 @@
    "token": "Cowing",
    "players": [
     "Jacob Cowing"
-   ]
-  },
-  {
-   "token": "Jadarian",
-   "players": [
-    "Jadarian Price"
    ]
   },
   {
@@ -4307,6 +4200,272 @@
   "source": "https://static.clubs.nfl.com/image/upload/saints/lmmm5qncxrt3of31sdps.pdf",
   "players": [
    "Adam Trautman"
+  ]
+ },
+ "Quinshon": {
+  "player": "Quinshon Judkins",
+  "ipa": "k w ɪ n ʃ ɑ n",
+  "say": "KWIN-shawn",
+  "note": "New York Jets PR game flip card (Jets vs. Cleveland Browns, 2025), Browns pronunciation box: \"QUINSHON JUDKINS ... KWIN-shon JUD-kins\".",
+  "source": "https://static.clubs.nfl.com/image/upload/jets/ltfuhjp3vdv9spsbh2jx",
+  "wrong": [
+   "k w ɪ n ʃ ə n",
+   "k w ɪ n ʃ o ʊ n",
+   "k w ɪ n s ɑ n"
+  ],
+  "players": [
+   "Quinshon Judkins"
+  ]
+ },
+ "Germie": {
+  "player": "Germie Bernard",
+  "ipa": "d ʒ ə ɹ m i",
+  "say": "JER-mee",
+  "note": "Alabama Athletics 2025 Football Media Guide pronunciation guide: \"GERMIE Bernard ... JER-mee\". Confirmed by the New Orleans Saints PR flip card for Steelers vs. Saints, Oct. 25, 2026 (Steelers pronunciations box): \"WR Germie Bernard (JUHR-mee)\" at https://static.clubs.nfl.com/image/upload/saints/fcgopvcbbky3macbzjgf.pdf",
+  "source": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/rolltide.com/documents/2025/7/28/2025-football-media-guide.pdf",
+  "wrong": [
+   "g ə ɹ m i",
+   "ʒ ɛ ɹ m i",
+   "d ʒ ɛ ɹ m a ɪ"
+  ],
+  "players": [
+   "Germie Bernard"
+  ]
+ },
+ "Mayer": {
+  "player": "Michael Mayer",
+  "ipa": "m e ɪ ə ɹ",
+  "say": "MAY-er",
+  "note": "Notre Dame Football 2021 Media Guide pronunciation guide (\"PRONUNICATION GUIDE\"): \"87 Michael Mayer ... Mayor\". The same entry appears in the 2022 ND media guide (https://storage.googleapis.com/fightingirish-com/2022/08/2022-ND-Football-Media-Guide.pdf). The guides were read from Notre Dame's storage mirror of fightingirish.com/wp-content/uploads/2021/08/2021-Media-Guide-FULL.pdf.",
+  "source": "https://storage.googleapis.com/fightingirish-com/2021/08/2021-Media-Guide-FULL.pdf",
+  "wrong": [
+   "m a ɪ ə ɹ",
+   "m e ɪ ɹ"
+  ],
+  "players": [
+   "Michael Mayer"
+  ]
+ },
+ "Braelon": {
+  "player": "Braelon Allen",
+  "ipa": "b ɹ e ɪ l ə n",
+  "say": "BRAY-lun",
+  "note": "Wikipedia article lead, respelling template: \"Braelon Allen ({{Respell|BRAY|-|lən|}}...)\". No team or school source was found; Wisconsin's roster bio has no pronunciation field.",
+  "source": "https://en.wikipedia.org/wiki/Braelon_Allen",
+  "wrong": [
+   "b ɹ æ l ə n",
+   "b ɹ i l ə n",
+   "b ɹ a ɪ l ə n"
+  ],
+  "players": [
+   "Braelon Allen"
+  ]
+ },
+ "Rachaad": {
+  "player": "Rachaad White",
+  "ipa": "ɹ ə ʃ ɑ d",
+  "say": "ruh-SHAHD",
+  "note": "Wikipedia article lead, respelling template: \"Rachaad White ({{Respell|rə|SHAWD}}...)\". No team flip card was found that lists him.",
+  "source": "https://en.wikipedia.org/wiki/Rachaad_White",
+  "wrong": [
+   "ɹ æ t ʃ æ d",
+   "ɹ ə t ʃ ɑ d",
+   "ɹ e ɪ t ʃ æ d",
+   "ɹ ə ʃ æ d"
+  ],
+  "players": [
+   "Rachaad White"
+  ]
+ },
+ "Makai": {
+  "ipa": "m ə k a ɪ",
+  "say": "muh-KYE",
+  "note": "USC Athletics game notes, PRONUNCIATION GUIDE: \"LEMON, Makai ... muh-KAI\" (USC vs UCLA, Nov 2025). FanSided's 2026 draft guide agrees: \"muh-KAI LEM-un\".",
+  "source": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/usctrojans.com/documents/2025/11/25/usc-trojans-football-game-notes-ucla-bruins-2025.pdf",
+  "wrong": [
+   "m æ k e ɪ",
+   "m e ɪ k a ɪ",
+   "m ə k e ɪ",
+   "m ɑ k i"
+  ],
+  "players": [
+   "Makai Lemon"
+  ]
+ },
+ "Ja'Kobi": {
+  "ipa": "d ʒ ə k o ʊ b i",
+  "say": "juh-KOH-bee",
+  "note": "USC Athletics game notes, PRONUNCIATION GUIDE: \"LANE, Ja'Kobi ... juh-COE-bee\" (USC vs UCLA, Nov 2025).",
+  "source": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/usctrojans.com/documents/2025/11/25/usc-trojans-football-game-notes-ucla-bruins-2025.pdf",
+  "wrong": [
+   "d ʒ e ɪ k o ʊ b i",
+   "j ɑ k o ʊ b i",
+   "d ʒ æ k ə b i",
+   "d ʒ ɑ k o ʊ b i"
+  ],
+  "players": [
+   "Ja'Kobi Lane"
+  ]
+ },
+ "Efton": {
+  "ipa": "ɛ f t ə n",
+  "say": "EFF-tun",
+  "note": "Eastern Washington Athletics game notes, PRONUNCIATION GUIDE: \"Efton Chism III ... EFF-tun CHIZ-um\" (2024, vs Idaho State).",
+  "source": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/ewu.sidearmsports.com/documents/2024/11/13/2024_EWU_FB_Game_Notes-ISU.pdf",
+  "wrong": [
+   "i f t ɑ n",
+   "ɛ f t ɑ n",
+   "e ɪ f t ə n"
+  ],
+  "players": [
+   "Efton Chism III"
+  ]
+ },
+ "Chism": {
+  "ipa": "t ʃ ɪ z ə m",
+  "say": "CHIZ-um",
+  "note": "Eastern Washington Athletics game notes, PRONUNCIATION GUIDE: \"Efton Chism III ... EFF-tun CHIZ-um\" (2024, vs Idaho State).",
+  "source": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/ewu.sidearmsports.com/documents/2024/11/13/2024_EWU_FB_Game_Notes-ISU.pdf",
+  "wrong": [
+   "k ɪ z ə m",
+   "ʃ ɪ z ə m",
+   "t ʃ ɪ s ə m",
+   "k ɪ s ə m"
+  ],
+  "players": [
+   "Efton Chism III"
+  ]
+ },
+ "Roschon": {
+  "ipa": "ɹ o ʊ ʃ ɑ n",
+  "say": "ROH-shahn",
+  "note": "Texas Longhorns game notes, PRONUNCIATIONS box: \"Roschon Johnson ... ROH-shahn\" (2021 Texas notes for the Arkansas game, hosted on arkansasrazorbacks.com).",
+  "source": "https://arkansasrazorbacks.com/pdf/football/2021/TexasGameNotes.pdf",
+  "wrong": [
+   "ɹ ɑ s t ʃ ɑ n",
+   "ɹ ɑ s k ɑ n",
+   "ɹ o ʊ s k ɑ n",
+   "ɹ ə ʃ ɑ n"
+  ],
+  "players": [
+   "Roschon Johnson"
+  ]
+ },
+ "Rashee": {
+  "ipa": "ɹ ɑ ʃ i",
+  "say": "rah-shee",
+  "note": "Kansas City Chiefs game-day flip card, CHIEFS PRONUNCIATION GUIDE: \"Rashee Rice ... rah-she\". It appears the same way on several 2025 Chiefs flip cards (vs. Chargers and Bengals). The source does not mark stress.",
+  "source": "https://static.clubs.nfl.com/image/upload/chargers/eiagogirjbnvjwf5yc4d",
+  "wrong": [
+   "ɹ æ ʃ i",
+   "ɹ ə ʃ e ɪ",
+   "ɹ æ ʃ e ɪ"
+  ],
+  "players": [
+   "Rashee Rice"
+  ]
+ },
+ "Kimani": {
+  "ipa": "k i m ɑ n i",
+  "say": "kee-MAH-nee",
+  "note": "Troy Athletics game notes, PRONUNCIATION GUIDE: \"28 Kimani Vidal ... key-MONN-ee vie-DELL\" (2023, Troy vs Texas State). Chargers/Steelers flip cards give the surname as \"VIE-dell\".",
+  "source": "https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/troytrojans.com/documents/2023/10/23/Troy_TXST_G8.pdf",
+  "wrong": [
+   "k ɪ m ə n i",
+   "k a ɪ m ɑ n i",
+   "k ɪ m æ n i",
+   "k ə m æ n i"
+  ],
+  "players": [
+   "Kimani Vidal"
+  ]
+ },
+ "Raridon": {
+  "ipa": "ɹ ɛ ɹ ə d ɪ n",
+  "alt": "ɹ ɛ ɹ ɪ d ə n",
+  "say": "RAIR-uh-din",
+  "note": "New England Patriots flip card, PATRIOTS PRONUNCIATION box: \"Eli Raridon ... RAIR-a-din\" (Steelers @ Patriots, Week 2 2026, hosted by Steelers Depot). The alt comes from Notre Dame game notes (2025 vs Navy): \"Eli Raridon ... RARE-i-dun\". Both give the same first syllable.",
+  "source": "https://steelersdepot.com/wp-content/uploads/2026/09/steelers-patriots-week-2-2026-flip-card.pdf",
+  "wrong": [
+   "ɹ æ ɹ ɪ d ɑ n",
+   "ɹ ə ɹ i d ɑ n",
+   "ɹ ɑ ɹ ɪ d ɑ n",
+   "ɹ ɛ ɹ ɪ d ɑ n"
+  ],
+  "players": [
+   "Eli Raridon"
+  ]
+ },
+ "Dowdle": {
+  "ipa": "d a ʊ d ɪ l",
+  "say": "DOWD-ill",
+  "note": "Pittsburgh Steelers flip cards, STEELERS PRONUNCIATION KEY: \"Rico Dowdle ... DOWD-ill\". The 2026 Steelers cards are consistent, and the older Cowboys and Panthers boxes give the same.",
+  "source": "https://steelersdepot.com/wp-content/uploads/2026/10/browns-steelers-week-8-2026-flip-card.pdf",
+  "wrong": [
+   "d o ʊ d ə l",
+   "d u d ə l",
+   "d a ʊ d ə l i"
+  ],
+  "players": [
+   "Rico Dowdle"
+  ]
+ },
+ "Kaelon": {
+  "ipa": "k e ɪ l ɔ n",
+  "say": "KAY-lawn",
+  "note": "Indiana University official football roster bio for Kaelon Black: \"Pronunciation: Kay-lawn Black\" (school sports information).",
+  "source": "https://iuhoosiers.com/sports/football/roster/kaelon-black/19931",
+  "wrong": [
+   "k a ɪ l ə n",
+   "k e ɪ l ə n",
+   "k i l ɑ n",
+   "k æ l ɑ n"
+  ],
+  "players": [
+   "Kaelon Black"
+  ]
+ },
+ "Jeudy": {
+  "ipa": "d ʒ u d i",
+  "say": "JOO-dee",
+  "note": "Cleveland Browns 2024 media guide pronunciation guide: \"Jerry Jeudy ... JUDY\". Same in the Denver Broncos 2023 media guide (\"Jerry Jeudy (pronounced: Judy)\") and NY Jets / Steelers-Browns game-day flip cards (\"Jerry JEUDY ... JUDY\").",
+  "source": "https://static.www.nfl.com/league/apps/league-site/media-guides/2024/CLE.pdf",
+  "wrong": [
+   "d ʒ ɛ d i",
+   "ʒ u d i",
+   "d ʒ u d e ɪ",
+   "d ʒ e ɪ u d i"
+  ],
+  "players": [
+   "Jerry Jeudy"
+  ]
+ },
+ "Savion": {
+  "ipa": "s e ɪ v i ɑ n",
+  "say": "SAY-vee-on",
+  "note": "Green Bay Packers 2025 media guide, Pronunciation Guide (p. 275): \"Savion Williams ... SAY-vee-on\" (team media relations).",
+  "source": "https://static.www.nfl.com/league/apps/league-site/media-guides/2025/GB.pdf",
+  "wrong": [
+   "s ə v i ɑ n",
+   "s æ v i ə n",
+   "s æ v j ə n"
+  ],
+  "players": [
+   "Savion Williams"
+  ]
+ },
+ "Jadarian": {
+  "ipa": "d ʒ ə d ɑ ɹ i ə n",
+  "say": "juh-DAR-ee-un",
+  "note": "Notre Dame football game notes, Alphabetical Roster/Pronunciations: \"Jadarian Price ... Jah-DAR (like dart)-ee-an\" (Notre Dame sports information; same entry in the 2025 season game notes).",
+  "source": "https://fightingirish.com/wp-content/uploads/2024/09/04.-Notre-Dame-Football-Notes-vs.-MIami-OH-Late-Week.pdf",
+  "wrong": [
+   "d ʒ æ d ə ɹ i ə n",
+   "d ʒ ə d ɛ ɹ i ə n",
+   "d ʒ e ɪ d ɛ ɹ i ə n"
+  ],
+  "players": [
+   "Jadarian Price"
   ]
  }
 }
