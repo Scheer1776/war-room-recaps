@@ -1,22 +1,111 @@
 {
-  "_note": "Kokoro phonemes (misaki US set: A=ay as in 'day', O=oh, I=eye, W=ow, Y=oy; ˈ before the stressed vowel). Add every player name that a check fails on, then re-run.",
-  "kokoro": {
-    "Caleb": "kˈAləb",
-    "Douglas": "dˈʌɡləs",
-    "Tetairoa": "tɛtˌaɪɹˈOə",
-    "McMillan": "məkmˈɪlən",
-    "Chuba": "ʧˈubə",
-    "Smack": "smˈæk",
-    "Golden": "ɡˈOldən",
-    "Bijan": "bˈiʒɑn",
-    "Bucky": "bˈʌki",
-    "Irving": "ˈɜɹvɪŋ",
-    "Maye": "mˈA",
-    "Likely": "lˈIkli",
-    "McBride": "məkbɹˈId",
-    "Bowers": "bˈWɚz",
-    "Kittle": "kˈɪɾəl",
-    "Burrow": "bˈɜɹO",
-    "Mahomes": "məhˈOmz"
+ "_note": "Kokoro phonemes (misaki US set: A=ay as in 'day', O=oh, I=eye, W=ow, Y=oy; ˈ before the stressed vowel). Add every player name that a check fails on, then re-run.",
+ "kokoro": {
+  "Caleb": "kˈAləb",
+  "Douglas": "dˈʌɡləs",
+  "Tetairoa": "tɛtˌaɪɹˈOə",
+  "McMillan": "məkmˈɪlən",
+  "Chuba": "ʧˈubə",
+  "Smack": "smˈæk",
+  "Golden": "ɡˈOldən",
+  "Bijan": "bˈiʒɑn",
+  "Bucky": "bˈʌki",
+  "Irving": "ˈɜɹvɪŋ",
+  "Maye": "mˈA",
+  "Likely": "lˈIkli",
+  "McBride": "məkbɹˈId",
+  "Bowers": "bˈWɚz",
+  "Kittle": "kˈɪɾəl",
+  "Burrow": "bˈɜɹO",
+  "Mahomes": "məhˈOmz"
+ },
+ "_pronounce_note": "pronounce: correct pronunciation per name for audit/pronounce.py. ipa = space-separated phones (General American), alt = accepted variants, say = respelling to type into VoiceStudio when the plain spelling is said wrong. Source every new entry (team site / broadcast / player intro), never a guess. wrong = known mispronunciations: a name FAILS when it sounds closer to one of these than to the right one.",
+ "pronounce": {
+  "Burrow": {
+   "ipa": "b ɜ ɹ o ʊ",
+   "note": "BUR-oh"
+  },
+  "Joe": {
+   "ipa": "d ʒ o ʊ"
+  },
+  "Tee": {
+   "ipa": "t i"
+  },
+  "Higgins": {
+   "ipa": "h ɪ ɡ ɪ n z",
+   "note": "HIG-inz"
+  },
+  "Tyler": {
+   "ipa": "t a ɪ l ə ɹ"
+  },
+  "Allgeier": {
+   "ipa": "æ l d ʒ ɪ ə ɹ",
+   "alt": [
+    "æ l d ʒ i ə ɹ",
+    "æ l d ʒ ɪ ɹ"
+   ],
+   "say": "Al-jeer",
+   "note": "AL-jeer, /ˈældʒɪər/ (Wikipedia). 2026-11-01 take said it wrong (owner caught it)",
+   "wrong": [
+    "æ l ɡ a ɪ ə ɹ",
+    "ɔ l ɡ a ɪ ə ɹ",
+    "æ l ɡ e ɪ ə ɹ",
+    "æ l ɡ a ɪ"
+   ]
+  },
+  "Adonai": {
+   "ipa": "æ d ə n a ɪ",
+   "alt": [
+    "æ d ɪ n a ɪ",
+    "æ d o ʊ n a ɪ"
+   ],
+   "say": "Add-en-eye",
+   "note": "ADD-en-eye (his own, via Yahoo Sports / The Forward 2024)",
+   "wrong": [
+    "ə d o ʊ n e ɪ",
+    "æ d ə n e ɪ"
+   ]
+  },
+  "Mitchell": {
+   "ipa": "m ɪ t ʃ ə l"
+  },
+  "Bijan": {
+   "ipa": "b ɪ ʒ ɑ n",
+   "alt": [
+    "b i ʒ ɑ n",
+    "b i ʒ ɔ n",
+    "b ɪ ʒ ɔ n"
+   ],
+   "say": "Bih-zhon",
+   "note": "bih-ZHON (his NFL Network correction, CBS Sports); the common 'bee-JAHN' with a J counts as wrong",
+   "wrong": [
+    "b a ɪ d ʒ ə n",
+    "b a ɪ ʒ æ n",
+    "b i d ʒ ɑ n",
+    "b ɪ d ʒ ɑ n"
+   ]
+  },
+  "Drake": {
+   "ipa": "d ɹ e ɪ k"
+  },
+  "London": {
+   "ipa": "l ʌ n d ə n"
+  },
+  "Atlanta": {
+   "ipa": "æ t l æ n t ə",
+   "alt": [
+    "ə t l æ n t ə",
+    "æ t l æ n ə"
+   ]
+  },
+  "Jacksonville": {
+   "ipa": "d ʒ æ k s ə n v ɪ l"
+  },
+  "Bengals": {
+   "ipa": "b ɛ ŋ ɡ ə l z",
+   "alt": [
+    "b ɛ n ɡ ə l z"
+   ]
   }
+ }
 }

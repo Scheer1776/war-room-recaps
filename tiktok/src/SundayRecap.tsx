@@ -16,16 +16,18 @@ const scene = z.object({
   player: player.nullable().default(null), players: z.array(player).default([]),
   tiles: z.array(z.object({ v: z.number(), dec: z.number().default(0), label: z.string() })).default([]),
   big: z.string().default(""),
+  dur: z.number().optional(), // fixed scene length (s): set when scenes are timed to one continuous voice take
 });
 export const sundaySchema = z.object({
   source: z.string(), week: z.number(), voice: z.boolean(), voDur: z.record(z.string(), z.number()).nullable(),
+  voFull: z.string().nullable().optional(), // one continuous voice take for the whole video (preferred: natural flow)
   scenes: z.array(scene),
   scores: z.array(z.object({ away: z.object({ t: z.string(), s: z.number() }), home: z.object({ t: z.string(), s: z.number() }), ot: z.boolean() })),
 });
 export type SundayProps = z.infer<typeof sundaySchema>;
 type Scene = z.infer<typeof scene>; type Pl = z.infer<typeof player>;
 const FPS = 30;
-const secs = (p: SundayProps, s: Scene) => { const d = p.voice && p.voDur ? p.voDur[s.id] : undefined; return d ? Math.max(s.base, d + (s.kind === "cta" ? 1.2 : 0.45)) : s.base; };
+const secs = (p: SundayProps, s: Scene) => { if (s.dur) return s.dur; const d = p.voice && p.voDur ? p.voDur[s.id] : undefined; return d ? Math.max(s.base, d + (s.kind === "cta" ? 1.2 : 0.45)) : s.base; };
 export const sundayFrames = (p: SundayProps) => p.scenes.reduce((n, s) => n + Math.round(secs(p, s) * FPS), 0);
 const col = (c: string) => (C as Record<string, string>)[c] || c;
 const L = SAFE.left, R = SAFE.right, T = SAFE.top, Wd = W - L - R;
@@ -194,9 +196,10 @@ export const SundayRecap: React.FC<SundayProps> = (p) => {
             {s.kind === "boom" ? <Boom p={p} s={s} d={d / FPS} /> : s.kind === "stats" ? <Stats p={p} s={s} d={d / FPS} /> : s.kind === "bust" ? <Bust p={p} s={s} d={d / FPS} />
               : s.kind === "scores" ? <Scores p={p} s={s} /> : <Cta s={s} />}
           </Punch>
-          {p.voice && p.voDur && p.voDur[s.id] ? <Sequence from={4} layout="none"><Audio src={staticFile(`${p.source}/vo/${s.id}.mp3`)} /></Sequence> : null}
+          {p.voice && !p.voFull && p.voDur && p.voDur[s.id] ? <Sequence from={4} layout="none"><Audio src={staticFile(`${p.source}/vo/${s.id}.mp3`)} /></Sequence> : null}
         </Sequence>
       ))}
+      {p.voice && p.voFull ? <Audio src={staticFile(`${p.source}/vo/${p.voFull}`)} /> : null}
     </AbsoluteFill>
   );
 };

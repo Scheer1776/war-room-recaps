@@ -6,3 +6,5 @@ out
 voice/.venv
 public/*/clips/
 public/recapvo/vo/
+__pycache__/
+public/*/vo/full/*.wav

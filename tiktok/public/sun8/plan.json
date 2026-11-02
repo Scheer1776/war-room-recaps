@@ -29,7 +29,9 @@
     "pts": 42.5,
     "proj": 22,
     "line": "462 pass yds \u00b7 5 TD \u00b7 1 rush TD"
-   }
+   },
+   "dur": 3.1,
+   "clipFrom": 0.99
   },
   {
    "id": "burrow",
@@ -52,7 +54,9 @@
      "label": "CIN PTS"
     }
    ],
-   "stamp": "43-36 OT"
+   "stamp": "43-36 OT",
+   "dur": 4.233,
+   "clipFrom": 0.67
   },
   {
    "id": "higgins",
@@ -70,7 +74,9 @@
     "pts": 37.5,
     "proj": 16,
     "line": "10 rec \u00b7 155 rec yds \u00b7 2 TD"
-   }
+   },
+   "dur": 2.6,
+   "clipFrom": 1.23
   },
   {
    "id": "allgeier",
@@ -88,7 +94,9 @@
     "pts": 36.1,
     "proj": 8.4,
     "line": "147 rush yds \u00b7 5 rec \u00b7 44 rec yds \u00b7 2 TD"
-   }
+   },
+   "dur": 3.6,
+   "clipFrom": 0.72
   },
   {
    "id": "mitchell",
@@ -106,7 +114,9 @@
     "pts": 27.2,
     "proj": 5.6,
     "line": "7 rec \u00b7 142 rec yds \u00b7 1 TD"
-   }
+   },
+   "dur": 3.433,
+   "clipFrom": 0.71
   },
   {
    "id": "bust",
@@ -136,19 +146,25 @@
      "proj": 16.5,
      "line": "1 rec \u00b7 8 rec yds"
     }
-   ]
+   ],
+   "dur": 4.1,
+   "clipFrom": 0.0
   },
   {
    "id": "scores",
    "kind": "scores",
    "base": 3.8,
-   "title": "EVERY *SUNDAY* FINAL"
+   "title": "EVERY *SUNDAY* FINAL",
+   "dur": 4.333,
+   "clipFrom": 0
   },
   {
    "id": "cta",
    "kind": "cta",
    "base": 5.6,
-   "title": "WHO'S STILL ALIVE|IN YOUR LEAGUE?"
+   "title": "WHO'S STILL ALIVE|IN YOUR LEAGUE?",
+   "dur": 5.9,
+   "clipFrom": 0
   }
  ],
  "scores": [
@@ -284,5 +300,6 @@
    },
    "ot": false
   }
- ]
+ ],
+ "voFull": "full/take5.mp3"
 }

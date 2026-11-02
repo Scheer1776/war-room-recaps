@@ -1,37 +1,26 @@
 {
- "video": "out/sun8/sunday-recap-pc.mp4",
+ "video": "out/sun8/sunday-recap-v2.mp4",
  "audio": "voice",
- "vo": "out/sun8/vo-track-pc.wav",
- "script": "Joe Burrow just dropped forty-two and a half fantasy points. Four hundred sixty-two yards. Six touchdowns. And the Bengals won it in overtime. Tee Higgins rode shotgun... thirty-seven and a half. Tyler Allgeier was projected for eight. He gave you thirty-six. Adonai Mitchell? Projected under six... twenty-seven. And Atlanta... got shut out. Bijan, under eight. Drake London, under two. Two overtime games. Jacksonville by thirty-five. That's your Sunday. Who's still alive in your league? Find out free, on War Room.",
- "names": [
-  "Joe Burrow",
-  "Tee Higgins",
-  "Tyler Allgeier",
-  "Adonai Mitchell",
-  "Bijan",
-  "Drake London",
-  "Atlanta",
-  "Jacksonville"
- ],
+ "script": "Joe Burrow just dropped forty-two and a half fantasy points. Four hundred sixty-two yards, six touchdowns, and the Bengals won it in overtime. Tee Higgins rode shotgun, thirty-seven and a half. Tyler Allgeier was projected for eight. He gave you thirty-six. Adonai Mitchell was projected under six. He put up twenty-seven. And Atlanta? Shut out. Bijan, under eight. Drake London, under two. Two overtime games, and Jacksonville won by thirty-five. That's your Sunday. So, who's still alive in your league? Find out free, on War Room.",
  "endCard": 3.5,
  "clips": [
   {
    "src": "public/sun8/clips/hook.mp4",
-   "at": 0.0,
-   "dur": 3.733,
-   "clipStart": 0,
+   "at": 0,
+   "dur": 3.1,
+   "clipStart": 0.99,
    "keyAt": 2.7,
    "label": "hook",
    "band": [
-    0.18,
-    0.56
+    0.2,
+    0.47
    ]
   },
   {
    "src": "public/sun8/clips/burrow.mp4",
-   "at": 3.733,
-   "dur": 4.7,
-   "clipStart": 0,
+   "at": 3.1,
+   "dur": 4.233,
+   "clipStart": 0.67,
    "keyAt": 3.0,
    "label": "burrow",
    "band": [
@@ -41,45 +30,45 @@
   },
   {
    "src": "public/sun8/clips/higgins.mp4",
-   "at": 8.433,
-   "dur": 3.867,
-   "clipStart": 0,
+   "at": 7.333,
+   "dur": 2.6,
+   "clipStart": 1.23,
    "keyAt": 2.66,
    "label": "higgins",
    "band": [
-    0.18,
-    0.56
+    0.2,
+    0.47
    ]
   },
   {
    "src": "public/sun8/clips/allgeier.mp4",
-   "at": 12.3,
-   "dur": 4.4,
-   "clipStart": 0,
+   "at": 9.933,
+   "dur": 3.6,
+   "clipStart": 0.72,
    "keyAt": 2.7,
    "label": "allgeier",
    "band": [
-    0.18,
-    0.56
+    0.2,
+    0.47
    ]
   },
   {
    "src": "public/sun8/clips/mitchell.mp4",
-   "at": 16.7,
-   "dur": 4.0,
-   "clipStart": 0,
+   "at": 13.533,
+   "dur": 3.433,
+   "clipStart": 0.71,
    "keyAt": 2.6,
    "label": "mitchell",
    "band": [
-    0.18,
-    0.56
+    0.2,
+    0.47
    ]
   },
   {
    "src": "public/sun8/clips/bust.mp4",
-   "at": 20.7,
-   "dur": 5.533,
-   "clipStart": 0,
+   "at": 16.966,
+   "dur": 4.1,
+   "clipStart": 0.0,
    "keyAt": 1.9,
    "label": "bust",
    "band": [

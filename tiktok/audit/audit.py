@@ -20,9 +20,10 @@ Manifest (JSON):
 Checks
   CLIP SYNC   the rendered frames really show the clip from clipStart (finds the true offset by matching frames; >0.25 s off = FAIL)
   CLIP MOMENT the key moment plays inside its window with >= 0.8 s of lead-in and >= 1.0 s after it (else FAIL)
-  VOICE PACE  a real pause after every sentence (>= 0.18 s), a beat before every "..." (>= 0.45 s), nothing dead > 1.6 s,
+  VOICE PACE  a beat before every "..." (>= 0.45 s), nothing dead > 1.6 s,
               130-270 words/min (FAIL on missing beats, WARN on short sentence gaps)
-  NAMES       every name in the script/names list is heard in the voice (transcribed without hints; FAIL)
+  NAMES       every name is PRONOUNCED right: phonemes heard vs voice/names.json (audit/pronounce.py; missing entry = FAIL)
+  VOICE SPLICES no digital-silence runs inside the speech (inserted pauses sound choppy; record one natural take)
   END CARD    the QR code decodes in frames across the last `endCard` seconds (FAIL)
   AUDIO       soundtrack present/absent as declared, no clipping (peak < -0.3 dBFS)
 """
@@ -53,21 +54,25 @@ def check_clip(video, c):
     vf, cf = vcap.get(cv2.CAP_PROP_FPS), ccap.get(cv2.CAP_PROP_FPS)
     clen = ccap.get(cv2.CAP_PROP_FRAME_COUNT) / cf
     cache = {}; band = tuple(c.get("band", (0.22, 0.78)))
+    ZOOMS = (1.0, 1.04, 1.08, 1.12, 1.16)   # compositions slowly zoom clips (Ken Burns): zoom the CLIP frame to match
+    def zoom(f, z):
+        h0, w0 = f.shape[:2]; ch, cw = int(h0 / z), int(w0 / z); y0, x0 = (h0 - ch) // 2, (w0 - cw) // 2
+        return cv2.resize(f[y0:y0 + ch, x0:x0 + cw], (w0, h0))
     def csig(t):
         k = round(t, 2)
         if k not in cache:
-            f = frame_at(ccap, t, cf); cache[k] = sig(f, band) if f is not None else None
+            f = frame_at(ccap, t, cf); cache[k] = [sig(zoom(f, z), band) for z in ZOOMS] if f is not None else None
         return cache[k]
     offsets = []
     for u in np.linspace(0.3, c["dur"] - 0.3, 6):
         f = frame_at(vcap, c["at"] + u, vf)
         if f is None: continue
-        s = sig(f, band)
+        sv = sig(f, band)
         best, bt = -2, None
         for t in np.arange(0, clen, 1 / 15):
             cs = csig(t)
             if cs is None: continue
-            v = float((s * cs).sum())
+            v = max(float((sv * c_) .sum()) for c_ in cs)
             if v > best: best, bt = v, t
         if bt is not None and best > 0.5: offsets.append(bt - u)
     lab = c.get("label", c["src"])
@@ -97,18 +102,16 @@ def check_voice(vo, script, names):
     want = set(names)
     if script:
         want |= {w for w in re.findall(r"(?<![.?!]\s)(?<!^)\b[A-Z][a-zA-Z'\-]+(?:\s[A-Z][a-zA-Z'\-]+)*", script)}
-    # Whisper spells rare names its own way (Bijan→"bijon", Allgeier→"allgaier", Tee→"t"); that is not a mispronunciation.
-    # Exact match first, else a sound-alike: same first letter and same consonant skeleton (2026-11-01).
-    skel = lambda w: (w[:1] + re.sub(r"[aeiouyhw]", "", w[1:])) if w else w
-    hw_set = heard.split(); alike = []
-    def heard_part(p):
-        if p in hw_set: return True
-        hit = next((h for h in hw_set if h[:1] == p[:1] and skel(h) == skel(p)), None)
-        if hit: alike.append(f"{p}~{hit}")
-        return bool(hit)
-    miss = [n for n in sorted(want) if not all(heard_part(norm(p)) for p in n.split() if norm(p))]
-    note = f" (sound-alike: {', '.join(sorted(set(alike)))})" if alike else ""
-    add("NAMES", "FAIL" if miss else "PASS", (f"not heard: {miss}" if miss else f"all heard: {sorted(want) or '(none listed)'}") + note)
+    # NAMES (2026-11-01, after a wrong "Allgeier" passed a spelling-based check): listen to the SOUNDS of every name with a
+    # phoneme recognizer and compare with the sourced pronunciation in voice/names.json (audit/pronounce.py). A name with no
+    # pronunciation on file fails, so every new name gets looked up before it ships. Whisper spelling is never the test.
+    if script:
+        sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+        import pronounce
+        for n, st, msg in pronounce.check(str(vo), script, words):
+            add("NAMES", st, f"{n}: {msg}")
+    else:
+        add("NAMES", "WARN", "no script given: pronunciation not checked")
     # PACE
     speak = sum(w.end - w.start for w in words); wpm = len(words) / max(0.1, words[-1].end - words[0].start) * 60
     gaps = [(words[i + 1].start - words[i].end, i) for i in range(len(words) - 1)]
@@ -150,7 +153,21 @@ def check_voice(vo, script, names):
         if hi is None or hi >= len(words) - 1: continue
         have = longest_quiet(words[hi].start + 0.05, words[hi + 1].end)
         if have + 1e-3 < g: (short_beats if g >= 0.45 else short_sent).append(f"after '{words[hi].word.strip()}' {have:.2f}s")
-    st = "FAIL" if short_beats or dead or not (130 <= wpm <= 270) else ("WARN" if short_sent else "PASS")
+    # Spliced silence (2026-11-01: the owner heard the inserted gaps as "choppy, weird pauses"): exact-zero runs inside
+    # the speech are edits, not delivery. Natural pauses keep breath and room tone, so they are never digital zero.
+    import soundfile as _sf
+    yy, ssr = librosa.load(str(wav), sr=16000)
+    a0, a1 = int(words[0].end * ssr), int(words[-1].start * ssr)   # between the first and last word: lead-in/tail padding is fine
+    z = np.abs(yy[a0:a1]) < 1e-5; runs = []; rn = 0
+    for i, v in enumerate(z):
+        if v: rn += 1
+        else:
+            if rn > 0.04 * ssr: runs.append(round((a0 + i - rn) / ssr, 2))
+            rn = 0
+    if runs: add("VOICE SPLICES", "FAIL", f"{len(runs)} spliced digital-silence gaps inside the speech at {runs[:6]}s: re-record as one take instead of inserting pauses")
+    else: add("VOICE SPLICES", "PASS", "no spliced silence inside the speech (natural pauses only)")
+    short_sent = []   # sentence-gap length is no longer judged: one natural take sets its own rhythm (owner, 2026-11-01)
+    st = "FAIL" if short_beats or dead or not (130 <= wpm <= 270) else "PASS"
     msg = f"{wpm:.0f} wpm; beats before twists: {'OK' if not short_beats else 'MISSING ' + '; '.join(short_beats)}"
     msg += f"; sentence gaps: {'OK' if not short_sent else str(len(short_sent)) + ' too short (' + '; '.join(short_sent[:4]) + ')'}"
     if dead: msg += f"; {len(dead)} dead spots > 1.6s"

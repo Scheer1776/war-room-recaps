@@ -98,7 +98,7 @@ const leagueRecapMeta: CalculateMetadataFunction<LeagueRecapProps> = async ({ pr
 const sundayMeta: CalculateMetadataFunction<SundayProps> = async ({ props }) => {
   await fontsReady;
   const plan = await fetch(staticFile(`${props.source}/plan.json`)).then((r) => r.json());
-  const p = { ...plan, ...props, scenes: plan.scenes, scores: plan.scores, voDur: props.voice ? plan.voDur : null };
+  const p = { ...plan, ...props, scenes: plan.scenes, scores: plan.scores, voFull: plan.voFull ?? null, voDur: props.voice ? plan.voDur : null };
   return { props: p, durationInFrames: sundayFrames(p) };
 };
 export const RemotionRoot: React.FC = () => (

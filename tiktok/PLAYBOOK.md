@@ -19,19 +19,22 @@ deliver a video whose last audit failed. Write one manifest per video in `audit/
 - **Audio:** `audio: "voice" | "music" | "silent"` — silent deliveries must have no track; nothing may clip.
 - Attach the `.audit.png` contact sheet view to your own QA; mention the audit result in one line of the delivery message.
 
-## Voices: pacing and emotion — 2026-10-30
+## Voices: pacing, flow and pronunciation — rewritten 2026-11-01 (owner: "choppy, weird pauses"; Allgeier said wrong)
 - Two voices, both VoiceStudio (VoxCPM2) on the owner's PC: **War Room Announcer** (hype, sports-radio) and **War Room
-  Narrator** (fast second-person storytelling, see the narrator spec). Alternate them on voiced days; Narrator for story
-  scripts ("You draft…"), Announcer for rankings, recaps and start/sit.
-- Render ONE clip per sentence or short line, never a whole script in one take: each line gets its own intonation and
-  ending, which is where emotion comes from. Render the punchline/verdict as its own clip.
-- Write emotion into the words: short sentences, a question, an interjection ("Obviously.", "Yeah.", "Wait."), "..."
-  before the twist. No ALL CAPS (VoxCPM2 goes flat on them).
-- Assemble with `audit/pace.py lines --lines lines.json --clips vo/raw --out vo/full.wav` (0.30 s between lines, 0.65 s
-  before a line starting with "..."), or `pace.py take` to re-space a single long take. Then audit.
-- Names: every new name goes in voice/names.json with a respelling if needed ("Teh-tie-row-uh"); if the audit can't hear a
-  name, respell it in the script and re-render just that line (max 2 tries, then cut the name from the line).
-
+  Narrator** (fast second-person storytelling). Narrator for story scripts ("You draft…"), Announcer for recaps/rankings.
+- **Record the whole script as ONE continuous take.** The voice's own rhythm across sentences is what sounds natural.
+  Never assemble per-line clips into scenes and never splice silence into a take (audit FAILs "VOICE SPLICES"); never
+  speed it up. Write the pauses into the script instead: periods, commas, a question ("And Atlanta? Shut out.").
+  Prep = trim the ends + 0.15 s lead-in + loudnorm only (`-af silenceremove…,adelay=150|150,loudnorm=I=-14:TP=-1.5:LRA=9`).
+- **Time the video to the voice**, not the voice to the video: scene boundaries = sentence starts from whisper word
+  timestamps (−0.12 s), each scene's `dur` set in plan.json, one `voFull` track (SundayRecap supports both). Then shift
+  each clip (`clipFrom`) so its moment lands inside its scene with >= 0.8 s before and >= 1.0 s after.
+- **Pronunciation is checked by sound, not spelling** (audit NAMES = `audit/pronounce.py`): every name in the script needs
+  a sourced entry in `voice/names.json` → `pronounce` (ipa, alt, wrong, say, note); no entry = FAIL. Look the name up
+  (Wikipedia IPA/respelling, team site, the player's own words) — never guess (I guessed "AL-guy-er"; it is "AL-jeer").
+  Type the `say` respelling into VoiceStudio for any name the plain spelling gets wrong (Al-jeer, Add-en-eye, Bee-zhahn;
+  "Bih-zhon" came out "Biz-jon", a "?" after a name can clip it). Takes are random: render 2–3 and keep the one where
+  every name PASSes (VoxCPM is stochastic; the same script can come out right on the next try).
 ## Clips and photos in daily runs — 2026-10-30
 - Player photos are allowed (owner's call): Sleeper headshots `https://sleepercdn.com/content/nfl/players/<id>.jpg` work from
   the cloud, no PC needed. Use them on covers, cards and rows.
@@ -275,6 +278,13 @@ and switch its row from *build* to the composition name.
   prints them; CLIP SYNC takes a per-clip `band` (fraction of the frame to compare) when cards or giant type cover the
   middle of a clip, which otherwise reads as a false 1 s offset. Keep every gap between voice lines under 1.6 s: trim the
   scene base, or re-cut the clip later so its moment lands earlier, rather than padding.
+- 2026-11-01 Owner feedback on the first Sunday Recap: "very choppy, weird pauses" and "Allgeier pronounced wrong".
+  Causes: per-line takes placed per scene + silence spliced into lines + 8% speed-up; and an audit that accepted
+  whisper's spelling "Allgaier" as a sound-alike. Fixes: one continuous take, scenes timed to it; new pronunciation audit
+  (wav2vec2 phoneme recognizer over the whole track + semi-global alignment to sourced IPA, known-wrong variants, missing
+  entry = FAIL), VOICE SPLICES check (digital-zero runs inside speech), zoom-aware CLIP SYNC. Regression sample
+  `audit/regression/choppy-v1-voice.flac` (+ `choppy-v1-script.txt`) must keep FAILING: `python3 -I audit/pronounce.py
+  audit/regression/choppy-v1-voice.flac "$(cat audit/regression/choppy-v1-script.txt)"` → Allgeier FAIL. Run it after any audit change.
 
 ## Log
 | Date | Format | Notes |
@@ -289,7 +299,7 @@ and switch its row from *build* to the composition name.
 | 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |
 | 2026-10-30 | Showcase v2 (9 features; NEW Start/Sit + Waivers scenes; clip layer) | Voiced: War Room Narrator (first full video), voice-only. Clips: Cook 41-yd TD, Mahomes truck-stick TD, Nabers moss (clip-library). Audit PASS (pace WARN: fast mid-line flow, by design) |
 | 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |
-| 2026-11-01 | Sunday Recap week 8 (NEW `SundayRecap`) | Voiced: War Room Announcer, voice-only + silent. Same-night clips scraped from the NFL channel on the PC: Burrow→Chase deep TD, Burrow OT TD (Short), Higgins corner catch, Allgeier 63-yd TD, Mitchell 4th-down TD, Penix INT (ATL 0). Burrow 42.5, Higgins 37.5, Allgeier 36.1 (proj 8.4), Mitchell 27.2 (proj 5.6), ATL shut out (Bijan 7.6, London 1.8), 12 finals. QR closer. Rendered on the owner's PC in 27 s (cloud: 12 min 43 s). Audit PASS |
+| 2026-11-01 | Sunday Recap week 8 (NEW `SundayRecap`) | Voiced: War Room Announcer, voice-only + silent. Same-night clips scraped from the NFL channel on the PC: Burrow→Chase deep TD, Burrow OT TD (Short), Higgins corner catch, Allgeier 63-yd TD, Mitchell 4th-down TD, Penix INT (ATL 0). Burrow 42.5, Higgins 37.5, Allgeier 36.1 (proj 8.4), Mitchell 27.2 (proj 5.6), ATL shut out (Bijan 7.6, London 1.8), 12 finals. QR closer. Rendered on the owner's PC in 27 s (cloud: 12 min 43 s). v1 rejected by owner (choppy + Allgeier wrong); v2: one continuous take (take 5 of 5, all 14 names PASS by phoneme audit), scenes timed to the voice, 31 s. Audit PASS |
 
 ## League Recap (in-app weekly video, every league) — added 2026-10-30
 - Composition `LeagueRecap` (src/LeagueRecap.tsx): real league/team names (it is FOR the league), house effects (kinetic
