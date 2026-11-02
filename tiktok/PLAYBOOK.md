@@ -156,6 +156,7 @@ cycle starts, start a new block. A run can't see the real balance, so if ElevenL
 | Start/Sit showdown: coin-flip pairs (projections within 0.3), tiebreaker = last-3-weeks form, START / SIT stamps | `StartSit` | Thu–Sat | `scripts/startsit.mjs` (Sleeper projections + last 3 weeks of stats) |
 | Bench-points shame: "you left X on your bench" + the app's max-lineup feature | *build* | Mon–Tue | recap.json bench data (anonymized) |
 | **Rank Slides** (ranked-list carousel, like @fantasyteamup's "TRADE VALUE" / "WEEK N RANKINGS" / "STOCK UP" posts): cover with the #1 player's jersey tile and a two-word title, two slides of 10 ranked rows (jersey tile, name, pos·team, number + bar, trend arrow), a risers slide, the app slide | `RankSlides` (carousel; one frame = one slide; `metricKey` value/proj/avg; `sub` starting with a position, e.g. "WR · Week 9", picks that position's weekly ranking) | any day, 2–3 a week in rotation with the other carousels: trade value (Tue/Wed), position rankings (Thu/Fri), stock up/down (Mon) | `scripts/rankings.mjs public/<dir>` (Sleeper season stats + projections; value = 0.45·season avg + 0.3·last-3 + 0.25·this-week proj, 99 = best flex asset) |
+| Waiver Heat carousel: hook, heat board, one slide per trending player (ADD / FADE / TRAP, 4-week snap-share usage strip), app slide | `WaiverSlides` (carousel; one frame = one slide; picks with verdict/title/why/stat in props) | Mon–Tue (adds peak after Sunday) | `scripts/waiverslides.mjs public/<dir> 24` (Sleeper trending adds last 24 h, weeks N-3..N half-PPR + snaps, week N+1 projections, headshots) |
 | Weather game alert: weather board of every game, one slide per flagged game (proj → with weather), verdict | `WeatherSlides` (carousel; one frame = one slide) | Thu–Sat | `scripts/weather.mjs <war-room-web> public/<dir>` (the app's lib/weather.js + Sleeper projections) |
 | O-line injury watch: a starter's line just lost a lineman | *build* | Wed–Fri | lib/oline.js |
 | Feature demo: screen tour of one app tool on a phone mockup | *build* (see `Showcase` for the 3D phone) | any | mock server screenshots/recordings |
@@ -295,6 +296,16 @@ and switch its row from *build* to the composition name.
   `audit/regression/choppy-v1-voice.flac` (+ `choppy-v1-script.txt`) must keep FAILING: `python3 -I audit/pronounce.py
   audit/regression/choppy-v1-voice.flac "$(cat audit/regression/choppy-v1-script.txt)"` → Allgeier FAIL. Run it after any audit change.
 
+- 2026-11-02 On the Monday after Sunday's games, Sleeper's state still says week N (MNF pending): next week's projections are week N+1
+  and look preliminary (Adonai Mitchell 3.3 vs KC after 23.7). Base verdicts on usage (snap share, targets, carries) and show the
+  projection only as a chip, not as the reason. `pts_half_ppr` is missing (not 0) when a player played and scored nothing.
+- 2026-11-02 Sleeper headshots are transparent 350x254 cutouts: best ~500 px wide over a team-color glow, with a giant outlined
+  jersey numeral (`WebkitTextStroke`) behind; much bigger and they go soft. A fan of 5 cutouts needs `transformOrigin: "50% 100%"`
+  so the shoulders line up, plus a 150 px fade at the bottom.
+- 2026-11-02 This cloud session could not push (git proxy: repo not in the session's authorized set; no add_repo tool) and could not
+  clone war-room-web (private), so the app slide reused `public/app/app-waivers.png` and the commit went to the PC as
+  `queue\23-waiver-slides.patch` for the owner's apply/push scripts.
+
 ## Log
 | Date | Format | Notes |
 |---|---|---|
@@ -309,6 +320,7 @@ and switch its row from *build* to the composition name.
 | 2026-10-30 | Showcase v2 (9 features; NEW Start/Sit + Waivers scenes; clip layer) | Voiced: War Room Narrator (first full video), voice-only. Clips: Cook 41-yd TD, Mahomes truck-stick TD, Nabers moss (clip-library). Audit PASS (pace WARN: fast mid-line flow, by design) |
 | 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |
 | 2026-11-01 | Sunday Recap week 8 (NEW `SundayRecap`) | Voiced: War Room Announcer, voice-only + silent. Same-night clips scraped from the NFL channel on the PC: Burrow→Chase deep TD, Burrow OT TD (Short), Higgins corner catch, Allgeier 63-yd TD, Mitchell 4th-down TD, Penix INT (ATL 0). Burrow 42.5, Higgins 37.5, Allgeier 36.1 (proj 8.4), Mitchell 27.2 (proj 5.6), ATL shut out (Bijan 7.6, London 1.8), 12 finals. QR closer. Rendered on the owner's PC in 27 s (cloud: 12 min 43 s). v1 rejected by owner (choppy + Allgeier wrong); v2: one continuous take (take 5 of 5, all 14 names PASS by phoneme audit), scenes timed to the voice, 31 s. Audit PASS |
+| 2026-11-02 | Photo carousel, NEW Waiver Heat carousel (`WaiverSlides`, week 9) | No-voice, 8 slides. No clips (none in the library for these players; 5 wishlist lines added), Sleeper headshots. Hook "579,376 adds · EVERYONE'S ADDING THESE 5. 2 ARE TRAPS."; heat board top 8; Mitchell ADD (9 tgt, snaps 44→61%), Allgeier FADE (33.6 on 11 car, 5.7 avg before), Emmett Johnson TRAP (22.8 on 13 snaps), Gainwell ADD (car 4/2/14/25), Coleman ADD (proj 13.0 vs CAR). Audit by hand PASS (QR decodes, SAFE, no league names). stats.json still 404. Song: Dame Hombro (Bulin 47) |
 
 ## League Recap (in-app weekly video, every league) — added 2026-10-30
 - Composition `LeagueRecap` (src/LeagueRecap.tsx): real league/team names (it is FOR the league), house effects (kinetic

@@ -14,6 +14,7 @@ import { SundayRecap, SundayProps, sundayFrames, sundaySchema } from "./SundayRe
 import { LeagueRecap, LeagueRecapProps, leagueRecapFrames, leagueRecapSchema } from "./LeagueRecap";
 import { Quiz, QuizProps, quizFrames, quizSchema } from "./Quiz";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
+import { WaiverSlides, WaiverSlidesProps, waiverSlides, waiverSlidesSchema } from "./WaiverSlides";
 
 const showcaseMeta: CalculateMetadataFunction<ShowcaseProps> = async ({ props }) => {
   await fontsReady;
@@ -42,6 +43,13 @@ const weatherMeta: CalculateMetadataFunction<WeatherProps> = async ({ props }) =
   const d = await (await fetch(staticFile(`${props.source}/weather.json`))).json();
   const p = { ...props, week: d.week, games: d.games };
   return { props: p, durationInFrames: weatherSlides(p) };
+};
+
+const waiverSlidesMeta: CalculateMetadataFunction<WaiverSlidesProps> = async ({ props }) => {
+  await fontsReady;
+  const data = await (await fetch(staticFile(`${props.source}/waivers.json`))).json();
+  const p = { ...props, data };
+  return { props: p, durationInFrames: waiverSlides(p) };
 };
 
 const startSitMeta: CalculateMetadataFunction<StartSitProps> = async ({ props }) => {
@@ -229,6 +237,18 @@ export const RemotionRoot: React.FC = () => (
   <Composition id="BrollExample" component={BrollExample} fps={30} width={1080} height={1920} durationInFrames={300} defaultProps={{ src: null }} />
   <Composition id="PlayAnimExample" component={PlayAnimExample} fps={30} width={1080} height={1920} durationInFrames={300}
     defaultProps={{ nfl: "GB", opp: "CAR", player: "Matthew Golden", num: 0, stat: "13 targets · 79 yds · TD", stamp: "BUY BEFORE YOUR LEAGUE NOTICES." }} />
+  <Composition id="WaiverSlides" component={WaiverSlides} fps={1} width={1080} height={1920} durationInFrames={8} schema={waiverSlidesSchema} calculateMetadata={waiverSlidesMeta}
+    defaultProps={{
+      source: "wh9", boardSize: 8, appShot: "app/app-waivers.png", data: null,
+      hook: ["EVERYONE'S ADDING THESE 5.", "2 ARE TRAPS."],
+      picks: [
+        { id: "11625", verdict: "ADD", title: "9 TARGETS. THAT'S A ROLE.", stat: { v: "142", label: "rec yards Sunday · 7 catches, 1 TD" }, why: "Snaps jumped from 44% to 61%. He also saw 12 targets in Week 2. When he's on the field, he gets fed." },
+        { id: "8132", verdict: "FADE", title: "ONE BIG AFTERNOON.", stat: { v: "33.6", label: "points on 11 carries" }, why: "147 yards and 2 TDs on 11 carries. Before Sunday he averaged 5.7 points a game and never topped 11.9." },
+        { id: "13337", verdict: "TRAP", title: "22.8 POINTS. 13 SNAPS.", stat: { v: "13", label: "snaps of 69 · his fewest this season" }, why: "One 128-yard day on 19% of the snaps. He hasn't played more than 25 snaps in any game this year." },
+        { id: "7567", verdict: "ADD", title: "THE WORK IS REAL.", stat: { v: "25", label: "carries Sunday · 140 yards" }, why: "Carries the last four weeks: 4, 2, 14, 25. Volume like that is what wins you a week." },
+        { id: "13345", verdict: "ADD", title: "BEST BET ON THE BOARD.", stat: { v: "13.0", label: "Sleeper Week 9 projection vs CAR" }, why: "Snaps went 49% → 66%, and Sleeper projects him higher than any other RB, WR or TE on this list." },
+      ],
+    }} />
   <Composition id="RankSlides" component={RankSlides} fps={1} width={1080} height={1920} durationInFrames={5} schema={rankSchema} calculateMetadata={rankMeta}
     defaultProps={{ source: "rank9", title: ["TRADE", "VALUE"], sub: "Week 8 · RB / WR / TE", metric: "VALUE", metricKey: "value", pages: [], risers: null, appShot: "app/finder-vp.png", week: 8, photos: true }} />
   <Composition id="PlayerHype" component={PlayerHype} fps={30} width={1080} height={1920} durationInFrames={hypeFrames} schema={hypeSchema}

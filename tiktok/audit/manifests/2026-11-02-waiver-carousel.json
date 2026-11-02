@@ -1,0 +1,7 @@
+{
+  "type": "carousel",
+  "slides": ["out/wh9/01.png", "out/wh9/02.png", "out/wh9/03.png", "out/wh9/04.png", "out/wh9/05.png", "out/wh9/06.png", "out/wh9/07.png", "out/wh9/08.png"],
+  "audio": "silent",
+  "note": "audit.py checks videos only. Carousel checks done by hand: QR on slide 8 decodes to https://war-room-self-one.vercel.app (cv2.QRCodeDetector); all text within SAFE (top 230, bottom 1500, left 80, right 920); no league/team names (Sleeper NFL data + mock app shot only); every number from public/wh9/waivers.json + the per-week Sleeper pulls on 2026-11-02 21:40 UTC.",
+  "result": "PASS"
+}
