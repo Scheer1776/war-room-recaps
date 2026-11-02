@@ -1,0 +1,93 @@
+{
+ "video": "out/sun8b/sunday-recap-60.mp4",
+ "audio": "voice",
+ "script": "Joe Burrow just dropped forty-two and a half fantasy points. Four hundred sixty-two yards, six touchdowns, and the Bengals won it in overtime. Chase saw sixteen targets. Tee Higgins caught two touchdowns. Tyler Allgeier was projected for eight. He gave you thirty-six. Adonai Mitchell was projected under six. He put up twenty-seven. Jacksonville rolled, forty-two to seven. And Atlanta? Shut out in the rain. Michael Penix threw four interceptions. Bijan, under eight. Drake London, under two, after a concussion check. Here's what we know now. Lamar Jackson needs thumb surgery, and he's headed to injured reserve. Wednesday's top adds: Mitchell, Allgeier, and Emmett Johnson. Every Sunday final is right here. And tonight, Chicago visits Seattle. Jaxon Smith-Njigba is projected for twenty-five. Did Sunday save your season? Check your playoff odds, free on War Room.",
+ "endCard": 3.5,
+ "clips": [
+  {
+   "src": "public/sun8b/clips/hook.mp4",
+   "at": 0,
+   "dur": 3.467,
+   "clipStart": 0.79,
+   "keyAt": 2.7,
+   "label": "hook",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun8b/clips/burrow.mp4",
+   "at": 3.467,
+   "dur": 3.833,
+   "clipStart": 0.89,
+   "keyAt": 3.0,
+   "label": "burrow",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun8b/clips/higgins.mp4",
+   "at": 7.3,
+   "dur": 3.333,
+   "clipStart": 0.72,
+   "keyAt": 2.66,
+   "label": "higgins",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun8b/clips/allgeier.mp4",
+   "at": 10.633,
+   "dur": 3.533,
+   "clipStart": 0.76,
+   "keyAt": 2.7,
+   "label": "allgeier",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun8b/clips/mitchell.mp4",
+   "at": 14.166,
+   "dur": 3.0,
+   "clipStart": 0.95,
+   "keyAt": 2.6,
+   "label": "mitchell",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun8b/clips/tuten.mp4",
+   "at": 17.166,
+   "dur": 1.767,
+   "clipStart": 2.53,
+   "keyAt": 3.2,
+   "label": "tuten",
+   "band": [
+    0.2,
+    0.47
+   ],
+   "minBefore": 0.6
+  },
+  {
+   "src": "public/sun8b/clips/bust.mp4",
+   "at": 18.933,
+   "dur": 4.0,
+   "clipStart": 0.0,
+   "keyAt": 1.9,
+   "label": "bust",
+   "band": [
+    0.42,
+    0.51
+   ]
+  }
+ ]
+}

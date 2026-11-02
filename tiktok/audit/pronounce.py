@@ -16,6 +16,12 @@ import numpy as np
 
 HERE = pathlib.Path(__file__).resolve().parent
 NAMES = json.loads((HERE.parent / "voice" / "names.json").read_text()).get("pronounce", {})
+# voice/pronounce-bank.json: sourced readings for every name token of the top ~300 fantasy players (2026-11-02).
+# names.json wins on a clash (hand-checked entries); tokens in the bank's "_unsourced" list stay missing → they FAIL until sourced.
+_bank = HERE.parent / "voice" / "pronounce-bank.json"
+if _bank.exists():
+    for _k, _v in json.loads(_bank.read_text()).items():
+        if not _k.startswith("_") and isinstance(_v, dict) and _v.get("ipa"): NAMES.setdefault(_k, _v)
 MODEL = "facebook/wav2vec2-lv-60-espeak-cv-ft"
 WARN_D, FAIL_D = 0.09, 0.15   # cost per target phone. Calibrated 2026-11-01: 13 good names <= 0.06, the wrong "AL-guy-er" Allgeier = 0.19
 
@@ -95,7 +101,9 @@ def names_in(script):
     """Every name-like word (capitalised, not sentence-initial) plus known names anywhere."""
     found = set(re.findall(r"(?<![.?!]\s)(?<!^)\b[A-Z][a-zA-Z'\-]+", script))
     found |= {n for n in NAMES if re.search(rf"\b{re.escape(n)}\b", script)}
-    skip = {"War", "Room", "Sunday", "Monday", "Thursday", "PPR", "ESPN", "Sleeper", "OT", "NFL", "So", "And", "He", "Find"}
+    skip = {"War", "Room", "Sunday", "Wednesday", "Tonight", "Here", "Every", "Did", "Check", "Monday", "Thursday", "PPR", "ESPN", "Sleeper", "OT", "NFL", "So", "And", "He", "Find"}
+    # a token that only appears inside a longer hyphenated name ("Smith" in "Smith-Njigba") is checked as that name
+    found = {n for n in found if not any(n != m and "-" in m and n in m.split("-") and not re.search(rf"\b{re.escape(n)}\b(?!-)(?<!-{re.escape(n)})", script.replace(m, "")) for m in found)}
     return sorted(n for n in found if n not in skip)
 
 def check(wav, script, words=None):
@@ -130,7 +138,8 @@ def check(wav, script, words=None):
         targets = [norm_ipa(ref["ipa"])] + [norm_ipa(x) for x in ref.get("alt", [])]
         wrongs = [norm_ipa(x) for x in ref.get("wrong", [])]
         for w in hits:
-            win = [ph for t, ph in tp if w.start - 0.35 <= t <= w.end + 0.35]
+            # long or hyphenated names (Smith-Njigba) can span several transcript words: widen the window by the name length
+            win = [ph for t, ph in tp if w.start - 0.35 <= t <= w.end + 0.35 + 0.06 * max(0, len(targets[0]) - 5)]
             good = min(fit(t, win) for t in targets)
             bad = min([fit(x, win) for x in wrongs] or [9])
             heard = " ".join(win)

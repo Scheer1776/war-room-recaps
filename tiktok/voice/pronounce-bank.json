@@ -1,0 +1,4312 @@
+{
+ "_note": "Pronunciation bank for top-300 fantasy players (one entry per name token). ipa = General American phones in names.json style (diphthongs/affricates split, r-colored schwa as \"ə ɹ\", no stress marks). Sourced entries cite Wikipedia IPA/respelling or an official NFL team game-day flip-card pronunciation guide; \"common English name\" entries use CMU Pronouncing Dictionary / standard readings. Tokens already curated in names.json (Adonai, Allgeier, Bijan, Burrow, Chase, Drake, Emmett, Higgins, Jackson, Jaxon, Joe, Johnson, Lamar, London, Michael, Mitchell, Penix, Smith-Njigba, Tee, Tyler) are intentionally not duplicated here. Built 2026-11-02.",
+ "_unsourced": [
+  {
+   "token": "Kyren",
+   "players": [
+    "Kyren Williams"
+   ]
+  },
+  {
+   "token": "Ja'Marr",
+   "players": [
+    "Ja'Marr Chase"
+   ]
+  },
+  {
+   "token": "D'Andre",
+   "players": [
+    "D'Andre Swift"
+   ]
+  },
+  {
+   "token": "Geno",
+   "players": [
+    "Geno Smith"
+   ]
+  },
+  {
+   "token": "Deshaun",
+   "players": [
+    "Deshaun Watson"
+   ]
+  },
+  {
+   "token": "Braelon",
+   "players": [
+    "Braelon Allen"
+   ]
+  },
+  {
+   "token": "Malik",
+   "players": [
+    "Malik Nabers",
+    "Malik Washington"
+   ],
+   "why": "source covers only Malik Willis"
+  },
+  {
+   "token": "Quinshon",
+   "players": [
+    "Quinshon Judkins"
+   ]
+  },
+  {
+   "token": "Juwan",
+   "players": [
+    "Juwan Johnson"
+   ]
+  },
+  {
+   "token": "MarShawn",
+   "players": [
+    "MarShawn Lloyd"
+   ]
+  },
+  {
+   "token": "Rachaad",
+   "players": [
+    "Rachaad White"
+   ]
+  },
+  {
+   "token": "Germie",
+   "players": [
+    "Germie Bernard"
+   ]
+  },
+  {
+   "token": "Carnell",
+   "players": [
+    "Carnell Tate"
+   ]
+  },
+  {
+   "token": "Keon",
+   "players": [
+    "Keon Coleman"
+   ]
+  },
+  {
+   "token": "Jakobi",
+   "players": [
+    "Jakobi Meyers"
+   ]
+  },
+  {
+   "token": "Mayer",
+   "players": [
+    "Michael Mayer"
+   ]
+  },
+  {
+   "token": "Makai",
+   "players": [
+    "Makai Lemon"
+   ]
+  },
+  {
+   "token": "Stefon",
+   "players": [
+    "Stefon Diggs"
+   ]
+  },
+  {
+   "token": "Efton",
+   "players": [
+    "Efton Chism III"
+   ]
+  },
+  {
+   "token": "Chism",
+   "players": [
+    "Efton Chism III"
+   ]
+  },
+  {
+   "token": "Kendre",
+   "players": [
+    "Kendre Miller"
+   ]
+  },
+  {
+   "token": "Jalon",
+   "players": [
+    "Jalon Daniels"
+   ]
+  },
+  {
+   "token": "Roschon",
+   "players": [
+    "Roschon Johnson"
+   ]
+  },
+  {
+   "token": "Rashod",
+   "players": [
+    "Rashod Bateman"
+   ]
+  },
+  {
+   "token": "Rashee",
+   "players": [
+    "Rashee Rice"
+   ]
+  },
+  {
+   "token": "Kimani",
+   "players": [
+    "Kimani Vidal"
+   ]
+  },
+  {
+   "token": "Laquon",
+   "players": [
+    "Laquon Treadwell"
+   ]
+  },
+  {
+   "token": "Raridon",
+   "players": [
+    "Eli Raridon"
+   ]
+  },
+  {
+   "token": "Dowdle",
+   "players": [
+    "Rico Dowdle"
+   ]
+  },
+  {
+   "token": "Jeremiyah",
+   "players": [
+    "Jeremiyah Love"
+   ]
+  },
+  {
+   "token": "Dameon",
+   "players": [
+    "Dameon Pierce"
+   ]
+  },
+  {
+   "token": "Ja'Kobi",
+   "players": [
+    "Ja'Kobi Lane"
+   ]
+  },
+  {
+   "token": "Kaelon",
+   "players": [
+    "Kaelon Black"
+   ]
+  },
+  {
+   "token": "Davante",
+   "players": [
+    "Davante Adams"
+   ]
+  },
+  {
+   "token": "Jaleel",
+   "players": [
+    "Jaleel McLaughlin"
+   ]
+  },
+  {
+   "token": "Devontez",
+   "players": [
+    "Devontez Walker"
+   ]
+  },
+  {
+   "token": "Savion",
+   "players": [
+    "Savion Williams"
+   ]
+  },
+  {
+   "token": "Jeudy",
+   "players": [
+    "Jerry Jeudy"
+   ]
+  },
+  {
+   "token": "Dohnte",
+   "players": [
+    "Dohnte Meyers"
+   ]
+  },
+  {
+   "token": "Zonovan",
+   "players": [
+    "Zonovan Knight"
+   ]
+  },
+  {
+   "token": "Breece",
+   "players": [
+    "Breece Hall"
+   ]
+  },
+  {
+   "token": "Marquise",
+   "players": [
+    "Marquise Brown"
+   ]
+  },
+  {
+   "token": "Roush",
+   "players": [
+    "Sam Roush"
+   ]
+  },
+  {
+   "token": "Cowing",
+   "players": [
+    "Jacob Cowing"
+   ]
+  },
+  {
+   "token": "Jadarian",
+   "players": [
+    "Jadarian Price"
+   ]
+  },
+  {
+   "token": "Ruckert",
+   "players": [
+    "Jeremy Ruckert"
+   ]
+  },
+  {
+   "token": "Zavion",
+   "players": [
+    "Zavion Thomas"
+   ]
+  },
+  {
+   "token": "Jacory",
+   "players": [
+    "Jacory Croskey-Merritt"
+   ]
+  },
+  {
+   "token": "Croskey-Merritt",
+   "players": [
+    "Jacory Croskey-Merritt"
+   ]
+  }
+ ],
+ "Robinson": {
+  "ipa": "ɹ ɑ b ə n s ə n",
+  "say": "Robinson",
+  "source": "common English name",
+  "players": [
+   "Bijan Robinson",
+   "Wan'Dale Robinson",
+   "Brian Robinson Jr."
+  ]
+ },
+ "Puka": {
+  "ipa": "p u k ə",
+  "alt": [
+   "p u k ɑ"
+  ],
+  "say": "POO-kuh",
+  "note": "POO-kuh, /ˈpuːkə/ (Wikipedia); Rams flip-card 'POO-kah'",
+  "source": "https://en.wikipedia.org/wiki/Puka_Nacua",
+  "players": [
+   "Puka Nacua"
+  ]
+ },
+ "Nacua": {
+  "ipa": "n ə k u ə",
+  "alt": [
+   "n ɑ k u ə"
+  ],
+  "wrong": [
+   "n ɑ k w ə",
+   "n æ k j u ə"
+  ],
+  "say": "nuh-KOO-uh",
+  "note": "nuh-KOO-uh, /nəˈkuːə/ (Wikipedia); Rams flip card 'Na-COO-ah'",
+  "source": "https://en.wikipedia.org/wiki/Puka_Nacua",
+  "players": [
+   "Puka Nacua"
+  ]
+ },
+ "Maye": {
+  "ipa": "m e ɪ",
+  "say": "Maye",
+  "source": "common English name",
+  "players": [
+   "Drake Maye"
+  ]
+ },
+ "Jahmyr": {
+  "ipa": "d ʒ ɑ m ɪ ə ɹ",
+  "alt": [
+   "d ʒ ə m ɪ ə ɹ",
+   "d ʒ ɑ m i ɹ"
+  ],
+  "wrong": [
+   "d ʒ ɑ m a ɪ ə ɹ",
+   "d ʒ ə m a ɪ ə ɹ"
+  ],
+  "say": "JAH-meer",
+  "note": "JAH-meer per Lions pronunciation guide (Lions-Titans 2024 flip card, also Bears card); Wikipedia gives jə-MEER /dʒəˈmɪər/ (accepted)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/m5723knmrbjbnhjfmcxb",
+  "players": [
+   "Jahmyr Gibbs"
+  ]
+ },
+ "Gibbs": {
+  "ipa": "ɡ ɪ b z",
+  "say": "Gibbs",
+  "source": "common English name",
+  "players": [
+   "Jahmyr Gibbs"
+  ]
+ },
+ "CeeDee": {
+  "ipa": "s i d i",
+  "say": "C.D.",
+  "source": "common English name",
+  "players": [
+   "CeeDee Lamb"
+  ]
+ },
+ "Lamb": {
+  "ipa": "l æ m",
+  "say": "Lamb",
+  "source": "common English name",
+  "players": [
+   "CeeDee Lamb"
+  ]
+ },
+ "Williams": {
+  "ipa": "w ɪ l j ə m z",
+  "say": "Williams",
+  "source": "common English name",
+  "players": [
+   "Kyren Williams",
+   "Javonte Williams",
+   "Caleb Williams",
+   "Jameson Williams",
+   "Antonio Williams",
+   "Kyle Williams",
+   "Savion Williams",
+   "Isaiah Williams"
+  ]
+ },
+ "Dak": {
+  "ipa": "d æ k",
+  "say": "Dak",
+  "note": "DAK, /dæk/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Dak_Prescott",
+  "players": [
+   "Dak Prescott"
+  ]
+ },
+ "Prescott": {
+  "ipa": "p ɹ ɛ s k ɑ t",
+  "say": "Prescott",
+  "source": "common English name",
+  "players": [
+   "Dak Prescott"
+  ]
+ },
+ "Jonathan": {
+  "ipa": "d ʒ ɑ n ə θ ə n",
+  "say": "Jonathan",
+  "source": "common English name",
+  "players": [
+   "Jonathan Taylor"
+  ]
+ },
+ "Taylor": {
+  "ipa": "t e ɪ l ə ɹ",
+  "say": "Taylor",
+  "source": "common English name",
+  "players": [
+   "Jonathan Taylor",
+   "Mason Taylor"
+  ]
+ },
+ "Javonte": {
+  "ipa": "d ʒ ə v ɑ n t e ɪ",
+  "alt": [
+   "d ʒ ə v ɔ n t e ɪ"
+  ],
+  "wrong": [
+   "d ʒ ə v ɑ n t",
+   "h ɑ v ɑ n t e ɪ"
+  ],
+  "say": "juh-VON-tay",
+  "note": "JUH-von-TAY (Broncos pronunciation guide, Steelers-Broncos 2024 flip card)",
+  "source": "https://steelersdepot.com/wp-content/uploads/2024/09/pit-den-week-2-flipcard-2024.pdf",
+  "players": [
+   "Javonte Williams"
+  ]
+ },
+ "Josh": {
+  "ipa": "d ʒ ɑ ʃ",
+  "say": "Josh",
+  "source": "common English name",
+  "players": [
+   "Josh Allen",
+   "Josh Downs",
+   "Josh Jacobs",
+   "Josh Cameron"
+  ]
+ },
+ "Allen": {
+  "ipa": "æ l ə n",
+  "say": "Allen",
+  "source": "common English name",
+  "players": [
+   "Josh Allen",
+   "Braelon Allen",
+   "Keenan Allen",
+   "Davis Allen",
+   "Cyrus Allen"
+  ]
+ },
+ "Matthew": {
+  "ipa": "m æ θ j u",
+  "say": "Matthew",
+  "source": "common English name",
+  "players": [
+   "Matthew Stafford",
+   "Matthew Golden"
+  ]
+ },
+ "Stafford": {
+  "ipa": "s t æ f ə ɹ d",
+  "say": "Stafford",
+  "source": "common English name",
+  "players": [
+   "Matthew Stafford"
+  ]
+ },
+ "Jordan": {
+  "ipa": "d ʒ ɔ ɹ d ə n",
+  "say": "Jordan",
+  "source": "common English name",
+  "players": [
+   "Jordan Love",
+   "Jordan Mason",
+   "Jordan Addison",
+   "Jordan Watkins",
+   "Jordan Whittington"
+  ]
+ },
+ "Love": {
+  "ipa": "l ʌ v",
+  "say": "Love",
+  "source": "common English name",
+  "players": [
+   "Jordan Love",
+   "Jeremiyah Love"
+  ]
+ },
+ "Kenneth": {
+  "ipa": "k ɛ n ɪ θ",
+  "say": "Kenneth",
+  "source": "common English name",
+  "players": [
+   "Kenneth Walker III"
+  ]
+ },
+ "Walker": {
+  "ipa": "w ɔ k ə ɹ",
+  "say": "Walker",
+  "source": "common English name",
+  "players": [
+   "Kenneth Walker III",
+   "Devontez Walker"
+  ]
+ },
+ "Zay": {
+  "ipa": "z e ɪ",
+  "say": "Zay",
+  "source": "common English name",
+  "players": [
+   "Zay Flowers"
+  ]
+ },
+ "Flowers": {
+  "ipa": "f l a ʊ ə ɹ z",
+  "say": "Flowers",
+  "source": "common English name",
+  "players": [
+   "Zay Flowers"
+  ]
+ },
+ "Brock": {
+  "ipa": "b ɹ ɑ k",
+  "say": "Brock",
+  "source": "common English name",
+  "players": [
+   "Brock Bowers",
+   "Brock Purdy"
+  ]
+ },
+ "Bowers": {
+  "ipa": "b a ʊ ə ɹ z",
+  "say": "Bowers",
+  "source": "common English name",
+  "players": [
+   "Brock Bowers"
+  ]
+ },
+ "Christian": {
+  "ipa": "k ɹ ɪ s t ʃ ə n",
+  "alt": [
+   "k ɹ ɪ s t ʃ ɪ n"
+  ],
+  "say": "Christian",
+  "source": "common English name",
+  "players": [
+   "Christian Watson",
+   "Christian McCaffrey"
+  ]
+ },
+ "Watson": {
+  "ipa": "w ɑ t s ə n",
+  "say": "Watson",
+  "source": "common English name",
+  "players": [
+   "Christian Watson",
+   "Deshaun Watson"
+  ]
+ },
+ "Trey": {
+  "ipa": "t ɹ e ɪ",
+  "say": "Trey",
+  "source": "common English name",
+  "players": [
+   "Trey McBride"
+  ]
+ },
+ "McBride": {
+  "ipa": "m ə k b ɹ a ɪ d",
+  "say": "McBride",
+  "source": "common English name",
+  "players": [
+   "Trey McBride"
+  ]
+ },
+ "McCaffrey": {
+  "ipa": "m ə k æ f ɹ i",
+  "say": "McCaffrey",
+  "source": "common English name",
+  "players": [
+   "Christian McCaffrey"
+  ]
+ },
+ "Purdy": {
+  "ipa": "p ɜ ɹ d i",
+  "say": "Purdy",
+  "source": "common English name",
+  "players": [
+   "Brock Purdy"
+  ]
+ },
+ "Sam": {
+  "ipa": "s æ m",
+  "say": "Sam",
+  "source": "common English name",
+  "players": [
+   "Sam Darnold",
+   "Sam LaPorta",
+   "Sam Roush"
+  ]
+ },
+ "Darnold": {
+  "ipa": "d ɑ ɹ n o ʊ l d",
+  "say": "Darnold",
+  "source": "common English name",
+  "players": [
+   "Sam Darnold"
+  ]
+ },
+ "Bo": {
+  "ipa": "b o ʊ",
+  "say": "Bo",
+  "source": "common English name",
+  "players": [
+   "Bo Nix",
+   "Bo Melton"
+  ]
+ },
+ "Nix": {
+  "ipa": "n ɪ k s",
+  "say": "Nix",
+  "source": "common English name",
+  "players": [
+   "Bo Nix"
+  ]
+ },
+ "Kirk": {
+  "ipa": "k ɜ ɹ k",
+  "say": "Kirk",
+  "source": "common English name",
+  "players": [
+   "Kirk Cousins"
+  ]
+ },
+ "Cousins": {
+  "ipa": "k ʌ z ə n z",
+  "say": "Cousins",
+  "source": "common English name",
+  "players": [
+   "Kirk Cousins"
+  ]
+ },
+ "Derrick": {
+  "ipa": "d ɛ ɹ ɪ k",
+  "say": "Derrick",
+  "source": "common English name",
+  "players": [
+   "Derrick Henry"
+  ]
+ },
+ "Henry": {
+  "ipa": "h ɛ n ɹ i",
+  "say": "Henry",
+  "source": "common English name",
+  "players": [
+   "Derrick Henry",
+   "Hunter Henry"
+  ]
+ },
+ "Bucky": {
+  "ipa": "b ʌ k i",
+  "say": "Bucky",
+  "source": "common English name",
+  "players": [
+   "Bucky Irving"
+  ]
+ },
+ "Irving": {
+  "ipa": "ɜ ɹ v ɪ ŋ",
+  "say": "Irving",
+  "source": "common English name",
+  "players": [
+   "Bucky Irving"
+  ]
+ },
+ "Garrett": {
+  "ipa": "ɡ æ ɹ ɪ t",
+  "alt": [
+   "ɡ ɛ ɹ ɪ t"
+  ],
+  "say": "Garrett",
+  "source": "common English name",
+  "players": [
+   "Garrett Wilson"
+  ]
+ },
+ "Wilson": {
+  "ipa": "w ɪ l s ə n",
+  "say": "Wilson",
+  "source": "common English name",
+  "players": [
+   "Garrett Wilson",
+   "Michael Wilson",
+   "Emanuel Wilson",
+   "Roman Wilson"
+  ]
+ },
+ "Swift": {
+  "ipa": "s w ɪ f t",
+  "say": "Swift",
+  "source": "common English name",
+  "players": [
+   "D'Andre Swift"
+  ]
+ },
+ "Jacoby": {
+  "ipa": "d ʒ ə k o ʊ b i",
+  "say": "Jacoby",
+  "source": "common English name",
+  "players": [
+   "Jacoby Brissett"
+  ]
+ },
+ "Brissett": {
+  "ipa": "b ɹ ɪ s ɛ t",
+  "wrong": [
+   "b ɹ ɪ s ɪ t",
+   "b ɹ ɪ s ə t"
+  ],
+  "say": "briss-ET",
+  "note": "briss-ETT, stress on 2nd syllable (Patriots pronunciation guide, Patriots-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/qlualmg8s5sezoalriil",
+  "players": [
+   "Jacoby Brissett"
+  ]
+ },
+ "Amon-Ra": {
+  "ipa": "ɑ m ɑ n ɹ ɑ",
+  "alt": [
+   "ɑ m ə n ɹ ɑ",
+   "æ m ɑ n ɹ ɑ"
+  ],
+  "wrong": [
+   "e ɪ m ə n ɹ ɑ"
+  ],
+  "say": "ah-mon-RAH",
+  "note": "ahmon-RAH (Lions pronunciation guide, Lions-Bengals & Lions-Titans flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/xpf9qxmruaw4jyzg312f",
+  "players": [
+   "Amon-Ra St. Brown"
+  ]
+ },
+ "St. Brown": {
+  "ipa": "s e ɪ n t b ɹ a ʊ n",
+  "wrong": [
+   "s t ɹ i t b ɹ a ʊ n",
+   "s t b ɹ a ʊ n"
+  ],
+  "say": "Saint Brown",
+  "source": "common English name",
+  "players": [
+   "Amon-Ra St. Brown"
+  ]
+ },
+ "Trevor": {
+  "ipa": "t ɹ ɛ v ə ɹ",
+  "say": "Trevor",
+  "source": "common English name",
+  "players": [
+   "Trevor Lawrence",
+   "Trevor Etienne"
+  ]
+ },
+ "Lawrence": {
+  "ipa": "l ɔ ɹ ə n s",
+  "say": "Lawrence",
+  "source": "common English name",
+  "players": [
+   "Trevor Lawrence"
+  ]
+ },
+ "Ashton": {
+  "ipa": "æ ʃ t ə n",
+  "say": "Ashton",
+  "source": "common English name",
+  "players": [
+   "Ashton Jeanty"
+  ]
+ },
+ "Jeanty": {
+  "ipa": "d ʒ ɛ n t i",
+  "wrong": [
+   "d ʒ i n t i",
+   "ʒ ɑ n t i"
+  ],
+  "say": "JEN-tee",
+  "note": "JEN-tee, /ˈdʒɛnti/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Ashton_Jeanty",
+  "players": [
+   "Ashton Jeanty"
+  ]
+ },
+ "Jared": {
+  "ipa": "d ʒ ɛ ɹ ɪ d",
+  "say": "Jared",
+  "source": "common English name",
+  "players": [
+   "Jared Goff"
+  ]
+ },
+ "Goff": {
+  "ipa": "ɡ ɔ f",
+  "say": "Goff",
+  "source": "common English name",
+  "players": [
+   "Jared Goff"
+  ]
+ },
+ "Patrick": {
+  "ipa": "p æ t ɹ ɪ k",
+  "say": "Patrick",
+  "source": "common English name",
+  "players": [
+   "Patrick Mahomes",
+   "Tim Patrick"
+  ]
+ },
+ "Mahomes": {
+  "ipa": "m ə h o ʊ m z",
+  "wrong": [
+   "m ə h o ʊ m i z",
+   "m ɑ h o ʊ m z"
+  ],
+  "say": "muh-HOMZ",
+  "note": "mə-HOHMZ, /məˈhoʊmz/ (Wikipedia; article notes 'Ma-homies' as wrong)",
+  "source": "https://en.wikipedia.org/wiki/Patrick_Mahomes",
+  "players": [
+   "Patrick Mahomes"
+  ]
+ },
+ "Smith": {
+  "ipa": "s m ɪ θ",
+  "say": "Smith",
+  "source": "common English name",
+  "players": [
+   "Geno Smith",
+   "DeVonta Smith",
+   "Jonnu Smith"
+  ]
+ },
+ "Golden": {
+  "ipa": "ɡ o ʊ l d ə n",
+  "say": "Golden",
+  "source": "common English name",
+  "players": [
+   "Matthew Golden"
+  ]
+ },
+ "Bryce": {
+  "ipa": "b ɹ a ɪ s",
+  "say": "Bryce",
+  "source": "common English name",
+  "players": [
+   "Bryce Young",
+   "Bryce Lance"
+  ]
+ },
+ "Young": {
+  "ipa": "j ʌ ŋ",
+  "say": "Young",
+  "source": "common English name",
+  "players": [
+   "Bryce Young"
+  ]
+ },
+ "Nico": {
+  "ipa": "n i k o ʊ",
+  "say": "Nico",
+  "source": "common English name",
+  "players": [
+   "Nico Collins"
+  ]
+ },
+ "Collins": {
+  "ipa": "k ɑ l ɪ n z",
+  "say": "Collins",
+  "source": "common English name",
+  "players": [
+   "Nico Collins"
+  ]
+ },
+ "Jayden": {
+  "ipa": "d ʒ e ɪ d ə n",
+  "say": "Jayden",
+  "source": "common English name",
+  "players": [
+   "Jayden Daniels"
+  ]
+ },
+ "Daniels": {
+  "ipa": "d æ n j ə l z",
+  "say": "Daniels",
+  "source": "common English name",
+  "players": [
+   "Jayden Daniels",
+   "Jalon Daniels"
+  ]
+ },
+ "Caleb": {
+  "ipa": "k e ɪ l ə b",
+  "say": "Caleb",
+  "source": "common English name",
+  "players": [
+   "Caleb Williams",
+   "Caleb Douglas"
+  ]
+ },
+ "Justin": {
+  "ipa": "d ʒ ʌ s t ə n",
+  "alt": [
+   "d ʒ ʌ s t ɪ n"
+  ],
+  "say": "Justin",
+  "source": "common English name",
+  "players": [
+   "Justin Jefferson",
+   "Justin Herbert"
+  ]
+ },
+ "Jefferson": {
+  "ipa": "d ʒ ɛ f ə ɹ s ə n",
+  "say": "Jefferson",
+  "source": "common English name",
+  "players": [
+   "Justin Jefferson"
+  ]
+ },
+ "Kyler": {
+  "ipa": "k a ɪ l ə ɹ",
+  "say": "Kyler",
+  "source": "common English name",
+  "players": [
+   "Kyler Murray"
+  ]
+ },
+ "Murray": {
+  "ipa": "m ɜ ɹ i",
+  "alt": [
+   "m ʌ ɹ i"
+  ],
+  "say": "Murray",
+  "source": "common English name",
+  "players": [
+   "Kyler Murray"
+  ]
+ },
+ "Chris": {
+  "ipa": "k ɹ ɪ s",
+  "say": "Chris",
+  "source": "common English name",
+  "players": [
+   "Chris Olave",
+   "Chris Godwin Jr.",
+   "Chris Bell",
+   "Chris Rodriguez Jr."
+  ]
+ },
+ "Olave": {
+  "ipa": "o ʊ l ɑ v e ɪ",
+  "wrong": [
+   "o ʊ l e ɪ v",
+   "o ʊ l ɑ v"
+  ],
+  "say": "oh-LAH-vay",
+  "note": "oh-LAH-vay, /oʊˈlɑːveɪ/ (Wikipedia; Saints flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Chris_Olave",
+  "players": [
+   "Chris Olave"
+  ]
+ },
+ "Brown": {
+  "ipa": "b ɹ a ʊ n",
+  "say": "Brown",
+  "source": "common English name",
+  "players": [
+   "Chase Brown",
+   "A.J. Brown",
+   "Marquise Brown"
+  ]
+ },
+ "George": {
+  "ipa": "d ʒ ɔ ɹ d ʒ",
+  "say": "George",
+  "source": "common English name",
+  "players": [
+   "George Pickens",
+   "George Kittle",
+   "George Holani"
+  ]
+ },
+ "Pickens": {
+  "ipa": "p ɪ k ə n z",
+  "say": "Pickens",
+  "source": "common English name",
+  "players": [
+   "George Pickens"
+  ]
+ },
+ "Jaylen": {
+  "ipa": "d ʒ e ɪ l ə n",
+  "say": "Jaylen",
+  "source": "common English name",
+  "players": [
+   "Jaylen Warren",
+   "Jaylen Waddle",
+   "Jaylen Wright"
+  ]
+ },
+ "Warren": {
+  "ipa": "w ɔ ɹ ə n",
+  "say": "Warren",
+  "source": "common English name",
+  "players": [
+   "Jaylen Warren",
+   "Tyler Warren"
+  ]
+ },
+ "Chuba": {
+  "ipa": "t ʃ u b ə",
+  "alt": [
+   "t ʃ u b ɑ"
+  ],
+  "say": "CHOO-buh",
+  "note": "CHOO-bə (Wikipedia); Panthers flip cards 'CHEW-ba'",
+  "source": "https://en.wikipedia.org/wiki/Chuba_Hubbard",
+  "players": [
+   "Chuba Hubbard"
+  ]
+ },
+ "Hubbard": {
+  "ipa": "h ʌ b ə ɹ d",
+  "say": "Hubbard",
+  "source": "common English name",
+  "players": [
+   "Chuba Hubbard"
+  ]
+ },
+ "Aaron": {
+  "ipa": "ɛ ɹ ə n",
+  "say": "Aaron",
+  "source": "common English name",
+  "players": [
+   "Aaron Rodgers",
+   "Aaron Jones Sr."
+  ]
+ },
+ "Rodgers": {
+  "ipa": "ɹ ɑ d ʒ ə ɹ z",
+  "say": "Rodgers",
+  "source": "common English name",
+  "players": [
+   "Aaron Rodgers"
+  ]
+ },
+ "James": {
+  "ipa": "d ʒ e ɪ m z",
+  "say": "James",
+  "source": "common English name",
+  "players": [
+   "James Cook III"
+  ]
+ },
+ "Cook": {
+  "ipa": "k ʊ k",
+  "say": "Cook",
+  "source": "common English name",
+  "players": [
+   "James Cook III"
+  ]
+ },
+ "Rhamondre": {
+  "ipa": "ɹ ə m ɑ n d ɹ e ɪ",
+  "say": "ruh-MON-dray",
+  "note": "ruh-MON-dray (Patriots pronunciation guide, Patriots-Raiders 2025 flip card)",
+  "source": "https://media.patriots.1rmg.com/wp-content/uploads/2025/03/02162437/Raiders-Flip-Card-09-07-2025.pdf",
+  "players": [
+   "Rhamondre Stevenson"
+  ]
+ },
+ "Stevenson": {
+  "ipa": "s t i v ə n s ə n",
+  "say": "Stevenson",
+  "source": "common English name",
+  "players": [
+   "Rhamondre Stevenson"
+  ]
+ },
+ "C.J.": {
+  "ipa": "s i d ʒ e ɪ",
+  "say": "C.J.",
+  "source": "common English name",
+  "players": [
+   "C.J. Stroud"
+  ]
+ },
+ "Stroud": {
+  "ipa": "s t ɹ a ʊ d",
+  "say": "Stroud",
+  "source": "common English name",
+  "players": [
+   "C.J. Stroud"
+  ]
+ },
+ "Shough": {
+  "ipa": "ʃ ʌ k",
+  "wrong": [
+   "ʃ a ʊ",
+   "ʃ u",
+   "ʃ ʌ f",
+   "ʃ o ʊ"
+  ],
+  "say": "Shuck",
+  "note": "SHUCK, /ʃʌk/ (Wikipedia; Saints/Patriots flip card '(SHUCK)'; Amon-Ra St. Brown: rhymes with the f-word)",
+  "source": "https://en.wikipedia.org/wiki/Tyler_Shough",
+  "players": [
+   "Tyler Shough"
+  ]
+ },
+ "Daniel": {
+  "ipa": "d æ n j ə l",
+  "say": "Daniel",
+  "source": "common English name",
+  "players": [
+   "Daniel Jones",
+   "Daniel Bellinger"
+  ]
+ },
+ "Jones": {
+  "ipa": "d ʒ o ʊ n z",
+  "say": "Jones",
+  "source": "common English name",
+  "players": [
+   "Daniel Jones",
+   "Aaron Jones Sr."
+  ]
+ },
+ "Luther": {
+  "ipa": "l u θ ə ɹ",
+  "say": "Luther",
+  "source": "common English name",
+  "players": [
+   "Luther Burden III"
+  ]
+ },
+ "Burden": {
+  "ipa": "b ɜ ɹ d ə n",
+  "say": "Burden",
+  "source": "common English name",
+  "players": [
+   "Luther Burden III"
+  ]
+ },
+ "Malik": {
+  "ipa": "m ə l i k",
+  "wrong": [
+   "m æ l ɪ k",
+   "m e ɪ l ɪ k"
+  ],
+  "say": "muh-LEEK",
+  "note": "mə-LEEK, /məˈliːk/ (Wikipedia, Malik Willis only; Nabers/Washington not separately verified)",
+  "source": "https://en.wikipedia.org/wiki/Malik_Willis",
+  "players": [
+   "Malik Willis"
+  ]
+ },
+ "Willis": {
+  "ipa": "w ɪ l ɪ s",
+  "say": "Willis",
+  "source": "common English name",
+  "players": [
+   "Malik Willis"
+  ]
+ },
+ "Parker": {
+  "ipa": "p ɑ ɹ k ə ɹ",
+  "say": "Parker",
+  "source": "common English name",
+  "players": [
+   "Parker Washington"
+  ]
+ },
+ "Washington": {
+  "ipa": "w ɑ ʃ ɪ ŋ t ə n",
+  "alt": [
+   "w ɔ ʃ ɪ ŋ t ə n"
+  ],
+  "say": "Washington",
+  "source": "common English name",
+  "players": [
+   "Parker Washington",
+   "Malik Washington",
+   "Mike Washington Jr.",
+   "Darnell Washington"
+  ]
+ },
+ "Waddle": {
+  "ipa": "w ɑ d ə l",
+  "say": "Waddle",
+  "source": "common English name",
+  "players": [
+   "Jaylen Waddle"
+  ]
+ },
+ "Kittle": {
+  "ipa": "k ɪ t ə l",
+  "say": "Kittle",
+  "source": "common English name",
+  "players": [
+   "George Kittle"
+  ]
+ },
+ "Jalen": {
+  "ipa": "d ʒ e ɪ l ə n",
+  "say": "Jalen",
+  "source": "common English name",
+  "players": [
+   "Jalen Coker",
+   "Jalen Nailor",
+   "Jalen Royals",
+   "Jalen Hurts"
+  ]
+ },
+ "Coker": {
+  "ipa": "k o ʊ k ə ɹ",
+  "say": "Coker",
+  "source": "common English name",
+  "players": [
+   "Jalen Coker"
+  ]
+ },
+ "Nabers": {
+  "ipa": "n e ɪ b ə ɹ z",
+  "say": "Nabers",
+  "source": "common English name",
+  "players": [
+   "Malik Nabers"
+  ]
+ },
+ "Tucker": {
+  "ipa": "t ʌ k ə ɹ",
+  "say": "Tucker",
+  "source": "common English name",
+  "players": [
+   "Tucker Kraft",
+   "Tre Tucker"
+  ]
+ },
+ "Kraft": {
+  "ipa": "k ɹ æ f t",
+  "say": "Kraft",
+  "source": "common English name",
+  "players": [
+   "Tucker Kraft"
+  ]
+ },
+ "Herbert": {
+  "ipa": "h ɜ ɹ b ə ɹ t",
+  "say": "Herbert",
+  "source": "common English name",
+  "players": [
+   "Justin Herbert"
+  ]
+ },
+ "Harold": {
+  "ipa": "h ɛ ɹ ə l d",
+  "say": "Harold",
+  "source": "common English name",
+  "players": [
+   "Harold Fannin Jr."
+  ]
+ },
+ "Fannin": {
+  "ipa": "f æ n ɪ n",
+  "say": "Fannin",
+  "source": "common English name",
+  "players": [
+   "Harold Fannin Jr."
+  ]
+ },
+ "Cam": {
+  "ipa": "k æ m",
+  "say": "Cam",
+  "source": "common English name",
+  "players": [
+   "Cam Ward",
+   "Cam Skattebo"
+  ]
+ },
+ "Ward": {
+  "ipa": "w ɔ ɹ d",
+  "say": "Ward",
+  "source": "common English name",
+  "players": [
+   "Cam Ward"
+  ]
+ },
+ "Tetairoa": {
+  "ipa": "t ɛ t a ɪ ɹ o ʊ ə",
+  "wrong": [
+   "t ɛ t ɛ ɹ o ʊ ə",
+   "t ɛ t ə ɹ o ʊ ə"
+  ],
+  "say": "teh-tie-ROH-uh",
+  "note": "teh-ty-ROH-ə, /tɛtaɪˈroʊə/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Tetairoa_McMillan",
+  "players": [
+   "Tetairoa McMillan"
+  ]
+ },
+ "McMillan": {
+  "ipa": "m ə k m ɪ l ə n",
+  "say": "McMillan",
+  "source": "common English name",
+  "players": [
+   "Tetairoa McMillan"
+  ]
+ },
+ "Bhayshul": {
+  "ipa": "b e ɪ ʃ ə l",
+  "wrong": [
+   "b a ɪ ʃ ə l",
+   "b h e ɪ ʃ ʊ l"
+  ],
+  "say": "BAY-shul",
+  "note": "BAY-shal (Jaguars pronunciation guide, Jaguars-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/jfbofrwf8kptievaifj5",
+  "players": [
+   "Bhayshul Tuten"
+  ]
+ },
+ "Tuten": {
+  "ipa": "t u t ə n",
+  "alt": [
+   "t j u t ə n"
+  ],
+  "say": "Tuten",
+  "source": "common English name",
+  "players": [
+   "Bhayshul Tuten"
+  ]
+ },
+ "Denzel": {
+  "ipa": "d ɛ n z ə l",
+  "say": "Denzel",
+  "source": "common English name",
+  "players": [
+   "Denzel Boston"
+  ]
+ },
+ "Boston": {
+  "ipa": "b ɑ s t ə n",
+  "alt": [
+   "b ɔ s t ə n"
+  ],
+  "say": "Boston",
+  "source": "common English name",
+  "players": [
+   "Denzel Boston"
+  ]
+ },
+ "Downs": {
+  "ipa": "d a ʊ n z",
+  "say": "Downs",
+  "source": "common English name",
+  "players": [
+   "Josh Downs"
+  ]
+ },
+ "Godwin": {
+  "ipa": "ɡ ɑ d w ɪ n",
+  "say": "Godwin",
+  "source": "common English name",
+  "players": [
+   "Chris Godwin Jr."
+  ]
+ },
+ "Ollie": {
+  "ipa": "ɑ l i",
+  "alt": [
+   "o ʊ l i"
+  ],
+  "say": "Ollie",
+  "source": "common English name",
+  "players": [
+   "Ollie Gordon II"
+  ]
+ },
+ "Gordon": {
+  "ipa": "ɡ ɔ ɹ d ə n",
+  "say": "Gordon",
+  "source": "common English name",
+  "players": [
+   "Ollie Gordon II"
+  ]
+ },
+ "Tanner": {
+  "ipa": "t æ n ə ɹ",
+  "say": "Tanner",
+  "source": "common English name",
+  "players": [
+   "Tanner McKee"
+  ]
+ },
+ "McKee": {
+  "ipa": "m ə k i",
+  "say": "McKee",
+  "source": "common English name",
+  "players": [
+   "Tanner McKee"
+  ]
+ },
+ "Rome": {
+  "ipa": "ɹ o ʊ m",
+  "say": "Rome",
+  "source": "common English name",
+  "players": [
+   "Rome Odunze"
+  ]
+ },
+ "Odunze": {
+  "ipa": "o ʊ d u n z e ɪ",
+  "wrong": [
+   "o ʊ d ʌ n z",
+   "o ʊ d u n z i"
+  ],
+  "say": "oh-DOON-zay",
+  "note": "OH-dune-ZAY (Bears pronunciation guide, Bears-Bengals & Bears-Saints flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/hqp4evac50widfmawcyj",
+  "players": [
+   "Rome Odunze"
+  ]
+ },
+ "Dallas": {
+  "ipa": "d æ l ə s",
+  "say": "Dallas",
+  "source": "common English name",
+  "players": [
+   "Dallas Goedert"
+  ]
+ },
+ "Goedert": {
+  "ipa": "ɡ ɑ d ə ɹ t",
+  "wrong": [
+   "ɡ o ʊ d ə ɹ t",
+   "ɡ ɜ ɹ d ə ɹ t"
+  ],
+  "say": "GOD-ert",
+  "note": "GOD-ert, /ˈɡɒdərt/ (Wikipedia; Eagles flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Dallas_Goedert",
+  "players": [
+   "Dallas Goedert"
+  ]
+ },
+ "Isaiah": {
+  "ipa": "a ɪ z e ɪ ə",
+  "say": "Isaiah",
+  "source": "common English name",
+  "players": [
+   "Isaiah Likely",
+   "Isaiah Davis",
+   "Isaiah Williams",
+   "Isaiah Bond"
+  ]
+ },
+ "Likely": {
+  "ipa": "l a ɪ k l i",
+  "say": "Likely",
+  "source": "common English name",
+  "players": [
+   "Isaiah Likely"
+  ]
+ },
+ "Travis": {
+  "ipa": "t ɹ æ v ɪ s",
+  "say": "Travis",
+  "source": "common English name",
+  "players": [
+   "Travis Kelce",
+   "Travis Hunter",
+   "Travis Etienne Jr."
+  ]
+ },
+ "Kelce": {
+  "ipa": "k ɛ l s i",
+  "alt": [
+   "k ɛ l s"
+  ],
+  "say": "KEL-see",
+  "note": "KEL-see, /ˈkɛlsi/ (Wikipedia; Eagles-Chiefs flip card); Travis once said the family name is technically KELSS, but both brothers go by KEL-see (CBS Sports)",
+  "source": "https://en.wikipedia.org/wiki/Travis_Kelce",
+  "players": [
+   "Travis Kelce"
+  ]
+ },
+ "Colston": {
+  "ipa": "k o ʊ l s t ə n",
+  "say": "Colston",
+  "source": "common English name",
+  "players": [
+   "Colston Loveland"
+  ]
+ },
+ "Loveland": {
+  "ipa": "l ʌ v l ə n d",
+  "say": "Loveland",
+  "source": "common English name",
+  "players": [
+   "Colston Loveland"
+  ]
+ },
+ "Tony": {
+  "ipa": "t o ʊ n i",
+  "say": "Tony",
+  "source": "common English name",
+  "players": [
+   "Tony Pollard"
+  ]
+ },
+ "Pollard": {
+  "ipa": "p ɑ l ə ɹ d",
+  "say": "Pollard",
+  "source": "common English name",
+  "players": [
+   "Tony Pollard"
+  ]
+ },
+ "LaPorta": {
+  "ipa": "l ə p ɔ ɹ t ə",
+  "say": "LaPorta",
+  "source": "common English name",
+  "players": [
+   "Sam LaPorta"
+  ]
+ },
+ "KC": {
+  "ipa": "k e ɪ s i",
+  "say": "K.C.",
+  "source": "common English name",
+  "players": [
+   "KC Concepcion Jr."
+  ]
+ },
+ "Concepcion": {
+  "ipa": "k ə n s ɛ p s i o ʊ n",
+  "alt": [
+   "k ɑ n s ɛ p s i o ʊ n"
+  ],
+  "wrong": [
+   "k ɑ n s ɛ p ʃ ə n",
+   "k o ʊ n s ɛ p s j o ʊ n"
+  ],
+  "say": "kun-sep-see-OHN",
+  "note": "kən-SEP-see-OHN, /kənˌsɛpsiˈoʊn/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/KC_Concepcion_(American_football)",
+  "players": [
+   "KC Concepcion Jr."
+  ]
+ },
+ "DK": {
+  "ipa": "d i k e ɪ",
+  "say": "DK",
+  "source": "common English name",
+  "players": [
+   "DK Metcalf"
+  ]
+ },
+ "Metcalf": {
+  "ipa": "m ɛ t k æ f",
+  "say": "Metcalf",
+  "source": "common English name",
+  "players": [
+   "DK Metcalf"
+  ]
+ },
+ "Tre": {
+  "ipa": "t ɹ e ɪ",
+  "say": "Tre",
+  "source": "common English name",
+  "players": [
+   "Tre Tucker"
+  ]
+ },
+ "Hunter": {
+  "ipa": "h ʌ n t ə ɹ",
+  "say": "Hunter",
+  "source": "common English name",
+  "players": [
+   "Hunter Henry",
+   "Travis Hunter"
+  ]
+ },
+ "Baker": {
+  "ipa": "b e ɪ k ə ɹ",
+  "say": "Baker",
+  "source": "common English name",
+  "players": [
+   "Baker Mayfield"
+  ]
+ },
+ "Mayfield": {
+  "ipa": "m e ɪ f i l d",
+  "alt": [
+   "m e ɪ f ɪ l d"
+  ],
+  "say": "Mayfield",
+  "source": "common English name",
+  "players": [
+   "Baker Mayfield"
+  ]
+ },
+ "Mike": {
+  "ipa": "m a ɪ k",
+  "say": "Mike",
+  "source": "common English name",
+  "players": [
+   "Mike Evans",
+   "Mike Gesicki",
+   "Mike Washington Jr."
+  ]
+ },
+ "Evans": {
+  "ipa": "ɛ v ə n z",
+  "say": "Evans",
+  "source": "common English name",
+  "players": [
+   "Mike Evans"
+  ]
+ },
+ "Higbee": {
+  "ipa": "h ɪ ɡ b i",
+  "say": "Higbee",
+  "source": "common English name",
+  "players": [
+   "Tyler Higbee"
+  ]
+ },
+ "Keenan": {
+  "ipa": "k i n ə n",
+  "say": "Keenan",
+  "source": "common English name",
+  "players": [
+   "Keenan Allen"
+  ]
+ },
+ "Woody": {
+  "ipa": "w ʊ d i",
+  "say": "Woody",
+  "source": "common English name",
+  "players": [
+   "Woody Marks"
+  ]
+ },
+ "Marks": {
+  "ipa": "m ɑ ɹ k s",
+  "say": "Marks",
+  "source": "common English name",
+  "players": [
+   "Woody Marks"
+  ]
+ },
+ "Emanuel": {
+  "ipa": "ɪ m æ n j u ə l",
+  "say": "Emanuel",
+  "source": "common English name",
+  "players": [
+   "Emanuel Wilson"
+  ]
+ },
+ "Jameson": {
+  "ipa": "d ʒ e ɪ m s ə n",
+  "say": "Jameson",
+  "source": "common English name",
+  "players": [
+   "Jameson Williams"
+  ]
+ },
+ "J.K.": {
+  "ipa": "d ʒ e ɪ k e ɪ",
+  "say": "J.K.",
+  "source": "common English name",
+  "players": [
+   "J.K. Dobbins"
+  ]
+ },
+ "Dobbins": {
+  "ipa": "d ɑ b ɪ n z",
+  "say": "Dobbins",
+  "source": "common English name",
+  "players": [
+   "J.K. Dobbins"
+  ]
+ },
+ "Mark": {
+  "ipa": "m ɑ ɹ k",
+  "say": "Mark",
+  "source": "common English name",
+  "players": [
+   "Mark Andrews"
+  ]
+ },
+ "Andrews": {
+  "ipa": "æ n d ɹ u z",
+  "say": "Andrews",
+  "source": "common English name",
+  "players": [
+   "Mark Andrews"
+  ]
+ },
+ "Judkins": {
+  "ipa": "d ʒ ʌ d k ɪ n z",
+  "say": "Judkins",
+  "source": "common English name",
+  "players": [
+   "Quinshon Judkins"
+  ]
+ },
+ "Jake": {
+  "ipa": "d ʒ e ɪ k",
+  "say": "Jake",
+  "source": "common English name",
+  "players": [
+   "Jake Ferguson"
+  ]
+ },
+ "Ferguson": {
+  "ipa": "f ɜ ɹ ɡ ə s ə n",
+  "say": "Ferguson",
+  "source": "common English name",
+  "players": [
+   "Jake Ferguson"
+  ]
+ },
+ "A.J.": {
+  "ipa": "e ɪ d ʒ e ɪ",
+  "say": "A.J.",
+  "source": "common English name",
+  "players": [
+   "A.J. Brown"
+  ]
+ },
+ "Saquon": {
+  "ipa": "s e ɪ k w ɑ n",
+  "wrong": [
+   "s ə k w ɑ n",
+   "s ɑ k w ɑ n"
+  ],
+  "say": "SAY-kwon",
+  "note": "SAY-kwon, /ˈseɪkwɒn/ (Wikipedia; Eagles flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Saquon_Barkley",
+  "players": [
+   "Saquon Barkley"
+  ]
+ },
+ "Barkley": {
+  "ipa": "b ɑ ɹ k l i",
+  "say": "Barkley",
+  "source": "common English name",
+  "players": [
+   "Saquon Barkley"
+  ]
+ },
+ "Wan'Dale": {
+  "ipa": "w ɑ n d e ɪ l",
+  "wrong": [
+   "w æ n d e ɪ l"
+  ],
+  "say": "WAHN-dale",
+  "note": "WAN-Dale (Giants pronunciation guide, Giants-Patriots & Giants-Chargers flip cards)",
+  "source": "https://media.patriots.1rmg.com/wp-content/uploads/2025/03/18182600/NYG-vs.-NE-Draft-2-1.pdf",
+  "players": [
+   "Wan'Dale Robinson"
+  ]
+ },
+ "Dalton": {
+  "ipa": "d ɔ l t ə n",
+  "say": "Dalton",
+  "source": "common English name",
+  "players": [
+   "Dalton Kincaid",
+   "Dalton Schultz"
+  ]
+ },
+ "Kincaid": {
+  "ipa": "k ɪ n k e ɪ d",
+  "say": "Kincaid",
+  "source": "common English name",
+  "players": [
+   "Dalton Kincaid"
+  ]
+ },
+ "T.J.": {
+  "ipa": "t i d ʒ e ɪ",
+  "say": "T.J.",
+  "source": "common English name",
+  "players": [
+   "T.J. Hockenson"
+  ]
+ },
+ "Hockenson": {
+  "ipa": "h ɑ k ə n s ə n",
+  "say": "Hockenson",
+  "source": "common English name",
+  "players": [
+   "T.J. Hockenson"
+  ]
+ },
+ "Jacobs": {
+  "ipa": "d ʒ e ɪ k ə b z",
+  "say": "Jacobs",
+  "source": "common English name",
+  "players": [
+   "Josh Jacobs"
+  ]
+ },
+ "Xavier": {
+  "ipa": "z e ɪ v j ə ɹ",
+  "alt": [
+   "z e ɪ v i ə ɹ",
+   "ɛ ɡ z e ɪ v i ə ɹ"
+  ],
+  "say": "Xavier",
+  "source": "common English name",
+  "players": [
+   "Xavier Worthy",
+   "Xavier Hutchinson"
+  ]
+ },
+ "Worthy": {
+  "ipa": "w ɜ ɹ ð i",
+  "say": "Worthy",
+  "source": "common English name",
+  "players": [
+   "Xavier Worthy"
+  ]
+ },
+ "AJ": {
+  "ipa": "e ɪ d ʒ e ɪ",
+  "say": "A.J.",
+  "source": "common English name",
+  "players": [
+   "AJ Barner"
+  ]
+ },
+ "Barner": {
+  "ipa": "b ɑ ɹ n ə ɹ",
+  "say": "Barner",
+  "source": "common English name",
+  "players": [
+   "AJ Barner"
+  ]
+ },
+ "Ryan": {
+  "ipa": "ɹ a ɪ ə n",
+  "say": "Ryan",
+  "source": "common English name",
+  "players": [
+   "Ryan Flournoy"
+  ]
+ },
+ "Flournoy": {
+  "ipa": "f l ə n ɔ ɪ",
+  "wrong": [
+   "f l ʊ ɹ n ɔ ɪ",
+   "f l ɔ ɹ n ɔ ɪ"
+  ],
+  "say": "fluh-NOY",
+  "note": "flə-NOY, /fləˈnɔɪ/ (Wikipedia); Cowboys flip card 'fla-NOY'",
+  "source": "https://en.wikipedia.org/wiki/Ryan_Flournoy",
+  "players": [
+   "Ryan Flournoy"
+  ]
+ },
+ "Cade": {
+  "ipa": "k e ɪ d",
+  "say": "Cade",
+  "source": "common English name",
+  "players": [
+   "Cade Otton"
+  ]
+ },
+ "Otton": {
+  "ipa": "ɔ t ɪ n",
+  "alt": [
+   "ɑ t ɪ n",
+   "ɑ t ə n"
+  ],
+  "wrong": [
+   "o ʊ t ɑ n"
+  ],
+  "say": "AW-tin",
+  "note": "AWT-in (Buccaneers pronunciation guide, Bucs-Seahawks Oct 2025 flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/buccaneers/f71snurcqihvimc35srv",
+  "players": [
+   "Cade Otton"
+  ]
+ },
+ "Kyle": {
+  "ipa": "k a ɪ l",
+  "say": "Kyle",
+  "source": "common English name",
+  "players": [
+   "Kyle Pitts Sr.",
+   "Kyle Williams"
+  ]
+ },
+ "Pitts": {
+  "ipa": "p ɪ t s",
+  "say": "Pitts",
+  "source": "common English name",
+  "players": [
+   "Kyle Pitts Sr."
+  ]
+ },
+ "Skattebo": {
+  "ipa": "s k æ t ə b u",
+  "wrong": [
+   "s k ə t ɛ b o ʊ",
+   "s k æ t ɪ b o ʊ"
+  ],
+  "say": "SKAT-uh-boo",
+  "note": "SKAT-ə-boo, /ˈskætəbuː/ (Wikipedia); Giants flip card 'SKAT-eh-boo'",
+  "source": "https://en.wikipedia.org/wiki/Cam_Skattebo",
+  "players": [
+   "Cam Skattebo"
+  ]
+ },
+ "Courtland": {
+  "ipa": "k ɔ ɹ t l æ n d",
+  "alt": [
+   "k ɔ ɹ t l ə n d"
+  ],
+  "say": "Courtland",
+  "source": "common English name",
+  "players": [
+   "Courtland Sutton"
+  ]
+ },
+ "Sutton": {
+  "ipa": "s ʌ t ə n",
+  "say": "Sutton",
+  "source": "common English name",
+  "players": [
+   "Courtland Sutton"
+  ]
+ },
+ "Brenton": {
+  "ipa": "b ɹ ɛ n t ə n",
+  "say": "Brenton",
+  "source": "common English name",
+  "players": [
+   "Brenton Strange"
+  ]
+ },
+ "Strange": {
+  "ipa": "s t ɹ e ɪ n d ʒ",
+  "say": "Strange",
+  "source": "common English name",
+  "players": [
+   "Brenton Strange"
+  ]
+ },
+ "Lloyd": {
+  "ipa": "l ɔ ɪ d",
+  "say": "Lloyd",
+  "source": "common English name",
+  "players": [
+   "MarShawn Lloyd"
+  ]
+ },
+ "Huntley": {
+  "ipa": "h ʌ n t l i",
+  "say": "Huntley",
+  "source": "common English name",
+  "players": [
+   "Tyler Huntley"
+  ]
+ },
+ "White": {
+  "ipa": "w a ɪ t",
+  "alt": [
+   "h w a ɪ t"
+  ],
+  "say": "White",
+  "source": "common English name",
+  "players": [
+   "Rachaad White",
+   "Cody White"
+  ]
+ },
+ "Kenny": {
+  "ipa": "k ɛ n i",
+  "say": "Kenny",
+  "source": "common English name",
+  "players": [
+   "Kenny Gainwell"
+  ]
+ },
+ "Gainwell": {
+  "ipa": "ɡ e ɪ n w ɛ l",
+  "say": "Gainwell",
+  "source": "common English name",
+  "players": [
+   "Kenny Gainwell"
+  ]
+ },
+ "Omarion": {
+  "ipa": "o ʊ m æ ɹ i ɑ n",
+  "alt": [
+   "o ʊ m ɛ ɹ i ɑ n",
+   "o ʊ m æ ɹ i ə n"
+  ],
+  "say": "oh-MARR-ee-on",
+  "note": "oh-MARR-ee-on (Chargers pronunciation guide, Giants-Chargers flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/chargers/w0ag3c3esckoocctb9cj",
+  "players": [
+   "Omarion Hampton"
+  ]
+ },
+ "Hampton": {
+  "ipa": "h æ m p t ə n",
+  "say": "Hampton",
+  "source": "common English name",
+  "players": [
+   "Omarion Hampton"
+  ]
+ },
+ "Khalil": {
+  "ipa": "k ə l ɪ l",
+  "wrong": [
+   "k ə l i l",
+   "k æ l ə l"
+  ],
+  "say": "kuh-LIL",
+  "note": "kuh-LIL (Bills pronunciation guide, Bills-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/ysrjx19ueyipdyhs7192",
+  "players": [
+   "Khalil Shakir"
+  ]
+ },
+ "Shakir": {
+  "ipa": "ʃ ɑ k ɪ ə ɹ",
+  "alt": [
+   "ʃ ə k ɪ ə ɹ",
+   "ʃ ɑ k ɪ ɹ",
+   "ʃ ɑ k i ɹ"
+  ],
+  "wrong": [
+   "ʃ æ k ɪ ɹ",
+   "ʃ e ɪ k ə ɹ"
+  ],
+  "say": "shah-KEER",
+  "note": "shah-KEER (Bills pronunciation guide, Bills-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/ysrjx19ueyipdyhs7192",
+  "players": [
+   "Khalil Shakir"
+  ]
+ },
+ "Bernard": {
+  "ipa": "b ə ɹ n ɑ ɹ d",
+  "alt": [
+   "b ɜ ɹ n ə ɹ d"
+  ],
+  "say": "Bernard",
+  "source": "common English name",
+  "players": [
+   "Germie Bernard"
+  ]
+ },
+ "Tate": {
+  "ipa": "t e ɪ t",
+  "say": "Tate",
+  "source": "common English name",
+  "players": [
+   "Carnell Tate"
+  ]
+ },
+ "Blake": {
+  "ipa": "b l e ɪ k",
+  "say": "Blake",
+  "source": "common English name",
+  "players": [
+   "Blake Corum",
+   "Blake Whiteheart"
+  ]
+ },
+ "Corum": {
+  "ipa": "k ɔ ɹ ə m",
+  "say": "Corum",
+  "source": "common English name",
+  "players": [
+   "Blake Corum"
+  ]
+ },
+ "Coleman": {
+  "ipa": "k o ʊ l m ə n",
+  "say": "Coleman",
+  "source": "common English name",
+  "players": [
+   "Keon Coleman",
+   "Jonah Coleman",
+   "Kevin Coleman Jr."
+  ]
+ },
+ "Meyers": {
+  "ipa": "m a ɪ ə ɹ z",
+  "say": "Meyers",
+  "source": "common English name",
+  "players": [
+   "Jakobi Meyers",
+   "Dohnte Meyers"
+  ]
+ },
+ "Cooper": {
+  "ipa": "k u p ə ɹ",
+  "say": "Cooper",
+  "source": "common English name",
+  "players": [
+   "Cooper Kupp",
+   "Omar Cooper Jr.",
+   "Darius Cooper"
+  ]
+ },
+ "Kupp": {
+  "ipa": "k ʌ p",
+  "say": "Kupp",
+  "source": "common English name",
+  "players": [
+   "Cooper Kupp"
+  ]
+ },
+ "Lemon": {
+  "ipa": "l ɛ m ə n",
+  "say": "Lemon",
+  "source": "common English name",
+  "players": [
+   "Makai Lemon"
+  ]
+ },
+ "Kalif": {
+  "ipa": "k ɑ l i f",
+  "wrong": [
+   "k e ɪ l ɪ f",
+   "k æ l ɪ f"
+  ],
+  "say": "KAH-leef",
+  "note": "CAH-leaf (Lions pronunciation guide, Lions-Bengals & Lions-Titans flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/xpf9qxmruaw4jyzg312f",
+  "players": [
+   "Kalif Raymond"
+  ]
+ },
+ "Raymond": {
+  "ipa": "ɹ e ɪ m ə n d",
+  "say": "Raymond",
+  "source": "common English name",
+  "players": [
+   "Kalif Raymond"
+  ]
+ },
+ "Pat": {
+  "ipa": "p æ t",
+  "say": "Pat",
+  "source": "common English name",
+  "players": [
+   "Pat Freiermuth"
+  ]
+ },
+ "Freiermuth": {
+  "ipa": "f ɹ a ɪ ə ɹ m u θ",
+  "wrong": [
+   "f ɹ i ə ɹ m u θ",
+   "f ɹ e ɪ ə ɹ m ʊ θ"
+  ],
+  "say": "FRY-er-mooth",
+  "note": "FRY-ar-mooth (Steelers pronunciation guide, Steelers-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/zqseyucu4rid2othhxg0",
+  "players": [
+   "Pat Freiermuth"
+  ]
+ },
+ "Devaughn": {
+  "ipa": "d ə v ɔ n",
+  "alt": [
+   "d ə v ɑ n",
+   "d ɛ v ɔ n",
+   "d ɛ v ɑ n"
+  ],
+  "say": "deh-VAWN",
+  "note": "deh-VAWN (Broncos pronunciation guide, Broncos-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/khig0419wxu1wdbtw26r",
+  "players": [
+   "Devaughn Vele"
+  ]
+ },
+ "Vele": {
+  "ipa": "v e ɪ l e ɪ",
+  "wrong": [
+   "v i l",
+   "v ɛ l"
+  ],
+  "say": "VAY-lay",
+  "note": "VAY-lay, /ˈveɪleɪ/ (Wikipedia; Broncos & Saints flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Devaughn_Vele",
+  "players": [
+   "Devaughn Vele"
+  ]
+ },
+ "DeMario": {
+  "ipa": "d ə m ɑ ɹ i o ʊ",
+  "alt": [
+   "d ɪ m ɑ ɹ i o ʊ"
+  ],
+  "say": "duh-MAR-ee-oh",
+  "note": "da-MARIO (Patriots pronunciation guide, Patriots-Raiders 2025 flip card)",
+  "source": "https://media.patriots.1rmg.com/wp-content/uploads/2025/03/02162437/Raiders-Flip-Card-09-07-2025.pdf",
+  "players": [
+   "DeMario Douglas"
+  ]
+ },
+ "Douglas": {
+  "ipa": "d ʌ ɡ l ə s",
+  "say": "Douglas",
+  "source": "common English name",
+  "players": [
+   "DeMario Douglas",
+   "Caleb Douglas"
+  ]
+ },
+ "Ladd": {
+  "ipa": "l æ d",
+  "say": "Ladd",
+  "source": "common English name",
+  "players": [
+   "Ladd McConkey"
+  ]
+ },
+ "McConkey": {
+  "ipa": "m ə k ɑ ŋ k i",
+  "say": "McConkey",
+  "source": "common English name",
+  "players": [
+   "Ladd McConkey"
+  ]
+ },
+ "Omar": {
+  "ipa": "o ʊ m ɑ ɹ",
+  "say": "Omar",
+  "source": "common English name",
+  "players": [
+   "Omar Cooper Jr."
+  ]
+ },
+ "Schultz": {
+  "ipa": "ʃ ʊ l t s",
+  "say": "Schultz",
+  "source": "common English name",
+  "players": [
+   "Dalton Schultz"
+  ]
+ },
+ "Diggs": {
+  "ipa": "d ɪ ɡ z",
+  "say": "Diggs",
+  "source": "common English name",
+  "players": [
+   "Stefon Diggs"
+  ]
+ },
+ "Emeka": {
+  "ipa": "ɛ m ɛ k ə",
+  "wrong": [
+   "i m ɛ k ə",
+   "ɪ m i k ə"
+  ],
+  "say": "eh-MEH-kuh",
+  "note": "eh-MEH-kuh (Buccaneers pronunciation guide, Bucs-Seahawks Oct 2025 flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/buccaneers/f71snurcqihvimc35srv",
+  "players": [
+   "Emeka Egbuka"
+  ]
+ },
+ "Egbuka": {
+  "ipa": "ɛ b u k ə",
+  "wrong": [
+   "ɛ ɡ b u k ə",
+   "ɛ ɡ b ə ɡ u"
+  ],
+  "say": "eh-BOO-kuh",
+  "note": "eh-BOO-kuh, g silent (Buccaneers pronunciation guide, Bucs-Seahawks Oct 2025 flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/buccaneers/f71snurcqihvimc35srv",
+  "players": [
+   "Emeka Egbuka"
+  ]
+ },
+ "RJ": {
+  "ipa": "ɑ ɹ d ʒ e ɪ",
+  "say": "R.J.",
+  "source": "common English name",
+  "players": [
+   "RJ Harvey"
+  ]
+ },
+ "Harvey": {
+  "ipa": "h ɑ ɹ v i",
+  "say": "Harvey",
+  "source": "common English name",
+  "players": [
+   "RJ Harvey"
+  ]
+ },
+ "Gesicki": {
+  "ipa": "ɡ ə s ɪ k i",
+  "alt": [
+   "ɡ ɛ s ɪ k i"
+  ],
+  "wrong": [
+   "d ʒ ə s ɪ k i",
+   "d ʒ ɛ s ɪ k i"
+  ],
+  "say": "guh-SICK-ee",
+  "note": "geh (hard g)-SICK-ee (Bengals pronunciation guide, Eagles-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/achsx8qylkiutzzxmroo",
+  "players": [
+   "Mike Gesicki"
+  ]
+ },
+ "Kendrick": {
+  "ipa": "k ɛ n d ɹ ɪ k",
+  "say": "Kendrick",
+  "source": "common English name",
+  "players": [
+   "Kendrick Bourne"
+  ]
+ },
+ "Bourne": {
+  "ipa": "b ɔ ɹ n",
+  "wrong": [
+   "b ʊ ɹ n",
+   "b u ɹ n"
+  ],
+  "say": "Born",
+  "note": "BORN (49ers pronunciation guide, Giants-49ers flip card)",
+  "source": "https://media.49ers.1rmg.com/wp-content/uploads/2025/05/22114909/NYG-vs-SF-Draft_4.pdf",
+  "players": [
+   "Kendrick Bourne"
+  ]
+ },
+ "Darius": {
+  "ipa": "d ə ɹ a ɪ ə s",
+  "say": "Darius",
+  "source": "common English name",
+  "players": [
+   "Darius Cooper"
+  ]
+ },
+ "Ted": {
+  "ipa": "t ɛ d",
+  "say": "Ted",
+  "source": "common English name",
+  "players": [
+   "Ted Hurst III"
+  ]
+ },
+ "Hurst": {
+  "ipa": "h ɜ ɹ s t",
+  "say": "Hurst",
+  "source": "common English name",
+  "players": [
+   "Ted Hurst III"
+  ]
+ },
+ "TreVeyon": {
+  "ipa": "t ɹ e ɪ v i ɑ n",
+  "alt": [
+   "t ɹ e ɪ v i ə n"
+  ],
+  "wrong": [
+   "t ɹ ɛ v e ɪ ɑ n",
+   "t ɹ ə v e ɪ ɑ n"
+  ],
+  "say": "TRAY-vee-on",
+  "note": "TRAY-vee-on (Patriots pronunciation guide, Patriots-Raiders 2025 flip card)",
+  "source": "https://media.patriots.1rmg.com/wp-content/uploads/2025/03/02162437/Raiders-Flip-Card-09-07-2025.pdf",
+  "players": [
+   "TreVeyon Henderson"
+  ]
+ },
+ "Henderson": {
+  "ipa": "h ɛ n d ə ɹ s ə n",
+  "say": "Henderson",
+  "source": "common English name",
+  "players": [
+   "TreVeyon Henderson"
+  ]
+ },
+ "Justice": {
+  "ipa": "d ʒ ʌ s t ə s",
+  "alt": [
+   "d ʒ ʌ s t ɪ s"
+  ],
+  "say": "Justice",
+  "source": "common English name",
+  "players": [
+   "Justice Hill"
+  ]
+ },
+ "Hill": {
+  "ipa": "h ɪ l",
+  "say": "Hill",
+  "source": "common English name",
+  "players": [
+   "Justice Hill"
+  ]
+ },
+ "J.J.": {
+  "ipa": "d ʒ e ɪ d ʒ e ɪ",
+  "say": "J.J.",
+  "source": "common English name",
+  "players": [
+   "J.J. McCarthy"
+  ]
+ },
+ "McCarthy": {
+  "ipa": "m ə k ɑ ɹ θ i",
+  "say": "McCarthy",
+  "source": "common English name",
+  "players": [
+   "J.J. McCarthy"
+  ]
+ },
+ "Alvin": {
+  "ipa": "æ l v ɪ n",
+  "say": "Alvin",
+  "source": "common English name",
+  "players": [
+   "Alvin Kamara"
+  ]
+ },
+ "Kamara": {
+  "ipa": "k ə m ɛ ɹ ə",
+  "wrong": [
+   "k ə m ɑ ɹ ə",
+   "k æ m ə ɹ ə"
+  ],
+  "say": "kuh-MAIR-uh",
+  "note": "kuh-MAIR-uh (Saints pronunciation guide, Saints-Falcons flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/saints/ypeuzle5quf6ullii6lo.pdf",
+  "players": [
+   "Alvin Kamara"
+  ]
+ },
+ "Jonah": {
+  "ipa": "d ʒ o ʊ n ə",
+  "say": "Jonah",
+  "source": "common English name",
+  "players": [
+   "Jonah Coleman"
+  ]
+ },
+ "Antonio": {
+  "ipa": "æ n t o ʊ n i o ʊ",
+  "say": "Antonio",
+  "source": "common English name",
+  "players": [
+   "Antonio Williams"
+  ]
+ },
+ "Keaton": {
+  "ipa": "k i t ə n",
+  "say": "Keaton",
+  "source": "common English name",
+  "players": [
+   "Keaton Mitchell"
+  ]
+ },
+ "Chig": {
+  "ipa": "t ʃ ɪ ɡ",
+  "say": "Chig",
+  "source": "common English name",
+  "players": [
+   "Chig Okonkwo"
+  ]
+ },
+ "Okonkwo": {
+  "ipa": "o ʊ k ɑ n k w o ʊ",
+  "alt": [
+   "o ʊ k ɔ n k w o ʊ"
+  ],
+  "say": "oh-KAHN-kwoh",
+  "note": "oh-KAHN-kwoh (Titans pronunciation guide, Lions-Titans & Eagles-Titans flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/m5723knmrbjbnhjfmcxb",
+  "players": [
+   "Chig Okonkwo"
+  ]
+ },
+ "Darren": {
+  "ipa": "d ɑ ɹ ə n",
+  "alt": [
+   "d ɛ ɹ ə n",
+   "d æ ɹ ə n"
+  ],
+  "say": "Darren",
+  "source": "common English name",
+  "players": [
+   "Darren Waller"
+  ]
+ },
+ "Waller": {
+  "ipa": "w ɔ l ə ɹ",
+  "say": "Waller",
+  "source": "common English name",
+  "players": [
+   "Darren Waller"
+  ]
+ },
+ "Mason": {
+  "ipa": "m e ɪ s ə n",
+  "say": "Mason",
+  "source": "common English name",
+  "players": [
+   "Jordan Mason",
+   "Mason Taylor"
+  ]
+ },
+ "Greg": {
+  "ipa": "ɡ ɹ ɛ ɡ",
+  "say": "Greg",
+  "source": "common English name",
+  "players": [
+   "Greg Dulcich"
+  ]
+ },
+ "Dulcich": {
+  "ipa": "d ʌ l s ɪ t ʃ",
+  "wrong": [
+   "d ʌ l k ɪ t ʃ",
+   "d ʊ l t ʃ ɪ t ʃ"
+  ],
+  "say": "DULL-sitch",
+  "note": "DUL-sitch, /ˈdʌlsɪtʃ/ (Wikipedia; Broncos/Giants flip cards 'dul-SICH')",
+  "source": "https://en.wikipedia.org/wiki/Greg_Dulcich",
+  "players": [
+   "Greg Dulcich"
+  ]
+ },
+ "Miller": {
+  "ipa": "m ɪ l ə ɹ",
+  "say": "Miller",
+  "source": "common English name",
+  "players": [
+   "Kendre Miller"
+  ]
+ },
+ "Jameis": {
+  "ipa": "d ʒ e ɪ m ɪ s",
+  "alt": [
+   "d ʒ e ɪ m ə s"
+  ],
+  "wrong": [
+   "d ʒ e ɪ m z",
+   "d ʒ ə m e ɪ s"
+  ],
+  "say": "JAY-miss",
+  "note": "JAY-miss, /ˈdʒeɪmᵻs/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Jameis_Winston",
+  "players": [
+   "Jameis Winston"
+  ]
+ },
+ "Winston": {
+  "ipa": "w ɪ n s t ə n",
+  "say": "Winston",
+  "source": "common English name",
+  "players": [
+   "Jameis Winston"
+  ]
+ },
+ "Bateman": {
+  "ipa": "b e ɪ t m ə n",
+  "say": "Bateman",
+  "source": "common English name",
+  "players": [
+   "Rashod Bateman"
+  ]
+ },
+ "Rice": {
+  "ipa": "ɹ a ɪ s",
+  "say": "Rice",
+  "source": "common English name",
+  "players": [
+   "Rashee Rice"
+  ]
+ },
+ "Samaje": {
+  "ipa": "s ə m ɑ d ʒ e ɪ",
+  "wrong": [
+   "s æ m ə d ʒ"
+  ],
+  "say": "suh-MAH-jay",
+  "note": "sə-MAH-jay, /səˈmɑːdʒeɪ/ (Wikipedia; Bengals flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Samaje_Perine",
+  "players": [
+   "Samaje Perine"
+  ]
+ },
+ "Perine": {
+  "ipa": "p i ɹ a ɪ n",
+  "wrong": [
+   "p ə ɹ i n",
+   "p ə ɹ i n i",
+   "p ɛ ɹ ɪ n"
+  ],
+  "say": "PEE-ryne",
+  "note": "PEE-ryne, /ˈpiːraɪn/ (Wikipedia; Bengals flip cards 'PEE-rhine')",
+  "source": "https://en.wikipedia.org/wiki/Samaje_Perine",
+  "players": [
+   "Samaje Perine"
+  ]
+ },
+ "Holani": {
+  "ipa": "h o ʊ l ɑ n i",
+  "say": "ho-LAH-nee",
+  "note": "ho-LAH-nee (Seahawks pronunciation guide, Bucs-Seahawks Oct 2025 flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/buccaneers/f71snurcqihvimc35srv",
+  "players": [
+   "George Holani"
+  ]
+ },
+ "Elic": {
+  "ipa": "ɛ l ɪ k",
+  "wrong": [
+   "i l ɪ k",
+   "ɛ l a ɪ d ʒ ə"
+  ],
+  "say": "EL-ick",
+  "note": "EL-ick (Titans pronunciation guide, Titans-Rams Sep 2025 flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/veibh0ywrlabfeu90rcd",
+  "players": [
+   "Elic Ayomanor"
+  ]
+ },
+ "Ayomanor": {
+  "ipa": "a ɪ o ʊ m ə n ə ɹ",
+  "wrong": [
+   "ɑ j o ʊ m ɑ n ɔ ɹ"
+  ],
+  "say": "EYE-oh-man-er",
+  "note": "EYE-oh-man-er (Titans pronunciation guide, Titans-Rams Sep 2025 flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/veibh0ywrlabfeu90rcd",
+  "players": [
+   "Elic Ayomanor"
+  ]
+ },
+ "DJ": {
+  "ipa": "d i d ʒ e ɪ",
+  "say": "DJ",
+  "source": "common English name",
+  "players": [
+   "DJ Moore"
+  ]
+ },
+ "Moore": {
+  "ipa": "m ʊ ɹ",
+  "alt": [
+   "m ɔ ɹ"
+  ],
+  "say": "Moore",
+  "source": "common English name",
+  "players": [
+   "DJ Moore",
+   "Elijah Moore"
+  ]
+ },
+ "Kenyon": {
+  "ipa": "k ɛ n j ə n",
+  "say": "Kenyon",
+  "source": "common English name",
+  "players": [
+   "Kenyon Sadiq"
+  ]
+ },
+ "Sadiq": {
+  "ipa": "s ɑ d i k",
+  "alt": [
+   "s ɑ d ɪ k",
+   "s ə d i k"
+  ],
+  "wrong": [
+   "s æ d ɪ k",
+   "s e ɪ d ɪ k"
+  ],
+  "say": "SAH-deek",
+  "note": "/ˈsɑːdik/ SAH-deek (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Kenyon_Sadiq",
+  "players": [
+   "Kenyon Sadiq"
+  ]
+ },
+ "Addison": {
+  "ipa": "æ d ə s ə n",
+  "alt": [
+   "æ d ɪ s ə n"
+  ],
+  "say": "Addison",
+  "source": "common English name",
+  "players": [
+   "Jordan Addison"
+  ]
+ },
+ "Vidal": {
+  "ipa": "v a ɪ d ə l",
+  "alt": [
+   "v a ɪ d ɛ l"
+  ],
+  "wrong": [
+   "v ɪ d ɑ l",
+   "v i d ɑ l"
+  ],
+  "say": "VY-dul",
+  "note": "VIE-dell (Chargers pronunciation guide, Giants-Chargers flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/chargers/w0ag3c3esckoocctb9cj",
+  "players": [
+   "Kimani Vidal"
+  ]
+ },
+ "Evan": {
+  "ipa": "ɛ v ə n",
+  "say": "Evan",
+  "source": "common English name",
+  "players": [
+   "Evan Engram"
+  ]
+ },
+ "Engram": {
+  "ipa": "ɛ n ɡ ɹ æ m",
+  "say": "Engram",
+  "source": "common English name",
+  "players": [
+   "Evan Engram"
+  ]
+ },
+ "Bell": {
+  "ipa": "b ɛ l",
+  "say": "Bell",
+  "source": "common English name",
+  "players": [
+   "Chris Bell"
+  ]
+ },
+ "Darnell": {
+  "ipa": "d ɑ ɹ n ɛ l",
+  "say": "Darnell",
+  "source": "common English name",
+  "players": [
+   "Darnell Washington",
+   "Darnell Mooney"
+  ]
+ },
+ "Treadwell": {
+  "ipa": "t ɹ ɛ d w ɛ l",
+  "say": "Treadwell",
+  "source": "common English name",
+  "players": [
+   "Laquon Treadwell"
+  ]
+ },
+ "Eli": {
+  "ipa": "i l a ɪ",
+  "say": "Eli",
+  "source": "common English name",
+  "players": [
+   "Eli Raridon"
+  ]
+ },
+ "Rashid": {
+  "ipa": "ɹ ɑ ʃ i d",
+  "alt": [
+   "ɹ ə ʃ i d"
+  ],
+  "wrong": [
+   "ɹ æ ʃ ɪ d"
+  ],
+  "say": "rah-SHEED",
+  "note": "rah-SHEED (Saints pronunciation guide, Rams-Saints flip card; Patriots card 'Ruh-SHEED')",
+  "source": "https://static.clubs.nfl.com/image/upload/saints/ayy8kbtqxkpagw7bd8ef.pdf",
+  "players": [
+   "Rashid Shaheed"
+  ]
+ },
+ "Shaheed": {
+  "ipa": "ʃ ɑ h i d",
+  "alt": [
+   "ʃ ə h i d"
+  ],
+  "say": "shah-HEED",
+  "note": "shah-HEED (Saints pronunciation guide, Rams-Saints flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/saints/ayy8kbtqxkpagw7bd8ef.pdf",
+  "players": [
+   "Rashid Shaheed"
+  ]
+ },
+ "David": {
+  "ipa": "d e ɪ v ɪ d",
+  "say": "David",
+  "source": "common English name",
+  "players": [
+   "David Montgomery"
+  ]
+ },
+ "Montgomery": {
+  "ipa": "m ɑ n t ɡ ʌ m ɹ i",
+  "say": "Montgomery",
+  "source": "common English name",
+  "players": [
+   "David Montgomery"
+  ]
+ },
+ "Jahan": {
+  "ipa": "d ʒ ə h ɑ n",
+  "wrong": [
+   "d ʒ ɑ h æ n",
+   "d ʒ e ɪ h ə n"
+  ],
+  "say": "juh-HAHN",
+  "note": "jə-HAHN, /dʒəˈhɑːn/ (Wikipedia; Eagles flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Jahan_Dotson",
+  "players": [
+   "Jahan Dotson"
+  ]
+ },
+ "Dotson": {
+  "ipa": "d ɑ t s ə n",
+  "say": "Dotson",
+  "source": "common English name",
+  "players": [
+   "Jahan Dotson"
+  ]
+ },
+ "Rico": {
+  "ipa": "ɹ i k o ʊ",
+  "say": "Rico",
+  "source": "common English name",
+  "players": [
+   "Rico Dowdle"
+  ]
+ },
+ "Austin": {
+  "ipa": "ɔ s t ə n",
+  "say": "Austin",
+  "source": "common English name",
+  "players": [
+   "Austin Ekeler",
+   "Austin Hooper"
+  ]
+ },
+ "Ekeler": {
+  "ipa": "ɛ k l ə ɹ",
+  "wrong": [
+   "ɛ k ə l ə ɹ",
+   "i k ə l ə ɹ"
+  ],
+  "say": "ECK-ler",
+  "note": "ECK-ler, /ˈɛklər/ (Wikipedia; Chargers flip card agrees)",
+  "source": "https://en.wikipedia.org/wiki/Austin_Ekeler",
+  "players": [
+   "Austin Ekeler"
+  ]
+ },
+ "Tez": {
+  "ipa": "t ɛ z",
+  "say": "Tez",
+  "source": "common English name",
+  "players": [
+   "Tez Johnson"
+  ]
+ },
+ "DeVonta": {
+  "ipa": "d ə v ɑ n t e ɪ",
+  "wrong": [
+   "d ə v ɑ n t ə"
+  ],
+  "say": "duh-VON-tay",
+  "note": "də-VON-tay, /dəˈvɒnteɪ/ (Wikipedia; Eagles flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/DeVonta_Smith",
+  "players": [
+   "DeVonta Smith"
+  ]
+ },
+ "Terry": {
+  "ipa": "t ɛ ɹ i",
+  "say": "Terry",
+  "source": "common English name",
+  "players": [
+   "Terry McLaurin"
+  ]
+ },
+ "McLaurin": {
+  "ipa": "m ɪ k l ɔ ɹ ɛ n",
+  "alt": [
+   "m ɪ k l ɔ ɹ ə n",
+   "m ə k l ɔ ɹ ə n"
+  ],
+  "say": "mick-LAW-ren",
+  "note": "MICK-law-REN (Commanders pronunciation guide, Commanders-Bengals & Eagles-Commanders flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/xvqbpoauzgpqn4xz58be",
+  "players": [
+   "Terry McLaurin"
+  ]
+ },
+ "Davis": {
+  "ipa": "d e ɪ v ə s",
+  "alt": [
+   "d e ɪ v ɪ s"
+  ],
+  "say": "Davis",
+  "source": "common English name",
+  "players": [
+   "Isaiah Davis",
+   "Davis Allen"
+  ]
+ },
+ "Gunnar": {
+  "ipa": "ɡ ʌ n ə ɹ",
+  "say": "Gunnar",
+  "source": "common English name",
+  "players": [
+   "Gunnar Helm"
+  ]
+ },
+ "Helm": {
+  "ipa": "h ɛ l m",
+  "say": "Helm",
+  "source": "common English name",
+  "players": [
+   "Gunnar Helm"
+  ]
+ },
+ "Romeo": {
+  "ipa": "ɹ o ʊ m i o ʊ",
+  "say": "Romeo",
+  "source": "common English name",
+  "players": [
+   "Romeo Doubs"
+  ]
+ },
+ "Doubs": {
+  "ipa": "d ɑ b z",
+  "wrong": [
+   "d ʌ b z",
+   "d u b z",
+   "d a ʊ b z"
+  ],
+  "say": "Dobbs",
+  "note": "DOBZ (rhymes with Dobbs), /ˈdɒbz/ (Wikipedia; Doubs himself via Nevada Sports Net 2022)",
+  "source": "https://en.wikipedia.org/wiki/Romeo_Doubs",
+  "players": [
+   "Romeo Doubs"
+  ]
+ },
+ "Oronde": {
+  "ipa": "ə ɹ ɑ n d e ɪ",
+  "alt": [
+   "ɔ ɹ ɑ n d e ɪ"
+  ],
+  "wrong": [
+   "ɔ ɹ ɑ n d"
+  ],
+  "say": "uh-RON-day",
+  "note": "uh-RON-day (Chargers pronunciation guide, Giants-Chargers flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/chargers/w0ag3c3esckoocctb9cj",
+  "players": [
+   "Oronde Gadsden"
+  ]
+ },
+ "Gadsden": {
+  "ipa": "ɡ æ d z d ə n",
+  "say": "Gadsden",
+  "source": "common English name",
+  "players": [
+   "Oronde Gadsden"
+  ]
+ },
+ "Colby": {
+  "ipa": "k o ʊ l b i",
+  "say": "Colby",
+  "source": "common English name",
+  "players": [
+   "Colby Parkinson"
+  ]
+ },
+ "Parkinson": {
+  "ipa": "p ɑ ɹ k ɪ n s ə n",
+  "say": "Parkinson",
+  "source": "common English name",
+  "players": [
+   "Colby Parkinson"
+  ]
+ },
+ "Troy": {
+  "ipa": "t ɹ ɔ ɪ",
+  "say": "Troy",
+  "source": "common English name",
+  "players": [
+   "Troy Franklin"
+  ]
+ },
+ "Franklin": {
+  "ipa": "f ɹ æ ŋ k l ɪ n",
+  "say": "Franklin",
+  "source": "common English name",
+  "players": [
+   "Troy Franklin"
+  ]
+ },
+ "Cody": {
+  "ipa": "k o ʊ d i",
+  "say": "Cody",
+  "source": "common English name",
+  "players": [
+   "Cody White"
+  ]
+ },
+ "Noah": {
+  "ipa": "n o ʊ ə",
+  "say": "Noah",
+  "source": "common English name",
+  "players": [
+   "Noah Fant",
+   "Noah Gray"
+  ]
+ },
+ "Fant": {
+  "ipa": "f æ n t",
+  "wrong": [
+   "f ɑ n t"
+  ],
+  "say": "Fant (rhymes with can't)",
+  "note": "rhymes with 'can't' (Bengals pronunciation guide, Cardinals-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/es89lljcervnwxc3kfyk",
+  "players": [
+   "Noah Fant"
+  ]
+ },
+ "Malachi": {
+  "ipa": "m æ l ə k a ɪ",
+  "say": "Malachi",
+  "source": "common English name",
+  "players": [
+   "Malachi Fields"
+  ]
+ },
+ "Fields": {
+  "ipa": "f i l d z",
+  "say": "Fields",
+  "source": "common English name",
+  "players": [
+   "Malachi Fields"
+  ]
+ },
+ "Marvin": {
+  "ipa": "m ɑ ɹ v ɪ n",
+  "say": "Marvin",
+  "source": "common English name",
+  "players": [
+   "Marvin Mims Jr.",
+   "Marvin Harrison Jr."
+  ]
+ },
+ "Mims": {
+  "ipa": "m ɪ m z",
+  "say": "Mims",
+  "source": "common English name",
+  "players": [
+   "Marvin Mims Jr."
+  ]
+ },
+ "Brian": {
+  "ipa": "b ɹ a ɪ ə n",
+  "say": "Brian",
+  "source": "common English name",
+  "players": [
+   "Brian Thomas Jr.",
+   "Brian Robinson Jr."
+  ]
+ },
+ "Thomas": {
+  "ipa": "t ɑ m ə s",
+  "say": "Thomas",
+  "source": "common English name",
+  "players": [
+   "Brian Thomas Jr.",
+   "Zavion Thomas"
+  ]
+ },
+ "Tory": {
+  "ipa": "t ɔ ɹ i",
+  "say": "Tory",
+  "source": "common English name",
+  "players": [
+   "Tory Horton"
+  ]
+ },
+ "Horton": {
+  "ipa": "h ɔ ɹ t ə n",
+  "say": "Horton",
+  "source": "common English name",
+  "players": [
+   "Tory Horton"
+  ]
+ },
+ "Tre'": {
+  "ipa": "t ɹ e ɪ",
+  "say": "Tre'",
+  "source": "common English name",
+  "players": [
+   "Tre' Harris"
+  ]
+ },
+ "Harris": {
+  "ipa": "h ɛ ɹ ɪ s",
+  "say": "Harris",
+  "source": "common English name",
+  "players": [
+   "Tre' Harris"
+  ]
+ },
+ "Goodson": {
+  "ipa": "ɡ ʊ d s ə n",
+  "say": "Goodson",
+  "source": "common English name",
+  "players": [
+   "Tyler Goodson"
+  ]
+ },
+ "Rodriguez": {
+  "ipa": "ɹ ɑ d ɹ i ɡ ɛ z",
+  "say": "Rodriguez",
+  "source": "common English name",
+  "players": [
+   "Chris Rodriguez Jr."
+  ]
+ },
+ "Quentin": {
+  "ipa": "k w ɛ n t ɪ n",
+  "say": "Quentin",
+  "source": "common English name",
+  "players": [
+   "Quentin Johnston"
+  ]
+ },
+ "Johnston": {
+  "ipa": "d ʒ ɑ n s t ə n",
+  "say": "Johnston",
+  "source": "common English name",
+  "players": [
+   "Quentin Johnston"
+  ]
+ },
+ "Pierce": {
+  "ipa": "p ɪ ɹ s",
+  "say": "Pierce",
+  "source": "common English name",
+  "players": [
+   "Dameon Pierce"
+  ]
+ },
+ "Ty": {
+  "ipa": "t a ɪ",
+  "say": "Ty",
+  "source": "common English name",
+  "players": [
+   "Ty Johnson"
+  ]
+ },
+ "Deebo": {
+  "ipa": "d i b o ʊ",
+  "say": "Deebo",
+  "source": "common English name",
+  "players": [
+   "Deebo Samuel Sr."
+  ]
+ },
+ "Samuel": {
+  "ipa": "s æ m j u l",
+  "alt": [
+   "s æ m j u ə l"
+  ],
+  "say": "Samuel",
+  "source": "common English name",
+  "players": [
+   "Deebo Samuel Sr."
+  ]
+ },
+ "Seth": {
+  "ipa": "s ɛ θ",
+  "say": "Seth",
+  "source": "common English name",
+  "players": [
+   "Seth McGowan"
+  ]
+ },
+ "McGowan": {
+  "ipa": "m ə ɡ a ʊ ə n",
+  "say": "McGowan",
+  "source": "common English name",
+  "players": [
+   "Seth McGowan"
+  ]
+ },
+ "Jaylin": {
+  "ipa": "d ʒ e ɪ l ɪ n",
+  "say": "Jaylin",
+  "source": "common English name",
+  "players": [
+   "Jaylin Noel"
+  ]
+ },
+ "Noel": {
+  "ipa": "n o ʊ ɛ l",
+  "say": "Noel",
+  "source": "common English name",
+  "players": [
+   "Jaylin Noel"
+  ]
+ },
+ "Dontayvion": {
+  "ipa": "d ɑ n t e ɪ v i ɪ n",
+  "alt": [
+   "d ɑ n t e ɪ v i ə n",
+   "d ɑ n t e ɪ v i ɑ n"
+  ],
+  "say": "don-TAY-vee-in",
+  "note": "don-TAY-vee-in (Packers pronunciation guide, Packers-Patriots flip card; Bears card agrees)",
+  "source": "https://static.clubs.nfl.com/image/upload/patriots/tqkursifxfeantp5xc5z.pdf",
+  "players": [
+   "Dontayvion Wicks"
+  ]
+ },
+ "Wicks": {
+  "ipa": "w ɪ k s",
+  "say": "Wicks",
+  "source": "common English name",
+  "players": [
+   "Dontayvion Wicks"
+  ]
+ },
+ "Lane": {
+  "ipa": "l e ɪ n",
+  "say": "Lane",
+  "source": "common English name",
+  "players": [
+   "Ja'Kobi Lane"
+  ]
+ },
+ "Zach": {
+  "ipa": "z æ k",
+  "say": "Zach",
+  "source": "common English name",
+  "players": [
+   "Zach Charbonnet"
+  ]
+ },
+ "Charbonnet": {
+  "ipa": "ʃ ɑ ɹ b ə n e ɪ",
+  "wrong": [
+   "ʃ ɑ ɹ b ə n ɪ t",
+   "t ʃ ɑ ɹ b ɑ n ɛ t"
+  ],
+  "say": "SHAR-buh-nay",
+  "note": "SHAR-bə-nay, /ˈʃɑːrbəneɪ/ (Wikipedia; Seahawks flip card agrees)",
+  "source": "https://en.wikipedia.org/wiki/Zach_Charbonnet",
+  "players": [
+   "Zach Charbonnet"
+  ]
+ },
+ "Dylan": {
+  "ipa": "d ɪ l ə n",
+  "say": "Dylan",
+  "source": "common English name",
+  "players": [
+   "Dylan Sampson"
+  ]
+ },
+ "Sampson": {
+  "ipa": "s æ m p s ə n",
+  "say": "Sampson",
+  "source": "common English name",
+  "players": [
+   "Dylan Sampson"
+  ]
+ },
+ "Wright": {
+  "ipa": "ɹ a ɪ t",
+  "say": "Wright",
+  "source": "common English name",
+  "players": [
+   "Jaylen Wright"
+  ]
+ },
+ "Black": {
+  "ipa": "b l æ k",
+  "say": "Black",
+  "source": "common English name",
+  "players": [
+   "Kaelon Black"
+  ]
+ },
+ "Isaac": {
+  "ipa": "a ɪ z ə k",
+  "alt": [
+   "a ɪ z ɪ k"
+  ],
+  "say": "Isaac",
+  "source": "common English name",
+  "players": [
+   "Isaac TeSlaa"
+  ]
+ },
+ "TeSlaa": {
+  "ipa": "t ə s l ɔ",
+  "alt": [
+   "t ɛ s l ɔ",
+   "t ə s l ɑ"
+  ],
+  "wrong": [
+   "t i s l ɑ",
+   "t ɛ s l ə"
+  ],
+  "say": "teh-SLAW",
+  "note": "teh-SLAW (Lions pronunciation guide, Lions-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/xpf9qxmruaw4jyzg312f",
+  "players": [
+   "Isaac TeSlaa"
+  ]
+ },
+ "Konata": {
+  "ipa": "k ə n ɑ t e ɪ",
+  "wrong": [
+   "k o ʊ n ɑ t ə"
+  ],
+  "say": "kuh-nah-TAY",
+  "note": "Kuh-nah-TAY (Rams pronunciation guide, Titans-Rams & Rams-Saints flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/veibh0ywrlabfeu90rcd",
+  "players": [
+   "Konata Mumpfield"
+  ]
+ },
+ "Mumpfield": {
+  "ipa": "m ʌ m p f i l d",
+  "say": "Mumpfield",
+  "source": "common English name",
+  "players": [
+   "Konata Mumpfield"
+  ]
+ },
+ "Corey": {
+  "ipa": "k ɔ ɹ i",
+  "say": "Corey",
+  "source": "common English name",
+  "players": [
+   "Corey Kiner"
+  ]
+ },
+ "Kiner": {
+  "ipa": "k a ɪ n ə ɹ",
+  "wrong": [
+   "k ɪ n ə ɹ"
+  ],
+  "say": "KY-ner",
+  "note": "KAI-ner (Bengals pronunciation guide, Cardinals-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/es89lljcervnwxc3kfyk",
+  "players": [
+   "Corey Kiner"
+  ]
+ },
+ "Jauan": {
+  "ipa": "d ʒ ə w ɑ n",
+  "wrong": [
+   "d ʒ ɔ n",
+   "d ʒ a ʊ ə n"
+  ],
+  "say": "juh-WAHN",
+  "note": "jə-WAHN, /dʒəˈwɑːn/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Jauan_Jennings",
+  "players": [
+   "Jauan Jennings"
+  ]
+ },
+ "Jennings": {
+  "ipa": "d ʒ ɛ n ɪ ŋ z",
+  "say": "Jennings",
+  "source": "common English name",
+  "players": [
+   "Jauan Jennings"
+  ]
+ },
+ "Zachariah": {
+  "ipa": "z æ k ə ɹ a ɪ ə",
+  "say": "Zachariah",
+  "source": "common English name",
+  "players": [
+   "Zachariah Branch"
+  ]
+ },
+ "Branch": {
+  "ipa": "b ɹ æ n t ʃ",
+  "say": "Branch",
+  "source": "common English name",
+  "players": [
+   "Zachariah Branch"
+  ]
+ },
+ "Sione": {
+  "ipa": "s i o ʊ n e ɪ",
+  "wrong": [
+   "s a ɪ o ʊ n",
+   "s i o ʊ n"
+  ],
+  "say": "see-OH-nay",
+  "note": "see-OH-nay (Lions pronunciation guide, Lions-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/xpf9qxmruaw4jyzg312f",
+  "players": [
+   "Sione Vaki"
+  ]
+ },
+ "Vaki": {
+  "ipa": "v ɑ k i",
+  "wrong": [
+   "v æ k i"
+  ],
+  "say": "VAH-kee",
+  "note": "VAH-key (Lions pronunciation guide, Lions-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/xpf9qxmruaw4jyzg312f",
+  "players": [
+   "Sione Vaki"
+  ]
+ },
+ "Hooper": {
+  "ipa": "h u p ə ɹ",
+  "say": "Hooper",
+  "source": "common English name",
+  "players": [
+   "Austin Hooper"
+  ]
+ },
+ "Kayshon": {
+  "ipa": "k e ɪ ʃ ɔ n",
+  "alt": [
+   "k e ɪ ʃ ɑ n"
+  ],
+  "say": "KAY-shawn",
+  "note": "KAY-shawn (Patriots pronunciation guide, Patriots-Raiders 2025 flip card)",
+  "source": "https://media.patriots.1rmg.com/wp-content/uploads/2025/03/02162437/Raiders-Flip-Card-09-07-2025.pdf",
+  "players": [
+   "Kayshon Boutte"
+  ]
+ },
+ "Boutte": {
+  "ipa": "b u t i",
+  "wrong": [
+   "b u t",
+   "b u t e ɪ"
+  ],
+  "say": "BOO-tee",
+  "note": "BOO-tee, /ˈbuːti/ (Wikipedia; Patriots flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Kayshon_Boutte",
+  "players": [
+   "Kayshon Boutte"
+  ]
+ },
+ "Tommy": {
+  "ipa": "t ɑ m i",
+  "say": "Tommy",
+  "source": "common English name",
+  "players": [
+   "Tommy Tremble"
+  ]
+ },
+ "Tremble": {
+  "ipa": "t ɹ ɛ m b ə l",
+  "say": "Tremble",
+  "source": "common English name",
+  "players": [
+   "Tommy Tremble"
+  ]
+ },
+ "Tyjae": {
+  "ipa": "t ɑ ʒ e ɪ",
+  "wrong": [
+   "t a ɪ d ʒ e ɪ",
+   "t a ɪ ʒ e ɪ"
+  ],
+  "say": "TAH-zhay",
+  "note": "TAH-zhay (Titans pronunciation guide, Colts-Titans & Titans-Colts flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/bgxcbgrmiuanqhf5hpux",
+  "players": [
+   "Tyjae Spears"
+  ]
+ },
+ "Spears": {
+  "ipa": "s p ɪ ɹ z",
+  "say": "Spears",
+  "source": "common English name",
+  "players": [
+   "Tyjae Spears"
+  ]
+ },
+ "Adams": {
+  "ipa": "æ d ə m z",
+  "say": "Adams",
+  "source": "common English name",
+  "players": [
+   "Davante Adams"
+  ]
+ },
+ "McLaughlin": {
+  "ipa": "m ə ɡ l ɑ f l ɪ n",
+  "alt": [
+   "m ə ɡ l ɔ f l ɪ n",
+   "m ə k l ɑ f l ɪ n",
+   "m ɪ k l ɑ f l ɪ n"
+  ],
+  "wrong": [
+   "m ə k l ɔ ɪ n"
+  ],
+  "say": "muh-GLOFF-lin",
+  "note": "mə-GLOFF-lin, /məˈɡlɒflɪn/ (Wikipedia; Broncos flip card 'muh-GLOFF-lin')",
+  "source": "https://en.wikipedia.org/wiki/Jaleel_McLaughlin",
+  "players": [
+   "Jaleel McLaughlin"
+  ]
+ },
+ "Gray": {
+  "ipa": "ɡ ɹ e ɪ",
+  "say": "Gray",
+  "source": "common English name",
+  "players": [
+   "Noah Gray"
+  ]
+ },
+ "Treylon": {
+  "ipa": "t ɹ e ɪ l ə n",
+  "alt": [
+   "t ɹ e ɪ l ɪ n"
+  ],
+  "say": "TRAY-lun",
+  "note": "TRAY-lun (Eagles/Commanders flip card 2026); Titans card 'TRAY-lin'",
+  "source": "https://media.washington.1rmg.com/wp-content/uploads/2025/03/04123122/1-4-26-vs.-WAS-Flip-Card-KELLY-GREEN.pdf",
+  "players": [
+   "Treylon Burks"
+  ]
+ },
+ "Burks": {
+  "ipa": "b ɜ ɹ k s",
+  "say": "Burks",
+  "source": "common English name",
+  "players": [
+   "Treylon Burks"
+  ]
+ },
+ "Nailor": {
+  "ipa": "n e ɪ l ə ɹ",
+  "say": "Nailor",
+  "source": "common English name",
+  "players": [
+   "Jalen Nailor"
+  ]
+ },
+ "Charlie": {
+  "ipa": "t ʃ ɑ ɹ l i",
+  "say": "Charlie",
+  "source": "common English name",
+  "players": [
+   "Charlie Kolar"
+  ]
+ },
+ "Kolar": {
+  "ipa": "k o ʊ l ə ɹ",
+  "wrong": [
+   "k o ʊ l ɑ ɹ"
+  ],
+  "say": "KOH-ler",
+  "note": "KOH-ler (Ravens pronunciation guide, Ravens-Bengals flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/pcq5d4x3ceqhed1ambw9",
+  "players": [
+   "Charlie Kolar"
+  ]
+ },
+ "Cameron": {
+  "ipa": "k æ m ə ɹ ə n",
+  "say": "Cameron",
+  "source": "common English name",
+  "players": [
+   "Josh Cameron"
+  ]
+ },
+ "Mooney": {
+  "ipa": "m u n i",
+  "say": "Mooney",
+  "source": "common English name",
+  "players": [
+   "Darnell Mooney"
+  ]
+ },
+ "Jerry": {
+  "ipa": "d ʒ ɛ ɹ i",
+  "say": "Jerry",
+  "source": "common English name",
+  "players": [
+   "Jerry Jeudy"
+  ]
+ },
+ "Royals": {
+  "ipa": "ɹ ɔ ɪ ə l z",
+  "say": "Royals",
+  "source": "common English name",
+  "players": [
+   "Jalen Royals"
+  ]
+ },
+ "Elijah": {
+  "ipa": "ɛ l a ɪ d ʒ ə",
+  "alt": [
+   "i l a ɪ d ʒ ə"
+  ],
+  "say": "Elijah",
+  "source": "common English name",
+  "players": [
+   "Elijah Higgins",
+   "Elijah Moore"
+  ]
+ },
+ "Pierre": {
+  "ipa": "p i ɛ ɹ",
+  "say": "Pierre",
+  "source": "common English name",
+  "players": [
+   "Pierre Strong Jr."
+  ]
+ },
+ "Strong": {
+  "ipa": "s t ɹ ɔ ŋ",
+  "say": "Strong",
+  "source": "common English name",
+  "players": [
+   "Pierre Strong Jr."
+  ]
+ },
+ "Hurts": {
+  "ipa": "h ɜ ɹ t s",
+  "say": "Hurts",
+  "source": "common English name",
+  "players": [
+   "Jalen Hurts"
+  ]
+ },
+ "Brandin": {
+  "ipa": "b ɹ æ n d ɪ n",
+  "say": "Brandin",
+  "source": "common English name",
+  "players": [
+   "Brandin Cooks"
+  ]
+ },
+ "Cooks": {
+  "ipa": "k ʊ k s",
+  "say": "Cooks",
+  "source": "common English name",
+  "players": [
+   "Brandin Cooks"
+  ]
+ },
+ "Dawson": {
+  "ipa": "d ɔ s ə n",
+  "say": "Dawson",
+  "source": "common English name",
+  "players": [
+   "Dawson Knox"
+  ]
+ },
+ "Knox": {
+  "ipa": "n ɑ k s",
+  "say": "Knox",
+  "source": "common English name",
+  "players": [
+   "Dawson Knox"
+  ]
+ },
+ "Hutchinson": {
+  "ipa": "h ʌ t ʃ ɪ n s ə n",
+  "say": "Hutchinson",
+  "source": "common English name",
+  "players": [
+   "Xavier Hutchinson"
+  ]
+ },
+ "Foster": {
+  "ipa": "f ɑ s t ə ɹ",
+  "say": "Foster",
+  "source": "common English name",
+  "players": [
+   "Foster Moreau"
+  ]
+ },
+ "Moreau": {
+  "ipa": "m ɔ ɹ o ʊ",
+  "alt": [
+   "m ə ɹ o ʊ"
+  ],
+  "say": "MORE-oh",
+  "note": "MORE-oh (Saints pronunciation guide, Rams-Saints & Bears-Saints flip cards; one 2023 Saints card 'Muh-ROH')",
+  "source": "https://static.clubs.nfl.com/image/upload/saints/ayy8kbtqxkpagw7bd8ef.pdf",
+  "players": [
+   "Foster Moreau"
+  ]
+ },
+ "Tyson": {
+  "ipa": "t a ɪ s ə n",
+  "say": "Tyson",
+  "source": "common English name",
+  "players": [
+   "Tyson Bagent",
+   "Jordyn Tyson"
+  ]
+ },
+ "Bagent": {
+  "ipa": "b e ɪ d ʒ ə n t",
+  "alt": [
+   "b e ɪ d ʒ ɪ n t"
+  ],
+  "wrong": [
+   "b æ ɡ ə n t",
+   "b ə ɡ ɛ n t"
+  ],
+  "say": "BAY-jent",
+  "note": "/ˈbeɪdʒənt/ (Wikipedia); Bears flip cards 'BAY-jint'",
+  "source": "https://en.wikipedia.org/wiki/Tyson_Bagent",
+  "players": [
+   "Tyson Bagent"
+  ]
+ },
+ "Knight": {
+  "ipa": "n a ɪ t",
+  "say": "Knight",
+  "source": "common English name",
+  "players": [
+   "Zonovan Knight"
+  ]
+ },
+ "Calvin": {
+  "ipa": "k æ l v ə n",
+  "alt": [
+   "k æ l v ɪ n"
+  ],
+  "say": "Calvin",
+  "source": "common English name",
+  "players": [
+   "Calvin Ridley"
+  ]
+ },
+ "Ridley": {
+  "ipa": "ɹ ɪ d l i",
+  "say": "Ridley",
+  "source": "common English name",
+  "players": [
+   "Calvin Ridley"
+  ]
+ },
+ "Joshua": {
+  "ipa": "d ʒ ɑ ʃ u ə",
+  "say": "Joshua",
+  "source": "common English name",
+  "players": [
+   "Joshua Palmer"
+  ]
+ },
+ "Palmer": {
+  "ipa": "p ɑ m ə ɹ",
+  "alt": [
+   "p ɑ l m ə ɹ"
+  ],
+  "say": "Palmer",
+  "source": "common English name",
+  "players": [
+   "Joshua Palmer"
+  ]
+ },
+ "CJ": {
+  "ipa": "s i d ʒ e ɪ",
+  "say": "C.J.",
+  "source": "common English name",
+  "players": [
+   "CJ Donaldson"
+  ]
+ },
+ "Donaldson": {
+  "ipa": "d ɑ n ə l d s ə n",
+  "say": "Donaldson",
+  "source": "common English name",
+  "players": [
+   "CJ Donaldson"
+  ]
+ },
+ "Devin": {
+  "ipa": "d ɛ v ɪ n",
+  "say": "Devin",
+  "source": "common English name",
+  "players": [
+   "Devin Singletary"
+  ]
+ },
+ "Singletary": {
+  "ipa": "s ɪ ŋ ɡ ə l t ɛ ɹ i",
+  "say": "Singletary",
+  "source": "common English name",
+  "players": [
+   "Devin Singletary"
+  ]
+ },
+ "Will": {
+  "ipa": "w ɪ l",
+  "alt": [
+   "w ə l"
+  ],
+  "say": "Will",
+  "source": "common English name",
+  "players": [
+   "Will Mallory",
+   "Will Shipley"
+  ]
+ },
+ "Mallory": {
+  "ipa": "m æ l ə ɹ i",
+  "say": "Mallory",
+  "source": "common English name",
+  "players": [
+   "Will Mallory"
+  ]
+ },
+ "Hall": {
+  "ipa": "h ɔ l",
+  "say": "Hall",
+  "source": "common English name",
+  "players": [
+   "Breece Hall"
+  ]
+ },
+ "Drew": {
+  "ipa": "d ɹ u",
+  "say": "Drew",
+  "source": "common English name",
+  "players": [
+   "Drew Sample"
+  ]
+ },
+ "Sample": {
+  "ipa": "s æ m p ə l",
+  "say": "Sample",
+  "source": "common English name",
+  "players": [
+   "Drew Sample"
+  ]
+ },
+ "Kevin": {
+  "ipa": "k ɛ v ɪ n",
+  "say": "Kevin",
+  "source": "common English name",
+  "players": [
+   "Kevin Coleman Jr."
+  ]
+ },
+ "Harrison": {
+  "ipa": "h ɛ ɹ ɪ s ə n",
+  "say": "Harrison",
+  "source": "common English name",
+  "players": [
+   "Marvin Harrison Jr."
+  ]
+ },
+ "Etienne": {
+  "ipa": "e ɪ t ʃ æ n",
+  "alt": [
+   "e ɪ t ʃ ɑ n"
+  ],
+  "wrong": [
+   "i t i ɛ n",
+   "e ɪ t i ɛ n",
+   "ɛ t i ɛ n"
+  ],
+  "say": "AY-chan",
+  "note": "AY-chan, /ˈeɪtʃæn/ (Wikipedia: Travis Etienne Jr. told Saints media in 2026 the name is actually AY-chan; previously believed ee-tee-EN). Same on Trevor Etienne's article",
+  "source": "https://en.wikipedia.org/wiki/Travis_Etienne",
+  "players": [
+   "Trevor Etienne",
+   "Travis Etienne Jr."
+  ]
+ },
+ "Matt": {
+  "ipa": "m æ t",
+  "say": "Matt",
+  "source": "common English name",
+  "players": [
+   "Matt Hibner"
+  ]
+ },
+ "Hibner": {
+  "ipa": "h ɪ b n ə ɹ",
+  "say": "Hibner",
+  "source": "common English name",
+  "players": [
+   "Matt Hibner"
+  ]
+ },
+ "Cole": {
+  "ipa": "k o ʊ l",
+  "say": "Cole",
+  "source": "common English name",
+  "players": [
+   "Cole Kmet"
+  ]
+ },
+ "Kmet": {
+  "ipa": "k ə m ɛ t",
+  "wrong": [
+   "k m ɛ t",
+   "k ɛ m ɪ t"
+  ],
+  "say": "kuh-MET",
+  "note": "kə-MET, /kəˈmɛt/ (Wikipedia; Bears flip cards agree)",
+  "source": "https://en.wikipedia.org/wiki/Cole_Kmet",
+  "players": [
+   "Cole Kmet"
+  ]
+ },
+ "Kaleb": {
+  "ipa": "k e ɪ l ə b",
+  "say": "Kaleb",
+  "source": "common English name",
+  "players": [
+   "Kaleb Johnson"
+  ]
+ },
+ "Whiteheart": {
+  "ipa": "w a ɪ t h ɑ ɹ t",
+  "say": "Whiteheart",
+  "source": "common English name",
+  "players": [
+   "Blake Whiteheart"
+  ]
+ },
+ "Watkins": {
+  "ipa": "w ɑ t k ɪ n z",
+  "say": "Watkins",
+  "source": "common English name",
+  "players": [
+   "Jordan Watkins"
+  ]
+ },
+ "Jacob": {
+  "ipa": "d ʒ e ɪ k ə b",
+  "say": "Jacob",
+  "source": "common English name",
+  "players": [
+   "Jacob Cowing"
+  ]
+ },
+ "Olamide": {
+  "ipa": "o ʊ l ɑ m ɪ d e ɪ",
+  "alt": [
+   "o ʊ l ɑ m ə d e ɪ"
+  ],
+  "wrong": [
+   "o ʊ l ə m a ɪ d"
+  ],
+  "say": "oh-LAH-mih-day",
+  "note": "oh-LAH-mih-day, /oʊˈlɑːmɪdeɪ/ (Wikipedia)",
+  "source": "https://en.wikipedia.org/wiki/Olamide_Zaccheaus",
+  "players": [
+   "Olamide Zaccheaus"
+  ]
+ },
+ "Zaccheaus": {
+  "ipa": "z ɑ k i ə s",
+  "alt": [
+   "z ə k i ə s",
+   "z ɑ k i j ə s"
+  ],
+  "wrong": [
+   "z æ k i ə s",
+   "z æ t ʃ i ə s"
+  ],
+  "say": "zah-KEE-us",
+  "note": "zah-KEE-us, /zɑːˈkiːjʌs/ (Wikipedia); Bears card 'zuh-KEE-uhs'",
+  "source": "https://en.wikipedia.org/wiki/Olamide_Zaccheaus",
+  "players": [
+   "Olamide Zaccheaus"
+  ]
+ },
+ "Tim": {
+  "ipa": "t ɪ m",
+  "say": "Tim",
+  "source": "common English name",
+  "players": [
+   "Tim Patrick"
+  ]
+ },
+ "Price": {
+  "ipa": "p ɹ a ɪ s",
+  "say": "Price",
+  "source": "common English name",
+  "players": [
+   "Jadarian Price"
+  ]
+ },
+ "Bond": {
+  "ipa": "b ɑ n d",
+  "say": "Bond",
+  "source": "common English name",
+  "players": [
+   "Isaiah Bond"
+  ]
+ },
+ "Whittington": {
+  "ipa": "w ɪ t ɪ ŋ t ə n",
+  "alt": [
+   "h w ɪ t ɪ ŋ t ə n"
+  ],
+  "say": "Whittington",
+  "source": "common English name",
+  "players": [
+   "Jordan Whittington"
+  ]
+ },
+ "Shipley": {
+  "ipa": "ʃ ɪ p l i",
+  "say": "Shipley",
+  "source": "common English name",
+  "players": [
+   "Will Shipley"
+  ]
+ },
+ "Jonnu": {
+  "ipa": "d ʒ ɑ n u",
+  "alt": [
+   "d ʒ ɑ n j u"
+  ],
+  "wrong": [
+   "d ʒ ɑ n ə",
+   "d ʒ o ʊ n u"
+  ],
+  "say": "JAH-noo",
+  "note": "JAH-noo (Steelers pronunciation guide, Steelers-Bengals flip card; Patriots card 'JAH-new')",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/zqseyucu4rid2othhxg0",
+  "players": [
+   "Jonnu Smith"
+  ]
+ },
+ "Chimere": {
+  "ipa": "t ʃ i m e ɪ ɹ e ɪ",
+  "alt": [
+   "t ʃ ɪ m ɹ e ɪ",
+   "t ʃ ɪ m ə ɹ e ɪ"
+  ],
+  "wrong": [
+   "ʃ ɪ m ɪ ə ɹ",
+   "k a ɪ m ɪ ə ɹ"
+  ],
+  "say": "CHEE-may-RAY",
+  "note": "CHEE-may-RAY (Titans pronunciation guide, Titans-Rams Sep 2025 flip card); Wikipedia gives CHIM-ray /ˈtʃɪmreɪ/ (accepted)",
+  "source": "https://static.clubs.nfl.com/image/upload/titans/veibh0ywrlabfeu90rcd",
+  "players": [
+   "Chimere Dike"
+  ]
+ },
+ "Dike": {
+  "ipa": "d i k e ɪ",
+  "wrong": [
+   "d a ɪ k"
+  ],
+  "say": "DEE-kay",
+  "note": "DEE-kay, /ˈdikeɪ/ (Wikipedia; Titans flip card agrees)",
+  "source": "https://en.wikipedia.org/wiki/Chimere_Dike",
+  "players": [
+   "Chimere Dike"
+  ]
+ },
+ "Jaydon": {
+  "ipa": "d ʒ e ɪ d ə n",
+  "say": "Jaydon",
+  "source": "common English name",
+  "players": [
+   "Jaydon Blue"
+  ]
+ },
+ "Blue": {
+  "ipa": "b l u",
+  "say": "Blue",
+  "source": "common English name",
+  "players": [
+   "Jaydon Blue"
+  ]
+ },
+ "Tyrone": {
+  "ipa": "t a ɪ ɹ o ʊ n",
+  "say": "Tyrone",
+  "source": "common English name",
+  "players": [
+   "Tyrone Tracy Jr."
+  ]
+ },
+ "Tracy": {
+  "ipa": "t ɹ e ɪ s i",
+  "say": "Tracy",
+  "source": "common English name",
+  "players": [
+   "Tyrone Tracy Jr."
+  ]
+ },
+ "Bellinger": {
+  "ipa": "b ɛ l ɪ ŋ ə ɹ",
+  "say": "Bellinger",
+  "source": "common English name",
+  "players": [
+   "Daniel Bellinger"
+  ]
+ },
+ "Jeremy": {
+  "ipa": "d ʒ ɛ ɹ ə m i",
+  "say": "Jeremy",
+  "source": "common English name",
+  "players": [
+   "Jeremy Ruckert"
+  ]
+ },
+ "Dare": {
+  "ipa": "d ɑ ɹ e ɪ",
+  "alt": [
+   "d æ ɹ e ɪ",
+   "d ɛ ɹ e ɪ"
+  ],
+  "wrong": [
+   "d ɛ ɹ"
+  ],
+  "say": "DAR-ay",
+  "note": "DARR-ay (Texans pronunciation guide, Texans-Colts flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/texans/qdpdnfvaha4e4khvgeo2",
+  "players": [
+   "Dare Ogunbowale"
+  ]
+ },
+ "Ogunbowale": {
+  "ipa": "o ʊ ɡ u n b o ʊ w ɑ l e ɪ",
+  "wrong": [
+   "o ʊ ɡ ʌ n b o ʊ l"
+  ],
+  "say": "oh-GOON-bo-WALL-ay",
+  "note": "oh-GOON-bo-WALL-aye (Texans pronunciation guide, Texans-Colts flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/texans/qdpdnfvaha4e4khvgeo2",
+  "players": [
+   "Dare Ogunbowale"
+  ]
+ },
+ "Jordyn": {
+  "ipa": "d ʒ ɔ ɹ d ə n",
+  "say": "Jordyn",
+  "source": "common English name",
+  "players": [
+   "Jordyn Tyson"
+  ]
+ },
+ "Lance": {
+  "ipa": "l æ n s",
+  "say": "Lance",
+  "source": "common English name",
+  "players": [
+   "Bryce Lance"
+  ]
+ },
+ "Melton": {
+  "ipa": "m ɛ l t ə n",
+  "say": "Melton",
+  "source": "common English name",
+  "players": [
+   "Bo Melton"
+  ]
+ },
+ "Audric": {
+  "ipa": "ɔ d ɹ ɪ k",
+  "alt": [
+   "ɑ d ɹ ɪ k"
+  ],
+  "wrong": [
+   "a ʊ d ɹ ɪ k"
+  ],
+  "say": "AW-drick",
+  "note": "AWE-drick (Broncos pronunciation guide, Broncos-Bengals & Steelers-Broncos flip cards)",
+  "source": "https://static.clubs.nfl.com/image/upload/bengals/khig0419wxu1wdbtw26r",
+  "players": [
+   "Audric Estime"
+  ]
+ },
+ "Estime": {
+  "ipa": "ɛ s t ɪ m e ɪ",
+  "alt": [
+   "ɛ s t ə m e ɪ"
+  ],
+  "wrong": [
+   "ɛ s t a ɪ m",
+   "ɛ s t i m",
+   "ɛ s t ɪ m"
+  ],
+  "say": "ESS-tih-may",
+  "note": "EH-stih-may, /ˈɛstɪmeɪ/ (Wikipedia, spelled Estimé); Broncos cards 'ess-TE-may' (2nd-syllable stress also accepted)",
+  "source": "https://en.wikipedia.org/wiki/Audric_Estim%C3%A9",
+  "players": [
+   "Audric Estime"
+  ]
+ },
+ "Cyrus": {
+  "ipa": "s a ɪ ɹ ə s",
+  "say": "Cyrus",
+  "source": "common English name",
+  "players": [
+   "Cyrus Allen"
+  ]
+ },
+ "Roman": {
+  "ipa": "ɹ o ʊ m ə n",
+  "say": "Roman",
+  "source": "common English name",
+  "players": [
+   "Roman Wilson"
+  ]
+ },
+ "Nate": {
+  "ipa": "n e ɪ t",
+  "say": "Nate",
+  "source": "common English name",
+  "players": [
+   "Nate Adkins"
+  ]
+ },
+ "Adkins": {
+  "ipa": "æ d k ɪ n z",
+  "say": "Adkins",
+  "source": "common English name",
+  "players": [
+   "Nate Adkins"
+  ]
+ },
+ "Tai": {
+  "ipa": "t a ɪ",
+  "say": "Tai",
+  "source": "common English name",
+  "players": [
+   "Tai Felton"
+  ]
+ },
+ "Felton": {
+  "ipa": "f ɛ l t ə n",
+  "say": "Felton",
+  "source": "common English name",
+  "players": [
+   "Tai Felton"
+  ]
+ },
+ "Adam": {
+  "ipa": "æ d ə m",
+  "say": "Adam",
+  "source": "common English name",
+  "players": [
+   "Adam Trautman"
+  ]
+ },
+ "Trautman": {
+  "ipa": "t ɹ a ʊ t m ə n",
+  "wrong": [
+   "t ɹ ɔ t m ə n"
+  ],
+  "say": "TROUT-man",
+  "note": "TROUT-man (Saints pronunciation guide, Eagles-Saints flip card)",
+  "source": "https://static.clubs.nfl.com/image/upload/saints/lmmm5qncxrt3of31sdps.pdf",
+  "players": [
+   "Adam Trautman"
+  ]
+ }
+}

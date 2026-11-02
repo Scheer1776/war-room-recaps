@@ -16,10 +16,18 @@ deliver a video whose last audit failed. Write one manifest per video in `audit/
 - **Voice:** give `vo` (the voice track before mixing) and the exact `script`. Checks: every name heard (no hints given to
   the transcriber), a real pause after every sentence, a beat (>= 0.45 s) before every "...", 130–270 wpm, no dead air.
 - **End card:** `endCard: 3.5` — the QR must decode across the last 3.5 s.
-- **Audio:** `audio: "voice" | "music" | "silent"` — silent deliveries must have no track; nothing may clip.
+- **Audio:** `audio: "voice"` (every delivery is voiced since 2026-11-02); nothing may clip.
 - Attach the `.audit.png` contact sheet view to your own QA; mention the audit result in one line of the delivery message.
 
 ## Voices: pacing, flow and pronunciation — rewritten 2026-11-01 (owner: "choppy, weird pauses"; Allgeier said wrong)
+- **Fast path (2026-11-02):** `python3 -I voice/say.py "<real-spelling script>"` prints the VoiceStudio text with sourced
+  respellings swapped in and lists names with no sourced pronunciation (cut those from the voice, show them on screen).
+  Sources: voice/names.json (hand-checked) + voice/pronounce-bank.json (every name token of the top ~300 players, each with
+  a source URL; `_unsourced` lists the ones still missing). Then record 3 seeds with no clicking: put
+  `{name, voice, model:"voxcpm2", seeds:[11,12,13], text}` in `Documents-WarRoom\takes\job.json`, double-click
+  `vs-takes.bat` (VoiceStudio API at 127.0.0.1:3900, ~60 s a take), stage `takes\<name>_s<seed>.wav` back, keep the
+  take where audit/pronounce.py shows 0 FAIL. Time it with `scripts/sunday-plan.py`, render with a `--props=<file>.json`
+  that names the source folder (render.bat alone renders the default props — it rendered last week's data once).
 - Two voices, both VoiceStudio (VoxCPM2) on the owner's PC: **War Room Announcer** (hype, sports-radio) and **War Room
   Narrator** (fast second-person storytelling). Narrator for story scripts ("You draft…"), Announcer for recaps/rankings.
 - **Record the whole script as ONE continuous take.** The voice's own rhythm across sentences is what sounds natural.
@@ -66,7 +74,8 @@ deliver a video whose last audit failed. Write one manifest per video in `audit/
 - Motion in every scene: springs, a counter ticking up, an impact plus a shake, a kinetic word reveal.
   Nothing should sit still.
 - Give a verdict. ADD / FADE / TRAP stamps, START / SIT, WIN / LOSE. Opinions get comments.
-- Two renders every time. On voiced days: voice + beat, and voice only. On music days: beat, and silent (the owner adds a trending sound in TikTok).
+- **Every video is voiced (owner, 2026-11-02: "dont make videos without voice anymore").** No music-only, beat-only or silent
+  versions, and no silent second render. One delivery: the voiced video.
 - The caption is 1–2 punchy lines plus 4–6 hashtags (#fantasyfootball #fantasyfootballadvice #nfl
   #waiverwire #ff #fantasyfootballtips, rotating).
 

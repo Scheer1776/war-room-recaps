@@ -106,6 +106,65 @@
    "alt": [
     "b ɛ n ɡ ə l z"
    ]
+  },
+  "Chase": {
+   "ipa": "t ʃ e ɪ s",
+   "note": "common English name"
+  },
+  "Michael": {
+   "ipa": "m a ɪ k ə l"
+  },
+  "Penix": {
+   "ipa": "p ɛ n ɪ k s",
+   "wrong": [
+    "p i n ɪ k s"
+   ],
+   "say": "Pen-iks",
+   "note": "PENN-iks, /ˈpɛnɪks/ (Wikipedia)"
+  },
+  "Lamar": {
+   "ipa": "l ə m ɑ ɹ",
+   "alt": [
+    "l ə m ɑ"
+   ],
+   "note": "luh-MAR, standard English given name"
+  },
+  "Jackson": {
+   "ipa": "d ʒ æ k s ə n"
+  },
+  "Emmett": {
+   "ipa": "ɛ m ɪ t",
+   "alt": [
+    "ɛ m ə t"
+   ]
+  },
+  "Johnson": {
+   "ipa": "d ʒ ɑ n s ə n"
+  },
+  "Jaxon": {
+   "ipa": "d ʒ æ k s ə n"
+  },
+  "Smith-Njigba": {
+   "ipa": "s m ɪ θ ɪ n d ʒ ɪ ɡ b ə",
+   "alt": [
+    "s m ɪ θ ə n d ʒ ɪ ɡ b ə",
+    "s m ɪ θ n̩ d ʒ ɪ ɡ b ə"
+   ],
+   "say": "Smith-In-jig-buh",
+   "note": "in-JIG-bə, /ɪnˈdʒɪɡbə/ (Wikipedia)"
+  },
+  "Chicago": {
+   "ipa": "ʃ ɪ k ɑ ɡ o ʊ",
+   "alt": [
+    "ʃ ɪ k ɔ ɡ o ʊ",
+    "ʃ ə k ɑ ɡ o ʊ"
+   ]
+  },
+  "Seattle": {
+   "ipa": "s i æ t ə l",
+   "alt": [
+    "s i æ ɾ ə l"
+   ]
   }
  }
 }

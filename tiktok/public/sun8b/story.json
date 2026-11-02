@@ -1,0 +1,461 @@
+{
+ "source": "sun8b",
+ "week": 8,
+ "scenes": [
+  {
+   "id": "hook",
+   "kind": "boom",
+   "anchor": [],
+   "clip": "hook.mp4",
+   "keyAt": 2.7,
+   "title": "SUNDAY'S *BIGGEST* NUMBER",
+   "stamp": "LEAGUE WINNER",
+   "color": "gold",
+   "player": {
+    "id": "6770",
+    "n": "Joe Burrow",
+    "pos": "QB",
+    "team": "CIN",
+    "pts": 42.5,
+    "proj": 22,
+    "line": "462 pass yds · 5 TD · 1 rush TD"
+   }
+  },
+  {
+   "id": "burrow",
+   "kind": "stats",
+   "anchor": [
+    "462"
+   ],
+   "clip": "burrow.mp4",
+   "keyAt": 3.0,
+   "title": "WON IT IN *OVERTIME*",
+   "color": "gold",
+   "tiles": [
+    {
+     "v": 462,
+     "label": "PASS YDS"
+    },
+    {
+     "v": 6,
+     "label": "TOTAL TD"
+    },
+    {
+     "v": 43,
+     "label": "CIN PTS"
+    }
+   ],
+   "stamp": "43-36 OT"
+  },
+  {
+   "id": "higgins",
+   "kind": "stats",
+   "anchor": [
+    "chase",
+    "saw"
+   ],
+   "clip": "higgins.mp4",
+   "keyAt": 2.66,
+   "title": "BENGALS *WR* ROOM",
+   "color": "turf",
+   "tiles": [
+    {
+     "v": 16,
+     "label": "CHASE TGTS"
+    },
+    {
+     "v": 2,
+     "label": "HIGGINS TD"
+    },
+    {
+     "v": 37.5,
+     "dec": 1,
+     "label": "HIGGINS PPR"
+    }
+   ],
+   "stamp": "SMASH"
+  },
+  {
+   "id": "allgeier",
+   "kind": "boom",
+   "anchor": [
+    "tyler"
+   ],
+   "clip": "allgeier.mp4",
+   "keyAt": 2.7,
+   "title": "PROJECTED *8.4*",
+   "stamp": "+27.7",
+   "color": "turf",
+   "player": {
+    "id": "8132",
+    "n": "Tyler Allgeier",
+    "pos": "RB",
+    "team": "ARI",
+    "pts": 36.1,
+    "proj": 8.4,
+    "line": "147 rush yds · 5 rec · 44 rec yds · 2 TD"
+   }
+  },
+  {
+   "id": "mitchell",
+   "kind": "boom",
+   "anchor": [
+    "mitchell"
+   ],
+   "clip": "mitchell.mp4",
+   "keyAt": 2.6,
+   "title": "PROJECTED *5.6*",
+   "stamp": "WAIVER GOLD",
+   "color": "turf",
+   "player": {
+    "id": "11625",
+    "n": "Adonai Mitchell",
+    "pos": "WR",
+    "team": "NYJ",
+    "pts": 27.2,
+    "proj": 5.6,
+    "line": "7 rec · 142 rec yds · 1 TD"
+   }
+  },
+  {
+   "id": "tuten",
+   "kind": "boom",
+   "anchor": [
+    "jacksonville",
+    "rolled"
+   ],
+   "clip": "tuten.mp4",
+   "keyAt": 3.2,
+   "title": "JAGUARS *42-7*",
+   "stamp": "ROUT",
+   "color": "turf",
+   "player": {
+    "id": "12490",
+    "n": "Bhayshul Tuten",
+    "pos": "RB",
+    "team": "JAX",
+    "pts": 29.9,
+    "proj": 15.3,
+    "line": "104 rush yds · 2 rec · 55 rec yds · 2 TD"
+   },
+   "minBefore": 0.6
+  },
+  {
+   "id": "bust",
+   "kind": "bust",
+   "anchor": [
+    "and",
+    "atlanta"
+   ],
+   "clip": "bust.mp4",
+   "keyAt": 1.9,
+   "title": "FALCONS: *ZERO* POINTS",
+   "big": "0",
+   "stamp": "4 INTs",
+   "color": "red",
+   "players": [
+    {
+     "id": "11559",
+     "n": "Michael Penix Jr.",
+     "pos": "QB",
+     "team": "ATL",
+     "pts": 2.1,
+     "proj": 14.4,
+     "line": "125 pass yds"
+    }
+   ]
+  },
+  {
+   "id": "bust2",
+   "kind": "bust",
+   "anchor": [
+    "bs",
+    "on"
+   ],
+   "title": "FANTASY *DAMAGE*",
+   "color": "red",
+   "stamp": "OUCH.",
+   "players": [
+    {
+     "id": "9509",
+     "n": "Bijan Robinson",
+     "pos": "RB",
+     "team": "ATL",
+     "pts": 7.6,
+     "proj": 21.9,
+     "line": "76 rush yds"
+    },
+    {
+     "id": "8112",
+     "n": "Drake London",
+     "pos": "WR",
+     "team": "ATL",
+     "pts": 1.8,
+     "proj": 16.5,
+     "line": "1 rec · 8 rec yds"
+    }
+   ],
+   "big": "-29"
+  },
+  {
+   "id": "chapter",
+   "kind": "chapter",
+   "anchor": [
+    "heres",
+    "what"
+   ],
+   "title": "WHAT WE|KNOW NOW",
+   "sub": "INJURIES · WAIVERS · TONIGHT"
+  },
+  {
+   "id": "lamar",
+   "kind": "news",
+   "anchor": [
+    "lamar"
+   ],
+   "title": "*INJURY* NEWS",
+   "color": "red",
+   "player": {
+    "id": "4881",
+    "n": "Lamar Jackson",
+    "pos": "QB",
+    "team": "BAL",
+    "pts": 0,
+    "proj": 0,
+    "line": ""
+   },
+   "headline": "Needs thumb surgery. Headed to IR.",
+   "sub": "Hurt on the first play vs. Buffalo · Bills 36, Ravens 10",
+   "stamp": "OUT"
+  },
+  {
+   "id": "adds",
+   "kind": "adds",
+   "anchor": [
+    "wednesdays"
+   ],
+   "title": "WAIVER *TARGETS*",
+   "sub": "Most added on Sleeper, last 24 hours",
+   "stamp": "ADD",
+   "rows": [
+    {
+     "player": {
+      "id": "11625",
+      "n": "Adonai Mitchell",
+      "pos": "WR",
+      "team": "NYJ",
+      "pts": 27.2,
+      "proj": 5.6,
+      "line": "7 rec · 142 rec yds · 1 TD"
+     },
+     "count": 563304,
+     "note": "27.2 PPR · 142 yds, TD"
+    },
+    {
+     "player": {
+      "id": "8132",
+      "n": "Tyler Allgeier",
+      "pos": "RB",
+      "team": "ARI",
+      "pts": 36.1,
+      "proj": 8.4,
+      "line": "147 rush yds · 5 rec · 44 rec yds · 2 TD"
+     },
+     "count": 326310,
+     "note": "36.1 PPR · 147 rush yds, 2 TD"
+    },
+    {
+     "player": {
+      "id": "13337",
+      "n": "Emmett Johnson",
+      "pos": "RB",
+      "team": "KC",
+      "pts": 25.3,
+      "proj": 0,
+      "line": ""
+     },
+     "count": 268299,
+     "note": "25.3 PPR · 128 yds, TD on 13 snaps"
+    }
+   ]
+  },
+  {
+   "id": "scores",
+   "kind": "scores",
+   "anchor": [
+    "every",
+    "sunday"
+   ],
+   "title": "EVERY *SUNDAY* FINAL"
+  },
+  {
+   "id": "mnf",
+   "kind": "mnf",
+   "anchor": [
+    "and",
+    "tonight"
+   ],
+   "title": "MONDAY *NIGHT*",
+   "game": {
+    "away": "CHI",
+    "home": "SEA",
+    "when": "Tonight 5:15 PT",
+    "line": "SEA -3.5 · O/U 46.5"
+   },
+   "player": {
+    "id": "9488",
+    "n": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "team": "SEA",
+    "pts": 0,
+    "proj": 25.2,
+    "line": ""
+   },
+   "stamp": "TOP PLAY"
+  },
+  {
+   "id": "cta",
+   "kind": "cta",
+   "anchor": [
+    "did",
+    "sunday",
+    "save"
+   ],
+   "title": "DID SUNDAY SAVE|YOUR SEASON?"
+  }
+ ],
+ "scores": [
+  {
+   "away": {
+    "t": "PHI",
+    "s": 10
+   },
+   "home": {
+    "t": "WSH",
+    "s": 27
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "BAL",
+    "s": 10
+   },
+   "home": {
+    "t": "BUF",
+    "s": 36
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "TEN",
+    "s": 36
+   },
+   "home": {
+    "t": "CIN",
+    "s": 43
+   },
+   "ot": true
+  },
+  {
+   "away": {
+    "t": "ARI",
+    "s": 33
+   },
+   "home": {
+    "t": "DAL",
+    "s": 30
+   },
+   "ot": true
+  },
+  {
+   "away": {
+    "t": "MIN",
+    "s": 15
+   },
+   "home": {
+    "t": "DET",
+    "s": 19
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "LV",
+    "s": 38
+   },
+   "home": {
+    "t": "NYJ",
+    "s": 33
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "CLE",
+    "s": 6
+   },
+   "home": {
+    "t": "PIT",
+    "s": 27
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "ATL",
+    "s": 0
+   },
+   "home": {
+    "t": "TB",
+    "s": 16
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "IND",
+    "s": 7
+   },
+   "home": {
+    "t": "JAX",
+    "s": 42
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "LAC",
+    "s": 9
+   },
+   "home": {
+    "t": "LAR",
+    "s": 24
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "KC",
+    "s": 24
+   },
+   "home": {
+    "t": "DEN",
+    "s": 28
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "NE",
+    "s": 24
+   },
+   "home": {
+    "t": "MIA",
+    "s": 19
+   },
+   "ot": false
+  }
+ ]
+}

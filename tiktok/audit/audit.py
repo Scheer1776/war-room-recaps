@@ -86,8 +86,9 @@ def check_clip(video, c):
     if "keyAt" in c:
         key_t = c["keyAt"] - off            # when the moment happens, relative to the window start
         lead, tail = key_t, c["dur"] - key_t
-        st = "PASS" if lead >= 0.8 and tail >= 1.0 else "FAIL"
-        add("CLIP MOMENT", st, f"{lab}: key moment at {c['at'] + key_t:.2f}s in the video, {lead:.2f}s of lead-in, {tail:.2f}s after (need >= 0.8 / 1.0)")
+        mb = c.get("minBefore", 0.8)   # a deliberately short scene (< 2 s) may set 0.6 in its manifest entry
+        st = "PASS" if lead >= mb and tail >= 1.0 else "FAIL"
+        add("CLIP MOMENT", st, f"{lab}: key moment at {c['at'] + key_t:.2f}s in the video, {lead:.2f}s of lead-in, {tail:.2f}s after (need >= {mb} / 1.0)")
 
 def norm(w): return re.sub(r"[^a-z0-9]", "", w.lower())
 
