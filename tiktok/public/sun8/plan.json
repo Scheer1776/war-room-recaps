@@ -155,15 +155,15 @@
    "kind": "scores",
    "base": 3.8,
    "title": "EVERY *SUNDAY* FINAL",
-   "dur": 4.333,
+   "dur": 4.201,
    "clipFrom": 0
   },
   {
    "id": "cta",
    "kind": "cta",
    "base": 5.6,
-   "title": "WHO'S STILL ALIVE|IN YOUR LEAGUE?",
-   "dur": 5.9,
+   "title": "DID SUNDAY SAVE|YOUR SEASON?",
+   "dur": 5.867,
    "clipFrom": 0
   }
  ],
@@ -301,5 +301,5 @@
    "ot": false
   }
  ],
- "voFull": "full/take5.mp3"
+ "voFull": "full/take6.mp3"
 }
