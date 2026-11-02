@@ -14,6 +14,7 @@ Manifest (JSON):
               "clipStart": 0.0, "keyAt": 2.15, "label": "stiff-arm" }],
                        # at/dur = where the clip sits in the video (s); clipStart = s into the clip it should start from;
                        # keyAt = s into the clip where the big moment happens (find it with a timestamped contact sheet)
+                       # band = optional [top, bottom] fraction of the frame to compare, when cards/big type cover the middle
   "endCard": 3.5                                      # seconds the QR/app link must be on screen at the end
 }
 Checks
@@ -36,10 +37,10 @@ def frame_at(cap, t, fps):
     ok, f = cap.read()
     return f if ok else None
 
-def sig(img):  # small grayscale signature of the clip region (the action area), zero-mean, unit-norm
+def sig(img, band=(0.22, 0.78)):  # small grayscale signature of the clip region (the action area), zero-mean, unit-norm
     g = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     h, w = g.shape
-    g = g[int(h * 0.22):int(h * 0.78), :]          # middle band: where the clip's action sits, away from captions
+    g = g[int(h * band[0]):int(h * band[1]), :]    # band: where the clip shows, away from captions/cards (manifest "band")
     g = cv2.resize(g, (48, 48), interpolation=cv2.INTER_AREA).astype(np.float32)
     g -= g.mean(); n = np.linalg.norm(g)
     return g / n if n else g
@@ -51,17 +52,17 @@ def check_clip(video, c):
     vcap, ccap = cv2.VideoCapture(str(video)), cv2.VideoCapture(str(c["src"]))
     vf, cf = vcap.get(cv2.CAP_PROP_FPS), ccap.get(cv2.CAP_PROP_FPS)
     clen = ccap.get(cv2.CAP_PROP_FRAME_COUNT) / cf
-    cache = {}
+    cache = {}; band = tuple(c.get("band", (0.22, 0.78)))
     def csig(t):
         k = round(t, 2)
         if k not in cache:
-            f = frame_at(ccap, t, cf); cache[k] = sig(f) if f is not None else None
+            f = frame_at(ccap, t, cf); cache[k] = sig(f, band) if f is not None else None
         return cache[k]
     offsets = []
     for u in np.linspace(0.3, c["dur"] - 0.3, 6):
         f = frame_at(vcap, c["at"] + u, vf)
         if f is None: continue
-        s = sig(f)
+        s = sig(f, band)
         best, bt = -2, None
         for t in np.arange(0, clen, 1 / 15):
             cs = csig(t)
@@ -96,8 +97,18 @@ def check_voice(vo, script, names):
     want = set(names)
     if script:
         want |= {w for w in re.findall(r"(?<![.?!]\s)(?<!^)\b[A-Z][a-zA-Z'\-]+(?:\s[A-Z][a-zA-Z'\-]+)*", script)}
-    miss = [n for n in sorted(want) if not all(norm(p) in heard.split() for p in n.split() if norm(p))]
-    add("NAMES", "FAIL" if miss else "PASS", f"not heard: {miss}" if miss else f"all heard: {sorted(want) or '(none listed)'}")
+    # Whisper spells rare names its own way (Bijan→"bijon", Allgeier→"allgaier", Tee→"t"); that is not a mispronunciation.
+    # Exact match first, else a sound-alike: same first letter and same consonant skeleton (2026-11-01).
+    skel = lambda w: (w[:1] + re.sub(r"[aeiouyhw]", "", w[1:])) if w else w
+    hw_set = heard.split(); alike = []
+    def heard_part(p):
+        if p in hw_set: return True
+        hit = next((h for h in hw_set if h[:1] == p[:1] and skel(h) == skel(p)), None)
+        if hit: alike.append(f"{p}~{hit}")
+        return bool(hit)
+    miss = [n for n in sorted(want) if not all(heard_part(norm(p)) for p in n.split() if norm(p))]
+    note = f" (sound-alike: {', '.join(sorted(set(alike)))})" if alike else ""
+    add("NAMES", "FAIL" if miss else "PASS", (f"not heard: {miss}" if miss else f"all heard: {sorted(want) or '(none listed)'}") + note)
     # PACE
     speak = sum(w.end - w.start for w in words); wpm = len(words) / max(0.1, words[-1].end - words[0].start) * 60
     gaps = [(words[i + 1].start - words[i].end, i) for i in range(len(words) - 1)]

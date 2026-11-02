@@ -1,7 +1,7 @@
 {
- "video": "out/sun8/sunday-recap-voice.mp4",
+ "video": "out/sun8/sunday-recap-pc.mp4",
  "audio": "voice",
- "vo": "out/sun8/vo-track.wav",
+ "vo": "out/sun8/vo-track-pc.wav",
  "script": "Joe Burrow just dropped forty-two and a half fantasy points. Four hundred sixty-two yards. Six touchdowns. And the Bengals won it in overtime. Tee Higgins rode shotgun... thirty-seven and a half. Tyler Allgeier was projected for eight. He gave you thirty-six. Adonai Mitchell? Projected under six... twenty-seven. And Atlanta... got shut out. Bijan, under eight. Drake London, under two. Two overtime games. Jacksonville by thirty-five. That's your Sunday. Who's still alive in your league? Find out free, on War Room.",
  "names": [
   "Joe Burrow",
@@ -18,50 +18,74 @@
   {
    "src": "public/sun8/clips/hook.mp4",
    "at": 0.0,
-   "dur": 4.2,
+   "dur": 3.733,
    "clipStart": 0,
-   "keyAt": 3.0,
-   "label": "hook"
+   "keyAt": 2.7,
+   "label": "hook",
+   "band": [
+    0.18,
+    0.56
+   ]
   },
   {
    "src": "public/sun8/clips/burrow.mp4",
-   "at": 4.2,
-   "dur": 4.6,
+   "at": 3.733,
+   "dur": 4.7,
    "clipStart": 0,
    "keyAt": 3.0,
-   "label": "burrow"
+   "label": "burrow",
+   "band": [
+    0.18,
+    0.5
+   ]
   },
   {
    "src": "public/sun8/clips/higgins.mp4",
-   "at": 8.8,
-   "dur": 4.4,
+   "at": 8.433,
+   "dur": 3.867,
    "clipStart": 0,
-   "keyAt": 3.3,
-   "label": "higgins"
+   "keyAt": 2.66,
+   "label": "higgins",
+   "band": [
+    0.18,
+    0.56
+   ]
   },
   {
    "src": "public/sun8/clips/allgeier.mp4",
-   "at": 13.2,
+   "at": 12.3,
    "dur": 4.4,
    "clipStart": 0,
    "keyAt": 2.7,
-   "label": "allgeier"
+   "label": "allgeier",
+   "band": [
+    0.18,
+    0.56
+   ]
   },
   {
    "src": "public/sun8/clips/mitchell.mp4",
-   "at": 17.6,
+   "at": 16.7,
    "dur": 4.0,
    "clipStart": 0,
    "keyAt": 2.6,
-   "label": "mitchell"
+   "label": "mitchell",
+   "band": [
+    0.18,
+    0.56
+   ]
   },
   {
    "src": "public/sun8/clips/bust.mp4",
-   "at": 21.6,
-   "dur": 4.8,
+   "at": 20.7,
+   "dur": 5.533,
    "clipStart": 0,
    "keyAt": 1.9,
-   "label": "bust"
+   "label": "bust",
+   "band": [
+    0.42,
+    0.51
+   ]
   }
  ]
 }

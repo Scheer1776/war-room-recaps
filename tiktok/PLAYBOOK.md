@@ -260,6 +260,21 @@ and switch its row from *build* to the composition name.
 - 2026-11-01 Props filled by calculateMetadata skip zod `.default()`s: guard optional fields with `??` in the component.
   The cloud browser path moves between containers; find it with `ls /opt/pw-browsers/chromium_headless_shell-*/chrome-headless-shell-linux64/`.
   `--concurrency` may not exceed the core count (2).
+- 2026-11-01 RENDER ON THE PC when it is linked: i7-14700F (28 threads) + RTX 4060 renders a 36 s clip video in ~27 s vs
+  12–13 min on the 2-core cloud box (~25x). Setup is done (Node at C:\Program Files\nodejs, repo at C:\WarRoom\war-room-recaps,
+  `npm ci` + Remotion's Chrome). Copy changed public/<dir> files into the PC repo with device_commit_files, then double-click
+  a wrapper that calls `Documents-WarRoom\render.bat <Composition> <name>` (21 of 28 threads, --gl=angle; copies the MP4 to
+  Completed Videos with the date; log in render.log). Remotion 4.0.539 wants a number for --concurrency, not "75%".
+  Never write a .bat while it is running: the write is lost (OneDrive/cmd keep the old file).
+- 2026-11-01 Pauses: VoxCPM runs short sentences together ("462 yards. Six touchdowns." with 0.00 s between). pace.py take
+  now measures silence from the waveform with a peak-relative threshold (a 3 s line has no silence to calibrate a floor),
+  but its cut point can still land on a consonant stop inside the next word ("six [pause] touchdowns"). Verify every
+  inserted pause: split the line at the candidate point and transcribe both halves; the right point reads
+  "...yards." | "six touchdowns...". Same trick when whisper fuses words ("six... twenty-seven" heard as "627").
+- 2026-11-01 Audit: NAMES accepts sound-alikes (same first letter + consonant skeleton: Bijan~bijon, Allgeier~allgaier) and
+  prints them; CLIP SYNC takes a per-clip `band` (fraction of the frame to compare) when cards or giant type cover the
+  middle of a clip, which otherwise reads as a false 1 s offset. Keep every gap between voice lines under 1.6 s: trim the
+  scene base, or re-cut the clip later so its moment lands earlier, rather than padding.
 
 ## Log
 | Date | Format | Notes |
@@ -274,7 +289,7 @@ and switch its row from *build* to the composition name.
 | 2026-10-30 | Game recap TNF CAR@GB (NEW `GameRecap`) | Voiced: War Room Announcer, voice-only. QR closer. Young 11.4 vs 18.0 "we told you", GB 27-19, Love/Hubbard/Jacobs, Golden 13 tgts BUY. "Rookie" cut from the Golden line (he's 2nd year) |
 | 2026-10-30 | Showcase v2 (9 features; NEW Start/Sit + Waivers scenes; clip layer) | Voiced: War Room Narrator (first full video), voice-only. Clips: Cook 41-yd TD, Mahomes truck-stick TD, Nabers moss (clip-library). Audit PASS (pace WARN: fast mid-line flow, by design) |
 | 2026-10-30 | Quiz "Pause & Guess" (NEW `Quiz`, weeks 5-7) | No-voice (music-only, beat + silent). Hook "3 QUESTIONS. LAST 3 WEEKS."; Q1 RB touches → Irving 69 WORKHORSE; Q2 QB ppg → Maye 30.6 (Mahomes 9.2); Q3 TE pts → Likely 50.0; verdict DRAFT-DAY NAMES LIE / USAGE DOESN'T; QR closer. Song: Final Game Showdown (ProdByLucK). TikTok stats.json not published yet (404) |
-| 2026-11-01 | Sunday Recap week 8 (NEW `SundayRecap`) | Voiced: War Room Announcer, voice-only + silent. Same-night clips scraped from the NFL channel on the PC: Burrow→Chase deep TD, Burrow OT TD (Short), Higgins corner catch, Allgeier 63-yd TD, Mitchell 4th-down TD, Penix INT (ATL 0). Burrow 42.5, Higgins 37.5, Allgeier 36.1 (proj 8.4), Mitchell 27.2 (proj 5.6), ATL shut out (Bijan 7.6, London 1.8), 12 finals. QR closer |
+| 2026-11-01 | Sunday Recap week 8 (NEW `SundayRecap`) | Voiced: War Room Announcer, voice-only + silent. Same-night clips scraped from the NFL channel on the PC: Burrow→Chase deep TD, Burrow OT TD (Short), Higgins corner catch, Allgeier 63-yd TD, Mitchell 4th-down TD, Penix INT (ATL 0). Burrow 42.5, Higgins 37.5, Allgeier 36.1 (proj 8.4), Mitchell 27.2 (proj 5.6), ATL shut out (Bijan 7.6, London 1.8), 12 finals. QR closer. Rendered on the owner's PC in 27 s (cloud: 12 min 43 s). Audit PASS |
 
 ## League Recap (in-app weekly video, every league) — added 2026-10-30
 - Composition `LeagueRecap` (src/LeagueRecap.tsx): real league/team names (it is FOR the league), house effects (kinetic

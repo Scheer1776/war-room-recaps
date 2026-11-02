@@ -3,20 +3,20 @@
  "week": 8,
  "voice": true,
  "voDur": {
-  "allgeier": 3.344,
-  "burrow": 3.709,
-  "bust": 4.258,
-  "cta": 2.456,
-  "higgins": 2.325,
+  "allgeier": 3.579,
+  "burrow": 4.258,
+  "bust": 5.068,
+  "cta": 2.769,
+  "higgins": 2.978,
   "hook": 2.664,
-  "mitchell": 2.638,
-  "scores": 2.926
+  "mitchell": 3.553,
+  "scores": 3.5
  },
  "scenes": [
   {
    "id": "hook",
    "kind": "boom",
-   "base": 4.2,
+   "base": 3.75,
    "clip": "hook.mp4",
    "title": "SUNDAY'S *BIGGEST* NUMBER",
    "stamp": "LEAGUE WINNER",
@@ -57,7 +57,7 @@
   {
    "id": "higgins",
    "kind": "boom",
-   "base": 4.4,
+   "base": 3.85,
    "clip": "higgins.mp4",
    "title": "TEE *HIGGINS*",
    "stamp": "SMASH",

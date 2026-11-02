@@ -81,13 +81,25 @@ def mode_take(a):
     s2h = {}
     for tag, i1, i2, j1, j2 in sm.get_opcodes():
         for k in range(i2 - i1): s2h[i1 + k] = j1 + min(k, max(0, j2 - j1 - 1)) if j2 > j1 else None
+    # Whisper's word edges smear over short gaps, so measure the real silence and the cut point from the waveform
+    # (same threshold as audit.py), and insert the missing time at the quietest frame between the two words.
+    import librosa, numpy as np
+    y, sr = librosa.load(a.take, sr=16000); hop = 160
+    db = 20 * np.log10(librosa.feature.rms(y=y, frame_length=400, hop_length=hop)[0] + 1e-9)
+    thr = db.max() - 38  # a single line has too little silence to calibrate a floor from
     cuts = []  # (time, gap)
     for si, g in sorted(ends.items()):
         hi = s2h.get(si)
         if hi is None or hi >= len(words) - 1: continue
-        end, nxt = words[hi].end, words[hi + 1].start
-        have = max(0.0, nxt - end)
-        if have < g: cuts.append(((end + nxt) / 2, g - have))
+        t0, t1 = max(0, words[hi].end - 0.25), words[hi + 1].start + 0.25
+        a0, a1 = int(t0 * sr / hop), max(int(t0 * sr / hop) + 1, int(t1 * sr / hop))
+        seg = db[a0:a1]; q = seg < thr; best = rn = 0; best_end = 0
+        for i, v in enumerate(q):
+            rn = rn + 1 if v else 0
+            if rn > best: best, best_end = rn, i
+        have = best * hop / sr
+        cut = (a0 + (best_end - best / 2 if best else int(np.argmin(seg)))) * hop / sr
+        if have < g: cuts.append((cut, g - have))
     tmp = pathlib.Path(tempfile.mkdtemp()); parts = []; t0 = 0.0
     for i, (t, add) in enumerate(cuts):
         seg = tmp / f"{i:02d}.wav"
