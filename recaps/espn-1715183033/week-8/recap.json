@@ -1,0 +1,262 @@
+{
+ "platform": "espn",
+ "league": "Pittsburgh Beginner H2H Points PPR League",
+ "week": 8,
+ "myTeamId": 5,
+ "games": [
+  {
+   "win": {
+    "id": 4,
+    "name": "Siphilis Seals",
+    "pts": 161.8,
+    "left": 12
+   },
+   "lose": {
+    "id": 1,
+    "name": "014",
+    "pts": 106.4,
+    "left": 16.5
+   },
+   "margin": 55.4
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "Red Tide",
+    "pts": 139.3,
+    "left": 0
+   },
+   "lose": {
+    "id": 9,
+    "name": "Dalton's Daring Team",
+    "pts": 94.4,
+    "left": 60.8
+   },
+   "margin": 44.9
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "Rizzy Ryan",
+    "pts": 104.9,
+    "left": 30.5
+   },
+   "lose": {
+    "id": 10,
+    "name": "Aotearoa Team ",
+    "pts": 100.8,
+    "left": 23.4
+   },
+   "margin": 4.1
+  },
+  {
+   "win": {
+    "id": 6,
+    "name": "Jordan Loves to throw meatballs",
+    "pts": 98.6,
+    "left": 76.1
+   },
+   "lose": {
+    "id": 5,
+    "name": "Diddy plower",
+    "pts": 91.8,
+    "left": 24.3
+   },
+   "margin": 6.8
+  },
+  {
+   "win": {
+    "id": 7,
+    "name": "Aiden's Astounding Team",
+    "pts": 89.2,
+    "left": 27
+   },
+   "lose": {
+    "id": 8,
+    "name": "Brittney's Best Team",
+    "pts": 66.3,
+    "left": 37.2
+   },
+   "margin": 22.9
+  }
+ ],
+ "high": {
+  "id": 4,
+  "name": "Siphilis Seals",
+  "pts": 161.8,
+  "left": 12,
+  "star": {
+   "id": "3915511",
+   "n": "Joe Burrow",
+   "pos": "QB",
+   "nfl": "CIN",
+   "act": 39.5
+  }
+ },
+ "low": {
+  "id": 8,
+  "name": "Brittney's Best Team",
+  "pts": 66.3,
+  "left": 37.2
+ },
+ "close": {
+  "win": {
+   "id": 2,
+   "name": "Rizzy Ryan",
+   "pts": 104.9,
+   "left": 30.5
+  },
+  "lose": {
+   "id": 10,
+   "name": "Aotearoa Team ",
+   "pts": 100.8,
+   "left": 23.4
+  },
+  "margin": 4.1
+ },
+ "blow": {
+  "win": {
+   "id": 4,
+   "name": "Siphilis Seals",
+   "pts": 161.8,
+   "left": 12
+  },
+  "lose": {
+   "id": 1,
+   "name": "014",
+   "pts": 106.4,
+   "left": 16.5
+  },
+  "margin": 55.4
+ },
+ "mvp": {
+  "player": {
+   "id": "3915511",
+   "n": "Joe Burrow",
+   "pos": "QB",
+   "nfl": "CIN",
+   "act": 39.5
+  },
+  "team": {
+   "id": 4,
+   "name": "Siphilis Seals",
+   "pts": 161.8,
+   "left": 12
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 6,
+   "name": "Jordan Loves to throw meatballs",
+   "pts": 98.6,
+   "left": 76.1
+  },
+  "bench": {
+   "id": "4373626",
+   "n": "Tyler Allgeier",
+   "pos": "RB",
+   "nfl": "ARI",
+   "act": 36.1
+  }
+ },
+ "standings": [
+  {
+   "id": 6,
+   "name": "Jordan Loves to throw meatballs",
+   "w": 7,
+   "l": 1,
+   "t": 0,
+   "pf": 965.4,
+   "odds": 100
+  },
+  {
+   "id": 2,
+   "name": "Rizzy Ryan",
+   "w": 6,
+   "l": 2,
+   "t": 0,
+   "pf": 1068.4,
+   "odds": 99.9
+  },
+  {
+   "id": 4,
+   "name": "Siphilis Seals",
+   "w": 5,
+   "l": 3,
+   "t": 0,
+   "pf": 1153,
+   "odds": 99.9
+  },
+  {
+   "id": 5,
+   "name": "Diddy plower",
+   "w": 5,
+   "l": 3,
+   "t": 0,
+   "pf": 1011.7,
+   "odds": 99.1
+  },
+  {
+   "id": 10,
+   "name": "Aotearoa Team ",
+   "w": 5,
+   "l": 3,
+   "t": 0,
+   "pf": 859.9,
+   "odds": 94.4
+  },
+  {
+   "id": 9,
+   "name": "Dalton's Daring Team",
+   "w": 4,
+   "l": 4,
+   "t": 0,
+   "pf": 889.7,
+   "odds": 92.2
+  },
+  {
+   "id": 7,
+   "name": "Aiden's Astounding Team",
+   "w": 3,
+   "l": 5,
+   "t": 0,
+   "pf": 764.9,
+   "odds": 7.6
+  },
+  {
+   "id": 1,
+   "name": "014",
+   "w": 2,
+   "l": 6,
+   "t": 0,
+   "pf": 856,
+   "odds": 5.5
+  },
+  {
+   "id": 3,
+   "name": "Red Tide",
+   "w": 2,
+   "l": 6,
+   "t": 0,
+   "pf": 743.4,
+   "odds": 0.3
+  },
+  {
+   "id": 8,
+   "name": "Brittney's Best Team",
+   "w": 1,
+   "l": 7,
+   "t": 0,
+   "pf": 695.5,
+   "odds": 1.1
+  }
+ ],
+ "next": {
+  "week": 9,
+  "a": "Siphilis Seals",
+  "b": "Diddy plower",
+  "pa": 160.6,
+  "pb": 134,
+  "wa": 0.748
+ }
+}
