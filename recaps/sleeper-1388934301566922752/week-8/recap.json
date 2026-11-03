@@ -1,0 +1,262 @@
+{
+ "platform": "sleeper",
+ "league": "Elite’s FFL",
+ "week": 8,
+ "myTeamId": 8,
+ "games": [
+  {
+   "win": {
+    "id": 4,
+    "name": "Maye Dicker Down",
+    "pts": 182.5,
+    "left": 15.7
+   },
+   "lose": {
+    "id": 6,
+    "name": "Jeremiyah Loves trash",
+    "pts": 121.3,
+    "left": 6
+   },
+   "margin": 61.2
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "BAD BEAT",
+    "pts": 170.1,
+    "left": 2.4
+   },
+   "lose": {
+    "id": 8,
+    "name": "Ryan’s Daddy",
+    "pts": 105.1,
+    "left": 26.4
+   },
+   "margin": 65
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "CDs Dak Shots",
+    "pts": 144.7,
+    "left": 0
+   },
+   "lose": {
+    "id": 5,
+    "name": "love, gibbs ",
+    "pts": 130.4,
+    "left": 0
+   },
+   "margin": 14.3
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Booty Bandits",
+    "pts": 140.9,
+    "left": 19.5
+   },
+   "lose": {
+    "id": 7,
+    "name": "Cornhole Taint",
+    "pts": 112.6,
+    "left": 14
+   },
+   "margin": 28.3
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "Taken these DakShotz",
+    "pts": 135.2,
+    "left": 8.2
+   },
+   "lose": {
+    "id": 9,
+    "name": "The Symbol of Hope",
+    "pts": 111.7,
+    "left": 65.3
+   },
+   "margin": 23.5
+  }
+ ],
+ "high": {
+  "id": 4,
+  "name": "Maye Dicker Down",
+  "pts": 182.5,
+  "left": 15.7,
+  "star": {
+   "id": "7564",
+   "n": "Ja'Marr Chase",
+   "pos": "WR",
+   "nfl": "CIN",
+   "act": 31.1
+  }
+ },
+ "low": {
+  "id": 8,
+  "name": "Ryan’s Daddy",
+  "pts": 105.1,
+  "left": 26.4
+ },
+ "close": {
+  "win": {
+   "id": 1,
+   "name": "CDs Dak Shots",
+   "pts": 144.7,
+   "left": 0
+  },
+  "lose": {
+   "id": 5,
+   "name": "love, gibbs ",
+   "pts": 130.4,
+   "left": 0
+  },
+  "margin": 14.3
+ },
+ "blow": {
+  "win": {
+   "id": 2,
+   "name": "BAD BEAT",
+   "pts": 170.1,
+   "left": 2.4
+  },
+  "lose": {
+   "id": 8,
+   "name": "Ryan’s Daddy",
+   "pts": 105.1,
+   "left": 26.4
+  },
+  "margin": 65
+ },
+ "mvp": {
+  "player": {
+   "id": "6770",
+   "n": "Joe Burrow",
+   "pos": "QB",
+   "nfl": "CIN",
+   "act": 47.5
+  },
+  "team": {
+   "id": 2,
+   "name": "BAD BEAT",
+   "pts": 170.1,
+   "left": 2.4
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 9,
+   "name": "The Symbol of Hope",
+   "pts": 111.7,
+   "left": 65.3
+  },
+  "bench": {
+   "id": "1166",
+   "n": "Kirk Cousins",
+   "pos": "QB",
+   "nfl": "LV",
+   "act": 28.2
+  }
+ },
+ "standings": [
+  {
+   "id": 1,
+   "name": "CDs Dak Shots",
+   "w": 6,
+   "l": 2,
+   "t": 0,
+   "pf": 1135.9,
+   "odds": 98.5
+  },
+  {
+   "id": 4,
+   "name": "Maye Dicker Down",
+   "w": 5,
+   "l": 3,
+   "t": 0,
+   "pf": 1186.5,
+   "odds": 97.1
+  },
+  {
+   "id": 5,
+   "name": "love, gibbs ",
+   "w": 5,
+   "l": 3,
+   "t": 0,
+   "pf": 1165.9,
+   "odds": 98.6
+  },
+  {
+   "id": 10,
+   "name": "Booty Bandits",
+   "w": 4,
+   "l": 4,
+   "t": 0,
+   "pf": 1121,
+   "odds": 86
+  },
+  {
+   "id": 6,
+   "name": "Jeremiyah Loves trash",
+   "w": 4,
+   "l": 4,
+   "t": 0,
+   "pf": 1107.6,
+   "odds": 46.7
+  },
+  {
+   "id": 9,
+   "name": "The Symbol of Hope",
+   "w": 4,
+   "l": 4,
+   "t": 0,
+   "pf": 1016.3,
+   "odds": 64.7
+  },
+  {
+   "id": 2,
+   "name": "BAD BEAT",
+   "w": 3,
+   "l": 5,
+   "t": 0,
+   "pf": 1124.3,
+   "odds": 39.4
+  },
+  {
+   "id": 8,
+   "name": "Ryan’s Daddy",
+   "w": 3,
+   "l": 5,
+   "t": 0,
+   "pf": 1021.7,
+   "odds": 30.7
+  },
+  {
+   "id": 3,
+   "name": "Taken these DakShotz",
+   "w": 3,
+   "l": 5,
+   "t": 0,
+   "pf": 1001,
+   "odds": 11.6
+  },
+  {
+   "id": 7,
+   "name": "Cornhole Taint",
+   "w": 3,
+   "l": 5,
+   "t": 0,
+   "pf": 963.3,
+   "odds": 26.7
+  }
+ ],
+ "next": {
+  "week": 9,
+  "a": "Maye Dicker Down",
+  "b": "Booty Bandits",
+  "pa": 151.7,
+  "pb": 149.9,
+  "wa": 0.518
+ }
+}
