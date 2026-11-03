@@ -84,6 +84,8 @@ jobs:
         run: |
           npm ci --ignore-scripts || npm install --ignore-scripts
           cd tiktok && (npm ci || npm install) && npx remotion browser ensure
+      - name: Install ffmpeg (poster frames)
+        run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg) || true
       - name: Render and publish this chunk
         run: node render.mjs
         env:

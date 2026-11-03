@@ -129,8 +129,7 @@ async function renderLeague(cfg, mods) {
     const t0 = Date.now();
     execFileSync("npx", ["remotion", "render", "LeagueRecap", out, `--props=${JSON.stringify({ source: src, voice: existsSync(join(tk, "public", "recapvo", "durations.json")) })}`,
       "--concurrency=" + (process.env.REMOTION_CONCURRENCY || "4"), "--log=error", ...browser], { stdio: "inherit", cwd: tk, env: process.env });
-    const poster = out.replace(/\.mp4$/, ".jpg");
-    execFileSync("ffmpeg", ["-v", "error", "-y", "-ss", "1.5", "-i", out, "-frames:v", "1", "-vf", "scale=540:960", poster]);
+    const poster = makePoster(out, 1.5);
     log(`${tag}: rendered ${(statSync(out).size / 1e6).toFixed(1)} MB in ${((Date.now() - t0) / 1000).toFixed(0)} s (Remotion).`);
     return { tag, week, out, poster, standings, league: L, counted };
   }
@@ -153,11 +152,18 @@ async function renderLeague(cfg, mods) {
   // Render.
   const out = join(HERE, "out", `${tag}-week-${week}.mp4`); mkdirSync(dirname(out), { recursive: true });
   execFileSync("npx", ["hyperframes", "render", dir, "-o", out, "--quality", "looks", "--video-bitrate", "2500k", "--workers", "4"], { stdio: "inherit", cwd: HERE, env: { ...process.env, HYPERFRAMES_SKIP_SKILLS: "1" } });
-  const poster = out.replace(/\.mp4$/, ".jpg");
-  execFileSync("ffmpeg", ["-v", "error", "-y", "-ss", "2", "-i", out, "-frames:v", "1", "-vf", "scale=540:960", poster]);
+  const poster = makePoster(out, 2);
   log(`${tag}: rendered ${(statSync(out).size / 1e6).toFixed(1)} MB, ${total.toFixed(1)} s.`);
 
   return { tag, week, out, poster, standings, league: L, counted };
+}
+
+// Poster frame: system ffmpeg, else the ffmpeg Remotion ships with; a missing poster never fails a league.
+function makePoster(out, at) {
+  const poster = out.replace(/\.mp4$/, ".jpg");
+  const args = ["-v", "error", "-y", "-ss", String(at), "-i", out, "-frames:v", "1", "-vf", "scale=540:960", poster];
+  try { execFileSync("ffmpeg", args); return poster; } catch { /* try Remotion's */ }
+  try { execFileSync("npx", ["remotion", "ffmpeg", ...args], { cwd: join(HERE, "tiktok") }); return poster; } catch (e) { log(`poster skipped: ${e.message.split("\n")[0]}`); return null; }
 }
 
 // Publish: commit the files to the `media` branch and point War Room at the jsDelivr URLs.
@@ -203,11 +209,15 @@ for (const cfg of cfgs) {
     const dataFiles = d => readdirSync(d, { recursive: true }).filter(f => statSync(join(d, f)).isFile()).map(f => ({ path: join(d, f), name: `${r.tag}/week-${r.week}/${f}` }));
     if (r.dataOnly) { const urlOf = publishFiles(dataFiles(r.dataDir)); log(`${r.tag}: published week ${r.week} data → ${urlOf(`${r.tag}/week-${r.week}/recap.json`)}`); continue; }
     const vName = `${r.tag}/week-${r.week}.mp4`, pName = `${r.tag}/week-${r.week}.jpg`;
-    const urlOf = publishFiles([{ path: r.out, name: vName }, { path: r.poster, name: pName }, ...dataFiles(join(HERE, "out", "data", r.tag, "week-" + r.week))]);
+    const urlOf = publishFiles([{ path: r.out, name: vName }, ...(r.poster ? [{ path: r.poster, name: pName }] : []), ...dataFiles(join(HERE, "out", "data", r.tag, "week-" + r.week))]);
     await json(`${APP}/api/hdrecap`, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-key": process.env.ADMIN_KEY || "" },
-      body: JSON.stringify({ platform: cfg.platform, leagueId: r.league.leagueId, season: r.league.season, week: r.week, video: urlOf(vName), poster: urlOf(pName),
+      body: JSON.stringify({ platform: cfg.platform, leagueId: r.league.leagueId, season: r.league.season, week: r.week, video: urlOf(vName), poster: r.poster ? urlOf(pName) : "",
         standings: r.standings, countedHere: r.counted, createdAt: new Date().toISOString() }) });
     log(`${r.tag}: published week ${r.week} → ${urlOf(vName)}`);
-  } catch (e) { failures++; console.error(`[recap] ${cfg.platform}-${cfg.leagueId} failed:`, e.message); }
+  } catch (e) {
+    // A private ESPN league nobody has unlocked can't be read: skip it quietly instead of failing the run.
+    if (/\b401\b|private/i.test(e.message || "")) { log(`${cfg.platform}-${cfg.leagueId}: skipped (private league, not unlocked).`); continue; }
+    failures++; console.error(`[recap] ${cfg.platform}-${cfg.leagueId} failed:`, e.message);
+  }
 }
 process.exit(failures ? 1 : 0);
