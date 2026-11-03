@@ -182,7 +182,7 @@ function publishFiles(files) {
   // Many leagues publish in parallel after Monday night, so rebase onto whatever landed first and try again.
   for (let i = 0; ; i++) {
     try { g("push", "origin", "HEAD:media"); break; }
-    catch (e) { if (i >= 8) throw e; execFileSync("sleep", [String(3 + Math.floor(Math.random() * 10))]); g("fetch", "origin", "media"); g("rebase", "origin/media"); }
+    catch (e) { if (i >= 8) throw e; execFileSync("sleep", [String(3 + Math.floor(Math.random() * 10))]); g("fetch", "origin", "media"); try { g("rebase", "origin/media"); } catch { try { g("rebase", "--abort"); } catch { /* none */ } g("pull", "--no-rebase", "-X", "theirs", "origin", "media"); } }
   }
   const commit = execFileSync("git", ["rev-parse", "HEAD"], { cwd: media }).toString().trim();
   return name => `https://cdn.jsdelivr.net/gh/${REPO}@${commit}/recaps/${name}`;
@@ -191,7 +191,9 @@ function publishFiles(files) {
 async function leagueList() {
   if (process.env.LEAGUES_JSON) return JSON.parse(process.env.LEAGUES_JSON);
   if (process.env.REGISTRY === "1") {
-    const all = await json(`${APP}/api/recaps`, { headers: { "x-admin-key": process.env.ADMIN_KEY || "" } });
+    // The registry comes back in no fixed order, so sort it: every parallel job must split the same list the same way.
+    const all = (await json(`${APP}/api/recaps`, { headers: { "x-admin-key": process.env.ADMIN_KEY || "" } }))
+      .sort((a, b) => `${a.platform}-${a.leagueId}`.localeCompare(`${b.platform}-${b.leagueId}`));
     const i = Number(process.env.CHUNK || 0), n = Math.max(1, Number(process.env.OF || 1));
     const mine = all.filter((_, k) => k % n === i);
     log(`registry: ${all.length} leagues, this job takes ${mine.length} (chunk ${i + 1}/${n}).`);
