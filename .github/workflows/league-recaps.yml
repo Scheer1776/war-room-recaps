@@ -97,7 +97,7 @@ jobs:
           ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ inputs.force && '1' || '' }}
-          WEEK: ${{ inputs.week }}
+          WEEK: ${{ inputs.week || needs.gate.outputs.week }} # the NFL week the gate saw finish; ESPN leagues roll to next week on Tuesday
           REMOTION_CONCURRENCY: "4"
 
   finish:

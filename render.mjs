@@ -89,9 +89,10 @@ async function renderLeague(cfg, mods) {
     live = await loadLive(cfg, L, L.week);
     const games = Object.values(live.games || {});
     const done = games.length && games.every(g => g.state === "post");
-    if (done) week = L.week;
-    else if (games.some(g => g.state === "in") || !FORCE) { log(`${tag}: week ${L.week} still has games left. Skipping for now.`); return null; }
-    else week = L.week - 1;
+    // Not done: either the league already rolled to next week (ESPN does on Tuesday) or games are still going;
+    // either way the last finished week is the one before.
+    week = done ? L.week : L.week - 1;
+    if (week < 1) { log(`${tag}: no finished week yet.`); return null; }
   }
   if (!live || live.week !== week) live = await loadLive(cfg, L, week);
   if (prev && prev.week >= week && !FORCE && !DATA_ONLY) { log(`${tag}: week ${week} HD recap already published.`); return null; }
