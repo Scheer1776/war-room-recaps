@@ -16,7 +16,7 @@ const scene = z.object({
   player: player.nullable().default(null), players: z.array(player).default([]),
   tiles: z.array(z.object({ v: z.number(), dec: z.number().default(0), label: z.string() })).default([]),
   big: z.string().default(""),
-  sub: z.string().default(""), headline: z.string().default(""),
+  sub: z.string().default(""), headline: z.string().default(""), projLabel: z.string().optional(), ptsLabel: z.string().optional(),
   rows: z.array(z.object({ player, count: z.number(), note: z.string().default("") })).default([]),   // adds
   game: z.object({ away: z.string(), home: z.string(), when: z.string(), line: z.string() }).nullable().default(null), // mnf
   dur: z.number().optional(), // fixed scene length (s): set when scenes are timed to one continuous voice take
@@ -75,8 +75,8 @@ const Boom: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =>
           <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 52, lineHeight: 1, color: C.ink, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{x.n.toUpperCase()}</div>
           <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.dim, marginTop: 4, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{x.pos} · {x.team} · {x.line}</div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 18, marginTop: 6 }}>
-            <Count at={14} to={x.pts} size={118} color={c} /><span style={{ fontFamily: BODY, fontWeight: 600, fontSize: 30, color: C.dim }}>PPR</span>
-            <span style={{ marginLeft: "auto", fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.dim, padding: "6px 14px", borderRadius: 14, background: "rgba(255,255,255,0.08)" }}>proj {f1(x.proj)}</span>
+            <Count at={14} to={x.pts} size={118} color={c} /><span style={{ fontFamily: BODY, fontWeight: 600, fontSize: 30, color: C.dim }}>{s.ptsLabel ?? "PPR"}</span>
+            <span style={{ marginLeft: "auto", fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.dim, padding: "6px 14px", borderRadius: 14, background: "rgba(255,255,255,0.08)" }}>{s.projLabel ?? "proj"} {f1(x.proj)}</span>
           </div>
         </div>
       </Glass>

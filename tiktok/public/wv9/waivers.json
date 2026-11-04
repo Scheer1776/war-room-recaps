@@ -1,0 +1,151 @@
+{
+ "season": "2026",
+ "week": 9,
+ "builtAt": "2026-11-04T05:44:49.283Z",
+ "players": [
+  {
+   "id": "11625",
+   "n": "Adonai Mitchell",
+   "num": 15,
+   "pos": "WR",
+   "nfl": "NYJ",
+   "adds": 2496344,
+   "proj": 5.8,
+   "opp": "KC",
+   "last": 23.7,
+   "inj": null
+  },
+  {
+   "id": "8132",
+   "n": "Tyler Allgeier",
+   "num": 22,
+   "pos": "RB",
+   "nfl": "ARI",
+   "adds": 1911110,
+   "proj": 10,
+   "opp": "SEA",
+   "last": 33.6,
+   "inj": null
+  },
+  {
+   "id": "6011",
+   "n": "Gardner Minshew II",
+   "num": 15,
+   "pos": "QB",
+   "nfl": "ARI",
+   "adds": 1345152,
+   "proj": 11.1,
+   "opp": "SEA",
+   "last": 19.5,
+   "inj": null
+  },
+  {
+   "id": "6130",
+   "n": "Devin Singletary",
+   "num": 26,
+   "pos": "RB",
+   "nfl": "NYG",
+   "adds": 1163682,
+   "proj": 8.1,
+   "opp": "PHI",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "13337",
+   "n": "Emmett Johnson",
+   "num": 10,
+   "pos": "RB",
+   "nfl": "KC",
+   "adds": 1099314,
+   "proj": 5.6,
+   "opp": "NYJ",
+   "last": 22.8,
+   "inj": null
+  },
+  {
+   "id": "4993",
+   "n": "Mike Gesicki",
+   "num": 88,
+   "pos": "TE",
+   "nfl": "CIN",
+   "adds": 448204,
+   "proj": 8.5,
+   "opp": "ATL",
+   "last": 15.6,
+   "inj": null
+  },
+  {
+   "id": "8161",
+   "n": "Malik Willis",
+   "num": 2,
+   "pos": "QB",
+   "nfl": "MIA",
+   "adds": 419860,
+   "proj": 17.8,
+   "opp": "DET",
+   "last": 15.6,
+   "inj": null
+  },
+  {
+   "id": "11783",
+   "n": "Ryan Flournoy",
+   "num": 19,
+   "pos": "WR",
+   "nfl": "DAL",
+   "adds": 416120,
+   "proj": 7.1,
+   "opp": "IND",
+   "last": 11.6,
+   "inj": null
+  },
+  {
+   "id": "11610",
+   "n": "Malik Washington",
+   "num": 6,
+   "pos": "WR",
+   "nfl": "MIA",
+   "adds": 367112,
+   "proj": 8.8,
+   "opp": "DET",
+   "last": 12.5,
+   "inj": null
+  },
+  {
+   "id": "8135",
+   "n": "Treylon Burks",
+   "num": 13,
+   "pos": "WR",
+   "nfl": "WAS",
+   "adds": 328160,
+   "proj": 4.8,
+   "opp": "LAR",
+   "last": 9.6,
+   "inj": null
+  },
+  {
+   "id": "13286",
+   "n": "Jadarian Price",
+   "num": 8,
+   "pos": "RB",
+   "nfl": "SEA",
+   "adds": 298755,
+   "proj": 8.8,
+   "opp": "ARI",
+   "last": 4.7,
+   "inj": null
+  },
+  {
+   "id": "12469",
+   "n": "Dylan Sampson",
+   "num": 22,
+   "pos": "RB",
+   "nfl": "CLE",
+   "adds": 276025,
+   "proj": 7.5,
+   "opp": "NO",
+   "last": 9.9,
+   "inj": null
+  }
+ ]
+}

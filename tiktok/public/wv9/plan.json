@@ -1,0 +1,156 @@
+{
+ "source": "wv9",
+ "week": 9,
+ "voice": true,
+ "voDur": null,
+ "voFull": "full.mp3",
+ "scenes": [
+  {
+   "id": "hook",
+   "kind": "adds",
+   "title": "MOST *ADDED* THIS WEEK",
+   "sub": "Most added on Sleeper, last 48 hours",
+   "stamp": "WAIVERS",
+   "rows": [
+    {
+     "player": {
+      "id": "11625",
+      "n": "Adonai Mitchell",
+      "pos": "WR",
+      "team": "NYJ",
+      "pts": 23.7,
+      "proj": 5.8,
+      "line": "WR · NYJ · vs KC"
+     },
+     "count": 2496344,
+     "note": "23.7 pts last week · proj 5.8"
+    },
+    {
+     "player": {
+      "id": "8132",
+      "n": "Tyler Allgeier",
+      "pos": "RB",
+      "team": "ARI",
+      "pts": 33.6,
+      "proj": 10,
+      "line": "RB · ARI · vs SEA"
+     },
+     "count": 1911110,
+     "note": "33.6 pts last week · proj 10"
+    },
+    {
+     "player": {
+      "id": "6011",
+      "n": "Gardner Minshew II",
+      "pos": "QB",
+      "team": "ARI",
+      "pts": 19.5,
+      "proj": 11.1,
+      "line": "QB · ARI · vs SEA"
+     },
+     "count": 1345152,
+     "note": "QB · 19.5 pts last week · vs SEA"
+    }
+   ],
+   "dur": 4.033,
+   "base": 4.033,
+   "clipFrom": 0
+  },
+  {
+   "id": "mitchell",
+   "kind": "boom",
+   "clip": "mitchell.mp4",
+   "title": "MOST *ADDED* PLAYER",
+   "stamp": "2.5M ADDS",
+   "color": "gold",
+   "player": {
+    "id": "11625",
+    "n": "Adonai Mitchell",
+    "pos": "WR",
+    "team": "NYJ",
+    "pts": 23.7,
+    "proj": 5.8,
+    "line": "Week 8 score · next: vs KC"
+   },
+   "projLabel": "wk 9 proj",
+   "ptsLabel": "HALF-PPR",
+   "dur": 4.133,
+   "base": 4.133,
+   "clipFrom": 0.33
+  },
+  {
+   "id": "allgeier",
+   "kind": "boom",
+   "clip": "allgeier.mp4",
+   "title": "1.9M *ADDS*",
+   "stamp": "RB1 UPSIDE",
+   "color": "turf",
+   "player": {
+    "id": "8132",
+    "n": "Tyler Allgeier",
+    "pos": "RB",
+    "team": "ARI",
+    "pts": 33.6,
+    "proj": 10,
+    "line": "Week 8 score · next: vs SEA"
+   },
+   "projLabel": "wk 9 proj",
+   "ptsLabel": "HALF-PPR",
+   "dur": 3.267,
+   "base": 3.267,
+   "clipFrom": 0.9
+  },
+  {
+   "id": "johnson",
+   "kind": "boom",
+   "title": "13 SNAPS, *22.8* PTS",
+   "stamp": "STASH",
+   "color": "turf",
+   "player": {
+    "id": "13337",
+    "n": "Emmett Johnson",
+    "pos": "RB",
+    "team": "KC",
+    "pts": 22.8,
+    "proj": 5.6,
+    "line": "Week 8 score · next: vs NYJ"
+   },
+   "projLabel": "wk 9 proj",
+   "ptsLabel": "HALF-PPR",
+   "dur": 3.567,
+   "base": 3.567,
+   "clipFrom": 0
+  },
+  {
+   "id": "gesicki",
+   "kind": "boom",
+   "title": "TE *STREAMER*",
+   "stamp": "vs ATL",
+   "color": "gold",
+   "player": {
+    "id": "4993",
+    "n": "Mike Gesicki",
+    "pos": "TE",
+    "team": "CIN",
+    "pts": 15.6,
+    "proj": 8.5,
+    "line": "Week 8 score · next: vs ATL"
+   },
+   "projLabel": "wk 9 proj",
+   "ptsLabel": "HALF-PPR",
+   "clip": "gesicki.mp4",
+   "dur": 3.367,
+   "base": 3.367,
+   "clipFrom": 2.65
+  },
+  {
+   "id": "cta",
+   "kind": "cta",
+   "title": "WHO'S YOUR|FIRST CLAIM?",
+   "dur": 5.5,
+   "base": 5.5,
+   "clipFrom": 0
+  }
+ ],
+ "scores": []
+}

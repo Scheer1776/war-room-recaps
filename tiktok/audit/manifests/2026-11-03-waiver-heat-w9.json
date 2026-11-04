@@ -1,0 +1,44 @@
+{
+ "video": "out/wv9/waiver-heat-w9.mp4",
+ "audio": "voice",
+ "script": "Waiver wire is open, and these are the most added players in fantasy. Adonai Mitchell leads the way, after twenty-three point seven points. Tyler Allgeier is next, after thirty-three point six. Emmett Johnson scored twenty-two point eight on thirteen snaps. Mike Gesicki put up fifteen point six, and he gets Atlanta. Who's your first claim? Check your waiver targets, free on War Room.",
+ "endCard": 3.5,
+ "clips": [
+  {
+   "src": "public/wv9/clips/mitchell.mp4",
+   "at": 4.033,
+   "dur": 4.133,
+   "clipStart": 0.33,
+   "keyAt": 2.6,
+   "label": "mitchell",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/wv9/clips/allgeier.mp4",
+   "at": 8.166,
+   "dur": 3.267,
+   "clipStart": 0.9,
+   "keyAt": 2.7,
+   "label": "allgeier",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/wv9/clips/gesicki.mp4",
+   "at": 15.0,
+   "dur": 3.367,
+   "clipStart": 2.65,
+   "keyAt": 4.5,
+   "label": "gesicki",
+   "band": [
+    0.2,
+    0.47
+   ]
+  }
+ ]
+}
