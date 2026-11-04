@@ -7,3 +7,5 @@ out/
 # de-ring intermediates (voice/dering.py, scripts/sunday-plan.py) — regenerated from the kept take
 tiktok/public/*/vo/take-clean.wav
 tiktok/public/*/vo/*-clean.wav
+# per-render props files for PC renders (render-<name>.bat --props=...)
+tiktok/props-*.json
