@@ -5,14 +5,14 @@
 // Env: ANTHROPIC_API_KEY, ROAST_MODEL (default claude-haiku-5-5), ROAST=0 (turn off)
 
 const MODEL = process.env.ROAST_MODEL || "claude-haiku-5-5";
-const MAX = 70; // characters per line, so it fits two lines on screen
+const MAX = 95; // characters per line accepted (the prompt asks for 60), so it fits two lines on screen
 // Same emoji strip as the video's cleanName(): the video fonts can't draw emoji.
 const plain = v => typeof v === "string" ? v.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu, "").replace(/\s+/g, " ").trim() : v;
 
 // Every number the lines are allowed to mention: the week's real numbers, in the forms the video shows them.
 function allowedNumbers(d) {
   const n = new Set();
-  const add = v => { if (typeof v !== "number" || !isFinite(v)) return; const r = Math.round(v * 10) / 10; n.add(String(r)); n.add(r.toFixed(1)); n.add(String(Math.round(v))); };
+  const add = v => { if (typeof v !== "number" || !isFinite(v)) return; const r = Math.round(v * 10) / 10; n.add(String(r)); n.add(r.toFixed(1)); n.add(String(Math.round(v))); n.add(String(Math.floor(v))); };
   for (const g of d.games || []) { add(g.win.pts); add(g.lose.pts); add(g.margin); }
   for (const x of [d.high, d.low, d.blunder && d.blunder.team]) if (x) { add(x.pts); add(x.left); }
   for (const p of [d.high && d.high.star, d.mvp && d.mvp.player, d.blunder && d.blunder.bench]) if (p) add(p.act);
@@ -59,7 +59,7 @@ Write exactly one line for each of these scenes: ${want.join(", ")}.
 - blunder: about the team that left points on the bench
 
 Rules:
-- Max ${MAX} characters per line. Punchy, funny, group-chat trash talk.
+- Max 60 characters per line. Punchy, funny, group-chat trash talk.
 - PG: no swearing, nothing about looks, family, race, religion or anything personal. Roast the lineup, not the person.
 - Use the real team or player names from the facts.
 - Only use numbers that appear in the facts, exactly as written. Never invent a stat.
@@ -72,7 +72,7 @@ Answer with JSON only, like {"highlow": "...", "mvp": "...", "blunder": "..."} w
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST", signal: ctrl.signal,
       headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-      body: JSON.stringify({ model: MODEL, max_tokens: 300, messages: [{ role: "user", content: prompt }] }),
+      body: JSON.stringify({ model: MODEL, max_tokens: 400, thinking: { type: "disabled" }, output_config: { effort: "low" }, messages: [{ role: "user", content: prompt }] }),
     }).finally(() => clearTimeout(timer));
     const j = await r.json().catch(() => null);
     if (!r.ok) { log(`roast lines skipped: API ${r.status} ${(j && j.error && j.error.message) || ""}`); return null; }
