@@ -60,7 +60,7 @@ function facts(L, M) {
 }
 
 function allowedNumbers(f) {
-  const n = new Set(); const add = v => { if (typeof v === "number" && isFinite(v)) { n.add(String(v)); n.add(String(Math.round(v))); } };
+  const n = new Set(); const add = v => { if (typeof v === "number" && isFinite(v)) { n.add(String(v)); n.add(String(Math.round(v))); n.add(String(Math.floor(v))); } };
   const walk = o => { if (typeof o === "number") add(o); else if (typeof o === "string") (o.match(/\d+(?:\.\d+)?/g) || []).forEach(x => n.add(x)); else if (o && typeof o === "object") Object.values(o).forEach(walk); };
   walk(f); ["1", "2", "3", "4", "5"].forEach(x => n.add(x));
   return n;
