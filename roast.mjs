@@ -72,7 +72,7 @@ Answer with JSON only, like {"highlow": "...", "mvp": "...", "blunder": "..."} w
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST", signal: ctrl.signal,
       headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-      body: JSON.stringify({ model: MODEL, max_tokens: 300, messages: [{ role: "user", content: prompt }] }),
+      body: JSON.stringify({ model: MODEL, max_tokens: 400, thinking: { type: "disabled" }, output_config: { effort: "low" }, messages: [{ role: "user", content: prompt }] }),
     }).finally(() => clearTimeout(timer));
     const j = await r.json().catch(() => null);
     if (!r.ok) { log(`roast lines skipped: API ${r.status} ${(j && j.error && j.error.message) || ""}`); return null; }

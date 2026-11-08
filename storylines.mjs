@@ -77,11 +77,11 @@ Write 3 short paragraphs, under 130 words in total:
 2. The must-win: a team whose season hangs on this week, or a bubble race.
 3. One more angle worth trash talk: a lopsided game, a team on the slide, or the race for the top seed.
 
-Rules: use the real team names. Only use numbers that appear in the facts, exactly as written; never invent stats or player news.
+Rules: playoffOdds, aWinPct and bWinPct are percentages, so write them with % (for example "a 39% playoff chance"). Use the real team names. Only use numbers that appear in the facts, exactly as written; never invent stats or player news.
 PG trash talk aimed at lineups and records, never at people. No emoji, hashtags, markdown, bullet points or headings. Separate paragraphs with a blank line.`;
   const r = await fetch((process.env.ANTHROPIC_BASE_URL || "https://api.anthropic.com") + "/v1/messages", { method: "POST",
     headers: { "x-api-key": KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
-    body: JSON.stringify({ model: MODEL, max_tokens: 1500, messages: [{ role: "user", content: prompt }] }) });
+    body: JSON.stringify({ model: MODEL, max_tokens: 700, thinking: { type: "disabled" }, output_config: { effort: "low" }, messages: [{ role: "user", content: prompt }] }) });
   const j = await r.json().catch(() => null);
   if (!r.ok || !j) throw new Error(`API ${r.status} ${(j && j.error && j.error.message) || ""}`);
   tokIn += j.usage?.input_tokens || 0; tokOut += j.usage?.output_tokens || 0;
