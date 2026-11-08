@@ -8,12 +8,14 @@
 //      ENGINE=remotion (render tiktok/src/LeagueRecap.tsx, the 2026-10-30 house style, instead of the HyperFrames composition)
 //      LEAGUES_JSON='[...]' (league list inline, e.g. a chunk of the /api/recaps registry; entries may carry espnS2/swid)
 //      REGISTRY=1 CHUNK=i OF=n (pull the league list from /api/recaps with ADMIN_KEY and take chunk i of n)
+//      ANTHROPIC_API_KEY (optional: Claude-written roast lines on screen, see roast.mjs; ROAST=0 turns them off)
 import { mkdirSync, writeFileSync, copyFileSync, readFileSync, existsSync, statSync, readdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { buildComposition } from "./composition.mjs";
 import { writeBeat } from "./beat.mjs";
+import { roastLines } from "./roast.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const APP = (process.env.WARROOM_URL || "https://war-room-self-one.vercel.app").replace(/\/$/, "");
@@ -109,6 +111,9 @@ async function renderLeague(cfg, mods) {
   const standingsAll = L.teams.map(t => ({ id: t.id, name: t.name, w: t.w, l: t.l, t: t.t, pf: Math.round(t.pf * 10) / 10 }))
     .sort((a, b) => (b.w + b.t / 2) - (a.w + a.t / 2) || b.pf - a.pf);
   const data = slimRecap(R, standingsAll, odds);
+  // Claude-written roast lines (on screen only). Skipped quietly without ANTHROPIC_API_KEY; never fails a league.
+  const roast = await roastLines(data, m => log(`${tag}: ${m}`));
+  if (roast) { data.roast = roast; log(`${tag}: roast lines: ${Object.keys(roast).join(", ")}.`); }
   // Headshots + logos for the TikTok cut, saved next to the data.
   const ddir = join(HERE, "out", "data", tag, "week-" + week); mkdirSync(join(ddir, "img"), { recursive: true });
   for (const pl of [data.mvp && data.mvp.player, data.blunder && data.blunder.bench, data.high && data.high.star].filter(Boolean)) {

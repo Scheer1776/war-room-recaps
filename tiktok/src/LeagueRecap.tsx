@@ -32,7 +32,8 @@ export const recapScenes = (p: LeagueRecapProps) => {
   s.push({ id: "standings", sec: 6.0 });
   if (r.next) s.push({ id: "next", sec: 4.6 });
   s.push({ id: "outro", sec: 4.6 });
-  return s.map(x => { const d = p.voice && p.voDur ? p.voDur[x.id] : undefined; return { ...x, sec: d ? Math.max(x.sec, d + 0.5) : x.sec }; });
+  const roast = r.roast || {};
+  return s.map(x => { const d = p.voice && p.voDur ? p.voDur[x.id] : undefined; const base = d ? Math.max(x.sec, d + 0.5) : x.sec; return { ...x, sec: roast[x.id] ? base + 1.2 : base }; });
 };
 export const leagueRecapFrames = (p: LeagueRecapProps) => p.recap ? recapScenes(p).reduce((n, x) => n + Math.round(x.sec * FPS), 0) : 30;
 
@@ -50,6 +51,17 @@ const Header: React.FC<{ r: Recap; label: string; color: string }> = ({ r, label
     <div style={{ marginTop: 6 }}><Kinetic text={label} at={2} size={96} align="left" accent={color} /></div>
   </div>
 );
+// Roast line (roast.mjs): sits between the header and the first card, types in after the card lands.
+const Quip: React.FC<{ text?: string; at?: number }> = ({ text, at = 16 }) => {
+  const f = useCurrentFrame();
+  if (!text) return null;
+  const o = interpolate(f, [at, at + 10], [0, 1], clamp);
+  return (
+    <div style={{ position: "absolute", top: 352, left: L, right: R, height: 100, display: "flex", alignItems: "center", opacity: o, translate: `${(1 - o) * 40}px 0` }}>
+      <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 36, lineHeight: 1.18, color: C.ink, fontStyle: "italic", borderLeft: `6px solid ${C.gold}`, paddingLeft: 20, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>{text}</div>
+    </div>
+  );
+};
 const Face: React.FC<{ src: string; id: string; n: string; nfl: string; size: number }> = ({ src, id, n, nfl, size }) => {
   const col = teamColor(nfl);
   return (
@@ -125,6 +137,7 @@ const HighLow: React.FC<SP> = ({ r, name, source, dur }) => {
     <AbsoluteFill>
       <Field /><Particles n={40} color={C.gold} seed="hl" speed={1.4} size={7} />
       <Header r={r} label="HIGH & *LOW*" color={C.gold} />
+      <Quip text={r.roast && r.roast.highlow} />
       <Glass style={{ position: "absolute", top: 470, left: L, width: Wd, padding: "30px 36px", display: "flex", gap: 28, alignItems: "center", translate: `${(1 - a) * -800}px 0`, opacity: a }} tint="rgba(255,198,41,0.12)">
         {r.high.star && <Face src={source} id={r.high.star.id} n={r.high.star.n} nfl={r.high.star.nfl} size={190} />}
         <div style={{ minWidth: 0, flex: 1 }}>
@@ -158,6 +171,7 @@ const Mvp: React.FC<SP> = ({ r, name, source, dur }) => {
       <Field /><AbsoluteFill style={{ background: `radial-gradient(800px 800px at 50% 45%, ${col}44, transparent 70%)` }} />
       <Particles n={60} color={col} seed="mvp" speed={2} size={8} />
       <Header r={r} label="WEEK *MVP*" color={C.gold} />
+      <Quip text={r.roast && r.roast.mvp} />
       <div style={{ position: "absolute", top: 480, left: 0, width: W, display: "flex", flexDirection: "column", alignItems: "center", scale: String(0.7 + 0.3 * inn), opacity: inn }}>
         <Face src={source} id={m.player.id} n={m.player.n} nfl={m.player.nfl} size={460} />
         <div style={{ marginTop: 26, fontFamily: DISPLAY, fontWeight: 800, fontSize: 84, lineHeight: 1, color: C.ink, textAlign: "center" }}>{m.player.n.toUpperCase()}</div>
@@ -178,6 +192,7 @@ const Blunder: React.FC<SP> = ({ r, name, source, dur }) => {
       <Field /><AbsoluteFill style={{ background: `radial-gradient(800px 700px at 50% 60%, ${C.red}33, transparent 70%)` }} />
       <Particles n={40} color={C.red} seed="bl" speed={1.5} size={7} />
       <Header r={r} label="BENCH *BLUNDER*" color={C.red} />
+      <Quip text={r.roast && r.roast.blunder} />
       <Glass style={{ position: "absolute", top: 480, left: L, width: Wd, padding: "34px 36px", display: "flex", gap: 30, alignItems: "center", opacity: inn, translate: `0 ${(1 - inn) * 200}px` }} tint="rgba(255,94,82,0.12)">
         <Face src={source} id={bench.id} n={bench.n} nfl={bench.nfl} size={200} />
         <div style={{ minWidth: 0, flex: 1 }}>

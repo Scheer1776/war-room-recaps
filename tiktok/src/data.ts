@@ -20,6 +20,8 @@ export const recapSchema = z.object({
   blunder: z.object({ team, bench: player.nullable() }).nullable(),
   standings: z.array(z.object({ id: z.number(), name: z.string(), w: z.number(), l: z.number(), t: z.number().optional(), pf: z.number(), odds: z.number() })),
   next: z.object({ week: z.number(), a: z.string(), b: z.string(), pa: z.number(), pb: z.number(), wa: z.number() }).nullable(),
+  // Claude-written on-screen roast lines (roast.mjs), keyed by scene id. Absent when no API key is set.
+  roast: z.record(z.string(), z.string()).optional(),
 });
 export type Recap = z.infer<typeof recapSchema>;
 

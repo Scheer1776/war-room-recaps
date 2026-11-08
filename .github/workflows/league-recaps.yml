@@ -95,6 +95,7 @@ jobs:
           OF: ${{ needs.gate.outputs.jobs }}
           WARROOM_URL: https://war-room-self-one.vercel.app
           ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # optional: roast lines (roast.mjs); blank = no roast lines
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE: ${{ inputs.force && '1' || '' }}
           WEEK: ${{ inputs.week || needs.gate.outputs.week }} # the NFL week the gate saw finish; ESPN leagues roll to next week on Tuesday
