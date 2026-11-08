@@ -3,7 +3,8 @@ import { AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, spring, stati
 import { Audio } from "@remotion/media";
 import { z } from "zod";
 import { AppLink, BODY, C, DISPLAY, Field, Glass, SAFE, f1, initialsOf, teamColor } from "./theme";
-import { Flash, Kinetic, Particles, Slam, Stamp, W, clamp, useShake } from "./fx";
+import { Flash, Kinetic, Leak, Particles, Slam, Stamp, W, clamp, useShake } from "./fx";
+import { Captions, Grain, Vignette, Whip, gradeStyle } from "./polish";
 
 // "Sunday Recap": the night's fantasy story told over that day's real highlights (owner's call on footage, 2026-10-30).
 // Clip-first: every storyline scene is a full-bleed 1080x1920 clip (pre-cut by clips/cut.py) with a stat card over the
@@ -23,6 +24,8 @@ const scene = z.object({
 });
 export const sundaySchema = z.object({
   source: z.string(), week: z.number(), voice: z.boolean(), voDur: z.record(z.string(), z.number()).nullable(),
+  words: z.array(z.object({ t: z.string(), s: z.number(), e: z.number() })).nullable().optional(), // caption timings (sunday-plan.py)
+  captions: z.boolean().optional(),
   voFull: z.string().nullable().optional(), // one continuous voice take for the whole video (preferred: natural flow)
   scenes: z.array(scene),
   scores: z.array(z.object({ away: z.object({ t: z.string(), s: z.number() }), home: z.object({ t: z.string(), s: z.number() }), ot: z.boolean() })),
@@ -55,7 +58,8 @@ const Clip: React.FC<{ src: string; file: string; from: number; dim?: number }> 
   const z = interpolate(f, [0, 150], [1.04, 1.12], clamp);
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: "#000" }}>
-      <OffthreadVideo src={staticFile(`${src}/clips/${file}`)} startFrom={Math.round(from * FPS)} muted style={{ width: "100%", height: "100%", objectFit: "cover", scale: String(z) }} />
+      <OffthreadVideo src={staticFile(`${src}/clips/${file}`)} startFrom={Math.round(from * FPS)} muted style={{ width: "100%", height: "100%", objectFit: "cover", scale: String(z), ...gradeStyle }} />
+      <Vignette />
       <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(4,17,11,${0.72 + dim}) 0%, rgba(4,17,11,${0.1 + dim}) 24%, rgba(4,17,11,${0.05 + dim}) 52%, rgba(4,17,11,${0.85 + dim}) 74%, rgba(4,17,11,0.95) 100%)` }} />
     </AbsoluteFill>
   );
@@ -300,16 +304,19 @@ export const SundayRecap: React.FC<SundayProps> = (p) => {
   const seqs = p.scenes.map(s => { const d = Math.round(secs(p, s) * FPS); const x = { s, from, d }; from += d; return x; });
   return (
     <AbsoluteFill style={{ background: "#04110B" }}>
-      {seqs.map(({ s, from, d }) => (
+      {seqs.map(({ s, from, d }, i) => (
         <Sequence key={s.id} name={s.id} from={from} durationInFrames={d}>
-          <Punch>
+          <Whip dir={i % 2 ? -1 : 1}><Punch>
             {s.kind === "boom" ? <Boom p={p} s={s} d={d / FPS} /> : s.kind === "stats" ? <Stats p={p} s={s} d={d / FPS} /> : s.kind === "bust" ? <Bust p={p} s={s} d={d / FPS} />
               : s.kind === "scores" ? <Scores p={p} s={s} /> : s.kind === "chapter" ? <Chapter s={s} /> : s.kind === "news" ? <News p={p} s={s} d={d / FPS} />
               : s.kind === "adds" ? <Adds p={p} s={s} d={d / FPS} /> : s.kind === "mnf" ? <Mnf p={p} s={s} d={d / FPS} /> : <Cta s={s} />}
-          </Punch>
+          </Punch></Whip>
+          {i > 0 && s.clip ? <Leak at={0} dur={12} seed={i} hue={90} opacity={0.14} /> : null}
           {p.voice && !p.voFull && p.voDur && p.voDur[s.id] ? <Sequence from={4} layout="none"><Audio src={staticFile(`${p.source}/vo/${s.id}.mp3`)} /></Sequence> : null}
         </Sequence>
       ))}
+      <Grain />
+      {p.voFull && p.words && p.captions !== false ? <Captions words={p.words} /> : null}
       {p.voice && p.voFull ? <Audio src={staticFile(`${p.source}/vo/${p.voFull}`)} /> : null}
     </AbsoluteFill>
   );

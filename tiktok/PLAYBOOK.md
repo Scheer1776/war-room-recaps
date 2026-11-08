@@ -19,6 +19,20 @@ deliver a video whose last audit failed. Write one manifest per video in `audit/
 - **Audio:** `audio: "voice"` (every delivery is voiced since 2026-11-02); nothing may clip.
 - Attach the `.audit.png` contact sheet view to your own QA; mention the audit result in one line of the delivery message.
 
+## Polish layer (owner, 2026-11-08: "increase the quality of our videos and any animations")
+Every voiced video gets these (src/polish.tsx; SundayRecap has them built in, add them to any new composition):
+- **Captions:** TikTok-style word-by-word captions synced to the one voice take. `scripts/sunday-plan.py` writes
+  `plan.words` (whisper timing, SCRIPT spelling: whisper writes "algiers"/"gassicki"). Needs `public/<dir>/script.txt`
+  = the exact real-spelling script. Lines of 2-3 words at y=1372 (between the card/stamp and TikTok's bottom UI);
+  the spoken word pops gold. Turn off with `captions: false` only for a deliberate no-text style.
+- **Scene entries:** 7-frame whip (slide + motion blur, alternating direction) instead of hard cuts; a soft light
+  leak (opacity 0.14, 12 frames) when a scene opens on a game clip. Scene lengths never change (voice-locked).
+- **Clip look:** contrast 1.08 / saturation 1.18 grade + vignette on every game clip; light moving film grain over
+  the whole frame. Light leaks above ~0.2 opacity wash the footage orange/purple: keep them subtle.
+- **Smooth slow-mo:** `clips/cut.py ... --speed 0.6` now motion-interpolates new frames (no stutter). It's slow
+  (~90 s in the cloud for a 3 s source; faster on the PC). `--no-smooth` = old frame repeats.
+- **Sunday clip scrapes** now run at 5:15pm (afternoon games), 8:45pm and Monday 7am (Task Scheduler on the PC).
+
 ## Voices: pacing, flow and pronunciation — rewritten 2026-11-01 (owner: "choppy, weird pauses"; Allgeier said wrong)
 - **De-ring every VoiceStudio take (owner, 2026-11-02: "high pitched ringing the whole way through").** VoxCPM2 leaves
   steady vocoder tones (a 6000 Hz whine at -34 dB, plus 12000/15600/15800 Hz). `python3 -I voice/dering.py <take> <out>`

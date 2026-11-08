@@ -11,13 +11,15 @@ import argparse, json, subprocess
 ap = argparse.ArgumentParser()
 ap.add_argument("src"); ap.add_argument("start", type=float); ap.add_argument("end", type=float); ap.add_argument("out")
 ap.add_argument("--speed", type=float, default=1.0); ap.add_argument("--pan", type=float, default=0.5)
-ap.add_argument("--zoom", type=float, default=1.0); ap.add_argument("--y", type=int, default=260)
+ap.add_argument("--no-smooth", action="store_true"); ap.add_argument("--zoom", type=float, default=1.0); ap.add_argument("--y", type=int, default=260)
 a = ap.parse_args()
 
 info = json.loads(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
                                   "-of", "json", a.src], capture_output=True, text=True, check=True).stdout)["streams"][0]
 w, h = info["width"], info["height"]
-slow = f"setpts=PTS/{a.speed}," if a.speed != 1 else ""
+# Slow-mo (2026-11-08): plain setpts just repeats frames (stutters at 0.75x). Motion-interpolate new in-between
+# frames instead so the big play glides. --no-smooth falls back to frame repeats (faster to cut).
+slow = (f"setpts=PTS/{a.speed}," + ("" if a.no_smooth else "minterpolate=fps=30:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,")) if a.speed != 1 else ""
 if h > w:
     vf = f"{slow}scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,format=yuv420p"
 else:

@@ -56,7 +56,30 @@ for sc, a, b in zip(st["scenes"], starts, ends):
         msg = f"clip {sc['clip']} from {cf:.2f}: moment at {kin:.2f}s (before {kin:.2f}, after {D - kin:.2f}){'' if ok else '  <-- DOES NOT FIT'}"
     print(f"{sc['id']:9} {a:6.2f}-{b:6.2f} ({s['dur']:4.2f}s) {msg}")
     scenes.append(s)
-plan = {"source": st["source"], "week": st["week"], "voice": True, "voDur": None, "voFull": "full.mp3", "scenes": scenes, "scores": st["scores"]}
+# Caption words (2026-11-08): whisper timings, but the SCRIPT's spelling (whisper writes "algiers", "gassicki").
+# Script tokens are aligned to whisper words by order; a script word whisper split or missed gets its neighbours' time.
+words = []
+script_p = d / "script.txt"
+if script_p.exists():
+    import difflib
+    toks = re.findall(r"[A-Za-z0-9][A-Za-z0-9'\-\.]*[A-Za-z0-9]?[.,?!:;]?|[A-Za-z0-9]", script_p.read_text())
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
+    tn = [norm(t) for t in toks]
+    sm = difflib.SequenceMatcher(None, tn, nw, autojunk=False)
+    tm = [None] * len(toks)
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag == "equal" or (tag == "replace" and i2 - i1 == j2 - j1):
+            for k in range(i2 - i1): tm[i1 + k] = (w[j1 + k].start, w[j1 + k].end)
+        elif tag == "replace" and j2 > j1:          # e.g. "thirty-three" vs "33": spread the whisper span over the script tokens
+            a, b = w[j1].start, w[j2 - 1].end
+            for k in range(i2 - i1): tm[i1 + k] = (a + (b - a) * k / (i2 - i1), a + (b - a) * (k + 1) / (i2 - i1))
+    for k in range(len(tm)):                         # fill gaps from neighbours
+        if tm[k] is None:
+            prev = next((tm[j] for j in range(k - 1, -1, -1) if tm[j]), (0.0, 0.0))
+            nxt = next((tm[j] for j in range(k + 1, len(tm)) if tm[j]), (prev[1] + 0.3, prev[1] + 0.3))
+            tm[k] = (prev[1], max(prev[1] + 0.05, nxt[0]))
+    words = [{"t": t, "s": round(a, 3), "e": round(b, 3)} for t, (a, b) in zip(toks, tm)]
+plan = {"source": st["source"], "week": st["week"], "voice": True, "voDur": None, "voFull": "full.mp3", "words": words, "scenes": scenes, "scores": st["scores"]}
 (d / "plan.json").write_text(json.dumps(plan, indent=1, ensure_ascii=False))
 print(f"video {ends[-1]:.2f}s, voice ends {w[-1].end:.2f}s -> {d / 'plan.json'}")
 sys.exit(1 if bad else 0)
