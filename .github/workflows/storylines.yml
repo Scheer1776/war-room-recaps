@@ -1,0 +1,41 @@
+name: League storylines (Thursday)
+
+# Thursday morning Pacific, before Thursday Night Football: Claude writes a short week-ahead preview for every
+# registered league from War Room's projections and posts it to the app's home screen (storylines.mjs).
+# Skips quietly if the ANTHROPIC_API_KEY secret isn't set.
+on:
+  schedule:
+    - cron: "47 16 * * 4" # 8:47am PST / 9:47am PDT
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the storylines instead of posting them"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: storylines
+  cancel-in-progress: false
+
+jobs:
+  storylines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: storylines.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node storylines.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ADMIN_KEY: ${{ secrets.ADMIN_KEY }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          WARROOM_URL: https://war-room-self-one.vercel.app
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
