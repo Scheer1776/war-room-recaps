@@ -1,0 +1,872 @@
+{
+ "source": "sun9",
+ "week": 9,
+ "voice": true,
+ "voDur": null,
+ "voFull": "full.mp3",
+ "words": [
+  {
+   "t": "If",
+   "s": 0.0,
+   "e": 0.56
+  },
+  {
+   "t": "you",
+   "s": 0.56,
+   "e": 0.66
+  },
+  {
+   "t": "started",
+   "s": 0.66,
+   "e": 0.94
+  },
+  {
+   "t": "C.J.",
+   "s": 0.94,
+   "e": 1.22
+  },
+  {
+   "t": "Stroud",
+   "s": 1.22,
+   "e": 1.54
+  },
+  {
+   "t": "today,",
+   "s": 1.54,
+   "e": 1.82
+  },
+  {
+   "t": "you're",
+   "s": 1.96,
+   "e": 2.02
+  },
+  {
+   "t": "smiling.",
+   "s": 2.02,
+   "e": 2.3
+  },
+  {
+   "t": "Five",
+   "s": 2.62,
+   "e": 2.74
+  },
+  {
+   "t": "touchdowns,",
+   "s": 2.74,
+   "e": 3.1
+  },
+  {
+   "t": "three",
+   "s": 3.4,
+   "e": 3.567
+  },
+  {
+   "t": "hundred",
+   "s": 3.567,
+   "e": 3.733
+  },
+  {
+   "t": "eighty-four",
+   "s": 3.733,
+   "e": 3.9
+  },
+  {
+   "t": "yards,",
+   "s": 3.9,
+   "e": 4.42
+  },
+  {
+   "t": "thirty-six",
+   "s": 4.62,
+   "e": 4.9
+  },
+  {
+   "t": "points.",
+   "s": 4.9,
+   "e": 5.28
+  },
+  {
+   "t": "Green",
+   "s": 5.52,
+   "e": 5.62
+  },
+  {
+   "t": "Bay",
+   "s": 5.62,
+   "e": 5.78
+  },
+  {
+   "t": "dropped",
+   "s": 5.78,
+   "e": 5.98
+  },
+  {
+   "t": "forty-five",
+   "s": 5.98,
+   "e": 6.4
+  },
+  {
+   "t": "on",
+   "s": 6.4,
+   "e": 6.74
+  },
+  {
+   "t": "New",
+   "s": 6.74,
+   "e": 6.86
+  },
+  {
+   "t": "England.",
+   "s": 6.86,
+   "e": 7.14
+  },
+  {
+   "t": "Jordan",
+   "s": 7.36,
+   "e": 7.52
+  },
+  {
+   "t": "Love",
+   "s": 7.52,
+   "e": 7.7
+  },
+  {
+   "t": "scored",
+   "s": 7.7,
+   "e": 7.98
+  },
+  {
+   "t": "thirty-six.",
+   "s": 7.98,
+   "e": 8.46
+  },
+  {
+   "t": "Matthew",
+   "s": 8.82,
+   "e": 9.06
+  },
+  {
+   "t": "Golden,",
+   "s": 9.06,
+   "e": 9.34
+  },
+  {
+   "t": "thirty-two.",
+   "s": 9.42,
+   "e": 9.84
+  },
+  {
+   "t": "Christian",
+   "s": 10.3,
+   "e": 10.5
+  },
+  {
+   "t": "Watson,",
+   "s": 10.5,
+   "e": 10.78
+  },
+  {
+   "t": "thirty.",
+   "s": 10.98,
+   "e": 11.3
+  },
+  {
+   "t": "Kenneth",
+   "s": 11.3,
+   "e": 11.62
+  },
+  {
+   "t": "Walker",
+   "s": 11.8,
+   "e": 11.94
+  },
+  {
+   "t": "found",
+   "s": 11.94,
+   "e": 12.2
+  },
+  {
+   "t": "the",
+   "s": 12.2,
+   "e": 12.34
+  },
+  {
+   "t": "end",
+   "s": 12.34,
+   "e": 12.48
+  },
+  {
+   "t": "zone",
+   "s": 12.48,
+   "e": 12.62
+  },
+  {
+   "t": "three",
+   "s": 12.62,
+   "e": 12.92
+  },
+  {
+   "t": "times",
+   "s": 12.92,
+   "e": 13.22
+  },
+  {
+   "t": "in",
+   "s": 13.22,
+   "e": 13.4
+  },
+  {
+   "t": "Kansas",
+   "s": 13.4,
+   "e": 13.64
+  },
+  {
+   "t": "City.",
+   "s": 13.64,
+   "e": 13.96
+  },
+  {
+   "t": "CeeDee",
+   "s": 14.22,
+   "e": 14.36
+  },
+  {
+   "t": "Lamb",
+   "s": 14.52,
+   "e": 14.58
+  },
+  {
+   "t": "went",
+   "s": 14.58,
+   "e": 14.78
+  },
+  {
+   "t": "for",
+   "s": 14.78,
+   "e": 15.0
+  },
+  {
+   "t": "one",
+   "s": 15.0,
+   "e": 15.36
+  },
+  {
+   "t": "ninety-five.",
+   "s": 15.36,
+   "e": 15.72
+  },
+  {
+   "t": "Puka",
+   "s": 15.72,
+   "e": 16.08
+  },
+  {
+   "t": "caught",
+   "s": 16.08,
+   "e": 16.36
+  },
+  {
+   "t": "fourteen",
+   "s": 16.36,
+   "e": 16.82
+  },
+  {
+   "t": "balls.",
+   "s": 16.82,
+   "e": 17.1
+  },
+  {
+   "t": "And",
+   "s": 17.38,
+   "e": 17.48
+  },
+  {
+   "t": "Darren",
+   "s": 17.48,
+   "e": 17.74
+  },
+  {
+   "t": "Waller?",
+   "s": 17.74,
+   "e": 18.1
+  },
+  {
+   "t": "Projected",
+   "s": 18.1,
+   "e": 18.44
+  },
+  {
+   "t": "for",
+   "s": 18.44,
+   "e": 18.74
+  },
+  {
+   "t": "six.",
+   "s": 18.74,
+   "e": 18.98
+  },
+  {
+   "t": "He",
+   "s": 19.22,
+   "e": 19.34
+  },
+  {
+   "t": "gave",
+   "s": 19.34,
+   "e": 19.5
+  },
+  {
+   "t": "you",
+   "s": 19.5,
+   "e": 19.68
+  },
+  {
+   "t": "twenty-three.",
+   "s": 19.68,
+   "e": 20.18
+  },
+  {
+   "t": "But",
+   "s": 20.46,
+   "e": 20.56
+  },
+  {
+   "t": "not",
+   "s": 20.56,
+   "e": 20.7
+  },
+  {
+   "t": "everyone",
+   "s": 20.7,
+   "e": 21.04
+  },
+  {
+   "t": "got",
+   "s": 21.04,
+   "e": 21.24
+  },
+  {
+   "t": "lucky.",
+   "s": 21.24,
+   "e": 21.54
+  },
+  {
+   "t": "Jared",
+   "s": 21.8,
+   "e": 21.92
+  },
+  {
+   "t": "Goff",
+   "s": 21.92,
+   "e": 22.16
+  },
+  {
+   "t": "threw",
+   "s": 22.16,
+   "e": 22.4
+  },
+  {
+   "t": "for",
+   "s": 22.4,
+   "e": 22.6
+  },
+  {
+   "t": "one",
+   "s": 22.6,
+   "e": 22.84
+  },
+  {
+   "t": "seventy",
+   "s": 22.84,
+   "e": 23.08
+  },
+  {
+   "t": "and",
+   "s": 23.08,
+   "e": 23.32
+  },
+  {
+   "t": "a",
+   "s": 23.32,
+   "e": 23.4
+  },
+  {
+   "t": "pick.",
+   "s": 23.4,
+   "e": 23.58
+  },
+  {
+   "t": "Six",
+   "s": 23.82,
+   "e": 24.04
+  },
+  {
+   "t": "points.",
+   "s": 24.04,
+   "e": 24.34
+  },
+  {
+   "t": "Gibbs,",
+   "s": 24.7,
+   "e": 24.72
+  },
+  {
+   "t": "thirteen.",
+   "s": 24.92,
+   "e": 25.26
+  },
+  {
+   "t": "And",
+   "s": 25.46,
+   "e": 25.58
+  },
+  {
+   "t": "Josh",
+   "s": 25.58,
+   "e": 25.74
+  },
+  {
+   "t": "Jacobs?",
+   "s": 25.74,
+   "e": 26.08
+  },
+  {
+   "t": "Half",
+   "s": 26.42,
+   "e": 26.54
+  },
+  {
+   "t": "a",
+   "s": 26.54,
+   "e": 26.68
+  },
+  {
+   "t": "point.",
+   "s": 26.68,
+   "e": 26.9
+  },
+  {
+   "t": "Here's",
+   "s": 26.9,
+   "e": 27.26
+  },
+  {
+   "t": "every",
+   "s": 27.26,
+   "e": 27.44
+  },
+  {
+   "t": "final",
+   "s": 27.44,
+   "e": 27.7
+  },
+  {
+   "t": "from",
+   "s": 27.7,
+   "e": 27.92
+  },
+  {
+   "t": "today.",
+   "s": 27.92,
+   "e": 28.24
+  },
+  {
+   "t": "Did",
+   "s": 28.4,
+   "e": 28.42
+  },
+  {
+   "t": "Sunday",
+   "s": 28.42,
+   "e": 28.6
+  },
+  {
+   "t": "save",
+   "s": 28.6,
+   "e": 28.84
+  },
+  {
+   "t": "your",
+   "s": 28.84,
+   "e": 28.96
+  },
+  {
+   "t": "season?",
+   "s": 28.96,
+   "e": 29.16
+  },
+  {
+   "t": "Check",
+   "s": 29.4,
+   "e": 29.54
+  },
+  {
+   "t": "your",
+   "s": 29.54,
+   "e": 29.7
+  },
+  {
+   "t": "playoff",
+   "s": 29.7,
+   "e": 29.98
+  },
+  {
+   "t": "odds,",
+   "s": 29.98,
+   "e": 30.26
+  },
+  {
+   "t": "free",
+   "s": 30.26,
+   "e": 30.48
+  },
+  {
+   "t": "on",
+   "s": 30.48,
+   "e": 30.62
+  },
+  {
+   "t": "War",
+   "s": 30.62,
+   "e": 30.78
+  },
+  {
+   "t": "Room.",
+   "s": 30.78,
+   "e": 30.98
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "kind": "boom",
+   "clip": "stroud.mp4",
+   "title": "SUNDAY'S *BIGGEST* SCORE",
+   "stamp": "5 TD",
+   "color": "gold",
+   "player": {
+    "id": "9758",
+    "n": "C.J. Stroud",
+    "pos": "QB",
+    "team": "HOU",
+    "pts": 36.4,
+    "proj": 16.8,
+    "line": "384 pass yds · 5 TD · 20 rush yds"
+   },
+   "ptsLabel": "PPR",
+   "dur": 5.4,
+   "base": 5.4,
+   "clipFrom": 0.53
+  },
+  {
+   "id": "packers",
+   "kind": "stats",
+   "clip": "golden.mp4",
+   "title": "PACKERS *45*, PATRIOTS 27",
+   "color": "turf",
+   "tiles": [
+    {
+     "v": 36.2,
+     "dec": 1,
+     "label": "LOVE PTS"
+    },
+    {
+     "v": 32.4,
+     "dec": 1,
+     "label": "GOLDEN PTS"
+    },
+    {
+     "v": 30.1,
+     "dec": 1,
+     "label": "WATSON PTS"
+    }
+   ],
+   "stamp": "BLOWOUT",
+   "dur": 5.767,
+   "base": 5.767,
+   "clipFrom": 0.33
+  },
+  {
+   "id": "walker",
+   "kind": "boom",
+   "clip": "walker.mp4",
+   "title": "3 *TOUCHDOWNS*",
+   "stamp": "KC 35, NYJ 12",
+   "color": "turf",
+   "player": {
+    "id": "8151",
+    "n": "Kenneth Walker III",
+    "pos": "RB",
+    "team": "KC",
+    "pts": 36.3,
+    "proj": 21.8,
+    "line": "102 rush yds · 4 rec · 41 rec yds · 3 TD"
+   },
+   "ptsLabel": "PPR",
+   "dur": 2.933,
+   "base": 2.933,
+   "clipFrom": 3.89
+  },
+  {
+   "id": "wr",
+   "kind": "stats",
+   "clip": "lamb.mp4",
+   "title": "WR *SHOWCASE*",
+   "color": "gold",
+   "tiles": [
+    {
+     "v": 195,
+     "label": "LAMB YDS"
+    },
+    {
+     "v": 14,
+     "label": "PUKA CATCHES"
+    },
+    {
+     "v": 35.0,
+     "dec": 1,
+     "label": "PUKA PTS"
+    }
+   ],
+   "stamp": "ALPHAS",
+   "dur": 3.167,
+   "base": 3.167,
+   "clipFrom": 3.26
+  },
+  {
+   "id": "waller",
+   "kind": "boom",
+   "title": "PROJECTED *6.6*",
+   "stamp": "+16.4",
+   "color": "turf",
+   "player": {
+    "id": "2505",
+    "n": "Darren Waller",
+    "pos": "TE",
+    "team": "CAR",
+    "pts": 23,
+    "proj": 6.6,
+    "line": "8 rec · 90 rec yds · 1 TD"
+   },
+   "ptsLabel": "PPR",
+   "dur": 3.067,
+   "base": 3.067,
+   "clipFrom": 0
+  },
+  {
+   "id": "bust",
+   "kind": "bust",
+   "clip": "goff.mp4",
+   "title": "LIONS WON. *GOFF* DIDN'T.",
+   "big": "6.3",
+   "stamp": "PICKED",
+   "color": "red",
+   "players": [
+    {
+     "id": "3163",
+     "n": "Jared Goff",
+     "pos": "QB",
+     "team": "DET",
+     "pts": 6.3,
+     "proj": 19.9,
+     "line": "170 pass yds"
+    }
+   ],
+   "dur": 4.233,
+   "base": 4.233,
+   "clipFrom": 1.17
+  },
+  {
+   "id": "bust2",
+   "kind": "bust",
+   "title": "FANTASY *DAMAGE*",
+   "big": "-27",
+   "stamp": "OUCH.",
+   "color": "red",
+   "players": [
+    {
+     "id": "9221",
+     "n": "Jahmyr Gibbs",
+     "pos": "RB",
+     "team": "DET",
+     "pts": 13.4,
+     "proj": 25.7,
+     "line": "74 rush yds · 1 TD"
+    },
+    {
+     "id": "5850",
+     "n": "Josh Jacobs",
+     "pos": "RB",
+     "team": "GB",
+     "pts": 0.5,
+     "proj": 15,
+     "line": ""
+    }
+   ],
+   "dur": 2.2,
+   "base": 2.2,
+   "clipFrom": 0
+  },
+  {
+   "id": "scores",
+   "kind": "scores",
+   "title": "EVERY *SUNDAY* FINAL",
+   "dur": 1.5,
+   "base": 1.5,
+   "clipFrom": 0
+  },
+  {
+   "id": "cta",
+   "kind": "cta",
+   "title": "DID SUNDAY SAVE|YOUR SEASON?",
+   "dur": 5.0,
+   "base": 5.0,
+   "clipFrom": 0
+  }
+ ],
+ "scores": [
+  {
+   "away": {
+    "t": "TB",
+    "s": 24
+   },
+   "home": {
+    "t": "CHI",
+    "s": 27
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "CIN",
+    "s": 34
+   },
+   "home": {
+    "t": "ATL",
+    "s": 17
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "DAL",
+    "s": 27
+   },
+   "home": {
+    "t": "IND",
+    "s": 23
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "NYJ",
+    "s": 12
+   },
+   "home": {
+    "t": "KC",
+    "s": 35
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "DET",
+    "s": 19
+   },
+   "home": {
+    "t": "MIA",
+    "s": 9
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "CLE",
+    "s": 22
+   },
+   "home": {
+    "t": "NO",
+    "s": 23
+   },
+   "ot": true
+  },
+  {
+   "away": {
+    "t": "NYG",
+    "s": 19
+   },
+   "home": {
+    "t": "PHI",
+    "s": 11
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "LAR",
+    "s": 20
+   },
+   "home": {
+    "t": "WSH",
+    "s": 13
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "DEN",
+    "s": 26
+   },
+   "home": {
+    "t": "CAR",
+    "s": 21
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "HOU",
+    "s": 44
+   },
+   "home": {
+    "t": "LAC",
+    "s": 22
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "GB",
+    "s": 45
+   },
+   "home": {
+    "t": "NE",
+    "s": 27
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "LV",
+    "s": 17
+   },
+   "home": {
+    "t": "SF",
+    "s": 38
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "ARI",
+    "s": 3
+   },
+   "home": {
+    "t": "SEA",
+    "s": 17
+   },
+   "ot": false
+  }
+ ]
+}

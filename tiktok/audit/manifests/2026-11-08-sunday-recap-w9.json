@@ -1,0 +1,68 @@
+{
+ "video": "out/sun9/sunday-recap-w9.mp4",
+ "audio": "voice",
+ "script": "If you started C.J. Stroud today, you're smiling. Five touchdowns, three hundred eighty-four yards, thirty-six points. Green Bay dropped forty-five on New England. Jordan Love scored thirty-six. Matthew Golden, thirty-two. Christian Watson, thirty. Kenneth Walker found the end zone three times in Kansas City. CeeDee Lamb went for one ninety-five. Puka caught fourteen balls. And Darren Waller? Projected for six. He gave you twenty-three. But not everyone got lucky. Jared Goff threw for one seventy and a pick. Six points. Gibbs, thirteen. And Josh Jacobs? Half a point. Here's every final from today. Did Sunday save your season? Check your playoff odds, free on War Room.",
+ "endCard": 3.5,
+ "clips": [
+  {
+   "src": "public/sun9/clips/stroud.mp4",
+   "at": 0,
+   "dur": 5.4,
+   "clipStart": 0.53,
+   "keyAt": 3.5,
+   "label": "hook",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/golden.mp4",
+   "at": 5.4,
+   "dur": 5.767,
+   "clipStart": 0.33,
+   "keyAt": 3.5,
+   "label": "packers",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/walker.mp4",
+   "at": 11.167,
+   "dur": 2.933,
+   "clipStart": 3.89,
+   "keyAt": 5.5,
+   "label": "walker",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/lamb.mp4",
+   "at": 14.1,
+   "dur": 3.167,
+   "clipStart": 3.26,
+   "keyAt": 5.0,
+   "label": "wr",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/goff.mp4",
+   "at": 20.334,
+   "dur": 4.233,
+   "clipStart": 1.17,
+   "keyAt": 3.5,
+   "label": "bust",
+   "band": [
+    0.2,
+    0.47
+   ]
+  }
+ ]
+}

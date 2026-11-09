@@ -1,0 +1,393 @@
+{
+ "source": "sun9",
+ "week": 9,
+ "scenes": [
+  {
+   "id": "hook",
+   "kind": "boom",
+   "anchor": [],
+   "clip": "stroud.mp4",
+   "keyAt": 3.5,
+   "title": "SUNDAY'S *BIGGEST* SCORE",
+   "stamp": "5 TD",
+   "color": "gold",
+   "player": {
+    "id": "9758",
+    "n": "C.J. Stroud",
+    "pos": "QB",
+    "team": "HOU",
+    "pts": 36.4,
+    "proj": 16.8,
+    "line": "384 pass yds · 5 TD · 20 rush yds"
+   },
+   "ptsLabel": "PPR"
+  },
+  {
+   "id": "packers",
+   "kind": "stats",
+   "anchor": [
+    [
+     "green",
+     "bay"
+    ]
+   ],
+   "clip": "golden.mp4",
+   "keyAt": 3.5,
+   "title": "PACKERS *45*, PATRIOTS 27",
+   "color": "turf",
+   "tiles": [
+    {
+     "v": 36.2,
+     "dec": 1,
+     "label": "LOVE PTS"
+    },
+    {
+     "v": 32.4,
+     "dec": 1,
+     "label": "GOLDEN PTS"
+    },
+    {
+     "v": 30.1,
+     "dec": 1,
+     "label": "WATSON PTS"
+    }
+   ],
+   "stamp": "BLOWOUT"
+  },
+  {
+   "id": "walker",
+   "kind": "boom",
+   "anchor": [
+    [
+     "kenneth",
+     "walker"
+    ],
+    [
+     "kenneth"
+    ]
+   ],
+   "clip": "walker.mp4",
+   "keyAt": 5.5,
+   "title": "3 *TOUCHDOWNS*",
+   "stamp": "KC 35, NYJ 12",
+   "color": "turf",
+   "player": {
+    "id": "8151",
+    "n": "Kenneth Walker III",
+    "pos": "RB",
+    "team": "KC",
+    "pts": 36.3,
+    "proj": 21.8,
+    "line": "102 rush yds · 4 rec · 41 rec yds · 3 TD"
+   },
+   "ptsLabel": "PPR"
+  },
+  {
+   "id": "wr",
+   "kind": "stats",
+   "anchor": [
+    [
+     "ceedee"
+    ],
+    [
+     "cd"
+    ],
+    [
+     "c",
+     "d",
+     "lamb"
+    ],
+    [
+     "cee",
+     "dee"
+    ],
+    [
+     "lamb",
+     "went"
+    ]
+   ],
+   "clip": "lamb.mp4",
+   "keyAt": 5.0,
+   "title": "WR *SHOWCASE*",
+   "color": "gold",
+   "tiles": [
+    {
+     "v": 195,
+     "label": "LAMB YDS"
+    },
+    {
+     "v": 14,
+     "label": "PUKA CATCHES"
+    },
+    {
+     "v": 35.0,
+     "dec": 1,
+     "label": "PUKA PTS"
+    }
+   ],
+   "stamp": "ALPHAS"
+  },
+  {
+   "id": "waller",
+   "kind": "boom",
+   "anchor": [
+    [
+     "and",
+     "darren"
+    ],
+    [
+     "darren"
+    ]
+   ],
+   "title": "PROJECTED *6.6*",
+   "stamp": "+16.4",
+   "color": "turf",
+   "player": {
+    "id": "2505",
+    "n": "Darren Waller",
+    "pos": "TE",
+    "team": "CAR",
+    "pts": 23,
+    "proj": 6.6,
+    "line": "8 rec · 90 rec yds · 1 TD"
+   },
+   "ptsLabel": "PPR"
+  },
+  {
+   "id": "bust",
+   "kind": "bust",
+   "anchor": [
+    [
+     "but",
+     "not"
+    ]
+   ],
+   "clip": "goff.mp4",
+   "keyAt": 3.5,
+   "title": "LIONS WON. *GOFF* DIDN'T.",
+   "big": "6.3",
+   "stamp": "PICKED",
+   "color": "red",
+   "players": [
+    {
+     "id": "3163",
+     "n": "Jared Goff",
+     "pos": "QB",
+     "team": "DET",
+     "pts": 6.3,
+     "proj": 19.9,
+     "line": "170 pass yds"
+    }
+   ]
+  },
+  {
+   "id": "bust2",
+   "kind": "bust",
+   "anchor": [
+    [
+     "gibbs",
+     "thirteen"
+    ],
+    [
+     "gibbs"
+    ]
+   ],
+   "title": "FANTASY *DAMAGE*",
+   "big": "-27",
+   "stamp": "OUCH.",
+   "color": "red",
+   "players": [
+    {
+     "id": "9221",
+     "n": "Jahmyr Gibbs",
+     "pos": "RB",
+     "team": "DET",
+     "pts": 13.4,
+     "proj": 25.7,
+     "line": "74 rush yds · 1 TD"
+    },
+    {
+     "id": "5850",
+     "n": "Josh Jacobs",
+     "pos": "RB",
+     "team": "GB",
+     "pts": 0.5,
+     "proj": 15,
+     "line": ""
+    }
+   ]
+  },
+  {
+   "id": "scores",
+   "kind": "scores",
+   "anchor": [
+    [
+     "heres",
+     "every"
+    ],
+    [
+     "here",
+     "is",
+     "every"
+    ]
+   ],
+   "title": "EVERY *SUNDAY* FINAL"
+  },
+  {
+   "id": "cta",
+   "kind": "cta",
+   "anchor": [
+    [
+     "did",
+     "sunday"
+    ]
+   ],
+   "title": "DID SUNDAY SAVE|YOUR SEASON?"
+  }
+ ],
+ "scores": [
+  {
+   "away": {
+    "t": "TB",
+    "s": 24
+   },
+   "home": {
+    "t": "CHI",
+    "s": 27
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "CIN",
+    "s": 34
+   },
+   "home": {
+    "t": "ATL",
+    "s": 17
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "DAL",
+    "s": 27
+   },
+   "home": {
+    "t": "IND",
+    "s": 23
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "NYJ",
+    "s": 12
+   },
+   "home": {
+    "t": "KC",
+    "s": 35
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "DET",
+    "s": 19
+   },
+   "home": {
+    "t": "MIA",
+    "s": 9
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "CLE",
+    "s": 22
+   },
+   "home": {
+    "t": "NO",
+    "s": 23
+   },
+   "ot": true
+  },
+  {
+   "away": {
+    "t": "NYG",
+    "s": 19
+   },
+   "home": {
+    "t": "PHI",
+    "s": 11
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "LAR",
+    "s": 20
+   },
+   "home": {
+    "t": "WSH",
+    "s": 13
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "DEN",
+    "s": 26
+   },
+   "home": {
+    "t": "CAR",
+    "s": 21
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "HOU",
+    "s": 44
+   },
+   "home": {
+    "t": "LAC",
+    "s": 22
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "GB",
+    "s": 45
+   },
+   "home": {
+    "t": "NE",
+    "s": 27
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "LV",
+    "s": 17
+   },
+   "home": {
+    "t": "SF",
+    "s": 38
+   },
+   "ot": false
+  },
+  {
+   "away": {
+    "t": "ARI",
+    "s": 3
+   },
+   "home": {
+    "t": "SEA",
+    "s": 17
+   },
+   "ot": false
+  }
+ ]
+}
