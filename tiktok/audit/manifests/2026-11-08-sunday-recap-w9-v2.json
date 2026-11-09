@@ -7,7 +7,7 @@
   {
    "src": "public/sun9/clips/stroud.mp4",
    "at": 0,
-   "dur": 3.45,
+   "dur": 7.533,
    "clipStart": 0.0,
    "keyAt": 3.5,
    "label": "hook",
@@ -19,7 +19,7 @@
   {
    "src": "public/sun9/clips/boutte.mp4",
    "at": 7.533,
-   "dur": 1.71,
+   "dur": 3.2,
    "clipStart": 2.24,
    "keyAt": 4.0,
    "label": "boutte",
@@ -31,7 +31,7 @@
   {
    "src": "public/sun9/clips/golden.mp4",
    "at": 10.733,
-   "dur": 3.45,
+   "dur": 6.5,
    "clipStart": 0.0,
    "keyAt": 3.5,
    "label": "packers",
@@ -43,7 +43,7 @@
   {
    "src": "public/sun9/clips/walker.mp4",
    "at": 17.233,
-   "dur": 1.45,
+   "dur": 2.733,
    "clipStart": 4.0,
    "keyAt": 5.5,
    "label": "walker",
@@ -55,7 +55,7 @@
   {
    "src": "public/sun9/clips/chase.mp4",
    "at": 19.966,
-   "dur": 3.71,
+   "dur": 6.833,
    "clipStart": 0.04,
    "keyAt": 3.8,
    "label": "chase",
@@ -67,7 +67,7 @@
   {
    "src": "public/sun9/clips/lamb.mp4",
    "at": 26.799,
-   "dur": 1.75,
+   "dur": 3.267,
    "clipStart": 3.2,
    "keyAt": 5.0,
    "label": "wr",
@@ -79,7 +79,7 @@
   {
    "src": "public/sun9/clips/goff.mp4",
    "at": 33.333,
-   "dur": 2.55,
+   "dur": 4.733,
    "clipStart": 0.9,
    "keyAt": 3.5,
    "label": "bust",
@@ -91,7 +91,7 @@
   {
    "src": "public/sun9/clips/odunze.mp4",
    "at": 48.666,
-   "dur": 2.15,
+   "dur": 4.0,
    "clipStart": 1.8,
    "keyAt": 4.0,
    "label": "bears",
