@@ -27,7 +27,7 @@ clean = d / "vo" / "take-clean.wav"
 subprocess.run([sys.executable, "-I", str(pathlib.Path(__file__).resolve().parent.parent / "voice" / "dering.py"), take, str(clean)], check=True)
 take = str(clean)
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", take, "-af",
-                "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,adelay=150|150,loudnorm=I=-14:TP=-1.5:LRA=9",
+                "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,adelay=150|150,loudnorm=I=-14:TP=-1.5:LRA=9,alimiter=limit=0.8:level=disabled:attack=2:release=40",
                 "-ar", "44100", "-ac", "1", "-b:a", "192k", str(full)], check=True)
 from faster_whisper import WhisperModel
 m = WhisperModel("small.en", device="cpu", compute_type="int8")
