@@ -204,6 +204,13 @@ def check_audio(video, kind):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-vn", "-ac", "1", "-ar", "48000", str(w)], check=True)
     t = dering.tones(str(w))
     add("RINGING", "FAIL" if t else "PASS", f"steady tones at {[f for f, _ in t]} Hz: run voice/dering.py on the take" if t else "no steady high-pitched tones in the audio")
+    # PAUSE NOISE (owner, 2026-11-08: "weird noise in the audio"): what's audible between sentences. The Narrator clone's
+    # pauses sat only 20 dB under the voice (music bed + hum); demucs-cleaned takes sit ~32 dB under. FAIL above -26 dB.
+    import librosa as _lr, numpy as _np
+    _y, _sr = _lr.load(str(w), sr=24000)
+    _db = 20 * _np.log10(_lr.feature.rms(y=_y, frame_length=480, hop_length=240)[0] + 1e-9)
+    _sp = _np.percentile(_db, 90); _fl = _np.percentile(_db[_db > _db.max() - 70], 10) - _sp
+    add("PAUSE NOISE", "FAIL" if _fl > -26 else "PASS", f"pauses sit {_fl:.0f} dB under the voice (needs <= -26; run the take through demucs, scripts/sunday-plan.py does)")
 
 def contact_sheet(video, out):
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(video), "-vf", "fps=1,scale=180:-1,tile=10x4", "-frames:v", "1", str(out)])

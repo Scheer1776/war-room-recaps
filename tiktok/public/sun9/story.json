@@ -8,6 +8,7 @@
    "anchor": [],
    "clip": "stroud.mp4",
    "keyAt": 3.5,
+   "impact": "TOUCHDOWN",
    "title": "SUNDAY'S *BIGGEST* SCORE",
    "stamp": "5 TD",
    "color": "gold",
@@ -23,6 +24,36 @@
    "ptsLabel": "PPR"
   },
   {
+   "id": "boutte",
+   "kind": "boom",
+   "anchor": [
+    [
+     "his",
+     "receiver"
+    ],
+    [
+     "receiver",
+     "was"
+    ]
+   ],
+   "clip": "boutte.mp4",
+   "keyAt": 4.0,
+   "impact": "BREAKAWAY",
+   "title": "PROJECTED *3.8*",
+   "stamp": "+24.7",
+   "color": "turf",
+   "player": {
+    "id": "9504",
+    "n": "Kayshon Boutte",
+    "pos": "WR",
+    "team": "HOU",
+    "pts": 28.5,
+    "proj": 3.8,
+    "line": "4 rec · 125 rec yds · 2 TD"
+   },
+   "ptsLabel": "PPR"
+  },
+  {
    "id": "packers",
    "kind": "stats",
    "anchor": [
@@ -33,6 +64,7 @@
    ],
    "clip": "golden.mp4",
    "keyAt": 3.5,
+   "impact": "TOUCHDOWN",
    "title": "PACKERS *45*, PATRIOTS 27",
    "color": "turf",
    "tiles": [
@@ -68,6 +100,7 @@
    ],
    "clip": "walker.mp4",
    "keyAt": 5.5,
+   "impact": "WALK-IN TD",
    "title": "3 *TOUCHDOWNS*",
    "stamp": "KC 35, NYJ 12",
    "color": "turf",
@@ -79,6 +112,40 @@
     "pts": 36.3,
     "proj": 21.8,
     "line": "102 rush yds · 4 rec · 41 rec yds · 3 TD"
+   },
+   "ptsLabel": "PPR"
+  },
+  {
+   "id": "chase",
+   "kind": "boom",
+   "anchor": [
+    [
+     "over",
+     "in",
+     "madrid"
+    ],
+    [
+     "in",
+     "madrid"
+    ],
+    [
+     "madrid"
+    ]
+   ],
+   "clip": "chase.mp4",
+   "keyAt": 3.8,
+   "impact": "TOE TAP",
+   "title": "*155* YARDS IN MADRID",
+   "stamp": "BENGALS 34-17",
+   "color": "gold",
+   "player": {
+    "id": "7564",
+    "n": "Ja'Marr Chase",
+    "pos": "WR",
+    "team": "CIN",
+    "pts": 31.5,
+    "proj": 19.5,
+    "line": "10 rec · 155 rec yds · 1 TD"
    },
    "ptsLabel": "PPR"
   },
@@ -108,6 +175,7 @@
    ],
    "clip": "lamb.mp4",
    "keyAt": 5.0,
+   "impact": "SIX",
    "title": "WR *SHOWCASE*",
    "color": "gold",
    "tiles": [
@@ -164,9 +232,10 @@
    ],
    "clip": "goff.mp4",
    "keyAt": 3.5,
+   "impact": "PICKED",
    "title": "LIONS WON. *GOFF* DIDN'T.",
    "big": "6.3",
-   "stamp": "PICKED",
+   "stamp": "OUCH",
    "color": "red",
    "players": [
     {
@@ -193,8 +262,8 @@
     ]
    ],
    "title": "FANTASY *DAMAGE*",
-   "big": "-27",
-   "stamp": "OUCH.",
+   "big": "-55",
+   "stamp": "BENCH 'EM?",
    "color": "red",
    "players": [
     {
@@ -205,6 +274,24 @@
      "pts": 13.4,
      "proj": 25.7,
      "line": "74 rush yds · 1 TD"
+    },
+    {
+     "id": "6790",
+     "n": "D'Andre Swift",
+     "pos": "RB",
+     "team": "CHI",
+     "pts": 3.1,
+     "proj": 19.2,
+     "line": "31 rush yds"
+    },
+    {
+     "id": "9488",
+     "n": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "team": "SEA",
+     "pts": 12.1,
+     "proj": 24.1,
+     "line": "7 rec · 51 rec yds"
     },
     {
      "id": "5850",
@@ -218,20 +305,128 @@
    ]
   },
   {
-   "id": "scores",
-   "kind": "scores",
+   "id": "giants",
+   "kind": "stats",
    "anchor": [
     [
-     "heres",
-     "every"
+     "now",
+     "the",
+     "upsets"
     ],
     [
-     "here",
-     "is",
-     "every"
+     "the",
+     "upsets"
+    ],
+    [
+     "now",
+     "the"
     ]
    ],
-   "title": "EVERY *SUNDAY* FINAL"
+   "title": "GIANTS *19*, EAGLES 11",
+   "color": "slate",
+   "tiles": [
+    {
+     "v": 19,
+     "label": "NYG"
+    },
+    {
+     "v": 11,
+     "label": "PHI"
+    }
+   ],
+   "impact": "UPSET"
+  },
+  {
+   "id": "saints",
+   "kind": "stats",
+   "anchor": [
+    [
+     "the",
+     "saints"
+    ],
+    [
+     "saints",
+     "beat"
+    ]
+   ],
+   "title": "SAINTS *23*, BROWNS 22",
+   "color": "gold",
+   "tiles": [
+    {
+     "v": 23,
+     "label": "NO"
+    },
+    {
+     "v": 22,
+     "label": "CLE"
+    }
+   ],
+   "impact": "OT WIN"
+  },
+  {
+   "id": "bears",
+   "kind": "stats",
+   "anchor": [
+    [
+     "and",
+     "tonight"
+    ],
+    [
+     "tonight"
+    ]
+   ],
+   "clip": "odunze.mp4",
+   "keyAt": 4.0,
+   "impact": "TOUCHDOWN",
+   "title": "BEARS *27*, BUCS 24",
+   "color": "turf",
+   "tiles": [
+    {
+     "v": 27,
+     "label": "CHI"
+    },
+    {
+     "v": 24,
+     "label": "TB"
+    },
+    {
+     "v": 28.5,
+     "dec": 1,
+     "label": "IRVING PTS"
+    }
+   ],
+   "stamp": "SNF"
+  },
+  {
+   "id": "mnf",
+   "kind": "mnf",
+   "anchor": [
+    [
+     "tomorrow",
+     "night"
+    ],
+    [
+     "tomorrow"
+    ]
+   ],
+   "title": "MONDAY *NIGHT*",
+   "game": {
+    "away": "BUF",
+    "home": "MIN",
+    "when": "Monday 5:15 PT",
+    "line": "Bills at Vikings"
+   },
+   "player": {
+    "id": "4984",
+    "n": "Josh Allen",
+    "pos": "QB",
+    "team": "BUF",
+    "pts": 0,
+    "proj": 21.9,
+    "line": ""
+   },
+   "stamp": "TOP PLAY",
+   "impact": "TOMORROW"
   },
   {
    "id": "cta",

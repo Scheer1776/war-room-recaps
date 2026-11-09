@@ -3,8 +3,9 @@ import { AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, spring, stati
 import { Audio } from "@remotion/media";
 import { z } from "zod";
 import { AppLink, BODY, C, DISPLAY, Field, Glass, SAFE, f1, initialsOf, teamColor } from "./theme";
-import { Flash, Kinetic, Leak, Particles, Slam, Stamp, W, clamp, useShake } from "./fx";
-import { Captions, Grain, Vignette, Whip, gradeStyle } from "./polish";
+import { Flash, Kinetic, Particles, Slam, Stamp, W, clamp, useShake } from "./fx";
+import { Captions, GlitchOpen, Grain, ImpactFX, ProgressBar, TeamWipe, Vignette, Whip, gradeStyle, impactShake } from "./polish";
+import { Freeze } from "remotion";
 
 // "Sunday Recap": the night's fantasy story told over that day's real highlights (owner's call on footage, 2026-10-30).
 // Clip-first: every storyline scene is a full-bleed 1080x1920 clip (pre-cut by clips/cut.py) with a stat card over the
@@ -20,6 +21,7 @@ const scene = z.object({
   sub: z.string().default(""), headline: z.string().default(""), projLabel: z.string().optional(), ptsLabel: z.string().optional(),
   rows: z.array(z.object({ player, count: z.number(), note: z.string().default("") })).default([]),   // adds
   game: z.object({ away: z.string(), home: z.string(), when: z.string(), line: z.string() }).nullable().default(null), // mnf
+  keyIn: z.number().optional(), impact: z.string().optional(), // v2: seconds into the scene of the clip's big moment; slam word
   dur: z.number().optional(), // fixed scene length (s): set when scenes are timed to one continuous voice take
 });
 export const sundaySchema = z.object({
@@ -53,16 +55,34 @@ const Count: React.FC<{ at: number; to: number; size: number; color: string; dec
   return <span style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: size, lineHeight: 0.9, color, fontVariantNumeric: "tabular-nums", textShadow: `0 0 50px ${color}66` }}>{v.toFixed(dec)}</span>;
 };
 // The highlight, full bleed, darkened at top and bottom so text reads. Must sit inside the scene's Sequence.
-const Clip: React.FC<{ src: string; file: string; from: number; dim?: number }> = ({ src, file, from, dim = 0 }) => {
+const HOLD = 0.45; // seconds the play freezes on its big moment (v2)
+const Clip: React.FC<{ src: string; file: string; from: number; dim?: number; keyIn?: number }> = ({ src, file, from, dim = 0, keyIn }) => {
   const f = useCurrentFrame();
-  const z = interpolate(f, [0, 150], [1.04, 1.12], clamp);
+  const kf = keyIn != null ? Math.round(keyIn * FPS) : null, H = Math.round(HOLD * FPS);
+  // slow drift, then a hard punch-in on the frozen frame, easing back out when play resumes
+  const base = interpolate(f, [0, 150], [1.04, 1.12], clamp);
+  const punch = kf == null ? 0 : interpolate(f, [kf, kf + 4, kf + H, kf + H + 10], [0, 0.2, 0.24, 0.06], { ...clamp, easing: (v) => 1 - Math.pow(1 - v, 3) });
+  const vstyle: React.CSSProperties = { width: "100%", height: "100%", objectFit: "cover", scale: String(base + punch), ...gradeStyle,
+    filter: kf != null && f >= kf && f < kf + H ? "contrast(1.25) saturate(1.45) brightness(1.06)" : gradeStyle.filter };
+  const vid = (startSec: number) => <OffthreadVideo src={staticFile(`${src}/clips/${file}`)} startFrom={Math.round(startSec * FPS)} muted style={vstyle} />;
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: "#000" }}>
-      <OffthreadVideo src={staticFile(`${src}/clips/${file}`)} startFrom={Math.round(from * FPS)} muted style={{ width: "100%", height: "100%", objectFit: "cover", scale: String(z), ...gradeStyle }} />
+      {kf == null ? vid(from) : (
+        <>
+          <Sequence durationInFrames={kf} layout="none">{vid(from)}</Sequence>
+          <Sequence from={kf} durationInFrames={H} layout="none"><Freeze frame={kf}>{vid(from)}</Freeze></Sequence>
+          <Sequence from={kf + H} layout="none">{vid(from + kf / FPS)}</Sequence>
+        </>
+      )}
       <Vignette />
       <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(4,17,11,${0.72 + dim}) 0%, rgba(4,17,11,${0.1 + dim}) 24%, rgba(4,17,11,${0.05 + dim}) 52%, rgba(4,17,11,${0.85 + dim}) 74%, rgba(4,17,11,0.95) 100%)` }} />
     </AbsoluteFill>
   );
+};
+
+const SceneShake: React.FC<{ at: number | null; children: React.ReactNode }> = ({ at, children }) => {
+  const f = useCurrentFrame();
+  return <AbsoluteFill style={{ transform: at == null ? undefined : impactShake(f, at) || undefined }}>{children}</AbsoluteFill>;
 };
 
 const Boom: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) => {
@@ -71,7 +91,7 @@ const Boom: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =>
   const inn = spring({ frame: f - 8, fps, config: { damping: 14, stiffness: 120 } });
   return (
     <AbsoluteFill style={{ translate: useShake(10, 16, 9) }}>
-      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} /> : <><Field /><Particles n={60} color={teamColor(x.team)} seed={s.id} speed={2} size={8} /></>}
+      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} keyIn={s.keyIn} /> : <><Field /><Particles n={60} color={teamColor(x.team)} seed={s.id} speed={2} size={8} /></>}
       <div style={{ position: "absolute", top: T - 20, left: L, right: R }}><Kinetic text={s.title} at={2} size={86} align="left" accent={c} /></div>
       <Glass style={{ position: "absolute", top: 1130, left: L - 20, width: Wd + 40, padding: "26px 30px", display: "flex", gap: 26, alignItems: "center", opacity: inn, translate: `0 ${(1 - inn) * 260}px` }} tint="rgba(4,17,11,0.62)">
         <Head src={p.source} x={x} size={170} />
@@ -90,11 +110,27 @@ const Boom: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =>
   );
 };
 
+// v2 (2026-11-08): a scene with no game clip still needs motion: the two teams' colors split the screen diagonally and drift.
+const TeamSplit: React.FC<{ a?: string; b?: string; seed: string }> = ({ a, b, seed }) => {
+  const f = useCurrentFrame();
+  const ca = a ? teamColor(a) : C.turf, cb = b ? teamColor(b) : C.slate;
+  const sweep = interpolate(f, [0, 18], [-40, 0], { ...clamp, easing: (v) => 1 - Math.pow(1 - v, 3) });
+  const drift = Math.sin(f / 20) * 30;
+  return (
+    <AbsoluteFill>
+      <Field />
+      <AbsoluteFill style={{ background: `linear-gradient(${115 + drift / 10}deg, ${ca}66 0%, ${ca}22 ${45 + sweep}%, transparent ${46 + sweep}%, transparent ${54 - sweep}%, ${cb}22 ${55 - sweep}%, ${cb}66 100%)` }} />
+      <AbsoluteFill style={{ background: `radial-gradient(700px 520px at ${22 + drift / 6}% 60%, ${ca}55, transparent 70%), radial-gradient(700px 520px at ${78 - drift / 6}% 60%, ${cb}55, transparent 70%)` }} />
+      <Particles n={70} color={ca} seed={seed} speed={3} size={8} />
+    </AbsoluteFill>
+  );
+};
+
 const Stats: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) => {
   const f = useCurrentFrame(); const { fps } = useVideoConfig(); const c = col(s.color ?? "gold");
   return (
     <AbsoluteFill>
-      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} dim={0.08} /> : <Field />}
+      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} dim={0.08} keyIn={s.keyIn} /> : <TeamSplit a={s.tiles?.[0]?.label} b={s.tiles?.[1]?.label} seed={s.id} />}
       <div style={{ position: "absolute", top: T - 20, left: L, right: R }}><Kinetic text={s.title} at={2} size={86} align="left" accent={c} /></div>
       <div style={{ position: "absolute", top: 1010, left: L - 10, width: Wd + 20, display: "flex", gap: 18 }}>
         {(s.tiles ?? []).map((t, i) => {
@@ -107,7 +143,7 @@ const Stats: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =
           );
         })}
       </div>
-      {s.stamp ? <div style={{ position: "absolute", top: 1290, left: L, right: R, display: "flex", justifyContent: "center" }}><Stamp text={s.stamp} color={c} at={Math.round(d * FPS * 0.6)} size={88} rot={-5} /></div> : null}
+      {s.stamp ? <div style={{ position: "absolute", top: 860, left: L, right: R, display: "flex", justifyContent: "flex-end" }}><Stamp text={s.stamp} color={c} at={Math.round(d * FPS * 0.6)} size={88} rot={-5} /></div> : null}
       <Flash at={0} peak={0.35} />
     </AbsoluteFill>
   );
@@ -117,15 +153,15 @@ const Bust: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =>
   const f = useCurrentFrame(); const { fps } = useVideoConfig(); const c = col(s.color ?? "gold");
   return (
     <AbsoluteFill style={{ translate: useShake(4, 22, 12) }}>
-      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} dim={0.12} /> : <><Field /><AbsoluteFill style={{ background: `radial-gradient(900px 700px at 50% 40%, ${c}33, transparent 70%)` }} /></>}
+      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} dim={0.12} keyIn={s.keyIn} /> : <><Field /><AbsoluteFill style={{ background: `radial-gradient(900px 700px at 50% 40%, ${c}33, transparent 70%)` }} /></>}
       <div style={{ position: "absolute", top: T - 20, left: L, right: R }}><Kinetic text={s.title} at={2} size={86} align="left" accent={c} /></div>
       {s.big ? <div style={{ position: "absolute", top: 420, left: 0, width: W, textAlign: "center", fontFamily: DISPLAY, fontWeight: 800, fontSize: 380, lineHeight: 1, color: c, textShadow: `0 0 90px ${c}88` }}><Slam at={4}>{s.big}</Slam></div> : null}
-      <div style={{ position: "absolute", top: 980, left: L - 10, width: Wd + 20, display: "flex", flexDirection: "column", gap: 16 }}>
+      <div style={{ position: "absolute", top: (s.players ?? []).length > 2 ? 800 : 980, left: L - 10, width: Wd + 20, display: "flex", flexDirection: "column", gap: (s.players ?? []).length > 2 ? 10 : 16 }}>
         {(s.players ?? []).map((x, i) => {
           const inn = spring({ frame: f - (16 + i * 8), fps, config: { damping: 14, stiffness: 120 } });
           return (
             <Glass key={x.id} style={{ padding: "16px 24px", display: "flex", gap: 22, alignItems: "center", opacity: inn, translate: `${(1 - inn) * (i % 2 ? 700 : -700)}px 0` }} tint="rgba(40,8,8,0.62)">
-              <Head src={p.source} x={x} size={104} />
+              <Head src={p.source} x={x} size={(s.players ?? []).length > 2 ? 86 : 104} />
               <div style={{ minWidth: 0, flex: 1 }}>
                 <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 46, lineHeight: 1, color: C.ink, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{x.n.toUpperCase()}</div>
                 <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 26, color: C.dim, marginTop: 4 }}>proj {f1(x.proj)}</div>
@@ -135,7 +171,7 @@ const Bust: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =>
           );
         })}
       </div>
-      {s.stamp ? <div style={{ position: "absolute", top: 1330, left: L, right: R, display: "flex", justifyContent: "center" }}><Stamp text={s.stamp} color={c} at={Math.round(d * FPS * 0.62)} size={96} rot={5} /></div> : null}
+      {s.stamp ? <div style={{ position: "absolute", top: 330, left: L, right: R, display: "flex", justifyContent: "flex-end" }}><Stamp text={s.stamp} color={c} at={Math.round(d * FPS * 0.62)} size={84} rot={8} /></div> : null}
       <Flash at={0} color={c} peak={0.35} />
     </AbsoluteFill>
   );
@@ -282,7 +318,7 @@ const Mnf: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) => 
         <Glass style={{ position: "absolute", top: 820, left: L - 20, width: Wd + 40, padding: "26px 30px", display: "flex", gap: 26, alignItems: "center", opacity: interpolate(f, [16, 28], [0, 1], clamp) }}>
           <Head src={p.source} x={x} size={170} />
           <div style={{ minWidth: 0, flex: 1 }}>
-            <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 28, letterSpacing: 3, color: C.slate }}>TOP PROJECTION TONIGHT</div>
+            <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 28, letterSpacing: 3, color: C.slate }}>TOP PROJECTION</div>
             <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 54, lineHeight: 1, color: C.ink, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{x.n.toUpperCase()}</div>
             <div style={{ display: "flex", alignItems: "baseline", gap: 14, marginTop: 6 }}><Count at={20} to={x.proj} size={110} color={C.slate} /><span style={{ fontFamily: BODY, fontWeight: 600, fontSize: 30, color: C.dim }}>PROJ PPR</span></div>
           </div>
@@ -306,16 +342,20 @@ export const SundayRecap: React.FC<SundayProps> = (p) => {
     <AbsoluteFill style={{ background: "#04110B" }}>
       {seqs.map(({ s, from, d }, i) => (
         <Sequence key={s.id} name={s.id} from={from} durationInFrames={d}>
-          <Whip dir={i % 2 ? -1 : 1}><Punch>
+          <SceneShake at={s.clip && s.keyIn != null ? Math.round(s.keyIn * FPS) + 1 : s.impact ? Math.round(d * 0.3) + 1 : null}><Whip dir={i % 2 ? -1 : 1}><Punch>
             {s.kind === "boom" ? <Boom p={p} s={s} d={d / FPS} /> : s.kind === "stats" ? <Stats p={p} s={s} d={d / FPS} /> : s.kind === "bust" ? <Bust p={p} s={s} d={d / FPS} />
               : s.kind === "scores" ? <Scores p={p} s={s} /> : s.kind === "chapter" ? <Chapter s={s} /> : s.kind === "news" ? <News p={p} s={s} d={d / FPS} />
               : s.kind === "adds" ? <Adds p={p} s={s} d={d / FPS} /> : s.kind === "mnf" ? <Mnf p={p} s={s} d={d / FPS} /> : <Cta s={s} />}
-          </Punch></Whip>
-          {i > 0 && s.clip ? <Leak at={0} dur={12} seed={i} hue={90} opacity={0.14} /> : null}
+          </Punch></Whip></SceneShake>
+          {s.clip && s.keyIn != null ? <ImpactFX at={Math.round(s.keyIn * FPS)} hold={Math.round(HOLD * FPS)} color={col(s.color ?? "gold")} text={s.impact} />
+            : s.impact ? <ImpactFX at={Math.round(d * 0.3)} hold={8} color={s.tiles?.[0] ? teamColor(s.tiles[0].label) : col(s.color ?? "gold")} text={s.impact} /> : null}
+          {i > 0 ? <TeamWipe color={s.player ? teamColor(s.player.team) : col(s.color ?? "gold")} dir={i % 2 ? -1 : 1} /> : null}
+          {i === 0 ? <GlitchOpen line1={`WEEK ${p.week}`} line2="SUNDAY RECAP" /> : null}
           {p.voice && !p.voFull && p.voDur && p.voDur[s.id] ? <Sequence from={4} layout="none"><Audio src={staticFile(`${p.source}/vo/${s.id}.mp3`)} /></Sequence> : null}
         </Sequence>
       ))}
       <Grain />
+      <ProgressBar lens={seqs.map(x => x.d)} />
       {p.voFull && p.words && p.captions !== false ? <Captions words={p.words} /> : null}
       {p.voice && p.voFull ? <Audio src={staticFile(`${p.source}/vo/${p.voFull}`)} /> : null}
     </AbsoluteFill>

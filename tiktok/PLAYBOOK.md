@@ -324,6 +324,15 @@ and switch its row from *build* to the composition name.
   clone war-room-web (private), so the app slide reused `public/app/app-waivers.png` and the commit went to the PC as
   `queue\23-waiver-slides.patch` for the owner's apply/push scripts.
 
+- 2026-11-08 Sunday recap v2 (owner: "weird noise in the audio", "voice breaks sound weird", "no new cool animations", "shorter than i thought"):
+  - The Narrator clone copied its reference clip's music bed into every pause (pause floor only -20 dB under the voice, hum near 1 kHz). Fixed at the source: the VoiceStudio Narrator reference was cleaned (demucs vocals, noisereduce, 70 Hz highpass, loudnorm) and re-uploaded with Documents-WarRoom\vs-narrator-clean.bat. Original kept at takes\narrator-ref-original.bin. New takes: pause floor -40 dB.
+  - sunday-plan.py also runs demucs (htdemucs, vocals stem) on every take before dering. audit.py has a PAUSE NOISE check (FAIL above -26 dB).
+  - "About a minute" means ~190 words: the clean Narrator reads ~3.2 words a second including pauses. Write to length; never speed up the take.
+  - Every clip scene freezes on its key moment (keyIn from sunday-plan.py) and slams an impact word (ImpactFX: speed lines, team-color shockwave, flash, shake). Scenes enter with a team-color wipe; the video opens with a glitch title; a progress bar runs on top. Pick an "impact" word per clip scene in story.json.
+  - Stamps sit above the caption band (captions start at y=1372).
+  - device_commit_files can deliver a cached old copy when the staged file name repeats. Stage every file under a new name (job-<name>-<timestamp>.json) and check its size on the PC.
+  - Names that fail twice in takes get cut from the voice and stay on screen only (Boutte, Irving this week).
+
 ## Log
 | Date | Format | Notes |
 |---|---|---|

@@ -13,6 +13,16 @@ story_p, take = pathlib.Path(sys.argv[1]), sys.argv[2]
 st = json.loads(story_p.read_text()); d = story_p.parent
 full = d / "vo" / "full.mp3"
 # 1) remove VoxCPM2's steady vocoder tones first (owner heard "high pitched ringing", 2026-11-02: 6000 Hz + others)
+# 0) (2026-11-08, owner: "weird noise ... voice breaks sound weird") the Narrator clone carries its reference clip's
+#    music bed into every pause (pause floor only -20 dB under speech, 1 kHz hum). demucs keeps only the voice: -32 dB.
+import shutil, tempfile
+sep_dir = pathlib.Path(tempfile.mkdtemp())
+r = subprocess.run([sys.executable, "-m", "demucs", "--two-stems", "vocals", "-n", "htdemucs", "-o", str(sep_dir), take], capture_output=True, text=True)
+voc = next(sep_dir.rglob("vocals.wav"), None)
+if r.returncode == 0 and voc:
+    take = str(voc); print("voice separated from background (demucs)")
+else:
+    print("WARNING: demucs failed, using the raw take:", r.stderr[-300:])
 clean = d / "vo" / "take-clean.wav"
 subprocess.run([sys.executable, "-I", str(pathlib.Path(__file__).resolve().parent.parent / "voice" / "dering.py"), take, str(clean)], check=True)
 take = str(clean)
@@ -51,6 +61,7 @@ for sc, a, b in zip(st["scenes"], starts, ends):
         want = min(max(mb + 0.1, D * 0.55), D - 1.1)
         cf = min(max(0.0, k - want), max(0.0, clen - D - 0.05)); kin = k - cf
         s["clipFrom"] = round(cf, 2)
+        s["keyIn"] = round(k - cf, 2)   # v2: the scene freezes + slams on this moment
         ok = kin >= mb and D - kin >= 1.0 and cf + D <= clen + 0.01
         bad += not ok
         msg = f"clip {sc['clip']} from {cf:.2f}: moment at {kin:.2f}s (before {kin:.2f}, after {D - kin:.2f}){'' if ok else '  <-- DOES NOT FIT'}"
