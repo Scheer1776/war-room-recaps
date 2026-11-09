@@ -1,0 +1,104 @@
+{
+ "video": "out/sun9/sunday-recap-w9-v2.mp4",
+ "audio": "voice",
+ "script": "Week nine is in the books. And if you started C.J. Stroud, you're smiling. Five touchdowns. Three hundred eighty-four yards. Thirty-six points. His receiver was projected for under four... he gave you twenty-eight. Green Bay dropped forty-five on New England. Jordan Love scored thirty-six. Matthew Golden, thirty-two. Christian Watson, thirty. Kenneth Walker found the end zone three times in Kansas City. Over in Madrid, Chase caught ten balls for one fifty-five, and the Bengals rolled. Joe Burrow threw three touchdowns and ran in another. CeeDee Lamb went for one ninety-five. Puka caught fourteen. And Darren Waller? Projected for six. He gave you twenty-three. But not everyone got lucky. Jared Goff threw for one seventy and a pick. Six points. Gibbs, thirteen. Swift, three. Jaxon Smith-Njigba, twelve. And Josh Jacobs? Half a point. Now, the upsets. The Giants took down the Eagles, nineteen to eleven. The Saints beat the Browns in overtime. And tonight, Caleb Williams and the Bears edged Tampa, twenty-seven to twenty-four. Tomorrow night, it's Buffalo at Minnesota. Josh Allen is projected for twenty-two. Did Sunday save your season? Check your playoff odds, free on War Room.",
+ "endCard": 3.5,
+ "clips": [
+  {
+   "src": "public/sun9/clips/stroud.mp4",
+   "at": 0,
+   "dur": 3.45,
+   "clipStart": 0.0,
+   "keyAt": 3.5,
+   "label": "hook",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/boutte.mp4",
+   "at": 7.533,
+   "dur": 1.71,
+   "clipStart": 2.24,
+   "keyAt": 4.0,
+   "label": "boutte",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/golden.mp4",
+   "at": 10.733,
+   "dur": 3.45,
+   "clipStart": 0.0,
+   "keyAt": 3.5,
+   "label": "packers",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/walker.mp4",
+   "at": 17.233,
+   "dur": 1.45,
+   "clipStart": 4.0,
+   "keyAt": 5.5,
+   "label": "walker",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/chase.mp4",
+   "at": 19.966,
+   "dur": 3.71,
+   "clipStart": 0.04,
+   "keyAt": 3.8,
+   "label": "chase",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/lamb.mp4",
+   "at": 26.799,
+   "dur": 1.75,
+   "clipStart": 3.2,
+   "keyAt": 5.0,
+   "label": "wr",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/goff.mp4",
+   "at": 33.333,
+   "dur": 2.55,
+   "clipStart": 0.9,
+   "keyAt": 3.5,
+   "label": "bust",
+   "band": [
+    0.2,
+    0.47
+   ]
+  },
+  {
+   "src": "public/sun9/clips/odunze.mp4",
+   "at": 48.666,
+   "dur": 2.15,
+   "clipStart": 1.8,
+   "keyAt": 4.0,
+   "label": "bears",
+   "band": [
+    0.2,
+    0.47
+   ]
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "season": "2026",
+ "week": 9,
+ "builtAt": "2026-11-09T05:53:33.013Z",
+ "players": [
+  {
+   "id": "6130",
+   "n": "Devin Singletary",
+   "num": 26,
+   "pos": "RB",
+   "nfl": "NYG",
+   "adds": 914499,
+   "proj": 13.2,
+   "opp": "PHI",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "3286",
+   "n": "Demarcus Robinson",
+   "num": 11,
+   "pos": "WR",
+   "nfl": "SF",
+   "adds": 744570,
+   "proj": 6.7,
+   "opp": "LV",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "11579",
+   "n": "Audric Estime",
+   "num": 36,
+   "pos": "RB",
+   "nfl": "NO",
+   "adds": 470682,
+   "proj": 7.9,
+   "opp": "CLE",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "9502",
+   "n": "Tank Dell",
+   "num": 1,
+   "pos": "WR",
+   "nfl": "HOU",
+   "adds": 335936,
+   "proj": 2.3,
+   "opp": "LAC",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "11783",
+   "n": "Ryan Flournoy",
+   "num": 19,
+   "pos": "WR",
+   "nfl": "DAL",
+   "adds": 301224,
+   "proj": 9.8,
+   "opp": "IND",
+   "last": 11.6,
+   "inj": null
+  },
+  {
+   "id": "11625",
+   "n": "Adonai Mitchell",
+   "num": 15,
+   "pos": "WR",
+   "nfl": "NYJ",
+   "adds": 253840,
+   "proj": 8.4,
+   "opp": "KC",
+   "last": 23.7,
+   "inj": null
+  },
+  {
+   "id": "12491",
+   "n": "Corey Kiner",
+   "num": 9,
+   "pos": "RB",
+   "nfl": "NE",
+   "adds": 246120,
+   "proj": 6.1,
+   "opp": "GB",
+   "last": 3.8,
+   "inj": null
+  },
+  {
+   "id": "4035",
+   "n": "Alvin Kamara",
+   "num": 41,
+   "pos": "RB",
+   "nfl": "NO",
+   "adds": 245848,
+   "proj": 11.1,
+   "opp": "CLE",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "3161",
+   "n": "Carson Wentz",
+   "num": 11,
+   "pos": "QB",
+   "nfl": "MIN",
+   "adds": 187578,
+   "proj": 14.3,
+   "opp": "BUF",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "13603",
+   "n": "Gregory Desrosiers",
+   "num": 30,
+   "pos": "RB",
+   "nfl": "NYG",
+   "adds": 186816,
+   "proj": 3.8,
+   "opp": "PHI",
+   "last": 0,
+   "inj": null
+  },
+  {
+   "id": "13150",
+   "n": "Darius Cooper",
+   "num": 80,
+   "pos": "WR",
+   "nfl": "PHI",
+   "adds": 161420,
+   "proj": 7.2,
+   "opp": "NYG",
+   "last": 2.9,
+   "inj": null
+  },
+  {
+   "id": "13276",
+   "n": "Omar Cooper Jr.",
+   "num": 11,
+   "pos": "WR",
+   "nfl": "NYJ",
+   "adds": 159792,
+   "proj": 11.1,
+   "opp": "KC",
+   "last": 0,
+   "inj": null
+  }
+ ]
+}
