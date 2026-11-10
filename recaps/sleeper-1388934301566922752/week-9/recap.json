@@ -1,0 +1,267 @@
+{
+ "platform": "sleeper",
+ "league": "Elite’s FFL",
+ "week": 9,
+ "myTeamId": 4,
+ "games": [
+  {
+   "win": {
+    "id": 4,
+    "name": "Maye Dicker Down",
+    "pts": 159.9,
+    "left": 2.6
+   },
+   "lose": {
+    "id": 10,
+    "name": "Booty Bandits",
+    "pts": 141.5,
+    "left": 2.9
+   },
+   "margin": 18.4
+  },
+  {
+   "win": {
+    "id": 8,
+    "name": "Ryan’s Daddy",
+    "pts": 149.1,
+    "left": 13.6
+   },
+   "lose": {
+    "id": 9,
+    "name": "Rice place, wrong time",
+    "pts": 126.7,
+    "left": 21.4
+   },
+   "margin": 22.4
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "Taken these DakShotz",
+    "pts": 139.7,
+    "left": 5.9
+   },
+   "lose": {
+    "id": 1,
+    "name": "CDs Dak Shots",
+    "pts": 126.7,
+    "left": 18.8
+   },
+   "margin": 13
+  },
+  {
+   "win": {
+    "id": 7,
+    "name": "Cornhole Taint",
+    "pts": 137.1,
+    "left": 5.3
+   },
+   "lose": {
+    "id": 2,
+    "name": "BAD BEAT",
+    "pts": 114.4,
+    "left": 4.2
+   },
+   "margin": 22.6
+  },
+  {
+   "win": {
+    "id": 5,
+    "name": "love, gibbs ",
+    "pts": 126.9,
+    "left": 38.1
+   },
+   "lose": {
+    "id": 6,
+    "name": "Jeremiyah Loves trash",
+    "pts": 117,
+    "left": 8.1
+   },
+   "margin": 9.9
+  }
+ ],
+ "high": {
+  "id": 4,
+  "name": "Maye Dicker Down",
+  "pts": 159.9,
+  "left": 2.6,
+  "star": {
+   "id": "7564",
+   "n": "Ja'Marr Chase",
+   "pos": "WR",
+   "nfl": "CIN",
+   "act": 31.5
+  }
+ },
+ "low": {
+  "id": 2,
+  "name": "BAD BEAT",
+  "pts": 114.4,
+  "left": 4.2
+ },
+ "close": {
+  "win": {
+   "id": 5,
+   "name": "love, gibbs ",
+   "pts": 126.9,
+   "left": 38.1
+  },
+  "lose": {
+   "id": 6,
+   "name": "Jeremiyah Loves trash",
+   "pts": 117,
+   "left": 8.1
+  },
+  "margin": 9.9
+ },
+ "blow": {
+  "win": {
+   "id": 7,
+   "name": "Cornhole Taint",
+   "pts": 137.1,
+   "left": 5.3
+  },
+  "lose": {
+   "id": 2,
+   "name": "BAD BEAT",
+   "pts": 114.4,
+   "left": 4.2
+  },
+  "margin": 22.6
+ },
+ "mvp": {
+  "player": {
+   "id": "8151",
+   "n": "Kenneth Walker III",
+   "pos": "RB",
+   "nfl": "KC",
+   "act": 36.3
+  },
+  "team": {
+   "id": 8,
+   "name": "Ryan’s Daddy",
+   "pts": 149.1,
+   "left": 13.6
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 5,
+   "name": "love, gibbs ",
+   "pts": 126.9,
+   "left": 38.1
+  },
+  "bench": {
+   "id": "6804",
+   "n": "Jordan Love",
+   "pos": "QB",
+   "nfl": "GB",
+   "act": 36.2
+  }
+ },
+ "standings": [
+  {
+   "id": 4,
+   "name": "Maye Dicker Down",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1346.3,
+   "odds": 99.6
+  },
+  {
+   "id": 5,
+   "name": "love, gibbs ",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1292.8,
+   "odds": 99.4
+  },
+  {
+   "id": 1,
+   "name": "CDs Dak Shots",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1262.6,
+   "odds": 98.4
+  },
+  {
+   "id": 10,
+   "name": "Booty Bandits",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1262.5,
+   "odds": 79.6
+  },
+  {
+   "id": 6,
+   "name": "Jeremiyah Loves trash",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1224.7,
+   "odds": 33.9
+  },
+  {
+   "id": 8,
+   "name": "Ryan’s Daddy",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1170.8,
+   "odds": 67.1
+  },
+  {
+   "id": 9,
+   "name": "Rice place, wrong time",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1143.1,
+   "odds": 51.8
+  },
+  {
+   "id": 3,
+   "name": "Taken these DakShotz",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1140.7,
+   "odds": 6.1
+  },
+  {
+   "id": 7,
+   "name": "Cornhole Taint",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1100.4,
+   "odds": 32.5
+  },
+  {
+   "id": 2,
+   "name": "BAD BEAT",
+   "w": 3,
+   "l": 6,
+   "t": 0,
+   "pf": 1238.8,
+   "odds": 31.6
+  }
+ ],
+ "next": {
+  "week": 10,
+  "a": "Maye Dicker Down",
+  "b": "love, gibbs ",
+  "pa": 158.2,
+  "pb": 146.5,
+  "wa": 0.613
+ },
+ "roast": {
+  "highlow": "Maye Dicker Down hit 159.9 while BAD BEAT limped to 114.4",
+  "mvp": "Ryan's Daddy started Kenneth Walker III and he dropped 36.3. Smart",
+  "blunder": "love, gibbs benched Jordan Love for 36.2 and left 38.1 on the bench"
+ }
+}
