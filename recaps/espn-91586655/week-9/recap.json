@@ -1,0 +1,267 @@
+{
+ "platform": "espn",
+ "league": "Tampa Bay Gridiron Gauntlet League",
+ "week": 9,
+ "myTeamId": 5,
+ "games": [
+  {
+   "win": {
+    "id": 4,
+    "name": "Courtney's Calculated Team",
+    "pts": 146.4,
+    "left": 6.4
+   },
+   "lose": {
+    "id": 7,
+    "name": "Thomas's Talented Team",
+    "pts": 103.6,
+    "left": 12.6
+   },
+   "margin": 42.9
+  },
+  {
+   "win": {
+    "id": 5,
+    "name": "Chicken n burritos ",
+    "pts": 123.1,
+    "left": 10.6
+   },
+   "lose": {
+    "id": 3,
+    "name": "Antonio's Angry Team",
+    "pts": 120.3,
+    "left": 0.2
+   },
+   "margin": 2.8
+  },
+  {
+   "win": {
+    "id": 8,
+    "name": "Tung tung tung sahur",
+    "pts": 112.7,
+    "left": 2.5
+   },
+   "lose": {
+    "id": 1,
+    "name": "Korey's Top-Notch Team",
+    "pts": 107.3,
+    "left": 24.1
+   },
+   "margin": 5.4
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Manifestation",
+    "pts": 108.6,
+    "left": 21.1
+   },
+   "lose": {
+    "id": 2,
+    "name": "Mudd Dawgzzz",
+    "pts": 107.2,
+    "left": 27.8
+   },
+   "margin": 1.4
+  },
+  {
+   "win": {
+    "id": 9,
+    "name": "Bennett's Best Team",
+    "pts": 102.5,
+    "left": 21.1
+   },
+   "lose": {
+    "id": 6,
+    "name": "Sandra's Smart Team",
+    "pts": 72.9,
+    "left": 54.2
+   },
+   "margin": 29.6
+  }
+ ],
+ "high": {
+  "id": 4,
+  "name": "Courtney's Calculated Team",
+  "pts": 146.4,
+  "left": 6.4,
+  "star": {
+   "id": "4596448",
+   "n": "Bucky Irving",
+   "pos": "RB",
+   "nfl": "TB",
+   "act": 28.5
+  }
+ },
+ "low": {
+  "id": 6,
+  "name": "Sandra's Smart Team",
+  "pts": 72.9,
+  "left": 54.2
+ },
+ "close": {
+  "win": {
+   "id": 10,
+   "name": "Manifestation",
+   "pts": 108.6,
+   "left": 21.1
+  },
+  "lose": {
+   "id": 2,
+   "name": "Mudd Dawgzzz",
+   "pts": 107.2,
+   "left": 27.8
+  },
+  "margin": 1.4
+ },
+ "blow": {
+  "win": {
+   "id": 4,
+   "name": "Courtney's Calculated Team",
+   "pts": 146.4,
+   "left": 6.4
+  },
+  "lose": {
+   "id": 7,
+   "name": "Thomas's Talented Team",
+   "pts": 103.6,
+   "left": 12.6
+  },
+  "margin": 42.9
+ },
+ "mvp": {
+  "player": {
+   "id": "4567048",
+   "n": "Kenneth Walker III",
+   "pos": "RB",
+   "nfl": "KC",
+   "act": 36.3
+  },
+  "team": {
+   "id": 1,
+   "name": "Korey's Top-Notch Team",
+   "pts": 107.3,
+   "left": 24.1
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 6,
+   "name": "Sandra's Smart Team",
+   "pts": 72.9,
+   "left": 54.2
+  },
+  "bench": {
+   "id": "4248528",
+   "n": "Christian Watson",
+   "pos": "WR",
+   "nfl": "GB",
+   "act": 30.1
+  }
+ },
+ "standings": [
+  {
+   "id": 5,
+   "name": "Chicken n burritos ",
+   "w": 7,
+   "l": 2,
+   "t": 0,
+   "pf": 1143.3,
+   "odds": 99.4
+  },
+  {
+   "id": 4,
+   "name": "Courtney's Calculated Team",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1123.6,
+   "odds": 93.3
+  },
+  {
+   "id": 2,
+   "name": "Mudd Dawgzzz",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1073.4,
+   "odds": 96.2
+  },
+  {
+   "id": 10,
+   "name": "Manifestation",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1026.8,
+   "odds": 87
+  },
+  {
+   "id": 9,
+   "name": "Bennett's Best Team",
+   "w": 5,
+   "l": 4,
+   "t": 0,
+   "pf": 989.3,
+   "odds": 67.9
+  },
+  {
+   "id": 8,
+   "name": "Tung tung tung sahur",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1060.6,
+   "odds": 49.7
+  },
+  {
+   "id": 7,
+   "name": "Thomas's Talented Team",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1037.5,
+   "odds": 38.9
+  },
+  {
+   "id": 1,
+   "name": "Korey's Top-Notch Team",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1031.2,
+   "odds": 62.7
+  },
+  {
+   "id": 3,
+   "name": "Antonio's Angry Team",
+   "w": 3,
+   "l": 6,
+   "t": 0,
+   "pf": 932.6,
+   "odds": 4.9
+  },
+  {
+   "id": 6,
+   "name": "Sandra's Smart Team",
+   "w": 0,
+   "l": 9,
+   "t": 0,
+   "pf": 689.8,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 10,
+  "a": "Manifestation",
+  "b": "Chicken n burritos ",
+  "pa": 129.8,
+  "pb": 128.9,
+  "wa": 0.51
+ },
+ "roast": {
+  "highlow": "Courtney's 146.4 vs Sandra's 72.9. Somebody skipped the homework.",
+  "mvp": "Korey's Top-Notch Team started Kenneth Walker III and let him cook for 36.3.",
+  "blunder": "Sandra benched Christian Watson for 30.1 and left 54.2 on the bench. Ouch."
+ }
+}
