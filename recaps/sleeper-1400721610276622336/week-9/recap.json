@@ -1,0 +1,265 @@
+{
+ "platform": "sleeper",
+ "league": "JV Gooners ",
+ "week": 9,
+ "myTeamId": 10,
+ "games": [
+  {
+   "win": {
+    "id": 8,
+    "name": "K1rkOchainz",
+    "pts": 212.9,
+    "left": 10.4
+   },
+   "lose": {
+    "id": 2,
+    "name": "Shaw has feet for hands ",
+    "pts": 92.9,
+    "left": 40.8
+   },
+   "margin": 120.1
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Pharoh20",
+    "pts": 181.6,
+    "left": 1.2
+   },
+   "lose": {
+    "id": 6,
+    "name": "carsonismylilho",
+    "pts": 177.3,
+    "left": 14.7
+   },
+   "margin": 4.3
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "WhyBebe805",
+    "pts": 174.1,
+    "left": 15.2
+   },
+   "lose": {
+    "id": 5,
+    "name": "danny879",
+    "pts": 168.5,
+    "left": 35.2
+   },
+   "margin": 5.6
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "Steeler Virginity ",
+    "pts": 160.4,
+    "left": 30.5
+   },
+   "lose": {
+    "id": 9,
+    "name": "Ocho",
+    "pts": 36.2,
+    "left": 55.9
+   },
+   "margin": 124.2
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "perez411",
+    "pts": 79.2,
+    "left": 99.8
+   },
+   "lose": {
+    "id": 7,
+    "name": "galardih",
+    "pts": 63.3,
+    "left": 22.6
+   },
+   "margin": 15.9
+  }
+ ],
+ "high": {
+  "id": 8,
+  "name": "K1rkOchainz",
+  "pts": 212.9,
+  "left": 10.4,
+  "star": {
+   "id": "9493",
+   "n": "Puka Nacua",
+   "pos": "WR",
+   "nfl": "LAR",
+   "act": 50
+  }
+ },
+ "low": {
+  "id": 9,
+  "name": "Ocho",
+  "pts": 36.2,
+  "left": 55.9
+ },
+ "close": {
+  "win": {
+   "id": 4,
+   "name": "Pharoh20",
+   "pts": 181.6,
+   "left": 1.2
+  },
+  "lose": {
+   "id": 6,
+   "name": "carsonismylilho",
+   "pts": 177.3,
+   "left": 14.7
+  },
+  "margin": 4.3
+ },
+ "blow": {
+  "win": {
+   "id": 1,
+   "name": "Steeler Virginity ",
+   "pts": 160.4,
+   "left": 30.5
+  },
+  "lose": {
+   "id": 9,
+   "name": "Ocho",
+   "pts": 36.2,
+   "left": 55.9
+  },
+  "margin": 124.2
+ },
+ "mvp": {
+  "player": {
+   "id": "6786",
+   "n": "CeeDee Lamb",
+   "pos": "WR",
+   "nfl": "DAL",
+   "act": 52
+  },
+  "team": {
+   "id": 1,
+   "name": "Steeler Virginity ",
+   "pts": 160.4,
+   "left": 30.5
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 3,
+   "name": "perez411",
+   "pts": 79.2,
+   "left": 99.8
+  },
+  "bench": {
+   "id": "9758",
+   "n": "C.J. Stroud",
+   "pos": "QB",
+   "nfl": "HOU",
+   "act": 71.2
+  }
+ },
+ "standings": [
+  {
+   "id": 6,
+   "name": "carsonismylilho",
+   "w": 7,
+   "l": 2,
+   "t": 0,
+   "pf": 1958.6,
+   "odds": 100
+  },
+  {
+   "id": 5,
+   "name": "danny879",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1458.8,
+   "odds": 99.8
+  },
+  {
+   "id": 10,
+   "name": "WhyBebe805",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1453.1,
+   "odds": 98.4
+  },
+  {
+   "id": 8,
+   "name": "K1rkOchainz",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1445.7,
+   "odds": 99.6
+  },
+  {
+   "id": 4,
+   "name": "Pharoh20",
+   "w": 5,
+   "l": 4,
+   "t": 0,
+   "pf": 1387.3,
+   "odds": 82.5
+  },
+  {
+   "id": 1,
+   "name": "Steeler Virginity ",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1352.7,
+   "odds": 66.8
+  },
+  {
+   "id": 3,
+   "name": "perez411",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 1269.2,
+   "odds": 6.3
+  },
+  {
+   "id": 2,
+   "name": "Shaw has feet for hands ",
+   "w": 3,
+   "l": 6,
+   "t": 0,
+   "pf": 1402.1,
+   "odds": 46.5
+  },
+  {
+   "id": 9,
+   "name": "Ocho",
+   "w": 2,
+   "l": 7,
+   "t": 0,
+   "pf": 923.1,
+   "odds": 0.1
+  },
+  {
+   "id": 7,
+   "name": "galardih",
+   "w": 2,
+   "l": 7,
+   "t": 0,
+   "pf": 834.9,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 10,
+  "a": "perez411",
+  "b": "carsonismylilho",
+  "pa": 157.6,
+  "pb": 237.4,
+  "wa": 0.07
+ },
+ "roast": {
+  "highlow": "K1rkOchainz scored 212.9 while Ocho limped in at 36.2, ouch"
+ }
+}
