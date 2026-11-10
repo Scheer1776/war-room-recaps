@@ -1,0 +1,267 @@
+{
+ "platform": "espn",
+ "league": "Pittsburgh Beginner H2H Points PPR League",
+ "week": 9,
+ "myTeamId": 5,
+ "games": [
+  {
+   "win": {
+    "id": 10,
+    "name": "Aotearoa Team ",
+    "pts": 178.6,
+    "left": 2.2
+   },
+   "lose": {
+    "id": 1,
+    "name": "014",
+    "pts": 121.3,
+    "left": 15.6
+   },
+   "margin": 57.3
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Siphilis Seals",
+    "pts": 159.2,
+    "left": 17.2
+   },
+   "lose": {
+    "id": 5,
+    "name": "Diddy plower",
+    "pts": 113.7,
+    "left": 17.4
+   },
+   "margin": 45.6
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "Rizzy Ryan",
+    "pts": 133.9,
+    "left": 5.7
+   },
+   "lose": {
+    "id": 9,
+    "name": "Dalton's Daring Team",
+    "pts": 91.5,
+    "left": 11.4
+   },
+   "margin": 42.5
+  },
+  {
+   "win": {
+    "id": 7,
+    "name": "Aiden's Astounding Team",
+    "pts": 115.1,
+    "left": 5.7
+   },
+   "lose": {
+    "id": 6,
+    "name": "Jordan Loves to throw meatballs",
+    "pts": 81.8,
+    "left": 16.8
+   },
+   "margin": 33.3
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "Red Tide",
+    "pts": 110.8,
+    "left": 3.9
+   },
+   "lose": {
+    "id": 8,
+    "name": "Brittney's Best Team",
+    "pts": 54.5,
+    "left": 32
+   },
+   "margin": 56.3
+  }
+ ],
+ "high": {
+  "id": 10,
+  "name": "Aotearoa Team ",
+  "pts": 178.6,
+  "left": 2.2,
+  "star": {
+   "id": "4567048",
+   "n": "Kenneth Walker III",
+   "pos": "RB",
+   "nfl": "KC",
+   "act": 36.3
+  }
+ },
+ "low": {
+  "id": 8,
+  "name": "Brittney's Best Team",
+  "pts": 54.5,
+  "left": 32
+ },
+ "close": {
+  "win": {
+   "id": 7,
+   "name": "Aiden's Astounding Team",
+   "pts": 115.1,
+   "left": 5.7
+  },
+  "lose": {
+   "id": 6,
+   "name": "Jordan Loves to throw meatballs",
+   "pts": 81.8,
+   "left": 16.8
+  },
+  "margin": 33.3
+ },
+ "blow": {
+  "win": {
+   "id": 10,
+   "name": "Aotearoa Team ",
+   "pts": 178.6,
+   "left": 2.2
+  },
+  "lose": {
+   "id": 1,
+   "name": "014",
+   "pts": 121.3,
+   "left": 15.6
+  },
+  "margin": 57.3
+ },
+ "mvp": {
+  "player": {
+   "id": "4567048",
+   "n": "Kenneth Walker III",
+   "pos": "RB",
+   "nfl": "KC",
+   "act": 36.3
+  },
+  "team": {
+   "id": 10,
+   "name": "Aotearoa Team ",
+   "pts": 178.6,
+   "left": 2.2
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 8,
+   "name": "Brittney's Best Team",
+   "pts": 54.5,
+   "left": 32
+  },
+  "bench": {
+   "id": "4361370",
+   "n": "Chris Olave",
+   "pos": "WR",
+   "nfl": "NO",
+   "act": 16.8
+  }
+ },
+ "standings": [
+  {
+   "id": 2,
+   "name": "Rizzy Ryan",
+   "w": 7,
+   "l": 2,
+   "t": 0,
+   "pf": 1202.4,
+   "odds": 100
+  },
+  {
+   "id": 6,
+   "name": "Jordan Loves to throw meatballs",
+   "w": 7,
+   "l": 2,
+   "t": 0,
+   "pf": 1047.2,
+   "odds": 100
+  },
+  {
+   "id": 4,
+   "name": "Siphilis Seals",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1312.3,
+   "odds": 100
+  },
+  {
+   "id": 10,
+   "name": "Aotearoa Team ",
+   "w": 6,
+   "l": 3,
+   "t": 0,
+   "pf": 1038.4,
+   "odds": 99
+  },
+  {
+   "id": 5,
+   "name": "Diddy plower",
+   "w": 5,
+   "l": 4,
+   "t": 0,
+   "pf": 1125.3,
+   "odds": 98.1
+  },
+  {
+   "id": 9,
+   "name": "Dalton's Daring Team",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 981.2,
+   "odds": 81.4
+  },
+  {
+   "id": 7,
+   "name": "Aiden's Astounding Team",
+   "w": 4,
+   "l": 5,
+   "t": 0,
+   "pf": 880,
+   "odds": 14.8
+  },
+  {
+   "id": 3,
+   "name": "Red Tide",
+   "w": 3,
+   "l": 6,
+   "t": 0,
+   "pf": 854.2,
+   "odds": 1.2
+  },
+  {
+   "id": 1,
+   "name": "014",
+   "w": 2,
+   "l": 7,
+   "t": 0,
+   "pf": 977.3,
+   "odds": 5.5
+  },
+  {
+   "id": 8,
+   "name": "Brittney's Best Team",
+   "w": 1,
+   "l": 8,
+   "t": 0,
+   "pf": 750,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 10,
+  "a": "Aotearoa Team ",
+  "b": "Siphilis Seals",
+  "pa": 121.4,
+  "pb": 153.4,
+  "wa": 0.194
+ },
+ "roast": {
+  "highlow": "Aotearoa scored 178.6 while Brittney's limped in at 54.5. Ouch.",
+  "mvp": "Kenneth Walker III dropped 36.3 for Aotearoa. Someone's getting a parade.",
+  "blunder": "Brittney benched Chris Olave with 16.8 pts and left 32 on the bench. Wow."
+ }
+}
