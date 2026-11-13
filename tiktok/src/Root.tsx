@@ -11,6 +11,7 @@ import { BrollExample, PlayAnimExample } from "./Examples";
 import { RankSlides, RankProps, rankSchema, rankSlides } from "./RankSlides";
 import { PlayerHype, hypeFrames, hypeSchema } from "./PlayerHype";
 import { SundayRecap, SundayProps, sundayFrames, sundaySchema } from "./SundayRecap";
+import { AutoRecap, AutoProps, autoFrames, autoSchema } from "./AutoRecap";
 import { LeagueRecap, LeagueRecapProps, leagueRecapFrames, leagueRecapSchema } from "./LeagueRecap";
 import { Quiz, QuizProps, quizFrames, quizSchema } from "./Quiz";
 import { WeatherSlides, WeatherProps, weatherSlides, weatherSchema } from "./WeatherSlides";
@@ -108,6 +109,10 @@ const sundayMeta: CalculateMetadataFunction<SundayProps> = async ({ props }) => 
   const plan = await fetch(staticFile(`${props.source}/plan.json`)).then((r) => r.json());
   const p = { ...plan, ...props, scenes: plan.scenes, scores: plan.scores, voFull: plan.voFull ?? null, voDur: props.voice ? plan.voDur : null };
   return { props: p, durationInFrames: sundayFrames(p) };
+};
+const autoMeta: CalculateMetadataFunction<AutoProps> = async ({ props }) => {
+  await fontsReady;
+  return { durationInFrames: Math.max(30, autoFrames(props)) };
 };
 export const RemotionRoot: React.FC = () => (
   <>
@@ -273,5 +278,7 @@ export const RemotionRoot: React.FC = () => (
     defaultProps={{ source: "lr7", recap: null, nameOverrides: {}, appUrl: "war-room-self-one.vercel.app", voice: false, voDur: null, music: "bed" }} />
   <Composition id="SundayRecap" component={SundayRecap} fps={30} width={1080} height={1920} durationInFrames={1050} schema={sundaySchema} calculateMetadata={sundayMeta}
     defaultProps={{ source: "sun8", week: 8, voice: true, voDur: null, scenes: [], scores: [] }} />
+  <Composition id="AutoRecap" component={AutoRecap} fps={30} width={1080} height={1920} durationInFrames={900} schema={autoSchema} calculateMetadata={autoMeta}
+    defaultProps={{ source: "auto/thu", week: 0, label: "THURSDAY NIGHT", voFull: null, words: [], scenes: [], scores: [] }} />
   </>
 );

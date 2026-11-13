@@ -22,6 +22,6 @@ voice/.venv/bin/python -I auto/voice.py "$DIR/story.json" 2>&1 | grep -v -i "war
 test -f "$DIR/plan.json"
 echo "== 5/5 render"
 OUT="out/auto-${SLATE}-w${WEEK}.mp4"
-npx remotion render SundayRecap "$OUT" --props="$DIR/plan.json" --codec=h264 --crf=20 --concurrency="${REMOTION_CONCURRENCY:-4}" --log=error
+npx remotion render AutoRecap "$OUT" --props="$DIR/plan.json" --codec=h264 --crf=20 --concurrency="${REMOTION_CONCURRENCY:-4}" --log=error
 ffprobe -v error -show_entries format=duration -of csv=p=0 "$OUT" | xargs -I{} echo "done: $OUT ({} s)"
 echo "$OUT" > out/last.txt

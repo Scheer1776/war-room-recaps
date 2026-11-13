@@ -369,4 +369,10 @@ caption words from Kokoro's own token timings (auto/voice.py) -> best-effort gam
 cloud downloads, so it usually skips) -> Remotion SundayRecap with `label` (e.g. "THURSDAY NIGHT"). Workflow
 `.github/workflows/tiktok-auto.yml` runs it after every Thursday Night Football game (and by hand for any slate) and
 attaches the MP4 to a GitHub release. Boom scenes with no clip show a 600 px player photo instead of empty space.
-Rough v1: no AI script yet, no game clips in the cloud, Kokoro "am_michael" voice instead of the VoiceStudio voices.
+Rough v1: no AI script yet, no game clips in the cloud, Kokoro voice instead of the VoiceStudio voices.
+- v2 (same night, owner: "a little more excitement in the voice but not much more" + "cooler animation"): voice = Kokoro blend
+  am_michael 0.7 + am_fenrir 0.3 at speed 1.2 (pitch movement 9.0 -> 10.6 semitones, +17%; Fenrir alone is +46%, too much)
+  and "!" on the payoff lines. Render = new `AutoRecap` composition (src/AutoRecap.tsx): logo smash with shockwave/sparks and
+  count-up scores, 3D-tilting player cards with a light sweep over rotating team-color speed lines, a fantasy-points meter
+  that fills past (or stops short of) the projection tick with a +/- badge, a cracking grayscale bust card with an RGB-glitch
+  number, and a 3D phone (app/startsit-vp.png) + QR closer. ESPN team logos are saved to <dir>/l/<TEAM>.png.

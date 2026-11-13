@@ -21,7 +21,7 @@ export const fontsReady = Promise.all([
 const TEAM_COLOR: Record<string, string> = { ARI: "#C8102E", ATL: "#D0102E", BAL: "#6A4FD8", BUF: "#2F6BFF", CAR: "#0085CA", CHI: "#E8562A", CIN: "#FB4F14", CLE: "#FF5A1F",
   DAL: "#8FA8C8", DEN: "#FB4F14", DET: "#1B9BE0", GB: "#FFB612", HOU: "#D0243F", IND: "#3A82D8", JAX: "#D7A22A", KC: "#F0263F", LAC: "#21A0E8",
   LAR: "#FFB000", LV: "#B9C0C4", MIA: "#00B3BD", MIN: "#8A5CE0", NE: "#E0263F", NO: "#D3BC8D", NYG: "#4A6BE8", NYJ: "#22A45D", PHI: "#00A3AD",
-  PIT: "#FFB612", SF: "#D92A2A", SEA: "#69BE28", TB: "#E8261E", TEN: "#4B92DB", WAS: "#C9373C" };
+  PIT: "#FFB612", SF: "#D92A2A", SEA: "#69BE28", TB: "#E8261E", TEN: "#4B92DB", WAS: "#C9373C", WSH: "#C9373C" };
 export const teamColor = (nfl: string) => TEAM_COLOR[nfl] || C.turf;
 
 export const ease = Easing.bezier(0.16, 1, 0.3, 1);

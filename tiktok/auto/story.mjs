@@ -13,7 +13,7 @@ const WHEN = { thu: "Thursday night", sun: "Sunday", mon: "Monday night", all: "
 const notFinal = d.games.filter(g => !g.final);
 if (notFinal.length && !force) { console.error(`not final yet: ${notFinal.map(g => `${g.away.t}@${g.home.t} ${g.detail}`).join(", ")}`); process.exit(3); }
 
-const pl = r => ({ id: r.id, n: r.n, pos: r.pos, team: r.team, pts: r.pts, proj: r.proj, line: r.line });
+const pl = r => ({ id: r.id, n: r.n, pos: r.pos, team: r.team, pts: r.pts, proj: r.proj, line: r.line, s: r.s });
 const num = x => (Number.isInteger(x) ? String(x) : x.toFixed(1));
 const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
 const tdWords = n => (n === 1 ? "a touchdown" : `${n} touchdowns`);
@@ -40,32 +40,32 @@ if (d.games.length === 1) {
   const g = d.games[0], aw = g.away.s > g.home.s, W = aw ? g.away : g.home, L = aw ? g.home : g.away, m = W.s - L.s;
   const tie = g.away.s === g.home.s;
   const verb = tie ? "TIE." : g.ot ? "IN OT." : m >= 17 ? "ROLL." : m >= 8 ? "WIN." : "SURVIVE.";
-  scenes.push({ id: "result", kind: "stats", title: tie ? `${g.away.name.toUpperCase()}-${g.home.name.toUpperCase()} END IN A TIE.` : `${W.name.toUpperCase()} ${verb}`,
+  scenes.push({ id: "result", kind: "versus", game: { away: { t: g.away.t, s: g.away.s, name: g.away.name }, home: { t: g.home.t, s: g.home.s, name: g.home.name }, ot: g.ot }, title: tie ? `${g.away.name.toUpperCase()}-${g.home.name.toUpperCase()} END IN A TIE.` : `${W.name.toUpperCase()} ${verb}`,
     stamp: "FINAL", color: "gold",
     tiles: [{ v: g.away.s, label: g.away.t }, { v: g.home.s, label: g.home.t }],
     line: tie ? `${WHEN}. ${g.away.name} and ${g.home.name} tie at ${g.away.s}. Here's what it did to your fantasy team.`
-      : `${WHEN}. The ${W.name} ${m >= 17 ? "ran over" : "beat"} the ${L.name}, ${W.s} to ${L.s}${g.ot ? " in overtime" : ""}. Here's what it did to your fantasy team.` });
+      : `${WHEN}. The ${W.name} ${m >= 17 ? "ran over" : "beat"} the ${L.name}, ${W.s} to ${L.s}${g.ot ? " in overtime" : ""}! Here's what it did to your fantasy team.` });
 } else {
-  scenes.push({ id: "result", kind: "scores", title: `${LABEL} SCORES`, line: `${WHEN} is in the books. Here's who won your fantasy week.` });
+  scenes.push({ id: "result", kind: "scores", title: `${LABEL} *SCORES`, line: `${WHEN} is in the books. Here's who won your fantasy week.` });
 }
 // 2) top scorer
 const t0 = d.top[0];
-if (t0) scenes.push({ id: "top", kind: "boom", title: t0.pts >= 25 ? "WENT NUCLEAR." : t0.pts >= 18 ? "SHOWED UP." : "LED THE WAY.", stamp: `${num(t0.pts)} PTS`, color: "gold",
-  player: pl(t0), line: `${t0.n} led everyone with ${num(t0.pts)} points.${spoken(t0) ? " " + spoken(t0)[0].toUpperCase() + spoken(t0).slice(1) + "." : ""}` });
+if (t0) scenes.push({ id: "top", kind: "hero", title: t0.pts >= 25 ? "WENT NUCLEAR." : t0.pts >= 18 ? "SHOWED UP." : "LED THE WAY.", stamp: `${num(t0.pts)} PTS`, color: "gold",
+  player: pl(t0), line: `${t0.n} led everyone with ${num(t0.pts)} points!${spoken(t0) ? " " + spoken(t0)[0].toUpperCase() + spoken(t0).slice(1) + "." : ""}` });
 // 3) the surprise (beat projection most), else the second-best scorer
 const b0 = d.beat.find(r => r.id !== t0?.id && r.diff >= 5);
 const t1 = b0 || d.top.find(r => r.id !== t0?.id);
 if (t1) scenes.push(b0
-  ? { id: "beat", kind: "boom", title: "NOBODY SAW THIS.", stamp: `+${num(b0.diff)}`, color: "turf", player: pl(b0),
-      line: `Nobody saw ${b0.n} coming. Projected for ${num(b0.proj)}, he put up ${num(b0.pts)}.` }
-  : { id: "second", kind: "boom", title: "RIGHT BEHIND HIM.", stamp: `${num(t1.pts)} PTS`, color: "turf", player: pl(t1),
+  ? { id: "beat", kind: "hero", title: "NOBODY SAW THIS.", stamp: `+${num(b0.diff)}`, color: "turf", player: pl(b0),
+      line: `Nobody saw ${b0.n} coming. Projected for ${num(b0.proj)}, he put up ${num(b0.pts)}!` }
+  : { id: "second", kind: "hero", title: "RIGHT BEHIND HIM.", stamp: `${num(t1.pts)} PTS`, color: "turf", player: pl(t1),
       line: `${t1.n} added ${num(t1.pts)}.${spoken(t1) ? " " + spoken(t1)[0].toUpperCase() + spoken(t1).slice(1) + "." : ""}` });
 // 4) the bust
 const x0 = d.bust.find(r => r.diff <= -5 && r.id !== t0?.id && r.id !== t1?.id);
-if (x0) scenes.push({ id: "bust", kind: "bust", title: "WHO STARTED HIM?", stamp: "OUCH.", color: "red", big: num(x0.pts), players: [pl(x0)],
+if (x0) scenes.push({ id: "bust", kind: "bust", title: "WHO STARTED HIM?", stamp: "OUCH.", color: "red", player: pl(x0),
   line: `And if you started ${x0.n}... sorry. ${num(x0.pts)} points, on a ${num(x0.proj)} point projection.` });
 // 5) call to action (QR + link card; held >= 4 s so the code can be scanned)
-scenes.push({ id: "cta", kind: "cta", title: "SUNDAY'S|COMING.", minDur: 4.2,
+scenes.push({ id: "cta", kind: "cta", title: "SUNDAY'S *COMING.", minDur: 4.2, color: "turf",
   line: `Need help with Sunday's lineup? Get free start-sit picks on War Room. Link in bio.` });
 
 const story = { source: src, week: d.week, label: LABEL, slate: d.slate,

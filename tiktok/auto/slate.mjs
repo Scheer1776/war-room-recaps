@@ -8,7 +8,7 @@ const arg = (k, d) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ?
 const out = process.argv[2] || "public/auto";
 const slate = arg("slate", "thu");
 const weekArg = arg("week", "");
-mkdirSync(out + "/h", { recursive: true });
+mkdirSync(out + "/h", { recursive: true }); mkdirSync(out + "/l", { recursive: true });
 
 const j = (u) => fetch(u).then(r => { if (!r.ok) throw new Error(u + " " + r.status); return r.json(); });
 const sb = await j("https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard" + (weekArg ? `?week=${weekArg}&seasontype=2` : ""));
@@ -19,7 +19,7 @@ if (!DAY) throw new Error("slate must be thu|sun|mon|all");
 const games = sb.events.filter(e => DAY.includes(pt(e.date).getDay())).map(e => {
   const c = e.competitions[0], st = e.status.type;
   const [a, b] = [...c.competitors].sort(x => (x.homeAway === "away" ? -1 : 1));
-  const side = x => ({ t: x.team.abbreviation, s: Number(x.score || 0), name: x.team.shortDisplayName, full: x.team.displayName, rec: x.records?.[0]?.summary || "" });
+  const side = x => ({ logo: x.team.logo, t: x.team.abbreviation, s: Number(x.score || 0), name: x.team.shortDisplayName, full: x.team.displayName, rec: x.records?.[0]?.summary || "" });
   return { id: e.id, date: e.date, state: st.state, final: st.completed, detail: st.shortDetail, ot: /OT/.test(st.shortDetail), away: side(a), home: side(b) };
 });
 if (!games.length) throw new Error(`no ${slate} games in week ${week}`);
@@ -58,6 +58,10 @@ for (const r of [...top, ...beat, ...bust]) {
   if (existsSync(f)) continue;
   const res = await fetch(`https://sleepercdn.com/content/nfl/players/${r.id}.jpg`);
   if (res.ok) writeFileSync(f, Buffer.from(await res.arrayBuffer()));
+}
+for (const g of games) for (const x of [g.away, g.home]) {   // team logos (ESPN CDN) for the logo smash
+  if (!x.logo || existsSync(`${out}/l/${x.t}.png`)) continue;
+  const res = await fetch(x.logo); if (res.ok) writeFileSync(`${out}/l/${x.t}.png`, Buffer.from(await res.arrayBuffer()));
 }
 const data = { season, week, slate, games, top, beat, bust, made: new Date().toISOString() };
 writeFileSync(`${out}/slate.json`, JSON.stringify(data, null, 1));

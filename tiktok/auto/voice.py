@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """auto/voice.py — voice a story.json with Kokoro (free, Apache-2.0, CPU) and time the video to it.
-  voice/.venv/bin/python -I auto/voice.py public/<dir>/story.json [--voice am_michael] [--speed 1.15]
+  voice/.venv/bin/python -I auto/voice.py public/<dir>/story.json [--voice am_michael:0.7,am_fenrir:0.3] [--speed 1.2]
 One continuous generation of the whole script (one line per scene, so each Kokoro chunk = one scene), then:
   - <dir>/vo/full.mp3   trimmed, 0.15 s lead-in, loudnorm -14 LUFS
   - <dir>/plan.json     SundayRecap props: each scene's exact `dur`, word timings for captions (script spelling)
@@ -13,7 +13,7 @@ from kokoro import KPipeline
 args = sys.argv[1:]
 story_p = pathlib.Path(args[0]); d = story_p.parent
 opt = lambda k, v: args[args.index(k) + 1] if k in args else v
-VOICE, SPEED = opt("--voice", "am_michael"), float(opt("--speed", "1.15"))
+VOICE, SPEED = opt("--voice", "am_michael:0.7,am_fenrir:0.3"), float(opt("--speed", "1.2"))  # 2026-11-12 owner: "a little more excitement, not much more" -> +17% pitch movement
 SR, LEAD, GAP, TAIL = 24000, 0.15, 0.28, 0.6   # GAP = breath after each scene's line (Kokoro chunks join without one)
 
 st = json.loads(story_p.read_text())
@@ -25,6 +25,8 @@ def for_speech(t):
     return t
 
 pipe = KPipeline(lang_code="a")
+if ":" in VOICE:   # weighted blend of Kokoro voicepacks, e.g. am_michael:0.7,am_fenrir:0.3
+    VOICE = sum(float(w) * pipe.load_voice(n) for n, w in (x.split(":") for x in VOICE.split(",")))
 chunks, words, t = [], [], LEAD
 audio = [np.zeros(int(LEAD * SR), dtype=np.float32)]
 for sc in st["scenes"]:
