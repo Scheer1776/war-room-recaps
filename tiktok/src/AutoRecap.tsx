@@ -13,12 +13,17 @@ const stats = z.object({ pass_yd: z.number(), pass_td: z.number(), pass_int: z.n
 const player = z.object({ id: z.string(), n: z.string(), pos: z.string(), team: z.string(), pts: z.number(), proj: z.number(), line: z.string(), s: stats.optional() });
 const side = z.object({ t: z.string(), s: z.number(), name: z.string() });
 const scene = z.object({
-  id: z.string(), kind: z.enum(["versus", "scores", "hero", "bust", "cta"]), dur: z.number(),
+  id: z.string(), kind: z.enum(["versus", "scores", "hero", "bust", "cta", "clip", "timeline"]), dur: z.number(),
   title: z.string().default(""), stamp: z.string().default(""), color: z.string().default("gold"),
   player: player.nullable().default(null),
   game: z.object({ away: side, home: side, ot: z.boolean().default(false) }).nullable().default(null),
   appShot: z.string().default("app/startsit-vp.png"),
-  pip: z.array(z.object({ file: z.string(), label: z.string(), headline: z.string().optional() })).optional(), // real game clips (auto/clips.mjs)
+  pip: z.array(z.object({ file: z.string(), label: z.string(), headline: z.string().optional(), from: z.number().optional() })).optional(), // real game clips (auto/clips.mjs)
+  // kind "clip": big widescreen game footage, segments played back to back (rate < 1 = slow-motion replay)
+  segs: z.array(z.object({ file: z.string(), from: z.number().default(0), to: z.number(), rate: z.number().default(1), label: z.string().optional() })).optional(),
+  // kind "timeline": every score of one game on a race chart, lead changes marked
+  timeline: z.object({ away: z.object({ t: z.string(), name: z.string() }), home: z.object({ t: z.string(), name: z.string() }),
+    plays: z.array(z.object({ min: z.number(), a: z.number(), h: z.number() })) }).optional(),
 });
 export const autoSchema = z.object({
   source: z.string(), week: z.number(), label: z.string().nullable().optional(), voFull: z.string().nullable().optional(),
@@ -106,7 +111,7 @@ const Pip: React.FC<{ p: AutoProps; s: Scene; color: string; at?: number }> = ({
         boxShadow: `0 0 0 5px ${color}, 0 0 50px ${color}99, 0 30px 60px rgba(0,0,0,0.7)`, background: "#000" }}>
         {list.map((c, i) => (
           <Sequence key={i} from={at + i * each} durationInFrames={each} layout="none">
-            <OffthreadVideo src={staticFile(`${p.source}/clips/${c.file}`)} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.08) saturate(1.2)" }} />
+            <OffthreadVideo src={staticFile(`${p.source}/clips/${c.file}`)} muted startFrom={Math.round((c.from || 0) * FPS)} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.08) saturate(1.2)" }} />
           </Sequence>
         ))}
         {lf >= 0 && lf < 4 ? <div style={{ position: "absolute", inset: 0, background: "#fff", opacity: 1 - lf / 4 }} /> : null}
@@ -314,6 +319,88 @@ const Cta: React.FC<{ s: Scene }> = ({ s }) => {
   );
 };
 
+// Big game footage: a widescreen box over a blurred copy of itself; segments back to back, slow-mo replays labeled.
+const ClipScene: React.FC<{ p: AutoProps; s: Scene }> = ({ p, s }) => {
+  const f = useCurrentFrame(); const { fps } = useVideoConfig();
+  const segs = s.segs || []; const c = col(s.color);
+  let at = 0;
+  const parts = segs.map(g => { const d = Math.max(1, Math.round(((g.to - g.from) / (g.rate || 1)) * FPS)); const x = { g, from: at, d }; at += d; return x; });
+  const total = at;
+  const cur = parts.find(x => f >= x.from && f < x.from + x.d) || parts[parts.length - 1];
+  const box = { top: 440, h: 780 };
+  const vid = (x: typeof parts[number], style: React.CSSProperties, blur = false) => (
+    <Sequence key={(blur ? "b" : "v") + x.from} from={x.from} durationInFrames={x === parts[parts.length - 1] ? Math.max(x.d, 99999) : x.d} layout="none">
+      <OffthreadVideo src={staticFile(`${p.source}/clips/${x.g.file}`)} muted startFrom={Math.round(x.g.from * FPS)} endAt={Math.round(x.g.to * FPS)} playbackRate={x.g.rate || 1} style={style} />
+    </Sequence>);
+  const inn = spring({ frame: f, fps, config: { damping: 15, stiffness: 120 } });
+  const lf = cur ? f - cur.from : 0;
+  const lab = spring({ frame: lf - 3, fps, config: { damping: 11, stiffness: 220 } });
+  const label = cur?.g.label || (cur && (cur.g.rate || 1) < 1 ? "REPLAY" : "");
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <AbsoluteFill style={{ filter: "blur(38px) brightness(0.42) saturate(1.3)", scale: "1.25" }}>
+        {parts.map(x => vid(x, { width: "100%", height: "100%", objectFit: "cover" }, true))}
+      </AbsoluteFill>
+      <AbsoluteFill style={{ background: `radial-gradient(900px 700px at 50% 45%, ${c}22, transparent 70%)` }} />
+      <div style={{ position: "absolute", top: box.top, left: 0, width: W, height: box.h, overflow: "hidden", scale: String(0.9 + 0.1 * inn), opacity: Math.min(1, inn * 1.5),
+        boxShadow: `0 -6px 0 ${c}, 0 6px 0 ${c}, 0 0 80px ${c}88` }}>
+        {parts.map(x => vid(x, { width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.08) saturate(1.18)" }))}
+        {cur && lf >= 0 && lf < 5 ? <div style={{ position: "absolute", inset: 0, background: "#fff", opacity: 0.85 * (1 - lf / 5) }} /> : null}
+      </div>
+      {label ? <div style={{ position: "absolute", top: box.top - 34, left: L - 10, padding: "4px 18px", borderRadius: 12, background: c, color: "#04110B", fontFamily: DISPLAY, fontWeight: 800, fontSize: 40, rotate: "-3deg",
+        scale: String(1.6 - 0.6 * lab), opacity: Math.min(1, lab * 2), boxShadow: `0 0 30px ${c}` }}>{label}</div> : null}
+      <Title s={s} accent={c} />
+      {s.stamp ? <div style={{ position: "absolute", top: box.top + box.h - 70, right: R - 30 }}><Stamp text={s.stamp} color={c} at={Math.min(total, 60)} size={80} rot={-7} /></div> : null}
+      <Flash at={1} color="#fff" peak={0.6} />
+    </AbsoluteFill>
+  );
+};
+
+// Race chart of one game's score: both lines draw left to right, lead changes pop as rings, quarters marked.
+const Timeline: React.FC<{ s: Scene }> = ({ s }) => {
+  const f = useCurrentFrame(); const tl = s.timeline!;
+  const X0 = 110, X1 = 970, Y0 = 1140, Y1 = 560;
+  const maxS = Math.max(...tl.plays.map(x => Math.max(x.a, x.h)), 7) + 4;
+  const x = (m: number) => X0 + (m / 60) * (X1 - X0), y = (v: number) => Y0 - (v / maxS) * (Y0 - Y1);
+  const prog = interpolate(f, [10, 120], [0, 60], { ...clamp, easing: (k) => k });
+  const pts = [{ min: 0, a: 0, h: 0 }, ...tl.plays];
+  const path = (key: "a" | "h") => { let d = `M ${x(0)} ${y(0)}`, last = 0;
+    for (const p of pts.slice(1)) { if (p.min > prog) break; d += ` L ${x(p.min)} ${y(last)} L ${x(p.min)} ${y(p[key])}`; last = p[key]; }
+    return d + ` L ${x(prog)} ${y(last)}`; };
+  const changes: { min: number; v: number; t: string }[] = []; let lead = 0;
+  for (const p of tl.plays) { const l = Math.sign(p.a - p.h);
+    if (l !== 0 && lead !== 0 && l !== lead) changes.push({ min: p.min, v: Math.max(p.a, p.h), t: l > 0 ? tl.away.t : tl.home.t });
+    if (l !== 0) lead = l; }
+  const shown = changes.filter(c => c.min <= prog).length;
+  const ca = teamColor(tl.away.t), ch = teamColor(tl.home.t);
+  return (
+    <AbsoluteFill>
+      <Base color={C.gold} seed={11} />
+      <Title s={s} accent={C.gold} />
+      <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
+        <rect x={x(0)} y={Y1 - 20} width={x(15) - x(0)} height={Y0 - Y1 + 20} fill="rgba(255,255,255,0.06)" />
+        <text x={(x(0) + x(15)) / 2} y={Y0 - 160} textAnchor="middle" fontFamily={DISPLAY} fontWeight={800} fontSize={64} fill="rgba(255,255,255,0.35)" opacity={interpolate(f, [20, 30], [0, 1], clamp)}>Z z z</text>
+        {[1, 2, 3, 4].map(q => <g key={q}><line x1={x(q * 15)} x2={x(q * 15)} y1={Y1 - 20} y2={Y0} stroke="rgba(255,255,255,0.15)" strokeWidth={2} strokeDasharray="8 10" />
+          <text x={x(q * 15 - 7.5)} y={Y0 + 50} textAnchor="middle" fontFamily={BODY} fontWeight={600} fontSize={30} fill={C.dim}>Q{q}</text></g>)}
+        <line x1={X0} x2={X1} y1={Y0} y2={Y0} stroke="rgba(255,255,255,0.35)" strokeWidth={3} />
+        <path d={path("a")} fill="none" stroke={ca} strokeWidth={12} strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 14px ${ca})` }} />
+        <path d={path("h")} fill="none" stroke={ch} strokeWidth={12} strokeLinejoin="round" style={{ filter: `drop-shadow(0 0 14px ${ch})` }} />
+        {changes.map((c, i) => { const k = interpolate(prog, [c.min, c.min + 2.5], [0, 1], clamp); if (k <= 0) return null;
+          return <circle key={i} cx={x(c.min)} cy={y(c.v)} r={18 + 30 * (1 - k)} fill="none" stroke="#fff" strokeWidth={6} opacity={0.4 + 0.6 * k} />; })}
+      </svg>
+      <div style={{ position: "absolute", top: Y1 - 110, left: L, display: "flex", gap: 28 }}>
+        {[[tl.away, ca, "a"], [tl.home, ch, "h"]].map(([t, cc, k]: any) => { const lastP = [...pts].reverse().find(p => p.min <= prog)!;
+          return <div key={k} style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: DISPLAY, fontWeight: 800, fontSize: 46, color: "#fff" }}>
+            <span style={{ width: 26, height: 26, borderRadius: 13, background: cc, boxShadow: `0 0 16px ${cc}` }} />{t.t} {lastP[k as "a" | "h"]}</div>; })}
+      </div>
+      <div style={{ position: "absolute", top: Y1 - 120, right: R - 20, textAlign: "right" }}>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 120, lineHeight: 0.9, color: C.gold, textShadow: `0 0 40px ${C.gold}88`, scale: String(shown ? interpolate((f % 20), [0, 4, 20], [1.12, 1, 1], clamp) : 1) }}>{shown}</div>
+        <div style={{ fontFamily: BODY, fontWeight: 600, fontSize: 28, letterSpacing: 3, color: C.dim }}>LEAD CHANGES</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const TeamWipe: React.FC<{ color: string; dir: number }> = ({ color, dir }) => {
   const f = useCurrentFrame();
   if (f > 9) return null;
@@ -330,7 +417,8 @@ export const AutoRecap: React.FC<AutoProps> = (p) => {
         <Sequence key={s.id} name={s.id} from={from} durationInFrames={d}>
           <Whip dir={i % 2 ? -1 : 1}>
             {s.kind === "versus" ? <Versus p={p} s={s} /> : s.kind === "hero" ? <Hero p={p} s={s} /> : s.kind === "bust" ? <Bust p={p} s={s} />
-              : s.kind === "scores" ? <Scores p={p} s={s} /> : <Cta s={s} />}
+              : s.kind === "scores" ? <Scores p={p} s={s} /> : s.kind === "clip" ? <ClipScene p={p} s={s} />
+              : s.kind === "timeline" ? <Timeline s={s} /> : <Cta s={s} />}
           </Whip>
           {i > 0 ? <TeamWipe color={s.player ? teamColor(s.player.team) : col(s.color)} dir={i % 2 ? -1 : 1} /> : null}
           {i === 0 ? <GlitchOpen line1={`WEEK ${p.week}`} line2={p.label || "RECAP"} dur={20} /> : null}

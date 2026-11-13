@@ -40,7 +40,8 @@ for sc in st["scenes"]:
             words.append({"t": tok.text + (tok.whitespace and "" or ""), "s": round(t + tok.start_ts, 3), "e": round(t + (tok.end_ts or tok.start_ts + 0.2), 3)})
         audio.append(a.astype(np.float32)); t += len(a) / SR
     spoke = t - start
-    audio.append(np.zeros(int(GAP * SR), dtype=np.float32)); t += GAP
+    pad = max(GAP, sc.get("minDur", 0) - spoke) if sc is not st["scenes"][-1] else GAP   # a scene can hold longer than its line (e.g. to let a clip play)
+    audio.append(np.zeros(int(pad * SR), dtype=np.float32)); t += pad
     chunks.append((sc, start, spoke))
 
 audio.append(np.zeros(int(TAIL * SR), dtype=np.float32))

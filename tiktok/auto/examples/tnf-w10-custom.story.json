@@ -1,0 +1,259 @@
+{
+ "source": "auto/tnf10",
+ "week": 10,
+ "label": "THURSDAY NIGHT",
+ "slate": "thu",
+ "scores": [
+  {
+   "away": {
+    "t": "WSH",
+    "s": 24
+   },
+   "home": {
+    "t": "NYG",
+    "s": 21
+   },
+   "ot": false
+  }
+ ],
+ "scenes": [
+  {
+   "id": "tease",
+   "kind": "clip",
+   "title": "HOW IT *ENDED.",
+   "color": "gold",
+   "segs": [
+    {
+     "file": "diggs.mp4",
+     "from": 4.6,
+     "to": 9.6
+    }
+   ],
+   "minDur": 5.0,
+   "line": "Thursday night was the most boring game on the planet... until it ended like this."
+  },
+  {
+   "id": "result",
+   "kind": "versus",
+   "title": "COMMANDERS SURVIVE.",
+   "stamp": "FINAL",
+   "color": "gold",
+   "game": {
+    "away": {
+     "t": "WSH",
+     "s": 24,
+     "name": "Commanders"
+    },
+    "home": {
+     "t": "NYG",
+     "s": 21,
+     "name": "Giants"
+    },
+    "ot": false
+   },
+   "line": "Commanders 24, Giants 21. Let's run it back."
+  },
+  {
+   "id": "timeline",
+   "kind": "timeline",
+   "title": "0-0 AFTER *ONE.",
+   "color": "gold",
+   "timeline": {
+    "away": {
+     "t": "WSH",
+     "name": "Commanders"
+    },
+    "home": {
+     "t": "NYG",
+     "name": "Giants"
+    },
+    "plays": [
+     {
+      "min": 15.88,
+      "a": 3,
+      "h": 0
+     },
+     {
+      "min": 27.42,
+      "a": 3,
+      "h": 7
+     },
+     {
+      "min": 29.92,
+      "a": 10,
+      "h": 7
+     },
+     {
+      "min": 34.63,
+      "a": 10,
+      "h": 14
+     },
+     {
+      "min": 38.07,
+      "a": 17,
+      "h": 14
+     },
+     {
+      "min": 51.78,
+      "a": 17,
+      "h": 21
+     },
+     {
+      "min": 59.05,
+      "a": 24,
+      "h": 21
+     }
+    ]
+   },
+   "minDur": 5.5,
+   "line": "Zero to zero after the first quarter. Nobody could move the ball. Then it flipped. Six lead changes the rest of the way!"
+  },
+  {
+   "id": "skattebo",
+   "kind": "hero",
+   "title": "BACKFLIP *SZN.",
+   "color": "gold",
+   "player": {
+    "id": "12481",
+    "n": "Cam Skattebo",
+    "pos": "RB",
+    "team": "NYG",
+    "pts": 27.2,
+    "proj": 12.4,
+    "line": "78 rush yds \u00b7 3 rec \u00b7 44 rec yds \u00b7 2 TD",
+    "s": {
+     "pass_yd": 0,
+     "pass_td": 0,
+     "pass_int": 0,
+     "rush_yd": 78,
+     "rush_td": 2,
+     "rec": 3,
+     "rec_yd": 44,
+     "rec_td": 0
+    }
+   },
+   "pip": [
+    {
+     "file": "sk1.mp4",
+     "from": 3.0,
+     "label": "TD #1 + BACKFLIP"
+    }
+   ],
+   "line": "Cam Skattebo punched in two rushing touchdowns, and celebrated the first one with a backflip. 27.2 fantasy points!"
+  },
+  {
+   "id": "flips",
+   "kind": "clip",
+   "title": "THREE. *BACKFLIPS.",
+   "color": "turf",
+   "minDur": 9.2,
+   "segs": [
+    {
+     "file": "sk2.mp4",
+     "from": 2.6,
+     "to": 6.6,
+     "label": "TD #2"
+    },
+    {
+     "file": "sk2.mp4",
+     "from": 19.6,
+     "to": 25.4,
+     "label": "x3"
+    }
+   ],
+   "line": "And on the second one? He did three of them."
+  },
+  {
+   "id": "likely",
+   "kind": "hero",
+   "title": "66 YARDS. *GONE.",
+   "color": "gold",
+   "player": {
+    "id": "8131",
+    "n": "Isaiah Likely",
+    "pos": "TE",
+    "team": "NYG",
+    "pts": 27.7,
+    "proj": 12.3,
+    "line": "9 rec \u00b7 127 rec yds \u00b7 1 TD",
+    "s": {
+     "pass_yd": 0,
+     "pass_td": 0,
+     "pass_int": 0,
+     "rush_yd": 0,
+     "rush_td": 0,
+     "rec": 9,
+     "rec_yd": 127,
+     "rec_td": 1
+    }
+   },
+   "pip": [
+    {
+     "file": "likely.mp4",
+     "from": 1.5,
+     "label": "66-YARD TD"
+    }
+   ],
+   "line": "Then Isaiah Likely took a short catch 66 yards to the house. Giants up 21 to 17 with eight minutes left. 27.7 points, the best on the field!"
+  },
+  {
+   "id": "diggs",
+   "kind": "clip",
+   "title": "STEFON DIGGS. *BALLGAME.",
+   "stamp": "GAME.",
+   "color": "gold",
+   "minDur": 16.0,
+   "segs": [
+    {
+     "file": "diggs.mp4",
+     "from": 0.0,
+     "to": 9.6,
+     "label": "0:57 LEFT"
+    },
+    {
+     "file": "diggs.mp4",
+     "from": 26.6,
+     "to": 31.4,
+     "rate": 0.6,
+     "label": "REPLAY"
+    }
+   ],
+   "line": "But with 57 seconds left, Jayden Daniels found Stefon Diggs for 32 yards... touchdown! Commanders win it, 24 to 21. Diggs finished with 6 catches for 83 yards and 20.3 fantasy points. Daniels threw three touchdowns."
+  },
+  {
+   "id": "bust",
+   "kind": "bust",
+   "title": "WHO STARTED HIM?",
+   "stamp": "OUCH.",
+   "color": "red",
+   "player": {
+    "id": "11632",
+    "n": "Malik Nabers",
+    "pos": "WR",
+    "team": "NYG",
+    "pts": 7.4,
+    "proj": 16.4,
+    "line": "5 rec \u00b7 44 rec yds",
+    "s": {
+     "pass_yd": 0,
+     "pass_td": 0,
+     "pass_int": 0,
+     "rush_yd": 0,
+     "rush_td": 0,
+     "rec": 5,
+     "rec_yd": 44,
+     "rec_td": 0
+    }
+   },
+   "line": "And if you started Malik Nabers... sorry. 7.4 points, on a 16.4 point projection."
+  },
+  {
+   "id": "cta",
+   "kind": "cta",
+   "title": "SUNDAY'S *COMING.",
+   "color": "turf",
+   "minDur": 4.2,
+   "line": "Need help with Sunday's lineup? Get free start-sit picks on War Room. Link in bio."
+  }
+ ]
+}
