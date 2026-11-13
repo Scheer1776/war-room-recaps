@@ -361,3 +361,12 @@ and switch its row from *build* to the composition name.
 - Narration: eight shared Announcer lines in public/recapvo/lines.json (record once; see its README). Never per-league TTS.
 - Secrets the workflow needs: ADMIN_KEY (already), and RECAP_KEY on Vercel (any long random string) for private leagues.
 - Known limit: GitHub cron can start 3–10 min late under load; the 5-minute polls make that the only delay.
+
+## Cloud auto videos (no PC) — 2026-11-12
+`auto/run.sh <thu|sun|mon|all> [week] [--force]` makes a whole recap in the cloud: ESPN + Sleeper data (auto/slate.mjs)
+-> templated scenes + script, every number from the data (auto/story.mjs) -> Kokoro voice, one take, scene times and
+caption words from Kokoro's own token timings (auto/voice.py) -> best-effort game b-roll (auto/broll.py; YouTube blocks
+cloud downloads, so it usually skips) -> Remotion SundayRecap with `label` (e.g. "THURSDAY NIGHT"). Workflow
+`.github/workflows/tiktok-auto.yml` runs it after every Thursday Night Football game (and by hand for any slate) and
+attaches the MP4 to a GitHub release. Boom scenes with no clip show a 600 px player photo instead of empty space.
+Rough v1: no AI script yet, no game clips in the cloud, Kokoro "am_michael" voice instead of the VoiceStudio voices.

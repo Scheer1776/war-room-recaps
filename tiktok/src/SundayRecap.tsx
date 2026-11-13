@@ -28,6 +28,7 @@ export const sundaySchema = z.object({
   source: z.string(), week: z.number(), voice: z.boolean(), voDur: z.record(z.string(), z.number()).nullable(),
   words: z.array(z.object({ t: z.string(), s: z.number(), e: z.number() })).nullable().optional(), // caption timings (sunday-plan.py)
   captions: z.boolean().optional(),
+  label: z.string().nullable().optional(), // opener line 2 (default "SUNDAY RECAP"); auto/ recaps set e.g. "THURSDAY NIGHT"
   voFull: z.string().nullable().optional(), // one continuous voice take for the whole video (preferred: natural flow)
   scenes: z.array(scene),
   scores: z.array(z.object({ away: z.object({ t: z.string(), s: z.number() }), home: z.object({ t: z.string(), s: z.number() }), ot: z.boolean() })),
@@ -91,7 +92,11 @@ const Boom: React.FC<{ p: SundayProps; s: Scene; d: number }> = ({ p, s, d }) =>
   const inn = spring({ frame: f - 8, fps, config: { damping: 14, stiffness: 120 } });
   return (
     <AbsoluteFill style={{ translate: useShake(10, 16, 9) }}>
-      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} keyIn={s.keyIn} /> : <><Field /><Particles n={60} color={teamColor(x.team)} seed={s.id} speed={2} size={8} /></>}
+      {s.clip ? <Clip src={p.source} file={s.clip} from={s.clipFrom ?? 0} keyIn={s.keyIn} /> : <><Field /><AbsoluteFill style={{ background: `radial-gradient(900px 900px at 50% 36%, ${teamColor(x.team)}66, transparent 70%)` }} /><Particles n={60} color={teamColor(x.team)} seed={s.id} speed={2} size={8} />
+        {/* no game clip (auto/ cloud recaps): the player himself fills the frame */}
+        <div style={{ position: "absolute", top: 330, left: 0, width: W, display: "flex", justifyContent: "center", scale: String(interpolate(f, [0, 12, 150], [0.82, 1, 1.08], clamp)), opacity: interpolate(f, [0, 8], [0, 1], clamp) }}>
+          <Head src={p.source} x={x} size={600} />
+        </div></>}
       <div style={{ position: "absolute", top: T - 20, left: L, right: R }}><Kinetic text={s.title} at={2} size={86} align="left" accent={c} /></div>
       <Glass style={{ position: "absolute", top: 1130, left: L - 20, width: Wd + 40, padding: "26px 30px", display: "flex", gap: 26, alignItems: "center", opacity: inn, translate: `0 ${(1 - inn) * 260}px` }} tint="rgba(4,17,11,0.62)">
         <Head src={p.source} x={x} size={170} />
@@ -350,7 +355,7 @@ export const SundayRecap: React.FC<SundayProps> = (p) => {
           {s.clip && s.keyIn != null ? <ImpactFX at={Math.round(s.keyIn * FPS)} hold={Math.round(HOLD * FPS)} color={col(s.color ?? "gold")} text={s.impact} />
             : s.impact ? <ImpactFX at={Math.round(d * 0.3)} hold={8} color={s.tiles?.[0] ? teamColor(s.tiles[0].label) : col(s.color ?? "gold")} text={s.impact} /> : null}
           {i > 0 ? <TeamWipe color={s.player ? teamColor(s.player.team) : col(s.color ?? "gold")} dir={i % 2 ? -1 : 1} /> : null}
-          {i === 0 ? <GlitchOpen line1={`WEEK ${p.week}`} line2="SUNDAY RECAP" /> : null}
+          {i === 0 ? <GlitchOpen line1={`WEEK ${p.week}`} line2={p.label || "SUNDAY RECAP"} /> : null}
           {p.voice && !p.voFull && p.voDur && p.voDur[s.id] ? <Sequence from={4} layout="none"><Audio src={staticFile(`${p.source}/vo/${s.id}.mp3`)} /></Sequence> : null}
         </Sequence>
       ))}

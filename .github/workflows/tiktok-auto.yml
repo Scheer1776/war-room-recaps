@@ -1,0 +1,109 @@
+name: TikTok auto video (cloud)
+
+# Makes a TikTok-style recap video with no PC: ESPN + Sleeper data -> script -> free Kokoro voice -> Remotion render.
+# Thursday nights it polls after Thursday Night Football (Nov-Mar = PST: 8:15-10:45 pm PT) and makes the TNF recap
+# once the game is final. Run it by hand any time (Actions -> TikTok auto video -> Run workflow) for any slate/week.
+# The finished MP4 is attached to a GitHub release (tag auto-<slate>-w<week>-<time>) so it can be downloaded on a phone.
+on:
+  schedule:
+    - cron: "15,45 4,5,6 * * 5" # Friday 04:15-06:45 UTC = Thursday 8:15-10:45 pm PST (7:15-9:45 pm PDT)
+  workflow_dispatch:
+    inputs:
+      slate:
+        description: "Which games: thu (Thursday night), sun (Sunday), mon (Monday night), all (whole week)"
+        type: choice
+        options: [thu, sun, mon, all]
+        default: thu
+      week:
+        description: "NFL week (blank = current week)"
+        required: false
+      force:
+        description: "Render even if a game isn't final yet (test runs)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok-auto
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      SLATE: ${{ inputs.slate || 'thu' }}
+      WEEK: ${{ inputs.week }}
+      FORCE: ${{ inputs.force && '--force' || '' }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Already made this week? (scheduled runs only)
+        id: done
+        if: github.event_name == 'schedule'
+        run: |
+          W=$(curl -s https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard | jq -r '.week.number')
+          if gh release list -R "$GITHUB_REPOSITORY" --limit 50 | grep -q "auto-${SLATE}-w${W}-"; then echo "skip=1" >> "$GITHUB_OUTPUT"; echo "week $W already made"; fi
+
+      - uses: actions/setup-node@v4
+        if: steps.done.outputs.skip != '1'
+        with:
+          node-version: 22
+      - uses: astral-sh/setup-uv@v6
+        if: steps.done.outputs.skip != '1'
+      - name: Cache Remotion deps, voice env and voice model
+        if: steps.done.outputs.skip != '1'
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            tiktok/node_modules
+            tiktok/voice/.venv
+            ~/.cache/huggingface
+            ~/.local/share/uv/python
+          key: tiktok-auto-${{ runner.os }}-${{ hashFiles('tiktok/package-lock.json', 'tiktok/voice/setup.sh') }}
+      - name: Install
+        if: steps.done.outputs.skip != '1'
+        run: |
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg)
+          pip install -q yt-dlp || true
+          cd tiktok
+          [ -d node_modules ] || npm ci
+          npx remotion browser ensure
+          bash voice/setup.sh
+
+      - name: Make the video
+        id: make
+        if: steps.done.outputs.skip != '1'
+        run: |
+          set +e
+          bash tiktok/auto/run.sh "$SLATE" "$WEEK" $FORCE
+          code=$?
+          if [ $code -eq 3 ]; then echo "game not final yet - will try again on the next poll"; echo "made=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          [ $code -eq 0 ] || exit $code
+          echo "made=1" >> "$GITHUB_OUTPUT"
+          echo "file=tiktok/$(cat tiktok/out/last.txt)" >> "$GITHUB_OUTPUT"
+        env:
+          REMOTION_CONCURRENCY: "4"
+
+      - name: Publish (GitHub release, phone-downloadable)
+        if: steps.make.outputs.made == '1'
+        run: |
+          F="${{ steps.make.outputs.file }}"
+          W=$(jq -r .week tiktok/public/auto/$SLATE/slate.json)
+          TAG="auto-${SLATE}-w${W}-$(date -u +%Y%m%d-%H%M)"
+          SCRIPT=$(cat tiktok/public/auto/$SLATE/script.txt)
+          gh release create "$TAG" "$F" "tiktok/public/auto/$SLATE/script.txt" --prerelease --target "$GITHUB_SHA" \
+            --title "TikTok: ${SLATE^^} recap, week $W" --notes "Auto-made in the cloud (no PC). Script:
+
+          $SCRIPT"
+          echo "### Video: https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: steps.make.outputs.made == '1'
+        with:
+          name: tiktok-auto
+          path: tiktok/out/*.mp4
+          retention-days: 14
