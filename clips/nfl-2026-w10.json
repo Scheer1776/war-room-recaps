@@ -155,7 +155,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1113/eb4b161e-7be8-4a36-9b60-1d4f85008af6/eb4b161e-7be8-4a36-9b60-1d4f85008af6.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1113/eb4b161e-7be8-4a36-9b60-1d4f85008af6/eb4b161e-7be8-4a36-9b60-1d4f85008af6/playlist.m3u8"
+  },
+  {
+   "id": 50468414,
+   "headline": "Stefon Diggs stuns Giants with late go-ahead TD for Commanders",
+   "published": "2026-11-13T04:21:40Z",
+   "gameId": "401873052",
+   "playIds": [
+    "4018730524259"
+   ],
+   "duration": 33,
+   "athletes": [
+    {
+     "id": "2976212",
+     "name": "Stefon Diggs"
+    }
+   ],
+   "teams": [
+    "WSH",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1113/439d55db-bebe-489b-b737-8e0094f4105e/439d55db-bebe-489b-b737-8e0094f4105e.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1113/439d55db-bebe-489b-b737-8e0094f4105e/439d55db-bebe-489b-b737-8e0094f4105e/playlist.m3u8"
   }
  ],
- "updated": "2026-11-13T04:23:10.347Z"
+ "updated": "2026-11-13T04:27:17.104Z"
 }
