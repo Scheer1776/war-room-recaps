@@ -122,8 +122,10 @@ if (cmd === "collect") {
       chosen = sc.kind === "bust" ? pick(mine, c => BAD.test(what(c)), 2) : pick(mine, c => !BAD.test(what(c)), 2);
     } else if (sc.kind === "versus" && sc.game) {
       const w = sc.game.away.s >= sc.game.home.s ? sc.game.away.t : sc.game.home.t;
-      chosen = pick(clips, c => /touchdown|\btd\b/.test(what(c)) && c.teams.includes(w) && new RegExp(w === sc.game.away.t ? sc.game.away.name : sc.game.home.name, "i").test(c.headline), 1);
-      if (!chosen.length) chosen = pick(clips, c => /touchdown|\btd\b/.test(what(c)), 1);
+      // the winner's LAST touchdown (usually the go-ahead/clinching score), not its first
+      const latest = (want) => clips.filter(c => !used.has(c.id) && want(c)).sort((a, b) => b.published.localeCompare(a.published)).slice(0, 1);
+      chosen = latest(c => /touchdown|\btd\b/.test(what(c)) && c.teams.includes(w) && new RegExp(w === sc.game.away.t ? sc.game.away.name : sc.game.home.name, "i").test(c.headline));
+      if (!chosen.length) chosen = latest(c => /touchdown|\btd\b/.test(what(c)));
     }
     const pip = [];
     for (const c of chosen) {

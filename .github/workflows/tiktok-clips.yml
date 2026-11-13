@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: tiktok-clips
@@ -46,3 +47,13 @@ jobs:
           F="nfl-${SEASON}-w${WEEK}.json"
           curl -sf "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/media/clips/$F" -o "$F" || true
           node tiktok/auto/clips.mjs collect "$F" --until-final "$SLATE" --every 120 --max-min 330 --push "media:clips/$F"
+      - name: Games final -> make the recap video now (GitHub's own timers have been missing runs)
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SLATE="${{ inputs.slate }}"
+          if [ -z "$SLATE" ]; then case "$(TZ=America/Los_Angeles date +%a)" in Thu|Fri) SLATE=thu;; Sun) SLATE=sun;; Mon|Tue) SLATE=mon;; *) SLATE=all;; esac; fi
+          FINAL=$(curl -s https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard | jq --arg s "$SLATE" '[.events[] | select(.status.type.completed)] | length')
+          [ "$FINAL" -gt 0 ] || { echo "no final games, not rendering"; exit 0; }
+          gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/tiktok-auto.yml/dispatches" -f ref=main -f "inputs[slate]=$SLATE" && echo "recap render started for $SLATE"
