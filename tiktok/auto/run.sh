@@ -15,8 +15,11 @@ node auto/slate.mjs "$DIR" --slate "$SLATE" ${WEEK:+--week "$WEEK"}
 WEEK=$(node -e "console.log(require('./$DIR/slate.json').week)")
 echo "== 2/5 story"
 node auto/story.mjs "$DIR" $FORCE
-echo "== 3/5 footage (best effort)"
-python3 auto/broll.py "$DIR/story.json" || echo "broll skipped"
+echo "== 3/5 game clips (ESPN play clips collected during the game, + the live feed)"
+SEASON=$(node -e "console.log(require('./$DIR/slate.json').season)")
+CF="$DIR/clips-store.json"
+curl -sf "https://raw.githubusercontent.com/Scheer1776/war-room-recaps/media/clips/nfl-${SEASON}-w${WEEK}.json" -o "$CF" || echo '{"clips":[]}' > "$CF"
+node auto/clips.mjs match "$DIR" "$CF" || echo "clips skipped"
 echo "== 4/5 voice"
 voice/.venv/bin/python -I auto/voice.py "$DIR/story.json" 2>&1 | grep -v -i "warn" || true
 test -f "$DIR/plan.json"

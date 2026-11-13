@@ -1,0 +1,48 @@
+name: TikTok clip collector (cloud)
+
+# ESPN posts single-play NFL clips during games, but its public feed only shows the newest ~100 clips across all
+# sports (~1 hour). This job starts near kickoff and polls the feed every 2 minutes until the slate's games are final,
+# saving every NFL clip (game, players, play id, MP4 link) to the media branch: clips/nfl-<season>-w<week>.json.
+# tiktok-auto.yml reads that file to put real game clips in the recap videos. Public repo = Actions minutes are free.
+on:
+  schedule:
+    - cron: "10 1 * * 5"   # Thu 5:10 pm PST / 6:10 pm PDT (TNF kicks off 5:15 pm PT)
+    - cron: "50 16 * * 0"  # Sun 8:50 am PST (early games 10 am PT; runs through the late window)
+    - cron: "10 1 * * 1"   # Sun 5:10 pm PST (Sunday night game)
+    - cron: "10 1 * * 2"   # Mon 5:10 pm PST (Monday night)
+  workflow_dispatch:
+    inputs:
+      slate:
+        description: "Stop when these games are final: thu | sun | mon | all"
+        type: choice
+        options: [thu, sun, mon, all]
+        default: thu
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok-clips
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tiktok/auto
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Collect clips until the games are final
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SLATE="${{ inputs.slate }}"
+          if [ -z "$SLATE" ]; then case "$(TZ=America/Los_Angeles date +%a)" in Thu) SLATE=thu;; Sun) SLATE=sun;; Mon) SLATE=mon;; *) SLATE=all;; esac; fi
+          read SEASON WEEK < <(curl -s https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard | jq -r '"\(.season.year) \(.week.number)"')
+          F="nfl-${SEASON}-w${WEEK}.json"
+          curl -sf "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/media/clips/$F" -o "$F" || true
+          node tiktok/auto/clips.mjs collect "$F" --until-final "$SLATE" --every 120 --max-min 330 --push "media:clips/$F"

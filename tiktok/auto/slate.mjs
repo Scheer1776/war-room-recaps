@@ -44,7 +44,7 @@ for (const r of stats) {
   const line = p.position === "QB"
     ? [s.pass_yd && `${s.pass_yd} pass yds`, s.pass_td && `${s.pass_td} TD`, s.pass_int && `${s.pass_int} INT`, s.rush_yd >= 20 && `${s.rush_yd} rush yds`, s.rush_td && `${s.rush_td} rush TD`]
     : [s.rush_yd >= 15 && `${s.rush_yd} rush yds`, s.rec && `${s.rec} rec`, s.rec_yd && `${s.rec_yd} rec yds`, td && `${td} TD`];
-  rows.push({ id: r.player_id, n: `${p.first_name} ${p.last_name}`, first: p.first_name, last: p.last_name, pos: p.position, team,
+  rows.push({ id: r.player_id, espn: p.espn_id ? String(p.espn_id) : null, n: `${p.first_name} ${p.last_name}`, first: p.first_name, last: p.last_name, pos: p.position, team,
     pts: Math.round(s.pts_ppr * 10) / 10, proj: Math.round((pj.get(r.player_id) || 0) * 10) / 10, line: line.filter(Boolean).join(" · "),
     s: { pass_yd: s.pass_yd || 0, pass_td: s.pass_td || 0, pass_int: s.pass_int || 0, rush_yd: s.rush_yd || 0, rush_td: s.rush_td || 0, rec: s.rec || 0, rec_yd: s.rec_yd || 0, rec_td: s.rec_td || 0 } });
 }
