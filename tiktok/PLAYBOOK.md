@@ -376,3 +376,13 @@ Rough v1: no AI script yet, no game clips in the cloud, Kokoro voice instead of 
   count-up scores, 3D-tilting player cards with a light sweep over rotating team-color speed lines, a fantasy-points meter
   that fills past (or stops short of) the projection tick with a +/- badge, a cracking grayscale bust card with an RGB-glitch
   number, and a 3D phone (app/startsit-vp.png) + QR closer. ESPN team logos are saved to <dir>/l/<TEAM>.png.
+- v3 (owner: "when it's going over Joe Fagnano put in the corner clips of him throwing picks or taking sacks"; "build out
+  the cloud option"): REAL GAME CLIPS WITHOUT A PC. ESPN's public video feed (content.core.api.espn.com/v1/video/clips)
+  posts single-play NFL clips during games as direct CDN MP4s, tagged with gameId, teams, athletes and the play-by-play
+  play id - but it only returns the newest ~100 clips of all sports (~1 hour). `tiktok-clips.yml` therefore polls it every
+  2 min from kickoff until the slate is final and saves every NFL clip to the media branch (clips/nfl-<season>-w<week>.json).
+  `auto/clips.mjs match` pairs clips with scenes by ESPN athlete id (Sleeper espn_id) or name: bust scenes only get BAD
+  plays (pick/sack/fumble, checked against the play-by-play text), hero scenes only good ones, the result scene gets the
+  winner's TD. AutoRecap shows them in a tilted corner box (top right, clear of TikTok's buttons) with a label
+  (PICKED OFF #1, SACKED, TOUCHDOWN, THE PLAY). Coverage = whatever ESPN clips (mostly TDs, turnovers, big plays); a scene
+  with no matching clip just has no box. Never use YouTube from the cloud (it blocks it; we don't work around that).

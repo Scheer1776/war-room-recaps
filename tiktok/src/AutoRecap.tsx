@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
 import { z } from "zod";
 import { AppLink, BODY, C, DISPLAY, SAFE, f1, initialsOf, teamColor } from "./theme";
@@ -18,6 +18,7 @@ const scene = z.object({
   player: player.nullable().default(null),
   game: z.object({ away: side, home: side, ot: z.boolean().default(false) }).nullable().default(null),
   appShot: z.string().default("app/startsit-vp.png"),
+  pip: z.array(z.object({ file: z.string(), label: z.string(), headline: z.string().optional() })).optional(), // real game clips (auto/clips.mjs)
 });
 export const autoSchema = z.object({
   source: z.string(), week: z.number(), label: z.string().nullable().optional(), voFull: z.string().nullable().optional(),
@@ -89,6 +90,35 @@ const Title: React.FC<{ s: Scene; accent: string }> = ({ s, accent }) => (
   <div style={{ position: "absolute", top: T - 30, left: L, right: R }}><Kinetic text={s.title || ""} at={2} size={92} align="left" accent={accent} /></div>
 );
 
+// Real game clip(s) in a tilted corner box (top right, clear of TikTok's right-hand buttons), played back to back.
+const PIP = { left: 500, top: 318, w: 440, h: 248 };
+const Pip: React.FC<{ p: AutoProps; s: Scene; color: string; at?: number }> = ({ p, s, color, at = 6 }) => {
+  const f = useCurrentFrame(); const { fps, durationInFrames } = useVideoConfig();
+  const list = s.pip || []; if (!list.length) return null;
+  const k = spring({ frame: f - at, fps, config: { damping: 14, stiffness: 140 } });
+  const span = Math.max(1, durationInFrames - at), each = Math.floor(span / list.length);
+  const idx = Math.min(list.length - 1, Math.max(0, Math.floor((f - at) / each)));
+  const lf = f - at - idx * each;
+  const lab = spring({ frame: lf - 4, fps, config: { damping: 11, stiffness: 220 } });
+  return (
+    <div style={{ position: "absolute", left: PIP.left, top: PIP.top, width: PIP.w, height: PIP.h, perspective: 1200, opacity: Math.min(1, k * 1.5), translate: `${(1 - k) * 500}px 0` }}>
+      <div style={{ width: "100%", height: "100%", transform: `rotateY(${-10 + Math.sin(f / 30) * 3}deg) rotateZ(-2deg)`, borderRadius: 24, overflow: "hidden", position: "relative",
+        boxShadow: `0 0 0 5px ${color}, 0 0 50px ${color}99, 0 30px 60px rgba(0,0,0,0.7)`, background: "#000" }}>
+        {list.map((c, i) => (
+          <Sequence key={i} from={at + i * each} durationInFrames={each} layout="none">
+            <OffthreadVideo src={staticFile(`${p.source}/clips/${c.file}`)} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.08) saturate(1.2)" }} />
+          </Sequence>
+        ))}
+        {lf >= 0 && lf < 4 ? <div style={{ position: "absolute", inset: 0, background: "#fff", opacity: 1 - lf / 4 }} /> : null}
+      </div>
+      <div style={{ position: "absolute", left: -18, top: -30, padding: "4px 16px", borderRadius: 12, background: color, color: "#04110B", fontFamily: DISPLAY, fontWeight: 800, fontSize: 38, rotate: "-4deg",
+        scale: String(1.6 - 0.6 * lab), opacity: Math.min(1, lab * 2), boxShadow: `0 0 30px ${color}`, whiteSpace: "nowrap" }}>{list[idx].label}</div>
+      <div style={{ position: "absolute", right: 14, bottom: 10, display: "flex", alignItems: "center", gap: 8, fontFamily: BODY, fontWeight: 600, fontSize: 20, letterSpacing: 2, color: "#fff", textShadow: "0 2px 6px #000" }}>
+        <span style={{ width: 12, height: 12, borderRadius: 6, background: C.red, opacity: f % 30 < 18 ? 1 : 0.3 }} />GAME FOOTAGE</div>
+    </div>
+  );
+};
+
 // ---------- scenes ----------
 // Result: both logos fly in and collide (flash, shockwave, sparks, shake), scores count up, winner glows, loser fades.
 const Versus: React.FC<{ p: AutoProps; s: Scene }> = ({ p, s }) => {
@@ -101,7 +131,7 @@ const Versus: React.FC<{ p: AutoProps; s: Scene }> = ({ p, s }) => {
   const wiggle = Math.sin(f / 9) * 6;
   const loseDim = (isWinner: boolean) => tie || isWinner ? 1 : interpolate(f, [hit + 40, hit + 54], [1, 0.45], clamp);
   const winPop = (isWinner: boolean) => !tie && isWinner ? interpolate(f, [hit + 40, hit + 48, hit + 60], [1, 1.16, 1.1], clamp) : 1;
-  const cy = 700;
+  const cy = s.pip?.length ? 800 : 700;
   const split = interpolate(f, [hit, hit + 12], [50, 50 + (aw ? 6 : -6) * (tie ? 0 : 1)], clamp);
   return (
     <AbsoluteFill style={{ translate: useShake(hit, 30, 14) }}>
@@ -123,6 +153,7 @@ const Versus: React.FC<{ p: AutoProps; s: Scene }> = ({ p, s }) => {
         ))}
       </div>
       <div style={{ position: "absolute", top: cy + 115, left: 0, width: W, display: "flex", justifyContent: "center" }}><Stamp text={g.ot ? "FINAL / OT" : "FINAL"} color={C.gold} at={hit + 44} size={72} rot={-4} /></div>
+      <Pip p={p} s={s} color={C.gold} at={hit + 8} />
       <Flash at={hit} color="#fff" peak={0.75} />
     </AbsoluteFill>
   );
@@ -195,10 +226,10 @@ const Meter: React.FC<{ x: Pl; at: number; good: boolean; showCount?: boolean }>
     </div>
   );
 };
-const Chips: React.FC<{ items: string[]; at: number; color: string }> = ({ items, at, color }) => {
+const Chips: React.FC<{ items: string[]; at: number; color: string; stack?: boolean }> = ({ items, at, color, stack }) => {
   const f = useCurrentFrame(); const { fps } = useVideoConfig();
   return (
-    <div style={{ position: "absolute", top: T + 100, left: L, right: R, display: "flex", flexWrap: "wrap", gap: 12 }}>
+    <div style={{ position: "absolute", top: T + 100, left: L, right: stack ? W - PIP.left + 20 : R, display: "flex", flexWrap: "wrap", flexDirection: stack ? "column" : "row", alignItems: "flex-start", gap: 12 }}>
       {items.map((t, i) => { const k = spring({ frame: f - at - i * 5, fps, config: { damping: 13, stiffness: 180 } });
         return <div key={i} style={{ padding: "8px 18px", borderRadius: 14, background: "rgba(4,17,11,0.7)", border: `2px solid ${color}`, fontFamily: DISPLAY, fontWeight: 800, fontSize: 36, color: "#fff", opacity: Math.min(1, k * 2), translate: `${(1 - k) * -200}px 0`, boxShadow: `0 0 24px ${color}55` }}>{t}</div>; })}
     </div>
@@ -214,9 +245,10 @@ const Hero: React.FC<{ p: AutoProps; s: Scene }> = ({ p, s }) => {
     <AbsoluteFill>
       <Base color={tc} color2={c} seed={x.id.length + 2} />
       <BigOutline text={f1(x.pts)} color={tc} />
-      <Card p={p} x={x} at={3} />
+      {s.pip?.length ? <Card p={p} x={x} at={3} top={600} k={0.74} /> : <Card p={p} x={x} at={3} />}
       <Title s={s} accent={c} />
-      <Chips items={statChips(x)} at={10} color={tc} />
+      <Chips items={statChips(x)} at={10} color={tc} stack={!!s.pip?.length} />
+      <Pip p={p} s={s} color={tc} at={12} />
       <Meter x={x} at={16} good />
       <Flash at={1} color={tc} peak={0.4} />
     </AbsoluteFill>
@@ -232,15 +264,16 @@ const Bust: React.FC<{ p: AutoProps; s: Scene }> = ({ p, s }) => {
     <AbsoluteFill style={{ translate: useShake(crack, 22, 12) }}>
       <Base color={C.red} seed={9} />
       <AbsoluteFill style={{ background: `radial-gradient(900px 700px at 50% 45%, ${C.red}33, transparent 70%)` }} />
-      <Card p={p} x={x} at={2} crack={crack} gray={gray} top={360} k={0.78} />
-      {f >= crack ? <div style={{ position: "absolute", top: 945, left: 0, width: W, textAlign: "center" }}>
+      {s.pip?.length ? <Card p={p} x={x} at={2} crack={crack} gray={gray} top={610} k={0.6} /> : <Card p={p} x={x} at={2} crack={crack} gray={gray} top={360} k={0.78} />}
+      {f >= crack ? <div style={{ position: "absolute", top: s.pip?.length ? 1035 : 945, left: 0, width: W, textAlign: "center" }}>
         {[["#00E5FF", -1], [C.red, 1], ["#fff", 0]].map(([cc, k], i) => (
-          <div key={i} style={{ position: i < 2 ? "absolute" : "relative", width: W, fontFamily: DISPLAY, fontWeight: 800, fontSize: 230, lineHeight: 1, color: cc as string, opacity: i < 2 ? 0.7 : 1, mixBlendMode: i < 2 ? "screen" : undefined, translate: `${jit(i) + (k as number) * 6}px ${jit(i + 5) * 0.4}px`, textShadow: i === 2 ? `0 0 60px ${C.red}` : undefined, scale: String(interpolate(f, [crack, crack + 5], [1.6, 1], clamp)) }}>{f1(x.pts)}</div>
+          <div key={i} style={{ position: i < 2 ? "absolute" : "relative", width: W, fontFamily: DISPLAY, fontWeight: 800, fontSize: s.pip?.length ? 170 : 230, lineHeight: 1, color: cc as string, opacity: i < 2 ? 0.7 : 1, mixBlendMode: i < 2 ? "screen" : undefined, translate: `${jit(i) + (k as number) * 6}px ${jit(i + 5) * 0.4}px`, textShadow: i === 2 ? `0 0 60px ${C.red}` : undefined, scale: String(interpolate(f, [crack, crack + 5], [1.6, 1], clamp)) }}>{f1(x.pts)}</div>
         ))}
       </div> : null}
       <Title s={s} accent={C.red} />
       <Meter x={x} at={12} good={false} showCount={false} />
-      {s.stamp ? <div style={{ position: "absolute", top: 370, right: R - 30 }}><Stamp text={s.stamp} color={C.red} at={crack + 10} size={84} rot={9} /></div> : null}
+      {s.stamp ? <div style={{ position: "absolute", top: s.pip?.length ? 600 : 370, right: R - 30 }}><Stamp text={s.stamp} color={C.red} at={crack + 10} size={84} rot={9} /></div> : null}
+      <Pip p={p} s={s} color={C.red} at={8} />
       <Sparks at={crack} x={W / 2} y={780} color={C.red} n={22} />
       <Flash at={crack} color={C.red} peak={0.5} />
     </AbsoluteFill>
