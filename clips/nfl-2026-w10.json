@@ -65,7 +65,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1113/cbd19af6-1af2-4f29-9e4a-e746ad2e3d99/cbd19af6-1af2-4f29-9e4a-e746ad2e3d99.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1113/cbd19af6-1af2-4f29-9e4a-e746ad2e3d99/cbd19af6-1af2-4f29-9e4a-e746ad2e3d99/playlist.m3u8"
+  },
+  {
+   "id": 50467644,
+   "headline": "Live on Prime Video: Giants celebrate Skatteboo's 2nd rushing TD with 3 backflips",
+   "published": "2026-11-13T03:12:19Z",
+   "gameId": "401873052",
+   "playIds": [
+    "4018730522378"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "4696981",
+     "name": "Cam Skattebo"
+    }
+   ],
+   "teams": [
+    "WSH",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1113/73ac4f48-f328-4635-be1f-d4bebea83b01/73ac4f48-f328-4635-be1f-d4bebea83b01.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1113/73ac4f48-f328-4635-be1f-d4bebea83b01/73ac4f48-f328-4635-be1f-d4bebea83b01/playlist.m3u8"
   }
  ],
- "updated": "2026-11-13T03:06:41.724Z"
+ "updated": "2026-11-13T03:16:49.255Z"
 }
