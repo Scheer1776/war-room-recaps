@@ -17,7 +17,9 @@
   "Bowers": "bˈWɚz",
   "Kittle": "kˈɪɾəl",
   "Burrow": "bˈɜɹO",
-  "Mahomes": "məhˈOmz"
+  "Mahomes": "məhˈOmz",
+  "Skattebo": "skˈætəbu",
+  "Malik": "məlˈik"
  },
  "_pronounce_note": "pronounce: correct pronunciation per name for audit/pronounce.py. ipa = space-separated phones (General American), alt = accepted variants, say = respelling to type into VoiceStudio when the plain spelling is said wrong. Source every new entry (team site / broadcast / player intro), never a guess. wrong = known mispronunciations: a name FAILS when it sounds closer to one of these than to the right one.",
  "pronounce": {
@@ -164,6 +166,28 @@
    "ipa": "s i æ t ə l",
    "alt": [
     "s i æ ɾ ə l"
+   ]
+  },
+  "Stefon": {
+   "ipa": "s t ɛ f ɑ n",
+   "alt": [
+    "s t ɛ f ə n"
+   ],
+   "say": "STEF-on",
+   "note": "STEF-on: common reading of the name, not yet verified against a team/broadcast source (2026-11-13). Replace with a sourced reading when found.",
+   "unverified": true
+  },
+  "Malik": {
+   "ipa": "m ə l i k",
+   "wrong": [
+    "m æ l ɪ k",
+    "m e ɪ l ɪ k"
+   ],
+   "say": "muh-LEEK",
+   "note": "mə-LEEK, /məˈliːk/ (Wikipedia for Malik Willis; Malik Nabers = muh-LEEK per LSU game notes, per the bank note)",
+   "source": "https://en.wikipedia.org/wiki/Malik_Willis",
+   "players": [
+    "Malik Willis"
    ]
   }
  }

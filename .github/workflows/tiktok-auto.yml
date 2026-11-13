@@ -74,6 +74,8 @@ jobs:
           [ -d node_modules ] || npm ci
           npx remotion browser ensure
           bash voice/setup.sh
+          # name auditor (auto/namefix.py -> audit/pronounce.py): whisper word times + wav2vec2 phoneme recognizer + panphon
+          uv pip install -q --python voice/.venv/bin/python panphon transformers librosa
 
       - name: Make the video
         id: make
@@ -96,7 +98,7 @@ jobs:
           W=$(jq -r .week tiktok/public/auto/$SLATE/slate.json)
           TAG="auto-${SLATE}-w${W}-$(date -u +%Y%m%d-%H%M)"
           SCRIPT=$(cat tiktok/public/auto/$SLATE/script.txt)
-          gh release create "$TAG" "$F" "tiktok/public/auto/$SLATE/script.txt" --prerelease --target "$GITHUB_SHA" \
+          gh release create "$TAG" "$F" "tiktok/public/auto/$SLATE/script.txt" tiktok/public/auto/$SLATE/names-report.txt --prerelease --target "$GITHUB_SHA" \
             --title "TikTok: ${SLATE^^} recap, week $W" --notes "Auto-made in the cloud (no PC). Script:
 
           $SCRIPT"

@@ -386,3 +386,11 @@ Rough v1: no AI script yet, no game clips in the cloud, Kokoro voice instead of 
   winner's TD. AutoRecap shows them in a tilted corner box (top right, clear of TikTok's buttons) with a label
   (PICKED OFF #1, SACKED, TOUCHDOWN, THE PLAY). Coverage = whatever ESPN clips (mostly TDs, turnovers, big plays); a scene
   with no matching clip just has no box. Never use YouTube from the cloud (it blocks it; we don't work around that).
+- v4 (2026-11-13, owner: "build out a name auditor like our pc system, a couple names sound funky" + "a little bit more
+  excitement"): auto/voice.py now audits every name in each Kokoro take with the PC's own checker (audit/pronounce.py:
+  whisper word times -> wav2vec2 phoneme recognizer -> panphon distance vs names.json / pronounce-bank.json). A FAIL with a
+  sourced pronunciation is fixed automatically: auto/namefix.py turns the IPA + the CAPS syllable of "say" into Kokoro
+  phonemes, overrides that name and re-records (max 2 retries); names with nothing on file are reported, never guessed.
+  Report = <dir>/names-report.txt (attached to the release). First catch: Skattebo said "skat-ee-BO" and Malik "MAL-ik"
+  (now skˈætəbu / məlˈik in names.json "kokoro"); Stefon added as STEF-on (marked unverified). Voice blend now
+  am_michael 0.55 + am_fenrir 0.45 at speed 1.22.

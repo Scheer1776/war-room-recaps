@@ -99,7 +99,7 @@ def words_of(wav):
 
 def names_in(script):
     """Every name-like word (capitalised, not sentence-initial) plus known names anywhere."""
-    found = set(re.findall(r"(?<![.?!]\s)(?<!^)\b[A-Z][a-zA-Z'\-]+", script))
+    found = {re.sub(r"'s$", "", x) for x in re.findall(r"(?<![.?!]\s)(?<!^)\b[A-Z][a-zA-Z'\-]+", script)}   # "Sunday's" -> "Sunday"
     found |= {n for n in NAMES if re.search(rf"\b{re.escape(n)}\b", script)}
     skip = {"Bears", "Bengals", "Bills", "Broncos", "Browns", "Buccaneers", "Bucs", "Cardinals", "Chargers", "Chiefs", "Colts", "Commanders", "Cowboys", "Dolphins", "Eagles", "Falcons", "Giants", "Jaguars", "Jets", "Lions", "Packers", "Panthers", "Patriots", "Raiders", "Rams", "Ravens", "Saints", "Seahawks", "Steelers", "Texans", "Titans", "Vikings", "Buffalo", "Minnesota", "Chicago", "Detroit", "Houston", "Miami", "Dallas", "Denver", "Seattle", "Atlanta", "Carolina", "Arizona", "Cleveland", "Pittsburgh", "Baltimore", "Cincinnati", "Indianapolis", "Jacksonville", "Tennessee", "Philadelphia", "Washington", "Tampa", "Week", "Now", "Over", "Monday", "Sunday", "Tomorrow", "Bay", "City", "England", "Kansas", "New", "Green", "York", "Los", "Angeles", "Las", "Vegas", "Tampa", "San", "Francisco", "Orleans", "Jersey", "Madrid", "War", "Room", "Sunday", "Wednesday", "Tonight", "Here", "Every", "Did", "Check", "Monday", "Thursday", "PPR", "ESPN", "Sleeper", "OT", "NFL", "So", "And", "He", "Find"}
     # a token that only appears inside a longer hyphenated name ("Smith" in "Smith-Njigba") is checked as that name
