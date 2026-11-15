@@ -1304,7 +1304,29 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_ffia_jordyntyson/dm_261115_ffia_jordyntyson.mp4",
    "hls916": null
+  },
+  {
+   "id": 50495227,
+   "headline": "Live on CBS: Jadarian Price dashes in for a Seahawks TD",
+   "published": "2026-11-15T22:54:39Z",
+   "gameId": "401873062",
+   "playIds": [
+    "4018730622093"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4685512",
+     "name": "Jadarian Price"
+    }
+   ],
+   "teams": [
+    "LV",
+    "SEA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/83b8436c-da98-4b22-92c4-21d6e2b6ffa8/83b8436c-da98-4b22-92c4-21d6e2b6ffa8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/83b8436c-da98-4b22-92c4-21d6e2b6ffa8/83b8436c-da98-4b22-92c4-21d6e2b6ffa8/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T22:49:16.191Z"
+ "updated": "2026-11-15T22:57:24.409Z"
 }
