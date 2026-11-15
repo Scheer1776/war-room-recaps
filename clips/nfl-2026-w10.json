@@ -614,7 +614,245 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/bd9e6cb6-4c33-4438-9f30-97a486080811/bd9e6cb6-4c33-4438-9f30-97a486080811.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/bd9e6cb6-4c33-4438-9f30-97a486080811/bd9e6cb6-4c33-4438-9f30-97a486080811/playlist.m3u8"
+  },
+  {
+   "id": 50493724,
+   "headline": "Bills make easy work of Jets",
+   "published": "2026-11-15T21:14:01Z",
+   "gameId": "401873054",
+   "playIds": [
+    "401873054737"
+   ],
+   "duration": 62,
+   "athletes": [
+    {
+     "id": "3918298",
+     "name": "Josh Allen"
+    },
+    {
+     "id": "4379399",
+     "name": "James Cook III"
+    },
+    {
+     "id": "3915416",
+     "name": "DJ Moore"
+    }
+   ],
+   "teams": [
+    "NYJ",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/c9dca6e9-5e92-4fe2-84a6-88c71d77fa94/c9dca6e9-5e92-4fe2-84a6-88c71d77fa94.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/c9dca6e9-5e92-4fe2-84a6-88c71d77fa94/c9dca6e9-5e92-4fe2-84a6-88c71d77fa94/playlist.m3u8"
+  },
+  {
+   "id": 50493633,
+   "headline": "Minnesota Vikings vs. Green Bay Packers: Game Highlights",
+   "published": "2026-11-15T21:09:45Z",
+   "gameId": "401873060",
+   "playIds": [
+    "401873060757"
+   ],
+   "duration": 63,
+   "athletes": [
+    {
+     "id": "3042519",
+     "name": "Aaron Jones Sr"
+    },
+    {
+     "id": "14880",
+     "name": "Kirk Cousins"
+    },
+    {
+     "id": "4036378",
+     "name": "Jordan Love"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "GB"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/fa789622-2990-4433-9aad-0937c75ad25e/fa789622-2990-4433-9aad-0937c75ad25e.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/fa789622-2990-4433-9aad-0937c75ad25e/fa789622-2990-4433-9aad-0937c75ad25e/playlist.m3u8"
+  },
+  {
+   "id": 50493631,
+   "headline": "Quinshon Judkins punches in late go-ahead TD for the Browns",
+   "published": "2026-11-15T21:09:37Z",
+   "gameId": "401873056",
+   "playIds": [
+    "4018730564239"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "4685702",
+     "name": "Quinshon Judkins"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "CLE"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/d9ccdc51-7e1a-4815-a22f-6774b4720d97/d9ccdc51-7e1a-4815-a22f-6774b4720d97.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/d9ccdc51-7e1a-4815-a22f-6774b4720d97/d9ccdc51-7e1a-4815-a22f-6774b4720d97/playlist.m3u8"
+  },
+  {
+   "id": 50493457,
+   "headline": "James Cook III erupts for a 74-yard rushing TD",
+   "published": "2026-11-15T21:01:01Z",
+   "gameId": "401873054",
+   "playIds": [
+    "4018730543897"
+   ],
+   "duration": 51,
+   "athletes": [
+    {
+     "id": "4379399",
+     "name": "James Cook III"
+    }
+   ],
+   "teams": [
+    "NYJ",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/eebac11a-53f9-4eef-9d90-6c71e3f0e08d/eebac11a-53f9-4eef-9d90-6c71e3f0e08d.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/eebac11a-53f9-4eef-9d90-6c71e3f0e08d/eebac11a-53f9-4eef-9d90-6c71e3f0e08d/playlist.m3u8"
+  },
+  {
+   "id": 50493447,
+   "headline": "Falcons execute perfect on-side kick",
+   "published": "2026-11-15T21:00:02Z",
+   "gameId": "401873058",
+   "playIds": [
+    "4018730583661"
+   ],
+   "duration": 33,
+   "athletes": [
+    {
+     "id": "4372066",
+     "name": "Jake Moody"
+    }
+   ],
+   "teams": [
+    "KC",
+    "ATL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/a6f958b1-9965-4448-aecd-5319ad456b27/a6f958b1-9965-4448-aecd-5319ad456b27.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/a6f958b1-9965-4448-aecd-5319ad456b27/a6f958b1-9965-4448-aecd-5319ad456b27/playlist.m3u8"
+  },
+  {
+   "id": 50493413,
+   "headline": "Tony Pollard breaks free for 32-yard TD to keep the Titans alive",
+   "published": "2026-11-15T20:57:58Z",
+   "gameId": "401873057",
+   "playIds": [
+    "4018730573576"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "3916148",
+     "name": "Tony Pollard"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/8761fdec-8d5e-4238-871f-49d80af9f302/8761fdec-8d5e-4238-871f-49d80af9f302.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/8761fdec-8d5e-4238-871f-49d80af9f302/8761fdec-8d5e-4238-871f-49d80af9f302/playlist.m3u8"
+  },
+  {
+   "id": 50493279,
+   "headline": "Trevor Lawrence hits a wide open Josh Cameron for 25-yard Jags TD",
+   "published": "2026-11-15T20:48:03Z",
+   "gameId": "401873057",
+   "playIds": [
+    "4018730573428"
+   ],
+   "duration": 25,
+   "athletes": [
+    {
+     "id": "4879194",
+     "name": "Josh Cameron"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/c172f0a7-3a8c-4ac1-a4cb-3f4a10538b52/c172f0a7-3a8c-4ac1-a4cb-3f4a10538b52.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/c172f0a7-3a8c-4ac1-a4cb-3f4a10538b52/c172f0a7-3a8c-4ac1-a4cb-3f4a10538b52/playlist.m3u8"
+  },
+  {
+   "id": 50493276,
+   "headline": "C.J. Stroud finds Dalton Schultz to put Texans on top",
+   "published": "2026-11-15T20:46:53Z",
+   "gameId": "401873056",
+   "playIds": [
+    "4018730563545"
+   ],
+   "duration": 20,
+   "athletes": [
+    {
+     "id": "4432577",
+     "name": "CJ Stroud"
+    },
+    {
+     "id": "3117256",
+     "name": "Dalton Schultz"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "CLE"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/fa4b002d-322a-47fe-a192-33c6dbfc5ff5/fa4b002d-322a-47fe-a192-33c6dbfc5ff5.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/fa4b002d-322a-47fe-a192-33c6dbfc5ff5/fa4b002d-322a-47fe-a192-33c6dbfc5ff5/playlist.m3u8"
+  },
+  {
+   "id": 50493184,
+   "headline": "Gavin Bartholomew stiff arms his way into the end zone to pad Vikings' lead",
+   "published": "2026-11-15T20:43:05Z",
+   "gameId": "401873060",
+   "playIds": [
+    "4018730603568"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "4708049",
+     "name": "Gavin Bartholomew"
+    }
+   ],
+   "teams": [
+    "MIN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/ee610f18-80da-482b-a51d-7fdfcf811145/ee610f18-80da-482b-a51d-7fdfcf811145.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/ee610f18-80da-482b-a51d-7fdfcf811145/ee610f18-80da-482b-a51d-7fdfcf811145/playlist.m3u8"
+  },
+  {
+   "id": 50493079,
+   "headline": "Kyle McCord shakes off getting his facemask grabbed, runs in a TD",
+   "published": "2026-11-15T20:38:38Z",
+   "gameId": "401873059",
+   "playIds": [
+    "4018730593204"
+   ],
+   "duration": 20,
+   "athletes": [
+    {
+     "id": "4433971",
+     "name": "Kyle McCord"
+    }
+   ],
+   "teams": [
+    "MIA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/17b65cb2-1724-460f-a339-27e512b1e111/17b65cb2-1724-460f-a339-27e512b1e111.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/17b65cb2-1724-460f-a339-27e512b1e111/17b65cb2-1724-460f-a339-27e512b1e111/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:21:18.298Z"
+ "updated": "2026-11-15T21:23:25.618Z"
 }
