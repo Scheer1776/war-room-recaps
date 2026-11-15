@@ -1326,7 +1326,24 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/83b8436c-da98-4b22-92c4-21d6e2b6ffa8/83b8436c-da98-4b22-92c4-21d6e2b6ffa8.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/83b8436c-da98-4b22-92c4-21d6e2b6ffa8/83b8436c-da98-4b22-92c4-21d6e2b6ffa8/playlist.m3u8"
+  },
+  {
+   "id": 50495228,
+   "headline": "Eric Moody: Parker Washington firmly on the WR1 radar in Week 11",
+   "published": "2026-11-15T22:55:00Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 84,
+   "athletes": [
+    {
+     "id": "4432620",
+     "name": "Parker Washington"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_fantasy_parkerwashington/dm_261115_fantasy_parkerwashington.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-15T22:57:24.409Z"
+ "updated": "2026-11-15T22:59:31.530Z"
 }
