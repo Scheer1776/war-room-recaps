@@ -1270,7 +1270,24 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_Trevor_Lawrence/dm_261115_Trevor_Lawrence.mp4",
    "hls916": null
+  },
+  {
+   "id": 50495090,
+   "headline": "Should Jared Goff be in fantasy lineups each and every week?",
+   "published": "2026-11-15T22:41:12Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 58,
+   "athletes": [
+    {
+     "id": "3046779",
+     "name": "Jared Goff"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_ffia_jaredgoff/dm_261115_ffia_jaredgoff.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-15T22:35:02.036Z"
+ "updated": "2026-11-15T22:45:08.984Z"
 }
