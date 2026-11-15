@@ -852,7 +852,50 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/17b65cb2-1724-460f-a339-27e512b1e111/17b65cb2-1724-460f-a339-27e512b1e111.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/17b65cb2-1724-460f-a339-27e512b1e111/17b65cb2-1724-460f-a339-27e512b1e111/playlist.m3u8"
+  },
+  {
+   "id": 50493880,
+   "headline": "Daniel Jones gets picked off by Michael Taaffe",
+   "published": "2026-11-15T21:19:27Z",
+   "gameId": "401873059",
+   "playIds": [
+    "4018730591441"
+   ],
+   "duration": 16,
+   "athletes": [
+    {
+     "id": "4880346",
+     "name": "Michael Taaffe"
+    }
+   ],
+   "teams": [
+    "MIA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/afc940d8-8f4d-4072-99c3-5f405418ab50/afc940d8-8f4d-4072-99c3-5f405418ab50.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/afc940d8-8f4d-4072-99c3-5f405418ab50/afc940d8-8f4d-4072-99c3-5f405418ab50/playlist.m3u8"
+  },
+  {
+   "id": 50493879,
+   "headline": "Bhayshul Tuten stamps Jaguars' win with late TD",
+   "published": "2026-11-15T21:19:18Z",
+   "gameId": "401873057",
+   "playIds": [
+    "4018730574104"
+   ],
+   "duration": 23,
+   "athletes": [
+    {
+     "id": "4882093",
+     "name": "Bhayshul Tuten"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/ac4ab321-076b-443e-878d-ff5e1ad98df6/ac4ab321-076b-443e-878d-ff5e1ad98df6.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/ac4ab321-076b-443e-878d-ff5e1ad98df6/ac4ab321-076b-443e-878d-ff5e1ad98df6/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:23:25.618Z"
+ "updated": "2026-11-15T21:25:32.665Z"
 }
