@@ -895,7 +895,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/ac4ab321-076b-443e-878d-ff5e1ad98df6/ac4ab321-076b-443e-878d-ff5e1ad98df6.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/ac4ab321-076b-443e-878d-ff5e1ad98df6/ac4ab321-076b-443e-878d-ff5e1ad98df6/playlist.m3u8"
+  },
+  {
+   "id": 50493934,
+   "headline": "Live on FOX: Alvin Kamara dives for a Saints touchdown",
+   "published": "2026-11-15T21:23:14Z",
+   "gameId": "401873055",
+   "playIds": [
+    "4018730553801"
+   ],
+   "duration": 18,
+   "athletes": [
+    {
+     "id": "3054850",
+     "name": "Alvin Kamara"
+    }
+   ],
+   "teams": [
+    "CAR",
+    "NO"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2b0a46db-02e9-4ee4-971a-f7ed52c418e9/2b0a46db-02e9-4ee4-971a-f7ed52c418e9.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2b0a46db-02e9-4ee4-971a-f7ed52c418e9/2b0a46db-02e9-4ee4-971a-f7ed52c418e9/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:25:32.665Z"
+ "updated": "2026-11-15T21:27:39.646Z"
 }
