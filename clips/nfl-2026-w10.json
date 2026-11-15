@@ -1453,7 +1453,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/a1cff51b-0dec-4146-8ca8-0540a0de081f/a1cff51b-0dec-4146-8ca8-0540a0de081f.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/a1cff51b-0dec-4146-8ca8-0540a0de081f/a1cff51b-0dec-4146-8ca8-0540a0de081f/playlist.m3u8"
+  },
+  {
+   "id": 50495784,
+   "headline": "Live on FOX: Kaelon Black plows into the end zone for San Francisco",
+   "published": "2026-11-15T23:33:12Z",
+   "gameId": "401873063",
+   "playIds": [
+    "4018730632498"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "4696044",
+     "name": "Kaelon Black"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/f49db984-0d87-4144-a1a6-78d2b17fc6db/f49db984-0d87-4144-a1a6-78d2b17fc6db.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/f49db984-0d87-4144-a1a6-78d2b17fc6db/f49db984-0d87-4144-a1a6-78d2b17fc6db/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T23:20:08.621Z"
+ "updated": "2026-11-15T23:38:17.338Z"
 }
