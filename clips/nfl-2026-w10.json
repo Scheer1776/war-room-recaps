@@ -177,7 +177,444 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1113/439d55db-bebe-489b-b737-8e0094f4105e/439d55db-bebe-489b-b737-8e0094f4105e.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1113/439d55db-bebe-489b-b737-8e0094f4105e/439d55db-bebe-489b-b737-8e0094f4105e/playlist.m3u8"
+  },
+  {
+   "id": 50492993,
+   "headline": "Live on CBS: Mahomes goes deep to Cyrus Allen to extend the Chiefs' lead",
+   "published": "2026-11-15T20:34:00Z",
+   "gameId": "401873058",
+   "playIds": [
+    "4018730582802"
+   ],
+   "duration": 32,
+   "athletes": [
+    {
+     "id": "4912218",
+     "name": "Cyrus Allen"
+    }
+   ],
+   "teams": [
+    "KC",
+    "ATL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/b4550d3e-64e9-48fb-9bcb-52df27ee018e/b4550d3e-64e9-48fb-9bcb-52df27ee018e.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/b4550d3e-64e9-48fb-9bcb-52df27ee018e/b4550d3e-64e9-48fb-9bcb-52df27ee018e/playlist.m3u8"
+  },
+  {
+   "id": 50492861,
+   "headline": "Live on CBS: Josh Allen goes deep to DJ Moore for a Bills TD",
+   "published": "2026-11-15T20:24:32Z",
+   "gameId": "401873054",
+   "playIds": [
+    "4018730542886"
+   ],
+   "duration": 21,
+   "athletes": [
+    {
+     "id": "3915416",
+     "name": "DJ Moore"
+    },
+    {
+     "id": "3918298",
+     "name": "Josh Allen"
+    }
+   ],
+   "teams": [
+    "NYJ",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/8f1e8657-97a1-4e58-962f-6407725f66e0/8f1e8657-97a1-4e58-962f-6407725f66e0.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/8f1e8657-97a1-4e58-962f-6407725f66e0/8f1e8657-97a1-4e58-962f-6407725f66e0/playlist.m3u8"
+  },
+  {
+   "id": 50492848,
+   "headline": "Live on CBS: Chris Johnson takes Daniel Jones' deflected yards 59 yards the other way for a pick-six",
+   "published": "2026-11-15T20:22:01Z",
+   "gameId": "401873059",
+   "playIds": [
+    "4018730592604"
+   ],
+   "duration": 33,
+   "athletes": [
+    {
+     "id": "4869579",
+     "name": "Chris Johnson"
+    }
+   ],
+   "teams": [
+    "MIA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/7c51518a-418e-4785-9117-e50a27bdd7d1/7c51518a-418e-4785-9117-e50a27bdd7d1.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/7c51518a-418e-4785-9117-e50a27bdd7d1/7c51518a-418e-4785-9117-e50a27bdd7d1/playlist.m3u8"
+  },
+  {
+   "id": 50492804,
+   "headline": "Live on FOX: Trevor Lawrence finds a wide-open Brenton Strange for a Jaguars TD",
+   "published": "2026-11-15T20:19:03Z",
+   "gameId": "401873057",
+   "playIds": [
+    "4018730572710"
+   ],
+   "duration": 19,
+   "athletes": [
+    {
+     "id": "4430539",
+     "name": "Brenton Strange"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/6f15f9ad-8393-44fa-9ae4-2e2dca20f002/6f15f9ad-8393-44fa-9ae4-2e2dca20f002.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/6f15f9ad-8393-44fa-9ae4-2e2dca20f002/6f15f9ad-8393-44fa-9ae4-2e2dca20f002/playlist.m3u8"
+  },
+  {
+   "id": 50492753,
+   "headline": "Live on FOX: Jordan Love puts Packers on the board with 32-yard TD pass to J. Michael Sturdivant",
+   "published": "2026-11-15T20:12:49Z",
+   "gameId": "401873060",
+   "playIds": [
+    "4018730602792"
+   ],
+   "duration": 19,
+   "athletes": [
+    {
+     "id": "4036378",
+     "name": "Jordan Love"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "GB"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/c3358901-d91b-494c-9ed0-5f7806786fde/c3358901-d91b-494c-9ed0-5f7806786fde.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/c3358901-d91b-494c-9ed0-5f7806786fde/c3358901-d91b-494c-9ed0-5f7806786fde/playlist.m3u8"
+  },
+  {
+   "id": 50492731,
+   "headline": "Live on CBS: Josh Allen punches in his 2nd TD of the game for the Bills",
+   "published": "2026-11-15T20:10:29Z",
+   "gameId": "401873054",
+   "playIds": [
+    "4018730542588"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "3918298",
+     "name": "Josh Allen"
+    }
+   ],
+   "teams": [
+    "NYJ",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/1d3b4537-a52d-49cb-aa95-1638abc4206d/1d3b4537-a52d-49cb-aa95-1638abc4206d.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/1d3b4537-a52d-49cb-aa95-1638abc4206d/1d3b4537-a52d-49cb-aa95-1638abc4206d/playlist.m3u8"
+  },
+  {
+   "id": 50492685,
+   "headline": "Live on FOX: KC Concepcion finds the angle and runs in a Browns TD",
+   "published": "2026-11-15T20:08:55Z",
+   "gameId": "401873056",
+   "playIds": [
+    "4018730562549"
+   ],
+   "duration": 25,
+   "athletes": [
+    {
+     "id": "4870653",
+     "name": "KC Concepcion"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "CLE"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/41f31700-9a2c-4f03-a516-f23ae0aae6d4/41f31700-9a2c-4f03-a516-f23ae0aae6d4.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/41f31700-9a2c-4f03-a516-f23ae0aae6d4/41f31700-9a2c-4f03-a516-f23ae0aae6d4/playlist.m3u8"
+  },
+  {
+   "id": 50492664,
+   "headline": "Live on FOX: Alvin Kamara barrels it in for a Saints touchdown",
+   "published": "2026-11-15T20:06:04Z",
+   "gameId": "401873055",
+   "playIds": [
+    "4018730552568"
+   ],
+   "duration": 19,
+   "athletes": [
+    {
+     "id": "3054850",
+     "name": "Alvin Kamara"
+    }
+   ],
+   "teams": [
+    "CAR",
+    "NO"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2d62a877-8e94-4316-91a6-67889c1a35ae/2d62a877-8e94-4316-91a6-67889c1a35ae.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2d62a877-8e94-4316-91a6-67889c1a35ae/2d62a877-8e94-4316-91a6-67889c1a35ae/playlist.m3u8"
+  },
+  {
+   "id": 50492662,
+   "headline": "Live on CBS: Colts recover Kyle McCord's fumble for a TD",
+   "published": "2026-11-15T20:05:40Z",
+   "gameId": "401873059",
+   "playIds": [],
+   "duration": 41,
+   "athletes": [
+    {
+     "id": "4427635",
+     "name": "Adetomiwa Adebawore"
+    }
+   ],
+   "teams": [
+    "MIA",
+    "IND"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/43a0b340-bc91-4db1-8c90-9fcbf23e4405/43a0b340-bc91-4db1-8c90-9fcbf23e4405.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/43a0b340-bc91-4db1-8c90-9fcbf23e4405/43a0b340-bc91-4db1-8c90-9fcbf23e4405/playlist.m3u8"
+  },
+  {
+   "id": 50492639,
+   "headline": "Live on FOX: Bad Packers snap leads gives Viking good field position",
+   "published": "2026-11-15T20:05:04Z",
+   "gameId": "401873060",
+   "playIds": [
+    "4018730602402"
+   ],
+   "duration": 22,
+   "athletes": [
+    {
+     "id": "4565190",
+     "name": "Dallas Turner"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "GB"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/b6703399-77a1-4b95-bc30-8f7b838f7cc0/b6703399-77a1-4b95-bc30-8f7b838f7cc0.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/b6703399-77a1-4b95-bc30-8f7b838f7cc0/b6703399-77a1-4b95-bc30-8f7b838f7cc0/playlist.m3u8"
+  },
+  {
+   "id": 50492630,
+   "headline": "Live on CBS: Josh Downs stamps his Chiefs debut with a TD catch",
+   "published": "2026-11-15T20:03:59Z",
+   "gameId": "401873058",
+   "playIds": [
+    "4018730582084"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "4688813",
+     "name": "Josh Downs"
+    }
+   ],
+   "teams": [
+    "KC",
+    "ATL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/9c475fff-f3a9-4218-b331-ca4bee3709f8/9c475fff-f3a9-4218-b331-ca4bee3709f8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/9c475fff-f3a9-4218-b331-ca4bee3709f8/9c475fff-f3a9-4218-b331-ca4bee3709f8/playlist.m3u8"
+  },
+  {
+   "id": 50492443,
+   "headline": "Who are some QBs that fantasy managers can turn to in place of Drake Maye?",
+   "published": "2026-11-15T19:47:12Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 94,
+   "athletes": [
+    {
+     "id": "4431452",
+     "name": "Drake Maye"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/ss_20261115_144713070_3743808/ss_20261115_144713070_3743808.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50492437,
+   "headline": "Michael Florio: Jahmyr Gibbs the definition of a fantasy MVP",
+   "published": "2026-11-15T19:46:01Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 77,
+   "athletes": [
+    {
+     "id": "4429795",
+     "name": "Jahmyr Gibbs"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/ss_20261115_144602895_3743804/ss_20261115_144602895_3743804.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50492421,
+   "headline": "Live on CBS: Geno Smith goes deep to Garrett WIlson for a 33-yard Jets completion",
+   "published": "2026-11-15T19:42:49Z",
+   "gameId": "401873054",
+   "playIds": [
+    "4018730541897"
+   ],
+   "duration": 19,
+   "athletes": [
+    {
+     "id": "15864",
+     "name": "Geno Smith"
+    },
+    {
+     "id": "4569618",
+     "name": "Garrett Wilson"
+    }
+   ],
+   "teams": [
+    "NYJ",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/4f99014a-51b0-4214-9271-910b24cc149c/4f99014a-51b0-4214-9271-910b24cc149c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/4f99014a-51b0-4214-9271-910b24cc149c/4f99014a-51b0-4214-9271-910b24cc149c/playlist.m3u8"
+  },
+  {
+   "id": 50492260,
+   "headline": "Live on CBS: Laquon Treadwell gets his first TD catch of the season",
+   "published": "2026-11-15T19:35:14Z",
+   "gameId": "401873059",
+   "playIds": [
+    "4018730591950"
+   ],
+   "duration": 21,
+   "athletes": [
+    {
+     "id": "3051889",
+     "name": "Laquon Treadwell"
+    },
+    {
+     "id": "3917792",
+     "name": "Daniel Jones"
+    }
+   ],
+   "teams": [
+    "IND"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/dcac0882-82b1-4d48-93bc-6f817a89e65c/dcac0882-82b1-4d48-93bc-6f817a89e65c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/dcac0882-82b1-4d48-93bc-6f817a89e65c/dcac0882-82b1-4d48-93bc-6f817a89e65c/playlist.m3u8"
+  },
+  {
+   "id": 50492230,
+   "headline": "Is Amon-Ra St. Brown's big Week 10 a sign of things to come?",
+   "published": "2026-11-15T19:34:24Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 60,
+   "athletes": [
+    {
+     "id": "4374302",
+     "name": "Amon-Ra St Brown"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/ss_20261115_143425639_3743770/ss_20261115_143425639_3743770.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50492205,
+   "headline": "Live on FOX: Tyson Campbell comes up with incredible pick of C.J. Stroud",
+   "published": "2026-11-15T19:28:27Z",
+   "gameId": "401873056",
+   "playIds": [
+    "4018730561856"
+   ],
+   "duration": 41,
+   "athletes": [
+    {
+     "id": "4379397",
+     "name": "Tyson Campbell"
+    },
+    {
+     "id": "4432577",
+     "name": "CJ Stroud"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "CLE"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/0af69d53-19e9-4bdc-b5ad-3d6c9ee07da8/0af69d53-19e9-4bdc-b5ad-3d6c9ee07da8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/0af69d53-19e9-4bdc-b5ad-3d6c9ee07da8/0af69d53-19e9-4bdc-b5ad-3d6c9ee07da8/playlist.m3u8"
+  },
+  {
+   "id": 50492104,
+   "headline": "Live on FOX: Aaron Jones Sr. does Lambeau Leap after scoring a Vikings TD",
+   "published": "2026-11-15T19:17:51Z",
+   "gameId": "401873060",
+   "playIds": [
+    "4018730601607"
+   ],
+   "duration": 16,
+   "athletes": [
+    {
+     "id": "3042519",
+     "name": "Aaron Jones Sr"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "GB"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/0ab1fd13-0dee-43b0-ac0c-5bcc9ea407f7/0ab1fd13-0dee-43b0-ac0c-5bcc9ea407f7.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/0ab1fd13-0dee-43b0-ac0c-5bcc9ea407f7/0ab1fd13-0dee-43b0-ac0c-5bcc9ea407f7/playlist.m3u8"
+  },
+  {
+   "id": 50492075,
+   "headline": "Live on FOX: Deshaun Watson waltzes into the end zone for a Browns TD",
+   "published": "2026-11-15T19:16:35Z",
+   "gameId": "401873056",
+   "playIds": [
+    "4018730561634"
+   ],
+   "duration": 20,
+   "athletes": [
+    {
+     "id": "3122840",
+     "name": "Deshaun Watson"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "CLE"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/f0aa9fb0-5ca2-4774-91ac-3d0b7777964f/f0aa9fb0-5ca2-4774-91ac-3d0b7777964f.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/f0aa9fb0-5ca2-4774-91ac-3d0b7777964f/f0aa9fb0-5ca2-4774-91ac-3d0b7777964f/playlist.m3u8"
+  },
+  {
+   "id": 50492073,
+   "headline": "Live on FOX: Daniel Bellinger hauls in 2-yard TD to keep the Titans in it",
+   "published": "2026-11-15T19:16:20Z",
+   "gameId": "401873057",
+   "playIds": [
+    "4018730571536"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4361516",
+     "name": "Daniel Bellinger"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/bd9e6cb6-4c33-4438-9f30-97a486080811/bd9e6cb6-4c33-4438-9f30-97a486080811.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/bd9e6cb6-4c33-4438-9f30-97a486080811/bd9e6cb6-4c33-4438-9f30-97a486080811/playlist.m3u8"
   }
  ],
- "updated": "2026-11-13T04:33:24.385Z"
+ "updated": "2026-11-15T21:21:18.298Z"
 }
