@@ -1387,7 +1387,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/885e2024-07f0-45b5-8183-c09d7c1b164b/885e2024-07f0-45b5-8183-c09d7c1b164b.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/885e2024-07f0-45b5-8183-c09d7c1b164b/885e2024-07f0-45b5-8183-c09d7c1b164b/playlist.m3u8"
+  },
+  {
+   "id": 50495391,
+   "headline": "Live on CBS: JSN goes 73 yards for a Seahawks TD",
+   "published": "2026-11-15T23:09:08Z",
+   "gameId": "401873062",
+   "playIds": [
+    "4018730622402"
+   ],
+   "duration": 40,
+   "athletes": [
+    {
+     "id": "4430878",
+     "name": "Jaxon Smith-Njigba"
+    }
+   ],
+   "teams": [
+    "LV",
+    "SEA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2ffc461d-34d1-4a4d-b10b-1ed5596c77dc/2ffc461d-34d1-4a4d-b10b-1ed5596c77dc.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2ffc461d-34d1-4a4d-b10b-1ed5596c77dc/2ffc461d-34d1-4a4d-b10b-1ed5596c77dc/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T23:09:47.072Z"
+ "updated": "2026-11-15T23:13:54.316Z"
 }
