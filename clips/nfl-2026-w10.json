@@ -1131,7 +1131,24 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/93123678-d873-4b3c-bcbb-6d2a3d6cf134/93123678-d873-4b3c-bcbb-6d2a3d6cf134.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/93123678-d873-4b3c-bcbb-6d2a3d6cf134/93123678-d873-4b3c-bcbb-6d2a3d6cf134/playlist.m3u8"
+  },
+  {
+   "id": 50494330,
+   "headline": "Why fantasy managers should keep riding the hot hand with Patrick Mahomes",
+   "published": "2026-11-15T21:53:18Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 61,
+   "athletes": [
+    {
+     "id": "3139477",
+     "name": "Patrick Mahomes"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/ss_20261115_165320335_3744197/ss_20261115_165320335_3744197.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-15T21:42:15.468Z"
+ "updated": "2026-11-15T21:58:24.382Z"
 }
