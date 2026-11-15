@@ -1343,7 +1343,29 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_fantasy_parkerwashington/dm_261115_fantasy_parkerwashington.mp4",
    "hls916": null
+  },
+  {
+   "id": 50495150,
+   "headline": "Live on FOX: Dak Prescott, George Pickens link up for their 2nd TD connection of the 1st half",
+   "published": "2026-11-15T22:45:29Z",
+   "gameId": "401873063",
+   "playIds": [
+    "4018730631746"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4426354",
+     "name": "George Pickens"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/cf549068-1134-4d0c-9927-ea551bdf0e69/cf549068-1134-4d0c-9927-ea551bdf0e69.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/cf549068-1134-4d0c-9927-ea551bdf0e69/cf549068-1134-4d0c-9927-ea551bdf0e69/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T22:59:31.530Z"
+ "updated": "2026-11-15T23:01:38.688Z"
 }
