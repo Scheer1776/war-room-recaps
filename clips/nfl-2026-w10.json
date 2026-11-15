@@ -1109,7 +1109,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/538055ea-4b87-43d8-9be8-828316a9a8e6/538055ea-4b87-43d8-9be8-828316a9a8e6.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/538055ea-4b87-43d8-9be8-828316a9a8e6/538055ea-4b87-43d8-9be8-828316a9a8e6/playlist.m3u8"
+  },
+  {
+   "id": 50494140,
+   "headline": "Live on CBS: Drew Lock airs one out to Cooper Kupp for an incredible Seahawks TD",
+   "published": "2026-11-15T21:39:39Z",
+   "gameId": "401873062",
+   "playIds": [
+    "401873062624"
+   ],
+   "duration": 31,
+   "athletes": [
+    {
+     "id": "2977187",
+     "name": "Cooper Kupp"
+    }
+   ],
+   "teams": [
+    "LV",
+    "SEA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/93123678-d873-4b3c-bcbb-6d2a3d6cf134/93123678-d873-4b3c-bcbb-6d2a3d6cf134.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/93123678-d873-4b3c-bcbb-6d2a3d6cf134/93123678-d873-4b3c-bcbb-6d2a3d6cf134/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:40:08.260Z"
+ "updated": "2026-11-15T21:42:15.468Z"
 }
