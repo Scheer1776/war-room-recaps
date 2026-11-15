@@ -1049,7 +1049,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/230aa0d1-e913-4747-8358-089694c17eb8/230aa0d1-e913-4747-8358-089694c17eb8.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/230aa0d1-e913-4747-8358-089694c17eb8/230aa0d1-e913-4747-8358-089694c17eb8/playlist.m3u8"
+  },
+  {
+   "id": 50494072,
+   "headline": "Ryan Fitzgerald drills a 54-yard walk off Field Goal for Panthers",
+   "published": "2026-11-15T21:34:36Z",
+   "gameId": "401873055",
+   "playIds": [
+    "4018730554430"
+   ],
+   "duration": 23,
+   "athletes": [
+    {
+     "id": "4568263",
+     "name": "Ryan Fitzgerald"
+    }
+   ],
+   "teams": [
+    "CAR",
+    "NO"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/e8dd83a1-5221-4151-942b-b013230c3f3f/e8dd83a1-5221-4151-942b-b013230c3f3f.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/e8dd83a1-5221-4151-942b-b013230c3f3f/e8dd83a1-5221-4151-942b-b013230c3f3f/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:35:53.844Z"
+ "updated": "2026-11-15T21:38:01.484Z"
 }
