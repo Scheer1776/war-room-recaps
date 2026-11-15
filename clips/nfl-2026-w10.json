@@ -1287,7 +1287,24 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_ffia_jaredgoff/dm_261115_ffia_jaredgoff.mp4",
    "hls916": null
+  },
+  {
+   "id": 50495148,
+   "headline": "Why Jordyn Tyson is firmly on the flex radar",
+   "published": "2026-11-15T22:45:23Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 79,
+   "athletes": [
+    {
+     "id": "4880281",
+     "name": "Jordyn Tyson"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_ffia_jordyntyson/dm_261115_ffia_jordyntyson.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-15T22:45:08.984Z"
+ "updated": "2026-11-15T22:49:16.191Z"
 }
