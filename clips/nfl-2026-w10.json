@@ -1253,7 +1253,24 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/8cd68053-e28f-48b5-a2f1-8bb200305f27/8cd68053-e28f-48b5-a2f1-8bb200305f27.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/8cd68053-e28f-48b5-a2f1-8bb200305f27/8cd68053-e28f-48b5-a2f1-8bb200305f27/playlist.m3u8"
+  },
+  {
+   "id": 50494901,
+   "headline": "Adam Rank: Trevor Lawrence needs to be a must-start fantasy QB every week",
+   "published": "2026-11-15T22:30:03Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 52,
+   "athletes": [
+    {
+     "id": "4360310",
+     "name": "Trevor Lawrence"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_Trevor_Lawrence/dm_261115_Trevor_Lawrence.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-15T22:18:53.897Z"
+ "updated": "2026-11-15T22:35:02.036Z"
 }
