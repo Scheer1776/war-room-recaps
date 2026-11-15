@@ -1365,7 +1365,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/cf549068-1134-4d0c-9927-ea551bdf0e69/cf549068-1134-4d0c-9927-ea551bdf0e69.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/cf549068-1134-4d0c-9927-ea551bdf0e69/cf549068-1134-4d0c-9927-ea551bdf0e69/playlist.m3u8"
+  },
+  {
+   "id": 50495213,
+   "headline": "Live on FOX: Brock Purdy scrambles, eventually finds CMC for thrilling 74-yard TD",
+   "published": "2026-11-15T22:52:51Z",
+   "gameId": "401873063",
+   "playIds": [
+    "4018730631873"
+   ],
+   "duration": 34,
+   "athletes": [
+    {
+     "id": "3117251",
+     "name": "Christian McCaffrey"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/885e2024-07f0-45b5-8183-c09d7c1b164b/885e2024-07f0-45b5-8183-c09d7c1b164b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/885e2024-07f0-45b5-8183-c09d7c1b164b/885e2024-07f0-45b5-8183-c09d7c1b164b/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T23:01:38.688Z"
+ "updated": "2026-11-15T23:09:47.072Z"
 }
