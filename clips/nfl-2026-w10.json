@@ -1190,7 +1190,26 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/8fc3c907-0a14-4df6-a44c-acf2d0187adc/8fc3c907-0a14-4df6-a44c-acf2d0187adc.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/8fc3c907-0a14-4df6-a44c-acf2d0187adc/8fc3c907-0a14-4df6-a44c-acf2d0187adc/playlist.m3u8"
+  },
+  {
+   "id": 50494318,
+   "headline": "Kirk Cousins emotional after victory in Vikings return",
+   "published": "2026-11-15T21:51:07Z",
+   "gameId": "401873060",
+   "playIds": [],
+   "duration": 62,
+   "athletes": [
+    {
+     "id": "14880",
+     "name": "Kirk Cousins"
+    }
+   ],
+   "teams": [
+    "MIN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_Vikings/dm_261115_Vikings.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-15T22:00:31.673Z"
+ "updated": "2026-11-15T22:02:38.549Z"
 }
