@@ -1209,7 +1209,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/dm_261115_Vikings/dm_261115_Vikings.mp4",
    "hls916": null
+  },
+  {
+   "id": 50494414,
+   "headline": "Live on FOX: Brock Purdy finds Deebo Samuel Sr. for a 49ers TD",
+   "published": "2026-11-15T21:55:35Z",
+   "gameId": "401873063",
+   "playIds": [
+    "401873063558"
+   ],
+   "duration": 21,
+   "athletes": [
+    {
+     "id": "3126486",
+     "name": "Deebo Samuel Sr"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/0effe72b-59b1-4d53-9c98-ba68eb3d632b/0effe72b-59b1-4d53-9c98-ba68eb3d632b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/0effe72b-59b1-4d53-9c98-ba68eb3d632b/0effe72b-59b1-4d53-9c98-ba68eb3d632b/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T22:02:38.549Z"
+ "updated": "2026-11-15T22:14:46.785Z"
 }
