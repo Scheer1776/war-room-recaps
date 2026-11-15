@@ -1431,7 +1431,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/7756ddc7-2740-4e2d-9895-93492b4a2a2e/7756ddc7-2740-4e2d-9895-93492b4a2a2e.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/7756ddc7-2740-4e2d-9895-93492b4a2a2e/7756ddc7-2740-4e2d-9895-93492b4a2a2e/playlist.m3u8"
+  },
+  {
+   "id": 50495246,
+   "headline": "Live on CBS: Rams' Xavier Smith finds end zone for first NFL TD",
+   "published": "2026-11-15T22:56:59Z",
+   "gameId": "401873061",
+   "playIds": [
+    "4018730612082"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "4386544",
+     "name": "Xavier Smith"
+    }
+   ],
+   "teams": [
+    "ARI",
+    "LAR"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/a1cff51b-0dec-4146-8ca8-0540a0de081f/a1cff51b-0dec-4146-8ca8-0540a0de081f.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/a1cff51b-0dec-4146-8ca8-0540a0de081f/a1cff51b-0dec-4146-8ca8-0540a0de081f/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T23:16:01.307Z"
+ "updated": "2026-11-15T23:20:08.621Z"
 }
