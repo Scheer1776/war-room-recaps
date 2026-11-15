@@ -917,7 +917,79 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2b0a46db-02e9-4ee4-971a-f7ed52c418e9/2b0a46db-02e9-4ee4-971a-f7ed52c418e9.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2b0a46db-02e9-4ee4-971a-f7ed52c418e9/2b0a46db-02e9-4ee4-971a-f7ed52c418e9/playlist.m3u8"
+  },
+  {
+   "id": 50493959,
+   "headline": "Houston Texans vs. Cleveland Browns: Game Highlights",
+   "published": "2026-11-15T21:25:35Z",
+   "gameId": "401873056",
+   "playIds": [
+    "401873056335"
+   ],
+   "duration": 58,
+   "athletes": [
+    {
+     "id": "4686422",
+     "name": "Xavier Hutchinson"
+    },
+    {
+     "id": "4432577",
+     "name": "CJ Stroud"
+    },
+    {
+     "id": "4685702",
+     "name": "Quinshon Judkins"
+    },
+    {
+     "id": "4870653",
+     "name": "KC Concepcion"
+    },
+    {
+     "id": "3122840",
+     "name": "Deshaun Watson"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "CLE"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/b0827c8e-90a1-4899-bae9-5037cf8e1560/b0827c8e-90a1-4899-bae9-5037cf8e1560.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/b0827c8e-90a1-4899-bae9-5037cf8e1560/b0827c8e-90a1-4899-bae9-5037cf8e1560/playlist.m3u8"
+  },
+  {
+   "id": 50493957,
+   "headline": "Carolina Panthers vs. New Orleans Saints: Game Highlights",
+   "published": "2026-11-15T21:24:59Z",
+   "gameId": "401873055",
+   "playIds": [
+    "4018730551552"
+   ],
+   "duration": 70,
+   "athletes": [
+    {
+     "id": "3054850",
+     "name": "Alvin Kamara"
+    },
+    {
+     "id": "4241416",
+     "name": "Chuba Hubbard"
+    },
+    {
+     "id": "4360689",
+     "name": "Tyler Shough"
+    },
+    {
+     "id": "4568263",
+     "name": "Ryan Fitzgerald"
+    }
+   ],
+   "teams": [
+    "CAR",
+    "NO"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2b33374d-8fee-4dbd-9a8c-85edc85dba54/2b33374d-8fee-4dbd-9a8c-85edc85dba54.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2b33374d-8fee-4dbd-9a8c-85edc85dba54/2b33374d-8fee-4dbd-9a8c-85edc85dba54/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:27:39.646Z"
+ "updated": "2026-11-15T21:31:46.581Z"
 }
