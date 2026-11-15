@@ -1071,7 +1071,45 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/e8dd83a1-5221-4151-942b-b013230c3f3f/e8dd83a1-5221-4151-942b-b013230c3f3f.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/e8dd83a1-5221-4151-942b-b013230c3f3f/e8dd83a1-5221-4151-942b-b013230c3f3f/playlist.m3u8"
+  },
+  {
+   "id": 50493995,
+   "headline": "Kansas City Chiefs vs. Atlanta Falcons: Game Highlights",
+   "published": "2026-11-15T21:28:24Z",
+   "gameId": "401873058",
+   "playIds": [
+    "401873058359"
+   ],
+   "duration": 78,
+   "athletes": [
+    {
+     "id": "5093923",
+     "name": "Andrew Armstrong"
+    },
+    {
+     "id": "4912218",
+     "name": "Cyrus Allen"
+    },
+    {
+     "id": "4430807",
+     "name": "Bijan Robinson"
+    },
+    {
+     "id": "4832955",
+     "name": "Emmett Johnson"
+    },
+    {
+     "id": "4688813",
+     "name": "Josh Downs"
+    }
+   ],
+   "teams": [
+    "KC",
+    "ATL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/538055ea-4b87-43d8-9be8-828316a9a8e6/538055ea-4b87-43d8-9be8-828316a9a8e6.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/538055ea-4b87-43d8-9be8-828316a9a8e6/538055ea-4b87-43d8-9be8-828316a9a8e6/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:38:01.484Z"
+ "updated": "2026-11-15T21:40:08.260Z"
 }
