@@ -989,7 +989,67 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2b33374d-8fee-4dbd-9a8c-85edc85dba54/2b33374d-8fee-4dbd-9a8c-85edc85dba54.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2b33374d-8fee-4dbd-9a8c-85edc85dba54/2b33374d-8fee-4dbd-9a8c-85edc85dba54/playlist.m3u8"
+  },
+  {
+   "id": 50494034,
+   "headline": "Live on CBS: Fernando Mendoza runs in for his 1st NFL TD",
+   "published": "2026-11-15T21:31:57Z",
+   "gameId": "401873062",
+   "playIds": [
+    "401873062354"
+   ],
+   "duration": 21,
+   "athletes": [
+    {
+     "id": "4837248",
+     "name": "Fernando Mendoza"
+    }
+   ],
+   "teams": [
+    "LV",
+    "SEA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/544f1cd0-4364-4fbc-9dce-597b85c06080/544f1cd0-4364-4fbc-9dce-597b85c06080.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/544f1cd0-4364-4fbc-9dce-597b85c06080/544f1cd0-4364-4fbc-9dce-597b85c06080/playlist.m3u8"
+  },
+  {
+   "id": 50494007,
+   "headline": "Jags come out on top in offensive shootout with Titans",
+   "published": "2026-11-15T21:30:49Z",
+   "gameId": "401873057",
+   "playIds": [
+    "401873057280"
+   ],
+   "duration": 61,
+   "athletes": [
+    {
+     "id": "4361516",
+     "name": "Daniel Bellinger"
+    },
+    {
+     "id": "4360310",
+     "name": "Trevor Lawrence"
+    },
+    {
+     "id": "3916148",
+     "name": "Tony Pollard"
+    },
+    {
+     "id": "4432620",
+     "name": "Parker Washington"
+    },
+    {
+     "id": "4882093",
+     "name": "Bhayshul Tuten"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/230aa0d1-e913-4747-8358-089694c17eb8/230aa0d1-e913-4747-8358-089694c17eb8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/230aa0d1-e913-4747-8358-089694c17eb8/230aa0d1-e913-4747-8358-089694c17eb8/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:31:46.581Z"
+ "updated": "2026-11-15T21:35:53.844Z"
 }
