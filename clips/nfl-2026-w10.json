@@ -1231,7 +1231,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/0effe72b-59b1-4d53-9c98-ba68eb3d632b/0effe72b-59b1-4d53-9c98-ba68eb3d632b.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/0effe72b-59b1-4d53-9c98-ba68eb3d632b/0effe72b-59b1-4d53-9c98-ba68eb3d632b/playlist.m3u8"
+  },
+  {
+   "id": 50494615,
+   "headline": "Live on FOX: Dak Prescott lets it fly to George Pickens for a Cowboys TD",
+   "published": "2026-11-15T22:07:05Z",
+   "gameId": "401873063",
+   "playIds": [
+    "401873063878"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4426354",
+     "name": "George Pickens"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/8cd68053-e28f-48b5-a2f1-8bb200305f27/8cd68053-e28f-48b5-a2f1-8bb200305f27.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/8cd68053-e28f-48b5-a2f1-8bb200305f27/8cd68053-e28f-48b5-a2f1-8bb200305f27/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T22:14:46.785Z"
+ "updated": "2026-11-15T22:18:53.897Z"
 }
