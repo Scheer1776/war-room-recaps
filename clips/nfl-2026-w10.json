@@ -1148,7 +1148,49 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1115/ss_20261115_165320335_3744197/ss_20261115_165320335_3744197.mp4",
    "hls916": null
+  },
+  {
+   "id": 50494327,
+   "headline": "Miami Dolphins vs. Indianapolis Colts Game Highlights",
+   "published": "2026-11-15T21:52:51Z",
+   "gameId": "401873059",
+   "playIds": [
+    "4018730591035"
+   ],
+   "duration": 68,
+   "athletes": [
+    {
+     "id": "4569603",
+     "name": "Malik Washington"
+    },
+    {
+     "id": "3917792",
+     "name": "Daniel Jones"
+    },
+    {
+     "id": "4427635",
+     "name": "Adetomiwa Adebawore"
+    },
+    {
+     "id": "4433971",
+     "name": "Kyle McCord"
+    },
+    {
+     "id": "4869579",
+     "name": "Chris Johnson"
+    },
+    {
+     "id": "4686468",
+     "name": "Seth McGowan"
+    }
+   ],
+   "teams": [
+    "MIA",
+    "IND"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/8fc3c907-0a14-4df6-a44c-acf2d0187adc/8fc3c907-0a14-4df6-a44c-acf2d0187adc.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/8fc3c907-0a14-4df6-a44c-acf2d0187adc/8fc3c907-0a14-4df6-a44c-acf2d0187adc/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T21:58:24.382Z"
+ "updated": "2026-11-15T22:00:31.673Z"
 }
