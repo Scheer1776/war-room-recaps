@@ -1563,7 +1563,41 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/e797ca10-73a2-41e4-ad52-6536778742b8/e797ca10-73a2-41e4-ad52-6536778742b8.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/e797ca10-73a2-41e4-ad52-6536778742b8/e797ca10-73a2-41e4-ad52-6536778742b8/playlist.m3u8"
+  },
+  {
+   "id": 50496498,
+   "headline": "Seattle Seahawks vs. Las Vegas Raiders: Game Highlights",
+   "published": "2026-11-16T00:21:59Z",
+   "gameId": "401873062",
+   "playIds": [
+    "401873062354"
+   ],
+   "duration": 60,
+   "athletes": [
+    {
+     "id": "4685512",
+     "name": "Jadarian Price"
+    },
+    {
+     "id": "4430878",
+     "name": "Jaxon Smith-Njigba"
+    },
+    {
+     "id": "4837248",
+     "name": "Fernando Mendoza"
+    },
+    {
+     "id": "2977187",
+     "name": "Cooper Kupp"
+    }
+   ],
+   "teams": [
+    "LV",
+    "SEA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/fa6621c5-2440-4448-9b9c-30ef4dd54f67/fa6621c5-2440-4448-9b9c-30ef4dd54f67.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/fa6621c5-2440-4448-9b9c-30ef4dd54f67/fa6621c5-2440-4448-9b9c-30ef4dd54f67/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T00:12:48.090Z"
+ "updated": "2026-11-16T00:28:56.683Z"
 }
