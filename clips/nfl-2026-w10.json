@@ -1793,7 +1793,250 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/8f7808b2-5021-4ca5-9081-1357c2fe1e78/8f7808b2-5021-4ca5-9081-1357c2fe1e78.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/8f7808b2-5021-4ca5-9081-1357c2fe1e78/8f7808b2-5021-4ca5-9081-1357c2fe1e78/playlist.m3u8"
+  },
+  {
+   "id": 50499358,
+   "headline": "Will Jonathan Taylor and Seth McGowan continue as a one-two punch in fantasy?",
+   "published": "2026-11-16T07:20:12Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 55,
+   "athletes": [
+    {
+     "id": "4242335",
+     "name": "Jonathan Taylor"
+    },
+    {
+     "id": "4686468",
+     "name": "Seth McGowan"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1116/ss_20261116_022013003_3745017/ss_20261116_022013003_3745017.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50499348,
+   "headline": "How Emmett Johnson proved he could handle a bigger workload in fantasy Week 10",
+   "published": "2026-11-16T07:09:55Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 60,
+   "athletes": [
+    {
+     "id": "4832955",
+     "name": "Emmett Johnson"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1116/ss_20261116_020956531_3745016/ss_20261116_020956531_3745016.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50498782,
+   "headline": "Big-time offensive plays highlight top NFL plays of Week 10",
+   "published": "2026-11-16T05:32:40Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 118,
+   "athletes": [
+    {
+     "id": "3918298",
+     "name": "Josh Allen"
+    },
+    {
+     "id": "4433971",
+     "name": "Kyle McCord"
+    },
+    {
+     "id": "4243256",
+     "name": "Devin Lloyd"
+    },
+    {
+     "id": "3924327",
+     "name": "Drew Lock"
+    },
+    {
+     "id": "4696044",
+     "name": "Kaelon Black"
+    },
+    {
+     "id": "2577417",
+     "name": "Dak Prescott"
+    },
+    {
+     "id": "4596363",
+     "name": "Kamren Kinchens"
+    },
+    {
+     "id": "4688380",
+     "name": "Cam Ward"
+    },
+    {
+     "id": "4360310",
+     "name": "Trevor Lawrence"
+    },
+    {
+     "id": "4869579",
+     "name": "Chris Johnson"
+    }
+   ],
+   "teams": [
+    "TEN",
+    "NYJ",
+    "DAL",
+    "MIA",
+    "BUF",
+    "SEA",
+    "CAR",
+    "SF",
+    "ARI",
+    "LAR",
+    "NO",
+    "JAX",
+    "LV",
+    "IND"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/0352aee8-3437-4463-93cc-b2eb066d81ac/0352aee8-3437-4463-93cc-b2eb066d81ac.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/0352aee8-3437-4463-93cc-b2eb066d81ac/0352aee8-3437-4463-93cc-b2eb066d81ac/playlist.m3u8"
+  },
+  {
+   "id": 50498558,
+   "headline": "Ref jumps in to break up Bengals-Steelers tussle",
+   "published": "2026-11-16T04:41:53Z",
+   "gameId": "401873064",
+   "playIds": [],
+   "duration": 27,
+   "athletes": [],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/17eff2ca-c838-4544-8486-f7a0b8e58820/17eff2ca-c838-4544-8486-f7a0b8e58820.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/17eff2ca-c838-4544-8486-f7a0b8e58820/17eff2ca-c838-4544-8486-f7a0b8e58820/playlist.m3u8"
+  },
+  {
+   "id": 50498452,
+   "headline": "Burrow throws 4 TDs as Bengals blow out Steelers",
+   "published": "2026-11-16T04:28:57Z",
+   "gameId": "401873064",
+   "playIds": [
+    "401873064922"
+   ],
+   "duration": 64,
+   "athletes": [
+    {
+     "id": "3915511",
+     "name": "Joe Burrow"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/7f18b309-91d8-4927-95b8-35abb9484dd2/7f18b309-91d8-4927-95b8-35abb9484dd2.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/7f18b309-91d8-4927-95b8-35abb9484dd2/7f18b309-91d8-4927-95b8-35abb9484dd2/playlist.m3u8"
+  },
+  {
+   "id": 50498368,
+   "headline": "Pat Freiermuth fights across the goal line for a powerful Steelers TD",
+   "published": "2026-11-16T04:15:17Z",
+   "gameId": "401873064",
+   "playIds": [
+    "4018730643817"
+   ],
+   "duration": 28,
+   "athletes": [
+    {
+     "id": "4361411",
+     "name": "Pat Freiermuth"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/5fa6c31e-398a-4702-b419-50faad5d2f81/5fa6c31e-398a-4702-b419-50faad5d2f81.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/5fa6c31e-398a-4702-b419-50faad5d2f81/5fa6c31e-398a-4702-b419-50faad5d2f81/playlist.m3u8"
+  },
+  {
+   "id": 50498257,
+   "headline": "Aaron Rodgers finds DK Metcalf for a much-needed Steelers TD",
+   "published": "2026-11-16T03:59:28Z",
+   "gameId": "401873064",
+   "playIds": [
+    "4018730643336"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "8439",
+     "name": "Aaron Rodgers"
+    },
+    {
+     "id": "4047650",
+     "name": "DK Metcalf"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/702a4cf9-33a3-4cfa-9fa1-cd1d7eeed5e8/702a4cf9-33a3-4cfa-9fa1-cd1d7eeed5e8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/702a4cf9-33a3-4cfa-9fa1-cd1d7eeed5e8/702a4cf9-33a3-4cfa-9fa1-cd1d7eeed5e8/playlist.m3u8"
+  },
+  {
+   "id": 50498116,
+   "headline": "Joe Burrow's 4th passing TD gives Bengals commanding lead",
+   "published": "2026-11-16T03:36:01Z",
+   "gameId": "401873064",
+   "playIds": [
+    "4018730642794"
+   ],
+   "duration": 33,
+   "athletes": [
+    {
+     "id": "4362238",
+     "name": "Chase Brown"
+    },
+    {
+     "id": "3915511",
+     "name": "Joe Burrow"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/0c992f09-5b8c-44cf-8358-4e695a57e1a8/0c992f09-5b8c-44cf-8358-4e695a57e1a8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/0c992f09-5b8c-44cf-8358-4e695a57e1a8/0c992f09-5b8c-44cf-8358-4e695a57e1a8/playlist.m3u8"
+  },
+  {
+   "id": 50497846,
+   "headline": "Joe Burrow throws his 3rd TD of the first half",
+   "published": "2026-11-16T03:02:42Z",
+   "gameId": "401873064",
+   "playIds": [
+    "4018730642191"
+   ],
+   "duration": 23,
+   "athletes": [
+    {
+     "id": "3915511",
+     "name": "Joe Burrow"
+    },
+    {
+     "id": "4384852",
+     "name": "Dohnte Meyers"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/e86a153e-ddf7-46f2-a395-9f2007a15ebf/e86a153e-ddf7-46f2-a395-9f2007a15ebf.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/e86a153e-ddf7-46f2-a395-9f2007a15ebf/e86a153e-ddf7-46f2-a395-9f2007a15ebf/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T02:52:00.874Z"
+ "updated": "2026-11-16T07:56:17.841Z"
 }
