@@ -1749,7 +1749,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/c9b222bf-cf71-42e4-b9e7-e37d8771eff3/c9b222bf-cf71-42e4-b9e7-e37d8771eff3.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/c9b222bf-cf71-42e4-b9e7-e37d8771eff3/c9b222bf-cf71-42e4-b9e7-e37d8771eff3/playlist.m3u8"
+  },
+  {
+   "id": 50497577,
+   "headline": "Live on NBC: Drew Sample finds paydirt to put the Bengals on the board",
+   "published": "2026-11-16T02:20:00Z",
+   "gameId": "401873064",
+   "playIds": [
+    "401873064922"
+   ],
+   "duration": 33,
+   "athletes": [
+    {
+     "id": "3127310",
+     "name": "Drew Sample"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/ff3f5409-4872-4acc-bf36-4c76482daacb/ff3f5409-4872-4acc-bf36-4c76482daacb.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/ff3f5409-4872-4acc-bf36-4c76482daacb/ff3f5409-4872-4acc-bf36-4c76482daacb/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T01:03:27.659Z"
+ "updated": "2026-11-16T02:31:44.250Z"
 }
