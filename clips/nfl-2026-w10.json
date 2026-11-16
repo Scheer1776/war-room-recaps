@@ -1627,7 +1627,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/d6233408-cc01-40e9-8e18-037662f6be11/d6233408-cc01-40e9-8e18-037662f6be11.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/d6233408-cc01-40e9-8e18-037662f6be11/d6233408-cc01-40e9-8e18-037662f6be11/playlist.m3u8"
+  },
+  {
+   "id": 50496586,
+   "headline": "Aaron Donald tallies his first sack of the season for Rams",
+   "published": "2026-11-16T00:29:17Z",
+   "gameId": "401873061",
+   "playIds": [
+    "4018730611217"
+   ],
+   "duration": 29,
+   "athletes": [
+    {
+     "id": "16716",
+     "name": "Aaron Donald"
+    }
+   ],
+   "teams": [
+    "ARI",
+    "LAR"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/5075e49a-b686-43f2-8f04-605dd1ede5fe/5075e49a-b686-43f2-8f04-605dd1ede5fe.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/5075e49a-b686-43f2-8f04-605dd1ede5fe/5075e49a-b686-43f2-8f04-605dd1ede5fe/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T00:31:03.560Z"
+ "updated": "2026-11-16T00:37:11.130Z"
 }
