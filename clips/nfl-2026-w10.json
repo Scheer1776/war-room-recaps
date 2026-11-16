@@ -1715,7 +1715,41 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/2448013a-3c03-4864-82da-2bc21e449f25/2448013a-3c03-4864-82da-2bc21e449f25.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/2448013a-3c03-4864-82da-2bc21e449f25/2448013a-3c03-4864-82da-2bc21e449f25/playlist.m3u8"
+  },
+  {
+   "id": 50496925,
+   "headline": "49ers outlast Cowboys in back-and-forth thriller",
+   "published": "2026-11-16T00:57:57Z",
+   "gameId": "401873063",
+   "playIds": [
+    "401873063878"
+   ],
+   "duration": 106,
+   "athletes": [
+    {
+     "id": "3126486",
+     "name": "Deebo Samuel Sr"
+    },
+    {
+     "id": "4426354",
+     "name": "George Pickens"
+    },
+    {
+     "id": "3117251",
+     "name": "Christian McCaffrey"
+    },
+    {
+     "id": "4696044",
+     "name": "Kaelon Black"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/c9b222bf-cf71-42e4-b9e7-e37d8771eff3/c9b222bf-cf71-42e4-b9e7-e37d8771eff3.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/c9b222bf-cf71-42e4-b9e7-e37d8771eff3/c9b222bf-cf71-42e4-b9e7-e37d8771eff3/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T00:49:19.299Z"
+ "updated": "2026-11-16T01:03:27.659Z"
 }
