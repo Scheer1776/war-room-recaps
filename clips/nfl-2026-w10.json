@@ -1771,7 +1771,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/ff3f5409-4872-4acc-bf36-4c76482daacb/ff3f5409-4872-4acc-bf36-4c76482daacb.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/ff3f5409-4872-4acc-bf36-4c76482daacb/ff3f5409-4872-4acc-bf36-4c76482daacb/playlist.m3u8"
+  },
+  {
+   "id": 50497654,
+   "headline": "Live on NBC: Joe Burrow finds a wide-open Chase Brown for a Bengals TD",
+   "published": "2026-11-16T02:34:49Z",
+   "gameId": "401873064",
+   "playIds": [
+    "4018730641642"
+   ],
+   "duration": 18,
+   "athletes": [
+    {
+     "id": "4362238",
+     "name": "Chase Brown"
+    }
+   ],
+   "teams": [
+    "CIN",
+    "PIT"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/8f7808b2-5021-4ca5-9081-1357c2fe1e78/8f7808b2-5021-4ca5-9081-1357c2fe1e78.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/8f7808b2-5021-4ca5-9081-1357c2fe1e78/8f7808b2-5021-4ca5-9081-1357c2fe1e78/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T02:31:44.250Z"
+ "updated": "2026-11-16T02:43:53.117Z"
 }
