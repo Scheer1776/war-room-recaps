@@ -1519,7 +1519,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/84b783a5-04f8-4a8f-a2ec-8bb7210045e8/84b783a5-04f8-4a8f-a2ec-8bb7210045e8.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/84b783a5-04f8-4a8f-a2ec-8bb7210045e8/84b783a5-04f8-4a8f-a2ec-8bb7210045e8/playlist.m3u8"
+  },
+  {
+   "id": 50495380,
+   "headline": "Brock Bowers hurt after taking a tumble vs. Seahawks",
+   "published": "2026-11-15T23:06:22Z",
+   "gameId": "401873062",
+   "playIds": [
+    "401873062209"
+   ],
+   "duration": 29,
+   "athletes": [
+    {
+     "id": "4890973",
+     "name": "Ashton Jeanty"
+    }
+   ],
+   "teams": [
+    "LV",
+    "SEA"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1115/915fa8fa-f62a-45a3-8fb5-48b0e9431780/915fa8fa-f62a-45a3-8fb5-48b0e9431780.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1115/915fa8fa-f62a-45a3-8fb5-48b0e9431780/915fa8fa-f62a-45a3-8fb5-48b0e9431780/playlist.m3u8"
   }
  ],
- "updated": "2026-11-15T23:52:32.467Z"
+ "updated": "2026-11-16T00:02:40.191Z"
 }
