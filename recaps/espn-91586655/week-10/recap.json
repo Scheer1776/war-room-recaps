@@ -1,0 +1,267 @@
+{
+ "platform": "espn",
+ "league": "Tampa Bay Gridiron Gauntlet League",
+ "week": 10,
+ "myTeamId": 5,
+ "games": [
+  {
+   "win": {
+    "id": 9,
+    "name": "Bennett's Best Team",
+    "pts": 146.6,
+    "left": 13.2
+   },
+   "lose": {
+    "id": 3,
+    "name": "Antonio's Angry Team",
+    "pts": 126.7,
+    "left": 16.8
+   },
+   "margin": 19.9
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Manifestation",
+    "pts": 143.1,
+    "left": 15.2
+   },
+   "lose": {
+    "id": 5,
+    "name": "Chicken n burritos ",
+    "pts": 84.6,
+    "left": 28.5
+   },
+   "margin": 58.5
+  },
+  {
+   "win": {
+    "id": 8,
+    "name": "Tung tung tung sahur",
+    "pts": 132.5,
+    "left": 13.1
+   },
+   "lose": {
+    "id": 6,
+    "name": "Sandra's Smart Team",
+    "pts": 99.8,
+    "left": 33.1
+   },
+   "margin": 32.7
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "Mudd Dawgzzz",
+    "pts": 126.9,
+    "left": 24.7
+   },
+   "lose": {
+    "id": 4,
+    "name": "Courtney's Calculated Team",
+    "pts": 107.5,
+    "left": 22.7
+   },
+   "margin": 19.4
+  },
+  {
+   "win": {
+    "id": 7,
+    "name": "Thomas's Talented Team",
+    "pts": 113.9,
+    "left": 7.9
+   },
+   "lose": {
+    "id": 1,
+    "name": "Korey's Top-Notch Team",
+    "pts": 105.1,
+    "left": 38.6
+   },
+   "margin": 8.9
+  }
+ ],
+ "high": {
+  "id": 9,
+  "name": "Bennett's Best Team",
+  "pts": 146.6,
+  "left": 13.2,
+  "star": {
+   "id": "4426354",
+   "n": "George Pickens",
+   "pos": "WR",
+   "nfl": "DAL",
+   "act": 43.5
+  }
+ },
+ "low": {
+  "id": 5,
+  "name": "Chicken n burritos ",
+  "pts": 84.6,
+  "left": 28.5
+ },
+ "close": {
+  "win": {
+   "id": 7,
+   "name": "Thomas's Talented Team",
+   "pts": 113.9,
+   "left": 7.9
+  },
+  "lose": {
+   "id": 1,
+   "name": "Korey's Top-Notch Team",
+   "pts": 105.1,
+   "left": 38.6
+  },
+  "margin": 8.9
+ },
+ "blow": {
+  "win": {
+   "id": 10,
+   "name": "Manifestation",
+   "pts": 143.1,
+   "left": 15.2
+  },
+  "lose": {
+   "id": 5,
+   "name": "Chicken n burritos ",
+   "pts": 84.6,
+   "left": 28.5
+  },
+  "margin": 58.5
+ },
+ "mvp": {
+  "player": {
+   "id": "3117251",
+   "n": "Christian McCaffrey",
+   "pos": "RB",
+   "nfl": "SF",
+   "act": 46.3
+  },
+  "team": {
+   "id": 4,
+   "name": "Courtney's Calculated Team",
+   "pts": 107.5,
+   "left": 22.7
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 1,
+   "name": "Korey's Top-Notch Team",
+   "pts": 105.1,
+   "left": 38.6
+  },
+  "bench": {
+   "id": "4361741",
+   "n": "Brock Purdy",
+   "pos": "QB",
+   "nfl": "SF",
+   "act": 31.7
+  }
+ },
+ "standings": [
+  {
+   "id": 5,
+   "name": "Chicken n burritos ",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1227.9,
+   "odds": 98
+  },
+  {
+   "id": 2,
+   "name": "Mudd Dawgzzz",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1200.3,
+   "odds": 98
+  },
+  {
+   "id": 10,
+   "name": "Manifestation",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1169.9,
+   "odds": 96
+  },
+  {
+   "id": 4,
+   "name": "Courtney's Calculated Team",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1231,
+   "odds": 93.3
+  },
+  {
+   "id": 9,
+   "name": "Bennett's Best Team",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1135.9,
+   "odds": 84
+  },
+  {
+   "id": 8,
+   "name": "Tung tung tung sahur",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1193.1,
+   "odds": 42.6
+  },
+  {
+   "id": 7,
+   "name": "Thomas's Talented Team",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1151.5,
+   "odds": 50.9
+  },
+  {
+   "id": 1,
+   "name": "Korey's Top-Notch Team",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1136.3,
+   "odds": 36
+  },
+  {
+   "id": 3,
+   "name": "Antonio's Angry Team",
+   "w": 3,
+   "l": 7,
+   "t": 0,
+   "pf": 1059.3,
+   "odds": 1.3
+  },
+  {
+   "id": 6,
+   "name": "Sandra's Smart Team",
+   "w": 0,
+   "l": 10,
+   "t": 0,
+   "pf": 789.6,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 11,
+  "a": "Korey's Top-Notch Team",
+  "b": "Mudd Dawgzzz",
+  "pa": 140.7,
+  "pb": 126,
+  "wa": 0.659
+ },
+ "roast": {
+  "highlow": "Bennett's Best hit 146.6 while Chicken n burritos sank to 84.6",
+  "mvp": "Courtney's Calculated Team started McCaffrey and still got 46.3 pts",
+  "blunder": "Korey benched Brock Purdy for 31.7 and left 38.6 pts on the bench"
+ }
+}
