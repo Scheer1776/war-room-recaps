@@ -1,0 +1,333 @@
+{
+ "platform": "espn",
+ "league": "Ball on the Spectrum",
+ "week": 10,
+ "myTeamId": 11,
+ "games": [
+  {
+   "win": {
+    "id": 14,
+    "name": "Rugntuggies",
+    "pts": 185,
+    "left": 0
+   },
+   "lose": {
+    "id": 5,
+    "name": "Rigger JEW'Marr",
+    "pts": 113.7,
+    "left": 11.2
+   },
+   "margin": 71.3
+  },
+  {
+   "win": {
+    "id": 16,
+    "name": "Prime Time Miggy",
+    "pts": 183.6,
+    "left": 0
+   },
+   "lose": {
+    "id": 6,
+    "name": "Jacking Goff",
+    "pts": 122.3,
+    "left": 29.7
+   },
+   "margin": 61.4
+  },
+  {
+   "win": {
+    "id": 11,
+    "name": "🥜So Much I Phillip Rivers",
+    "pts": 149.5,
+    "left": 7.8
+   },
+   "lose": {
+    "id": 4,
+    "name": "Veiny dih",
+    "pts": 99.2,
+    "left": 12
+   },
+   "margin": 50.3
+  },
+  {
+   "win": {
+    "id": 7,
+    "name": "Injured Team Enjoy Free Win",
+    "pts": 144.3,
+    "left": 54.6
+   },
+   "lose": {
+    "id": 1,
+    "name": "PUKACHUUUUU",
+    "pts": 76.9,
+    "left": 20.9
+   },
+   "margin": 67.5
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "DIGGA D",
+    "pts": 133.1,
+    "left": 18.1
+   },
+   "lose": {
+    "id": 9,
+    "name": "Skattebubu",
+    "pts": 127.3,
+    "left": 15.1
+   },
+   "margin": 5.8
+  },
+  {
+   "win": {
+    "id": 15,
+    "name": "Strib Club💈",
+    "pts": 124,
+    "left": 2.3
+   },
+   "lose": {
+    "id": 13,
+    "name": "Nerdy Diggers",
+    "pts": 87.3,
+    "left": 8
+   },
+   "margin": 36.7
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Herbo the Turbo",
+    "pts": 100.5,
+    "left": 0
+   },
+   "lose": {
+    "id": 12,
+    "name": "See Y'all at the Casino ",
+    "pts": 81.2,
+    "left": 10.1
+   },
+   "margin": 19.3
+  }
+ ],
+ "high": {
+  "id": 14,
+  "name": "Rugntuggies",
+  "pts": 185,
+  "left": 0,
+  "star": {
+   "id": "4360310",
+   "n": "Trevor Lawrence",
+   "pos": "QB",
+   "nfl": "JAX",
+   "act": 37.6
+  }
+ },
+ "low": {
+  "id": 1,
+  "name": "PUKACHUUUUU",
+  "pts": 76.9,
+  "left": 20.9
+ },
+ "close": {
+  "win": {
+   "id": 2,
+   "name": "DIGGA D",
+   "pts": 133.1,
+   "left": 18.1
+  },
+  "lose": {
+   "id": 9,
+   "name": "Skattebubu",
+   "pts": 127.3,
+   "left": 15.1
+  },
+  "margin": 5.8
+ },
+ "blow": {
+  "win": {
+   "id": 14,
+   "name": "Rugntuggies",
+   "pts": 185,
+   "left": 0
+  },
+  "lose": {
+   "id": 5,
+   "name": "Rigger JEW'Marr",
+   "pts": 113.7,
+   "left": 11.2
+  },
+  "margin": 71.3
+ },
+ "mvp": {
+  "player": {
+   "id": "3139477",
+   "n": "Patrick Mahomes",
+   "pos": "QB",
+   "nfl": "KC",
+   "act": 49.2
+  },
+  "team": {
+   "id": 16,
+   "name": "Prime Time Miggy",
+   "pts": 183.6,
+   "left": 0
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 7,
+   "name": "Injured Team Enjoy Free Win",
+   "pts": 144.3,
+   "left": 54.6
+  },
+  "bench": {
+   "id": "2577417",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 48.5
+  }
+ },
+ "standings": [
+  {
+   "id": 11,
+   "name": "🥜So Much I Phillip Rivers",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1407.6,
+   "odds": 99.9
+  },
+  {
+   "id": 4,
+   "name": "Veiny dih",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1259.3,
+   "odds": 99.6
+  },
+  {
+   "id": 7,
+   "name": "Injured Team Enjoy Free Win",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1208,
+   "odds": 98.1
+  },
+  {
+   "id": 13,
+   "name": "Nerdy Diggers",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1207.7,
+   "odds": 99
+  },
+  {
+   "id": 16,
+   "name": "Prime Time Miggy",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1211.5,
+   "odds": 93.1
+  },
+  {
+   "id": 5,
+   "name": "Rigger JEW'Marr",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1259.7,
+   "odds": 66.6
+  },
+  {
+   "id": 6,
+   "name": "Jacking Goff",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1206.8,
+   "odds": 57.4
+  },
+  {
+   "id": 15,
+   "name": "Strib Club💈",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1145.5,
+   "odds": 26.7
+  },
+  {
+   "id": 10,
+   "name": "Herbo the Turbo",
+   "w": 5,
+   "l": 5,
+   "t": 0,
+   "pf": 1114.8,
+   "odds": 40
+  },
+  {
+   "id": 2,
+   "name": "DIGGA D",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1143.3,
+   "odds": 16
+  },
+  {
+   "id": 12,
+   "name": "See Y'all at the Casino ",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 989.3,
+   "odds": 3.1
+  },
+  {
+   "id": 1,
+   "name": "PUKACHUUUUU",
+   "w": 3,
+   "l": 7,
+   "t": 0,
+   "pf": 1071,
+   "odds": 0
+  },
+  {
+   "id": 14,
+   "name": "Rugntuggies",
+   "w": 3,
+   "l": 7,
+   "t": 0,
+   "pf": 1056.8,
+   "odds": 0.1
+  },
+  {
+   "id": 9,
+   "name": "Skattebubu",
+   "w": 2,
+   "l": 8,
+   "t": 0,
+   "pf": 1102.4,
+   "odds": 0.3
+  }
+ ],
+ "next": {
+  "week": 11,
+  "a": "See Y'all at the Casino ",
+  "b": "🥜So Much I Phillip Rivers",
+  "pa": 109.2,
+  "pb": 149,
+  "wa": 0.129
+ },
+ "roast": {
+  "highlow": "Rugntuggies hit 185 while PUKACHUUUUU limped in with 76.9. Wild gap",
+  "mvp": "Prime Time Miggy started Mahomes and dropped 49.2. Easy lineup, easy win",
+  "blunder": "Injured Team Enjoy Free Win sat Dak for 48.5 and left 54.6 on the bench"
+ }
+}
