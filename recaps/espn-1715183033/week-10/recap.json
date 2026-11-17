@@ -1,0 +1,267 @@
+{
+ "platform": "espn",
+ "league": "Pittsburgh Beginner H2H Points PPR League",
+ "week": 10,
+ "myTeamId": 5,
+ "games": [
+  {
+   "win": {
+    "id": 4,
+    "name": "Siphilis Seals",
+    "pts": 177.6,
+    "left": 11.8
+   },
+   "lose": {
+    "id": 10,
+    "name": "Aotearoa Team ",
+    "pts": 107.3,
+    "left": 12.3
+   },
+   "margin": 70.3
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "Rizzy Ryan",
+    "pts": 164.9,
+    "left": 18
+   },
+   "lose": {
+    "id": 8,
+    "name": "Brittney's Best Team",
+    "pts": 59.3,
+    "left": 55.5
+   },
+   "margin": 105.5
+  },
+  {
+   "win": {
+    "id": 5,
+    "name": "Diddy plower",
+    "pts": 158.4,
+    "left": 30
+   },
+   "lose": {
+    "id": 7,
+    "name": "Aiden's Astounding Team",
+    "pts": 92,
+    "left": 11.4
+   },
+   "margin": 66.4
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "014",
+    "pts": 127.9,
+    "left": 32.4
+   },
+   "lose": {
+    "id": 9,
+    "name": "Dalton's Daring Team",
+    "pts": 106.9,
+    "left": 23.8
+   },
+   "margin": 21.1
+  },
+  {
+   "win": {
+    "id": 6,
+    "name": "Jordan Loves to throw meatballs",
+    "pts": 113.5,
+    "left": 0
+   },
+   "lose": {
+    "id": 3,
+    "name": "Red Tide",
+    "pts": 97.1,
+    "left": 0
+   },
+   "margin": 16.4
+  }
+ ],
+ "high": {
+  "id": 4,
+  "name": "Siphilis Seals",
+  "pts": 177.6,
+  "left": 11.8,
+  "star": {
+   "id": "4429795",
+   "n": "Jahmyr Gibbs",
+   "pos": "RB",
+   "nfl": "DET",
+   "act": 44.2
+  }
+ },
+ "low": {
+  "id": 8,
+  "name": "Brittney's Best Team",
+  "pts": 59.3,
+  "left": 55.5
+ },
+ "close": {
+  "win": {
+   "id": 6,
+   "name": "Jordan Loves to throw meatballs",
+   "pts": 113.5,
+   "left": 0
+  },
+  "lose": {
+   "id": 3,
+   "name": "Red Tide",
+   "pts": 97.1,
+   "left": 0
+  },
+  "margin": 16.4
+ },
+ "blow": {
+  "win": {
+   "id": 2,
+   "name": "Rizzy Ryan",
+   "pts": 164.9,
+   "left": 18
+  },
+  "lose": {
+   "id": 8,
+   "name": "Brittney's Best Team",
+   "pts": 59.3,
+   "left": 55.5
+  },
+  "margin": 105.5
+ },
+ "mvp": {
+  "player": {
+   "id": "3117251",
+   "n": "Christian McCaffrey",
+   "pos": "RB",
+   "nfl": "SF",
+   "act": 46.3
+  },
+  "team": {
+   "id": 2,
+   "name": "Rizzy Ryan",
+   "pts": 164.9,
+   "left": 18
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 8,
+   "name": "Brittney's Best Team",
+   "pts": 59.3,
+   "left": 55.5
+  },
+  "bench": {
+   "id": "4241416",
+   "n": "Chuba Hubbard",
+   "pos": "RB",
+   "nfl": "CAR",
+   "act": 34.2
+  }
+ },
+ "standings": [
+  {
+   "id": 2,
+   "name": "Rizzy Ryan",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1367.2,
+   "odds": 100
+  },
+  {
+   "id": 6,
+   "name": "Jordan Loves to throw meatballs",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1160.7,
+   "odds": 100
+  },
+  {
+   "id": 4,
+   "name": "Siphilis Seals",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1489.8,
+   "odds": 100
+  },
+  {
+   "id": 5,
+   "name": "Diddy plower",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1283.7,
+   "odds": 100
+  },
+  {
+   "id": 10,
+   "name": "Aotearoa Team ",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1145.7,
+   "odds": 97.3
+  },
+  {
+   "id": 9,
+   "name": "Dalton's Daring Team",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1088.1,
+   "odds": 60.1
+  },
+  {
+   "id": 7,
+   "name": "Aiden's Astounding Team",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 972,
+   "odds": 10.6
+  },
+  {
+   "id": 1,
+   "name": "014",
+   "w": 3,
+   "l": 7,
+   "t": 0,
+   "pf": 1105.2,
+   "odds": 31.1
+  },
+  {
+   "id": 3,
+   "name": "Red Tide",
+   "w": 3,
+   "l": 7,
+   "t": 0,
+   "pf": 951.4,
+   "odds": 1
+  },
+  {
+   "id": 8,
+   "name": "Brittney's Best Team",
+   "w": 1,
+   "l": 9,
+   "t": 0,
+   "pf": 809.3,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 11,
+  "a": "Siphilis Seals",
+  "b": "Dalton's Daring Team",
+  "pa": 160.8,
+  "pb": 132.7,
+  "wa": 0.761
+ },
+ "roast": {
+  "highlow": "Siphilis Seals scored 177.6 while Brittney's Best Team limped to 59.3",
+  "mvp": "Rizzy Ryan started McCaffrey and he dropped 46.3 points, easy money",
+  "blunder": "Brittney's Best Team benched Chuba Hubbard for 34.2 and left 55.5 on the bench"
+ }
+}
