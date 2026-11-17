@@ -1,0 +1,300 @@
+{
+ "platform": "espn",
+ "league": "Dylons League 26-27",
+ "week": 10,
+ "myTeamId": 2,
+ "games": [
+  {
+   "win": {
+    "id": 12,
+    "name": "Rocco's Rowdy Team",
+    "pts": 159.3,
+    "left": 28.9
+   },
+   "lose": {
+    "id": 7,
+    "name": "My Ball Zach Ertz",
+    "pts": 65.3,
+    "left": 13
+   },
+   "margin": 93.9
+  },
+  {
+   "win": {
+    "id": 11,
+    "name": "Belt To Ass",
+    "pts": 150.7,
+    "left": 0
+   },
+   "lose": {
+    "id": 8,
+    "name": "The goat ",
+    "pts": 69.7,
+    "left": 20.8
+   },
+   "margin": 81
+  },
+  {
+   "win": {
+    "id": 9,
+    "name": "Fourth and Freaking Out",
+    "pts": 148.7,
+    "left": 40.2
+   },
+   "lose": {
+    "id": 4,
+    "name": "JAHMYRACLE WORKERS",
+    "pts": 140.3,
+    "left": 4.4
+   },
+   "margin": 8.4
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "Fly Eagles Fly ",
+    "pts": 121.1,
+    "left": 14.2
+   },
+   "lose": {
+    "id": 2,
+    "name": "4th and Delusional",
+    "pts": 116,
+    "left": 0
+   },
+   "margin": 5.1
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Trust the Process... Again ",
+    "pts": 119.1,
+    "left": 38.3
+   },
+   "lose": {
+    "id": 6,
+    "name": "FORE RIGHT ",
+    "pts": 113.6,
+    "left": 16.8
+   },
+   "margin": 5.5
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "Dictators Death Squad",
+    "pts": 119,
+    "left": 11.4
+   },
+   "lose": {
+    "id": 5,
+    "name": "Codys team",
+    "pts": 58.6,
+    "left": 7
+   },
+   "margin": 60.4
+  }
+ ],
+ "high": {
+  "id": 12,
+  "name": "Rocco's Rowdy Team",
+  "pts": 159.3,
+  "left": 28.9,
+  "star": {
+   "id": "4241416",
+   "n": "Chuba Hubbard",
+   "pos": "RB",
+   "nfl": "CAR",
+   "act": 34.2
+  }
+ },
+ "low": {
+  "id": 5,
+  "name": "Codys team",
+  "pts": 58.6,
+  "left": 7
+ },
+ "close": {
+  "win": {
+   "id": 3,
+   "name": "Fly Eagles Fly ",
+   "pts": 121.1,
+   "left": 14.2
+  },
+  "lose": {
+   "id": 2,
+   "name": "4th and Delusional",
+   "pts": 116,
+   "left": 0
+  },
+  "margin": 5.1
+ },
+ "blow": {
+  "win": {
+   "id": 12,
+   "name": "Rocco's Rowdy Team",
+   "pts": 159.3,
+   "left": 28.9
+  },
+  "lose": {
+   "id": 7,
+   "name": "My Ball Zach Ertz",
+   "pts": 65.3,
+   "left": 13
+  },
+  "margin": 93.9
+ },
+ "mvp": {
+  "player": {
+   "id": "3117251",
+   "n": "Christian McCaffrey",
+   "pos": "RB",
+   "nfl": "SF",
+   "act": 46.3
+  },
+  "team": {
+   "id": 3,
+   "name": "Fly Eagles Fly ",
+   "pts": 121.1,
+   "left": 14.2
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 9,
+   "name": "Fourth and Freaking Out",
+   "pts": 148.7,
+   "left": 40.2
+  },
+  "bench": {
+   "id": "4426354",
+   "n": "George Pickens",
+   "pos": "WR",
+   "nfl": "DAL",
+   "act": 43.5
+  }
+ },
+ "standings": [
+  {
+   "id": 3,
+   "name": "Fly Eagles Fly ",
+   "w": 9,
+   "l": 1,
+   "t": 0,
+   "pf": 1218,
+   "odds": 100
+  },
+  {
+   "id": 12,
+   "name": "Rocco's Rowdy Team",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1375.1,
+   "odds": 100
+  },
+  {
+   "id": 9,
+   "name": "Fourth and Freaking Out",
+   "w": 8,
+   "l": 2,
+   "t": 0,
+   "pf": 1126.4,
+   "odds": 100
+  },
+  {
+   "id": 10,
+   "name": "Trust the Process... Again ",
+   "w": 7,
+   "l": 3,
+   "t": 0,
+   "pf": 1108.8,
+   "odds": 90.7
+  },
+  {
+   "id": 2,
+   "name": "4th and Delusional",
+   "w": 6,
+   "l": 4,
+   "t": 0,
+   "pf": 1266.1,
+   "odds": 98.6
+  },
+  {
+   "id": 11,
+   "name": "Belt To Ass",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1141.9,
+   "odds": 40.2
+  },
+  {
+   "id": 4,
+   "name": "JAHMYRACLE WORKERS",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1128.1,
+   "odds": 30.4
+  },
+  {
+   "id": 1,
+   "name": "Dictators Death Squad",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1121.5,
+   "odds": 22.1
+  },
+  {
+   "id": 8,
+   "name": "The goat ",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 1063.4,
+   "odds": 8.7
+  },
+  {
+   "id": 7,
+   "name": "My Ball Zach Ertz",
+   "w": 4,
+   "l": 6,
+   "t": 0,
+   "pf": 990.1,
+   "odds": 9.3
+  },
+  {
+   "id": 6,
+   "name": "FORE RIGHT ",
+   "w": 2,
+   "l": 8,
+   "t": 0,
+   "pf": 1094.7,
+   "odds": 0
+  },
+  {
+   "id": 5,
+   "name": "Codys team",
+   "w": 0,
+   "l": 10,
+   "t": 0,
+   "pf": 948.8,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 11,
+  "a": "Fly Eagles Fly ",
+  "b": "Rocco's Rowdy Team",
+  "pa": 132.8,
+  "pb": 145.9,
+  "wa": 0.363
+ },
+ "roast": {
+  "highlow": "Rocco's Rowdy Team cooked with 159.3 while Codys team limped to 58.6",
+  "mvp": "CMC dropped 46.3 for Fly Eagles Fly, the lineup genius of the week",
+  "blunder": "Fourth and Freaking Out benched George Pickens and his 43.5, oops"
+ }
+}
