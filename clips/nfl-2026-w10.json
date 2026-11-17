@@ -2036,7 +2036,230 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1116/e86a153e-ddf7-46f2-a395-9f2007a15ebf/e86a153e-ddf7-46f2-a395-9f2007a15ebf.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1116/e86a153e-ddf7-46f2-a395-9f2007a15ebf/e86a153e-ddf7-46f2-a395-9f2007a15ebf/playlist.m3u8"
+  },
+  {
+   "id": 50507977,
+   "headline": "Herbert credits Chargers locker room for sticking together",
+   "published": "2026-11-17T05:08:10Z",
+   "gameId": "401873065",
+   "playIds": [],
+   "duration": 83,
+   "athletes": [
+    {
+     "id": "4038941",
+     "name": "Justin Herbert"
+    }
+   ],
+   "teams": [
+    "LAC"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1117/ss_20261117_000811190_3746148/ss_20261117_000811190_3746148.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50507821,
+   "headline": "Rashod Bateman makes an amazing grab in traffic",
+   "published": "2026-11-17T04:37:29Z",
+   "gameId": "401873065",
+   "playIds": [
+    "4018730651215"
+   ],
+   "duration": 30,
+   "athletes": [
+    {
+     "id": "4360939",
+     "name": "Rashod Bateman"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/5623b86d-cf6e-4033-a964-c89780e2a057/5623b86d-cf6e-4033-a964-c89780e2a057.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/5623b86d-cf6e-4033-a964-c89780e2a057/5623b86d-cf6e-4033-a964-c89780e2a057/playlist.m3u8"
+  },
+  {
+   "id": 50507817,
+   "headline": "Justice Hill breaks free for a big-time Ravens 1st down",
+   "published": "2026-11-17T04:36:43Z",
+   "gameId": "401873065",
+   "playIds": [
+    "4018730652862"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4038441",
+     "name": "Justice Hill"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/ff5010be-8899-4a57-8b9d-7401f67df07f/ff5010be-8899-4a57-8b9d-7401f67df07f.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/ff5010be-8899-4a57-8b9d-7401f67df07f/ff5010be-8899-4a57-8b9d-7401f67df07f/playlist.m3u8"
+  },
+  {
+   "id": 50507793,
+   "headline": "Chargers stop Ravens' Hail Mary attempt to secure 1st win",
+   "published": "2026-11-17T04:31:58Z",
+   "gameId": "401873065",
+   "playIds": [],
+   "duration": 38,
+   "athletes": [],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/1cd4b23f-75ed-4cbf-b079-0f095f707202/1cd4b23f-75ed-4cbf-b079-0f095f707202.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/1cd4b23f-75ed-4cbf-b079-0f095f707202/1cd4b23f-75ed-4cbf-b079-0f095f707202/playlist.m3u8"
+  },
+  {
+   "id": 50507744,
+   "headline": "Chargers stun Ravens, pick up first win on MNF",
+   "published": "2026-11-17T04:20:27Z",
+   "gameId": "401873065",
+   "playIds": [
+    "401873065309"
+   ],
+   "duration": 66,
+   "athletes": [
+    {
+     "id": "4432571",
+     "name": "Tarheeb Still"
+    },
+    {
+     "id": "4038941",
+     "name": "Justin Herbert"
+    },
+    {
+     "id": "3043078",
+     "name": "Derrick Henry"
+    },
+    {
+     "id": "4685382",
+     "name": "Omarion Hampton"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/4940034c-263e-4b06-aab3-3d5d977dc0c9/4940034c-263e-4b06-aab3-3d5d977dc0c9.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/4940034c-263e-4b06-aab3-3d5d977dc0c9/4940034c-263e-4b06-aab3-3d5d977dc0c9/playlist.m3u8"
+  },
+  {
+   "id": 50507738,
+   "headline": "Chargers seal victory with late forced fumble by Tarheeb Still",
+   "published": "2026-11-17T04:19:09Z",
+   "gameId": "401873065",
+   "playIds": [
+    "4018730653978"
+   ],
+   "duration": 57,
+   "athletes": [
+    {
+     "id": "4432571",
+     "name": "Tarheeb Still"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/442727b0-6947-454c-ad1e-02d7078cf56c/442727b0-6947-454c-ad1e-02d7078cf56c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/442727b0-6947-454c-ad1e-02d7078cf56c/442727b0-6947-454c-ad1e-02d7078cf56c/playlist.m3u8"
+  },
+  {
+   "id": 50507656,
+   "headline": "Derrick Henry's 2nd rushing TD pulls Ravens closer",
+   "published": "2026-11-17T03:56:52Z",
+   "gameId": "401873065",
+   "playIds": [
+    "4018730653461"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "3043078",
+     "name": "Derrick Henry"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/4e412606-6b22-4382-bbef-9b456ee2bf66/4e412606-6b22-4382-bbef-9b456ee2bf66.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/4e412606-6b22-4382-bbef-9b456ee2bf66/4e412606-6b22-4382-bbef-9b456ee2bf66/playlist.m3u8"
+  },
+  {
+   "id": 50507501,
+   "headline": "Bo Nix and Eli do some quality trolling of Peyton's rushing game",
+   "published": "2026-11-17T03:25:30Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 43,
+   "athletes": [
+    {
+     "id": "4426338",
+     "name": "Bo Nix"
+    },
+    {
+     "id": "1428",
+     "name": "Peyton Manning"
+    },
+    {
+     "id": "5526",
+     "name": "Eli Manning"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1116/ss_20261116_222531410_3746010/ss_20261116_222531410_3746010.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50507150,
+   "headline": "Omarion Hampton plows across the goal line for a Chargers TD",
+   "published": "2026-11-17T02:39:38Z",
+   "gameId": "401873065",
+   "playIds": [
+    "4018730651805"
+   ],
+   "duration": 21,
+   "athletes": [
+    {
+     "id": "4685382",
+     "name": "Omarion Hampton"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/acdf85a9-dd05-44ea-8580-5dbdfb17d37b/acdf85a9-dd05-44ea-8580-5dbdfb17d37b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/acdf85a9-dd05-44ea-8580-5dbdfb17d37b/acdf85a9-dd05-44ea-8580-5dbdfb17d37b/playlist.m3u8"
+  },
+  {
+   "id": 50506923,
+   "headline": "Del'Shawn Phillips snags the INT after ball bounces off teammates helmet",
+   "published": "2026-11-17T02:22:30Z",
+   "gameId": "401873065",
+   "playIds": [],
+   "duration": 39,
+   "athletes": [
+    {
+     "id": "4240528",
+     "name": "Del'Shawn Phillips"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "BAL"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1117/f2df7f31-866c-4fef-9fa0-f8899251f03c/f2df7f31-866c-4fef-9fa0-f8899251f03c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1117/f2df7f31-866c-4fef-9fa0-f8899251f03c/f2df7f31-866c-4fef-9fa0-f8899251f03c/playlist.m3u8"
   }
  ],
- "updated": "2026-11-16T08:08:26.660Z"
+ "updated": "2026-11-17T09:04:05.494Z"
 }
