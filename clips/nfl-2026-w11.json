@@ -1,0 +1,75 @@
+{
+ "clips": [
+  {
+   "id": 50538342,
+   "headline": "Why Raiders' run defense remains a concern",
+   "published": "2026-11-20T05:22:46Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 48,
+   "athletes": [],
+   "teams": [
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1120/dm_261120_raiders/dm_261120_raiders.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/2026/1120/dm_261120_raiders/dm_261120_raiders/playlist.m3u8"
+  },
+  {
+   "id": 50537710,
+   "headline": "Texans improve to 4-6 with easy win over the Colts",
+   "published": "2026-11-20T04:16:14Z",
+   "gameId": "401873066",
+   "playIds": [
+    "401873066834"
+   ],
+   "duration": 74,
+   "athletes": [
+    {
+     "id": "4429022",
+     "name": "Kayshon Boutte"
+    },
+    {
+     "id": "4685724",
+     "name": "Will Anderson Jr"
+    },
+    {
+     "id": "4695705",
+     "name": "Marlin Klein"
+    },
+    {
+     "id": "4258173",
+     "name": "Nico Collins"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "IND"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1120/f17721f8-3303-4991-b1fe-d1d3f9a71220/f17721f8-3303-4991-b1fe-d1d3f9a71220.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1120/f17721f8-3303-4991-b1fe-d1d3f9a71220/f17721f8-3303-4991-b1fe-d1d3f9a71220/playlist.m3u8"
+  },
+  {
+   "id": 50537665,
+   "headline": "Kamari Lassiter skies for an impressive Texans INT",
+   "published": "2026-11-20T04:11:30Z",
+   "gameId": "401873066",
+   "playIds": [
+    "4018730661055"
+   ],
+   "duration": 37,
+   "athletes": [
+    {
+     "id": "4602699",
+     "name": "Kamari Lassiter"
+    }
+   ],
+   "teams": [
+    "HOU",
+    "IND"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1120/559492e5-2f4e-4c24-a9af-95f9a5ea077a/559492e5-2f4e-4c24-a9af-95f9a5ea077a.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1120/559492e5-2f4e-4c24-a9af-95f9a5ea077a/559492e5-2f4e-4c24-a9af-95f9a5ea077a/playlist.m3u8"
+  }
+ ],
+ "updated": "2026-11-20T08:30:38.357Z"
+}
