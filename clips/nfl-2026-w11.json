@@ -806,7 +806,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/23643070-9388-49a0-8718-07cbb9ec6929/23643070-9388-49a0-8718-07cbb9ec6929.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/23643070-9388-49a0-8718-07cbb9ec6929/23643070-9388-49a0-8718-07cbb9ec6929/playlist.m3u8"
+  },
+  {
+   "id": 50566408,
+   "headline": "Live on CBS: J.J. McCarthy picks out Malik Nabers for a Giants TD",
+   "published": "2026-11-22T22:58:11Z",
+   "gameId": "401873069",
+   "playIds": [
+    "4018730691911"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4595348",
+     "name": "Malik Nabers"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/94c7e0a8-e8e8-4c8d-b4fc-7a26e3639c2c/94c7e0a8-e8e8-4c8d-b4fc-7a26e3639c2c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/94c7e0a8-e8e8-4c8d-b4fc-7a26e3639c2c/94c7e0a8-e8e8-4c8d-b4fc-7a26e3639c2c/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T22:58:41.248Z"
+ "updated": "2026-11-22T23:04:56.312Z"
 }
