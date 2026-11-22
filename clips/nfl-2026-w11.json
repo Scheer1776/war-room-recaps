@@ -640,7 +640,46 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/6acb8e7a-0061-4651-a5fc-807fd8e116f0/6acb8e7a-0061-4651-a5fc-807fd8e116f0.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/6acb8e7a-0061-4651-a5fc-807fd8e116f0/6acb8e7a-0061-4651-a5fc-807fd8e116f0/playlist.m3u8"
+  },
+  {
+   "id": 50565751,
+   "headline": "Is Saquon Barkley back to must-start status in fantasy?",
+   "published": "2026-11-22T22:08:09Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 66,
+   "athletes": [
+    {
+     "id": "3929630",
+     "name": "Saquon Barkley"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/dm_261122_Saquon_Barkley_Moody_fantasy/dm_261122_Saquon_Barkley_Moody_fantasy.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50565680,
+   "headline": "Live on CBS: Deonte Banks picks off Trevor Lawrence",
+   "published": "2026-11-22T22:04:18Z",
+   "gameId": "401873069",
+   "playIds": [
+    "401873069517"
+   ],
+   "duration": 33,
+   "athletes": [
+    {
+     "id": "4428328",
+     "name": "Deonte Banks"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/3d065ceb-c871-4882-81dc-5661ca412cb6/3d065ceb-c871-4882-81dc-5661ca412cb6.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/3d065ceb-c871-4882-81dc-5661ca412cb6/3d065ceb-c871-4882-81dc-5661ca412cb6/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T22:09:08.799Z"
+ "updated": "2026-11-22T22:11:23.404Z"
 }
