@@ -679,7 +679,24 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/3d065ceb-c871-4882-81dc-5661ca412cb6/3d065ceb-c871-4882-81dc-5661ca412cb6.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/3d065ceb-c871-4882-81dc-5661ca412cb6/3d065ceb-c871-4882-81dc-5661ca412cb6/playlist.m3u8"
+  },
+  {
+   "id": 50565801,
+   "headline": "Why this might be a good time for fantasy managers to trade Derrick Henry",
+   "published": "2026-11-22T22:11:22Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 84,
+   "athletes": [
+    {
+     "id": "3043078",
+     "name": "Derrick Henry"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/dm_261122_Derrick_Henry_fantasy/dm_261122_Derrick_Henry_fantasy.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-22T22:11:23.404Z"
+ "updated": "2026-11-22T22:15:38.091Z"
 }
