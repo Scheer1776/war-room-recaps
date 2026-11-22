@@ -696,7 +696,29 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/dm_261122_Derrick_Henry_fantasy/dm_261122_Derrick_Henry_fantasy.mp4",
    "hls916": null
+  },
+  {
+   "id": 50565818,
+   "headline": "Live on CBS: Announcer breaks into song over Adam Trautman's Broncos TD",
+   "published": "2026-11-22T22:14:13Z",
+   "gameId": "401873075",
+   "playIds": [
+    "401873075987"
+   ],
+   "duration": 17,
+   "athletes": [
+    {
+     "id": "3911853",
+     "name": "Adam Trautman"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/a34834bc-d062-4d6b-b58b-fc685f6c97ba/a34834bc-d062-4d6b-b58b-fc685f6c97ba.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/a34834bc-d062-4d6b-b58b-fc685f6c97ba/a34834bc-d062-4d6b-b58b-fc685f6c97ba/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T22:15:38.091Z"
+ "updated": "2026-11-22T22:19:52.469Z"
 }
