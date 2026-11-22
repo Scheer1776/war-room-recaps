@@ -740,7 +740,51 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/bb458c44-3155-4e5c-90a1-c7c9ae5d7528/bb458c44-3155-4e5c-90a1-c7c9ae5d7528.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/bb458c44-3155-4e5c-90a1-c7c9ae5d7528/bb458c44-3155-4e5c-90a1-c7c9ae5d7528/playlist.m3u8"
+  },
+  {
+   "id": 50566078,
+   "headline": "Live on Fox: Geno escapes the pocket to find Sterling Shepard for a Jets TD",
+   "published": "2026-11-22T22:31:52Z",
+   "gameId": "401873074",
+   "playIds": [
+    "4018730741523"
+   ],
+   "duration": 18,
+   "athletes": [
+    {
+     "id": "2976592",
+     "name": "Sterling Shepard"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "NYJ"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/16bf4a93-72ba-4b40-a925-c76970342102/16bf4a93-72ba-4b40-a925-c76970342102.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/16bf4a93-72ba-4b40-a925-c76970342102/16bf4a93-72ba-4b40-a925-c76970342102/playlist.m3u8"
+  },
+  {
+   "id": 50566075,
+   "headline": "Live on Fox: Justin Herbert summersaults into the end zone for a Chargers TD",
+   "published": "2026-11-22T22:31:26Z",
+   "gameId": "401873074",
+   "playIds": [
+    "4018730741946"
+   ],
+   "duration": 18,
+   "athletes": [
+    {
+     "id": "4038941",
+     "name": "Justin Herbert"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "NYJ"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T22:30:08.113Z"
+ "updated": "2026-11-22T22:34:22.739Z"
 }
