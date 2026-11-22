@@ -862,7 +862,24 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_181905358_3757138/ss_20261122_181905358_3757138.mp4",
    "hls916": null
+  },
+  {
+   "id": 50566740,
+   "headline": "Why fantasy managers should add Cam Ward off waivers",
+   "published": "2026-11-22T23:19:30Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 59,
+   "athletes": [
+    {
+     "id": "4688380",
+     "name": "Cam Ward"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_181931775_3757139/ss_20261122_181931775_3757139.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-22T23:29:27.782Z"
+ "updated": "2026-11-22T23:31:41.482Z"
 }
