@@ -944,7 +944,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/14556fb4-dbd0-4c60-afe2-7b39fb63588a/14556fb4-dbd0-4c60-afe2-7b39fb63588a.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/14556fb4-dbd0-4c60-afe2-7b39fb63588a/14556fb4-dbd0-4c60-afe2-7b39fb63588a/playlist.m3u8"
+  },
+  {
+   "id": 50567072,
+   "headline": "Live on CBS: Cam Skattebo fumbles the ball for the Giants",
+   "published": "2026-11-22T23:49:53Z",
+   "gameId": "401873069",
+   "playIds": [
+    "4018730693030"
+   ],
+   "duration": 34,
+   "athletes": [
+    {
+     "id": "4429168",
+     "name": "Antonio Johnson"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/e7918b38-bfda-4a6e-9268-f59fd880f7ad/e7918b38-bfda-4a6e-9268-f59fd880f7ad.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/e7918b38-bfda-4a6e-9268-f59fd880f7ad/e7918b38-bfda-4a6e-9268-f59fd880f7ad/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T23:48:12.098Z"
+ "updated": "2026-11-22T23:54:27.619Z"
 }
