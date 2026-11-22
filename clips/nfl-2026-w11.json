@@ -922,7 +922,29 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_182007307_3757141/ss_20261122_182007307_3757141.mp4",
    "hls916": null
+  },
+  {
+   "id": 50566987,
+   "headline": "Live on Fox: Justin Herbert fires a dart to Ladd McConkey to pull the Chargers closer",
+   "published": "2026-11-22T23:42:22Z",
+   "gameId": "401873074",
+   "playIds": [
+    "4018730743623"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "4612826",
+     "name": "Ladd McConkey"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "NYJ"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/14556fb4-dbd0-4c60-afe2-7b39fb63588a/14556fb4-dbd0-4c60-afe2-7b39fb63588a.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/14556fb4-dbd0-4c60-afe2-7b39fb63588a/14556fb4-dbd0-4c60-afe2-7b39fb63588a/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T23:33:55.613Z"
+ "updated": "2026-11-22T23:48:12.098Z"
 }
