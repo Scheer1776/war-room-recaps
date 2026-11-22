@@ -784,7 +784,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f/fdc20e6a-6668-49ec-b233-9b9f23c8ff5f/playlist.m3u8"
+  },
+  {
+   "id": 50566343,
+   "headline": "Live on CBS: Fernando Mendoza's first TD pass is a 68-yard dime to Ashton Jeanty",
+   "published": "2026-11-22T22:52:00Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730751881"
+   ],
+   "duration": 25,
+   "athletes": [
+    {
+     "id": "4890973",
+     "name": "Ashton Jeanty"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/23643070-9388-49a0-8718-07cbb9ec6929/23643070-9388-49a0-8718-07cbb9ec6929.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/23643070-9388-49a0-8718-07cbb9ec6929/23643070-9388-49a0-8718-07cbb9ec6929/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T22:34:22.739Z"
+ "updated": "2026-11-22T22:58:41.248Z"
 }
