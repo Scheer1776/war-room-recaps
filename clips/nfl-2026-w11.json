@@ -718,7 +718,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/a34834bc-d062-4d6b-b58b-fc685f6c97ba/a34834bc-d062-4d6b-b58b-fc685f6c97ba.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/a34834bc-d062-4d6b-b58b-fc685f6c97ba/a34834bc-d062-4d6b-b58b-fc685f6c97ba/playlist.m3u8"
+  },
+  {
+   "id": 50565994,
+   "headline": "Live on CBS: Jonah Coleman punches in a TD for Denver",
+   "published": "2026-11-22T22:24:16Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730751314"
+   ],
+   "duration": 16,
+   "athletes": [
+    {
+     "id": "4702555",
+     "name": "Jonah Coleman"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/bb458c44-3155-4e5c-90a1-c7c9ae5d7528/bb458c44-3155-4e5c-90a1-c7c9ae5d7528.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/bb458c44-3155-4e5c-90a1-c7c9ae5d7528/bb458c44-3155-4e5c-90a1-c7c9ae5d7528/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T22:19:52.469Z"
+ "updated": "2026-11-22T22:30:08.113Z"
 }
