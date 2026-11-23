@@ -1389,7 +1389,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/d224b669-4c5a-4fe8-b9ce-5641e281455b/d224b669-4c5a-4fe8-b9ce-5641e281455b.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/d224b669-4c5a-4fe8-b9ce-5641e281455b/d224b669-4c5a-4fe8-b9ce-5641e281455b/playlist.m3u8"
+  },
+  {
+   "id": 50568945,
+   "headline": "Live on NBC: Ji'Ayir Brown's pick-six pads the 49ers' lead",
+   "published": "2026-11-23T02:45:44Z",
+   "gameId": "401873077",
+   "playIds": [
+    "4018730771735"
+   ],
+   "duration": 23,
+   "athletes": [
+    {
+     "id": "4693644",
+     "name": "Ji'Ayir Brown"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/876d98af-eedc-49ab-98c6-a0c882b0163b/876d98af-eedc-49ab-98c6-a0c882b0163b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/876d98af-eedc-49ab-98c6-a0c882b0163b/876d98af-eedc-49ab-98c6-a0c882b0163b/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T02:48:12.095Z"
+ "updated": "2026-11-23T02:50:26.580Z"
 }
