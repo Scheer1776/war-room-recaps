@@ -1323,7 +1323,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/ef572424-0092-4a46-98e7-df2fd587ee02/ef572424-0092-4a46-98e7-df2fd587ee02.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/ef572424-0092-4a46-98e7-df2fd587ee02/ef572424-0092-4a46-98e7-df2fd587ee02/playlist.m3u8"
+  },
+  {
+   "id": 50568617,
+   "headline": "Live on NBC: Aaron Jones Sr. bulldozes into the end zone for a Vikings TD",
+   "published": "2026-11-23T02:04:39Z",
+   "gameId": "401873077",
+   "playIds": [
+    "401873077850"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "3042519",
+     "name": "Aaron Jones Sr"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/0d6c3ded-853e-4654-a496-f7a3e4163ab7/0d6c3ded-853e-4654-a496-f7a3e4163ab7.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/0d6c3ded-853e-4654-a496-f7a3e4163ab7/0d6c3ded-853e-4654-a496-f7a3e4163ab7/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T01:41:21.310Z"
+ "updated": "2026-11-23T02:07:38.672Z"
 }
