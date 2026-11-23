@@ -1075,7 +1075,24 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_185350543_3757217/ss_20261122_185350543_3757217.mp4",
    "hls916": null
+  },
+  {
+   "id": 50567175,
+   "headline": "Is Jaylen Warren still a fantasy must-start?",
+   "published": "2026-11-23T00:05:38Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 54,
+   "athletes": [
+    {
+     "id": "4569987",
+     "name": "Jaylen Warren"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_190539415_3757242/ss_20261122_190539415_3757242.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-23T00:25:17.001Z"
+ "updated": "2026-11-23T00:31:31.683Z"
 }
