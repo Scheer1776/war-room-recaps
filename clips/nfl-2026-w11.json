@@ -1058,7 +1058,24 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/1d994fc4-f225-4162-8d60-60fca59a2886/1d994fc4-f225-4162-8d60-60fca59a2886.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/1d994fc4-f225-4162-8d60-60fca59a2886/1d994fc4-f225-4162-8d60-60fca59a2886/playlist.m3u8"
+  },
+  {
+   "id": 50567109,
+   "headline": "Is Trey McBride a sell-high candidate in fantasy?",
+   "published": "2026-11-22T23:53:49Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 63,
+   "athletes": [
+    {
+     "id": "4361307",
+     "name": "Trey McBride"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_185350543_3757217/ss_20261122_185350543_3757217.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-23T00:10:59.120Z"
+ "updated": "2026-11-23T00:25:17.001Z"
 }
