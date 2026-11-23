@@ -1145,7 +1145,107 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/841a6f55-58c9-4145-bee0-dd6538d535f5/841a6f55-58c9-4145-bee0-dd6538d535f5.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/841a6f55-58c9-4145-bee0-dd6538d535f5/841a6f55-58c9-4145-bee0-dd6538d535f5/playlist.m3u8"
+  },
+  {
+   "id": 50567555,
+   "headline": "Mendoza throws 3 TDs, but Raiders fall to Broncos in Denver",
+   "published": "2026-11-23T00:43:10Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730751881"
+   ],
+   "duration": 92,
+   "athletes": [
+    {
+     "id": "4567462",
+     "name": "Ja'Quan McMillian"
+    },
+    {
+     "id": "4702555",
+     "name": "Jonah Coleman"
+    },
+    {
+     "id": "4045305",
+     "name": "Ian Thomas"
+    },
+    {
+     "id": "4890973",
+     "name": "Ashton Jeanty"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/974cccdc-04cd-4e6a-b27b-7698ea742463/974cccdc-04cd-4e6a-b27b-7698ea742463.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/974cccdc-04cd-4e6a-b27b-7698ea742463/974cccdc-04cd-4e6a-b27b-7698ea742463/playlist.m3u8"
+  },
+  {
+   "id": 50567546,
+   "headline": "Broncos seal the win with pick-six late in the fourth quarter",
+   "published": "2026-11-23T00:42:04Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730754300"
+   ],
+   "duration": 36,
+   "athletes": [
+    {
+     "id": "4567462",
+     "name": "Ja'Quan McMillian"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/7243759b-f0e0-443e-b952-2d5e5e64afba/7243759b-f0e0-443e-b952-2d5e5e64afba.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/7243759b-f0e0-443e-b952-2d5e5e64afba/7243759b-f0e0-443e-b952-2d5e5e64afba/playlist.m3u8"
+  },
+  {
+   "id": 50567385,
+   "headline": "Jack Bech hauls in a tough catch for a Raiders TD",
+   "published": "2026-11-23T00:30:29Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730754074"
+   ],
+   "duration": 17,
+   "athletes": [
+    {
+     "id": "4603186",
+     "name": "Jack Bech"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/d8520b75-b54b-492a-8f97-12c3e6a5582a/d8520b75-b54b-492a-8f97-12c3e6a5582a.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/d8520b75-b54b-492a-8f97-12c3e6a5582a/d8520b75-b54b-492a-8f97-12c3e6a5582a/playlist.m3u8"
+  },
+  {
+   "id": 50567232,
+   "headline": "Jonah Coleman punches in his third TD of the game for Denver",
+   "published": "2026-11-23T00:12:49Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730753525"
+   ],
+   "duration": 19,
+   "athletes": [
+    {
+     "id": "4702555",
+     "name": "Jonah Coleman"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/f515e9f7-7824-4292-a3f1-b85fe6f4512c/f515e9f7-7824-4292-a3f1-b85fe6f4512c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/f515e9f7-7824-4292-a3f1-b85fe6f4512c/f515e9f7-7824-4292-a3f1-b85fe6f4512c/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T00:50:16.500Z"
+ "updated": "2026-11-23T00:56:31.369Z"
 }
