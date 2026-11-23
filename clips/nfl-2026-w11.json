@@ -1411,7 +1411,166 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/876d98af-eedc-49ab-98c6-a0c882b0163b/876d98af-eedc-49ab-98c6-a0c882b0163b.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/876d98af-eedc-49ab-98c6-a0c882b0163b/876d98af-eedc-49ab-98c6-a0c882b0163b/playlist.m3u8"
+  },
+  {
+   "id": 50571065,
+   "headline": "Cam Ward scrambles and heaves absurd TD pass to Calvin Ridley",
+   "published": "2026-11-23T07:26:49Z",
+   "gameId": "401873073",
+   "playIds": [
+    "4018730734553"
+   ],
+   "duration": 53,
+   "athletes": [
+    {
+     "id": "4688380",
+     "name": "Cam Ward"
+    },
+    {
+     "id": "3925357",
+     "name": "Calvin Ridley"
+    }
+   ],
+   "teams": [
+    "TEN"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1123/ss_20261123_022650362_3757828/ss_20261123_022650362_3757828.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50569951,
+   "headline": "Justin Jefferson visibly upset after fumbling in third quarter",
+   "published": "2026-11-23T04:33:24Z",
+   "gameId": "401873077",
+   "playIds": [
+    "4018730772282"
+   ],
+   "duration": 25,
+   "athletes": [
+    {
+     "id": "4361985",
+     "name": "Christian Darrisaw"
+    },
+    {
+     "id": "4262921",
+     "name": "Justin Jefferson"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/6a9ad967-1fa5-4108-b400-d741c3a8aa43/6a9ad967-1fa5-4108-b400-d741c3a8aa43.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/6a9ad967-1fa5-4108-b400-d741c3a8aa43/6a9ad967-1fa5-4108-b400-d741c3a8aa43/playlist.m3u8"
+  },
+  {
+   "id": 50569860,
+   "headline": "49ers blow out Vikings 35-10 in Mexico City ",
+   "published": "2026-11-23T04:23:27Z",
+   "gameId": "401873077",
+   "playIds": [
+    "401873077208"
+   ],
+   "duration": 63,
+   "athletes": [
+    {
+     "id": "3040151",
+     "name": "George Kittle"
+    },
+    {
+     "id": "4361741",
+     "name": "Brock Purdy"
+    },
+    {
+     "id": "16737",
+     "name": "Mike Evans"
+    },
+    {
+     "id": "3117251",
+     "name": "Christian McCaffrey"
+    },
+    {
+     "id": "4693644",
+     "name": "Ji'Ayir Brown"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/766abe7e-79a1-408c-ad59-40275e06616d/766abe7e-79a1-408c-ad59-40275e06616d.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/766abe7e-79a1-408c-ad59-40275e06616d/766abe7e-79a1-408c-ad59-40275e06616d/playlist.m3u8"
+  },
+  {
+   "id": 50569830,
+   "headline": "Top NFL plays from Week 11",
+   "published": "2026-11-23T04:19:35Z",
+   "gameId": "",
+   "playIds": [
+    "4018730734553"
+   ],
+   "duration": 91,
+   "athletes": [
+    {
+     "id": "4723086",
+     "name": "Colston Loveland"
+    },
+    {
+     "id": "4696882",
+     "name": "Devontez Walker"
+    },
+    {
+     "id": "4688380",
+     "name": "Cam Ward"
+    },
+    {
+     "id": "4871023",
+     "name": "Carnell Tate"
+    },
+    {
+     "id": "4567462",
+     "name": "Ja'Quan McMillian"
+    },
+    {
+     "id": "5151083",
+     "name": "Will Lee III"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "CAR",
+    "TEN",
+    "BAL",
+    "DAL",
+    "NO",
+    "CHI",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_231936092_3757711/ss_20261122_231936092_3757711.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50569584,
+   "headline": "CMC finds pay dirt to pad the 49ers' lead",
+   "published": "2026-11-23T03:59:34Z",
+   "gameId": "401873077",
+   "playIds": [
+    "4018730773056"
+   ],
+   "duration": 16,
+   "athletes": [
+    {
+     "id": "3117251",
+     "name": "Christian McCaffrey"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/011da52c-7a12-4a88-a135-541a7cd01243/011da52c-7a12-4a88-a135-541a7cd01243.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/011da52c-7a12-4a88-a135-541a7cd01243/011da52c-7a12-4a88-a135-541a7cd01243/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T03:40:48.759Z"
+ "updated": "2026-11-23T08:57:55.858Z"
 }
