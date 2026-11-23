@@ -1126,7 +1126,26 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_191618973_3757262/ss_20261122_191618973_3757262.mp4",
    "hls916": null
+  },
+  {
+   "id": 50567337,
+   "headline": "Live on CBS: Should this Parker Washington incompletion have been ruled a TD?",
+   "published": "2026-11-23T00:28:43Z",
+   "gameId": "401873069",
+   "playIds": [],
+   "duration": 48,
+   "athletes": [
+    {
+     "id": "4432620",
+     "name": "Parker Washington"
+    }
+   ],
+   "teams": [
+    "JAX"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/841a6f55-58c9-4145-bee0-dd6538d535f5/841a6f55-58c9-4145-bee0-dd6538d535f5.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/841a6f55-58c9-4145-bee0-dd6538d535f5/841a6f55-58c9-4145-bee0-dd6538d535f5/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T00:40:01.258Z"
+ "updated": "2026-11-23T00:50:16.500Z"
 }
