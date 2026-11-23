@@ -1570,7 +1570,41 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/011da52c-7a12-4a88-a135-541a7cd01243/011da52c-7a12-4a88-a135-541a7cd01243.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/011da52c-7a12-4a88-a135-541a7cd01243/011da52c-7a12-4a88-a135-541a7cd01243/playlist.m3u8"
+  },
+  {
+   "id": 50572660,
+   "headline": "Dan Orlovsky: Brock Purdy is the MVP right now",
+   "published": "2026-11-23T13:38:59Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 51,
+   "athletes": [
+    {
+     "id": "4361741",
+     "name": "Brock Purdy"
+    }
+   ],
+   "teams": [
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1123/ss_20261123_083900613_3757856/ss_20261123_083900613_3757856.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50572656,
+   "headline": "Did Jags mismanage the fourth quarter in loss to Giants?",
+   "published": "2026-11-23T13:36:40Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 151,
+   "athletes": [],
+   "teams": [
+    "JAX",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1123/ss_20261123_083641881_3757855/ss_20261123_083641881_3757855.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-23T08:57:55.858Z"
+ "updated": "2026-11-23T13:44:40.916Z"
 }
