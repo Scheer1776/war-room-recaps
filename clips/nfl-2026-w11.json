@@ -1267,7 +1267,41 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/05cbd8f0-def5-432f-82b3-4ce53510ed70/05cbd8f0-def5-432f-82b3-4ce53510ed70.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/05cbd8f0-def5-432f-82b3-4ce53510ed70/05cbd8f0-def5-432f-82b3-4ce53510ed70/playlist.m3u8"
+  },
+  {
+   "id": 50567972,
+   "headline": "Jacksonville Jaguars vs. New York Giants: Game Highlights",
+   "published": "2026-11-23T01:23:37Z",
+   "gameId": "401873069",
+   "playIds": [
+    "401873069517"
+   ],
+   "duration": 65,
+   "athletes": [
+    {
+     "id": "4429168",
+     "name": "Antonio Johnson"
+    },
+    {
+     "id": "4360310",
+     "name": "Trevor Lawrence"
+    },
+    {
+     "id": "4595348",
+     "name": "Malik Nabers"
+    },
+    {
+     "id": "4428328",
+     "name": "Deonte Banks"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/6947cfec-369c-485a-9612-5f579aa54d2b/6947cfec-369c-485a-9612-5f579aa54d2b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/6947cfec-369c-485a-9612-5f579aa54d2b/6947cfec-369c-485a-9612-5f579aa54d2b/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T00:58:45.411Z"
+ "updated": "2026-11-23T01:29:05.372Z"
 }
