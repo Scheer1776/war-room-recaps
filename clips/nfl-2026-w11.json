@@ -1032,7 +1032,33 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/3a4222b6-bfca-45f9-b68d-655cb8084c5c/3a4222b6-bfca-45f9-b68d-655cb8084c5c.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/3a4222b6-bfca-45f9-b68d-655cb8084c5c/3a4222b6-bfca-45f9-b68d-655cb8084c5c/playlist.m3u8"
+  },
+  {
+   "id": 50567126,
+   "headline": "New York Jets vs. Los Angeles Chargers: Game Highlights",
+   "published": "2026-11-22T23:58:51Z",
+   "gameId": "401873074",
+   "playIds": [
+    "401873074910"
+   ],
+   "duration": 64,
+   "athletes": [
+    {
+     "id": "15864",
+     "name": "Geno Smith"
+    },
+    {
+     "id": "4038941",
+     "name": "Justin Herbert"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "NYJ"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/1d994fc4-f225-4162-8d60-60fca59a2886/1d994fc4-f225-4162-8d60-60fca59a2886.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/1d994fc4-f225-4162-8d60-60fca59a2886/1d994fc4-f225-4162-8d60-60fca59a2886/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T00:02:42.223Z"
+ "updated": "2026-11-23T00:10:59.120Z"
 }
