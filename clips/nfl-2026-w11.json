@@ -1301,7 +1301,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/6947cfec-369c-485a-9612-5f579aa54d2b/6947cfec-369c-485a-9612-5f579aa54d2b.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/6947cfec-369c-485a-9612-5f579aa54d2b/6947cfec-369c-485a-9612-5f579aa54d2b/playlist.m3u8"
+  },
+  {
+   "id": 50568294,
+   "headline": "Live on NBC: George Kittle runs over multiple defenders for a 49ers TD",
+   "published": "2026-11-23T01:36:44Z",
+   "gameId": "401873077",
+   "playIds": [
+    "401873077208"
+   ],
+   "duration": 26,
+   "athletes": [
+    {
+     "id": "3040151",
+     "name": "George Kittle"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/ef572424-0092-4a46-98e7-df2fd587ee02/ef572424-0092-4a46-98e7-df2fd587ee02.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/ef572424-0092-4a46-98e7-df2fd587ee02/ef572424-0092-4a46-98e7-df2fd587ee02/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T01:29:05.372Z"
+ "updated": "2026-11-23T01:41:21.310Z"
 }
