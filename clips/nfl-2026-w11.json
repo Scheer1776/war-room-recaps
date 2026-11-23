@@ -1092,7 +1092,24 @@
    "teams": [],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_190539415_3757242/ss_20261122_190539415_3757242.mp4",
    "hls916": null
+  },
+  {
+   "id": 50567217,
+   "headline": "Why fantasy managers should be excited about DJ Moore",
+   "published": "2026-11-23T00:10:04Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 50,
+   "athletes": [
+    {
+     "id": "3915416",
+     "name": "DJ Moore"
+    }
+   ],
+   "teams": [],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1122/ss_20261122_191005684_3757247/ss_20261122_191005684_3757247.mp4",
+   "hls916": null
   }
  ],
- "updated": "2026-11-23T00:31:31.683Z"
+ "updated": "2026-11-23T00:35:45.956Z"
 }
