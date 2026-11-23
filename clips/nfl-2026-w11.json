@@ -1245,7 +1245,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/f515e9f7-7824-4292-a3f1-b85fe6f4512c/f515e9f7-7824-4292-a3f1-b85fe6f4512c.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/f515e9f7-7824-4292-a3f1-b85fe6f4512c/f515e9f7-7824-4292-a3f1-b85fe6f4512c/playlist.m3u8"
+  },
+  {
+   "id": 50567633,
+   "headline": "Trevor Lawrence dimes Brian Thomas Jr. for a Jags TD",
+   "published": "2026-11-23T00:52:32Z",
+   "gameId": "401873069",
+   "playIds": [
+    "4018730694361"
+   ],
+   "duration": 22,
+   "athletes": [
+    {
+     "id": "4432773",
+     "name": "Brian Thomas Jr"
+    }
+   ],
+   "teams": [
+    "JAX",
+    "NYG"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/05cbd8f0-def5-432f-82b3-4ce53510ed70/05cbd8f0-def5-432f-82b3-4ce53510ed70.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/05cbd8f0-def5-432f-82b3-4ce53510ed70/05cbd8f0-def5-432f-82b3-4ce53510ed70/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T00:56:31.369Z"
+ "updated": "2026-11-23T00:58:45.411Z"
 }
