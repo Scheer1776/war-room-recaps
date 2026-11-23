@@ -1345,7 +1345,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/0d6c3ded-853e-4654-a496-f7a3e4163ab7/0d6c3ded-853e-4654-a496-f7a3e4163ab7.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/0d6c3ded-853e-4654-a496-f7a3e4163ab7/0d6c3ded-853e-4654-a496-f7a3e4163ab7/playlist.m3u8"
+  },
+  {
+   "id": 50568686,
+   "headline": "Live on NBC: Brock Purdy finds George Kittle again for a 49ers TD",
+   "published": "2026-11-23T02:15:13Z",
+   "gameId": "401873077",
+   "playIds": [
+    "4018730771033"
+   ],
+   "duration": 25,
+   "athletes": [
+    {
+     "id": "3040151",
+     "name": "George Kittle"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/960ad464-cbeb-4c0e-abd7-c2127e64a1c7/960ad464-cbeb-4c0e-abd7-c2127e64a1c7.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/960ad464-cbeb-4c0e-abd7-c2127e64a1c7/960ad464-cbeb-4c0e-abd7-c2127e64a1c7/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T02:07:38.672Z"
+ "updated": "2026-11-23T02:19:54.176Z"
 }
