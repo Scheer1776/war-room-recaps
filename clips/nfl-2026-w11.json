@@ -1367,7 +1367,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/960ad464-cbeb-4c0e-abd7-c2127e64a1c7/960ad464-cbeb-4c0e-abd7-c2127e64a1c7.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/960ad464-cbeb-4c0e-abd7-c2127e64a1c7/960ad464-cbeb-4c0e-abd7-c2127e64a1c7/playlist.m3u8"
+  },
+  {
+   "id": 50568943,
+   "headline": "Live on NBC: Purdy dimes Evans for a one-handed 49ers TD",
+   "published": "2026-11-23T02:44:23Z",
+   "gameId": "401873077",
+   "playIds": [
+    "4018730771660"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "16737",
+     "name": "Mike Evans"
+    }
+   ],
+   "teams": [
+    "MIN",
+    "SF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1123/d224b669-4c5a-4fe8-b9ce-5641e281455b/d224b669-4c5a-4fe8-b9ce-5641e281455b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1123/d224b669-4c5a-4fe8-b9ce-5641e281455b/d224b669-4c5a-4fe8-b9ce-5641e281455b/playlist.m3u8"
   }
  ],
- "updated": "2026-11-23T02:19:54.176Z"
+ "updated": "2026-11-23T02:48:12.095Z"
 }
