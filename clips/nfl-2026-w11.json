@@ -966,7 +966,73 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/e7918b38-bfda-4a6e-9268-f59fd880f7ad/e7918b38-bfda-4a6e-9268-f59fd880f7ad.mp4",
    "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/e7918b38-bfda-4a6e-9268-f59fd880f7ad/e7918b38-bfda-4a6e-9268-f59fd880f7ad/playlist.m3u8"
+  },
+  {
+   "id": 50567125,
+   "headline": "Ladd McConkey hauls in a dime from Justin Hebert for a Chargers TD",
+   "published": "2026-11-22T23:58:45Z",
+   "gameId": "401873074",
+   "playIds": [
+    "4018730742870"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "4612826",
+     "name": "Ladd McConkey"
+    }
+   ],
+   "teams": [
+    "LAC",
+    "NYJ"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/fb936e58-3991-41c4-aa59-0cd86f16d8d7/fb936e58-3991-41c4-aa59-0cd86f16d8d7.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/fb936e58-3991-41c4-aa59-0cd86f16d8d7/fb936e58-3991-41c4-aa59-0cd86f16d8d7/playlist.m3u8"
+  },
+  {
+   "id": 50567120,
+   "headline": "Live on CBS: Jonah Coleman barrels in for his second Broncos TD",
+   "published": "2026-11-22T23:57:40Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730753181"
+   ],
+   "duration": 16,
+   "athletes": [
+    {
+     "id": "4702555",
+     "name": "Jonah Coleman"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/4f7066ca-d793-4d87-8eac-3ef46ac278ef/4f7066ca-d793-4d87-8eac-3ef46ac278ef.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/4f7066ca-d793-4d87-8eac-3ef46ac278ef/4f7066ca-d793-4d87-8eac-3ef46ac278ef/playlist.m3u8"
+  },
+  {
+   "id": 50567046,
+   "headline": "Live on CBS: Fernando Mendoza hits Ian Thomas with a 19-yard TD pass to tie the score",
+   "published": "2026-11-22T23:48:53Z",
+   "gameId": "401873075",
+   "playIds": [
+    "4018730752879"
+   ],
+   "duration": 20,
+   "athletes": [
+    {
+     "id": "4837248",
+     "name": "Fernando Mendoza"
+    }
+   ],
+   "teams": [
+    "DEN",
+    "LV"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1122/3a4222b6-bfca-45f9-b68d-655cb8084c5c/3a4222b6-bfca-45f9-b68d-655cb8084c5c.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1122/3a4222b6-bfca-45f9-b68d-655cb8084c5c/3a4222b6-bfca-45f9-b68d-655cb8084c5c/playlist.m3u8"
   }
  ],
- "updated": "2026-11-22T23:54:27.619Z"
+ "updated": "2026-11-23T00:02:42.223Z"
 }
