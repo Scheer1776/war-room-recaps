@@ -1,0 +1,267 @@
+{
+ "platform": "espn",
+ "league": "Tampa Bay Gridiron Gauntlet League",
+ "week": 11,
+ "myTeamId": 5,
+ "games": [
+  {
+   "win": {
+    "id": 10,
+    "name": "Manifestation",
+    "pts": 158.8,
+    "left": 6.8
+   },
+   "lose": {
+    "id": 3,
+    "name": "Antonio's Angry Team",
+    "pts": 91.3,
+    "left": 2.2
+   },
+   "margin": 67.5
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "Mudd Dawgzzz",
+    "pts": 110.4,
+    "left": 6
+   },
+   "lose": {
+    "id": 1,
+    "name": "Korey's Top-Notch Team",
+    "pts": 86.4,
+    "left": 16.1
+   },
+   "margin": 24.1
+  },
+  {
+   "win": {
+    "id": 7,
+    "name": "Thomas's Talented Team",
+    "pts": 105.1,
+    "left": 13.3
+   },
+   "lose": {
+    "id": 6,
+    "name": "Sandra's Smart Team",
+    "pts": 74.3,
+    "left": 12.7
+   },
+   "margin": 30.8
+  },
+  {
+   "win": {
+    "id": 8,
+    "name": "Tung tung tung sahur",
+    "pts": 105,
+    "left": 8.9
+   },
+   "lose": {
+    "id": 9,
+    "name": "Bennett's Best Team",
+    "pts": 102.3,
+    "left": 9.9
+   },
+   "margin": 2.7
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Courtney's Calculated Team",
+    "pts": 101.5,
+    "left": 25.4
+   },
+   "lose": {
+    "id": 5,
+    "name": "Chicken n burritos ",
+    "pts": 100.5,
+    "left": 37.6
+   },
+   "margin": 1
+  }
+ ],
+ "high": {
+  "id": 10,
+  "name": "Manifestation",
+  "pts": 158.8,
+  "left": 6.8,
+  "star": {
+   "id": "4702555",
+   "n": "Jonah Coleman",
+   "pos": "RB",
+   "nfl": "DEN",
+   "act": 34.9
+  }
+ },
+ "low": {
+  "id": 6,
+  "name": "Sandra's Smart Team",
+  "pts": 74.3,
+  "left": 12.7
+ },
+ "close": {
+  "win": {
+   "id": 4,
+   "name": "Courtney's Calculated Team",
+   "pts": 101.5,
+   "left": 25.4
+  },
+  "lose": {
+   "id": 5,
+   "name": "Chicken n burritos ",
+   "pts": 100.5,
+   "left": 37.6
+  },
+  "margin": 1
+ },
+ "blow": {
+  "win": {
+   "id": 10,
+   "name": "Manifestation",
+   "pts": 158.8,
+   "left": 6.8
+  },
+  "lose": {
+   "id": 3,
+   "name": "Antonio's Angry Team",
+   "pts": 91.3,
+   "left": 2.2
+  },
+  "margin": 67.5
+ },
+ "mvp": {
+  "player": {
+   "id": "4702555",
+   "n": "Jonah Coleman",
+   "pos": "RB",
+   "nfl": "DEN",
+   "act": 34.9
+  },
+  "team": {
+   "id": 10,
+   "name": "Manifestation",
+   "pts": 158.8,
+   "left": 6.8
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 5,
+   "name": "Chicken n burritos ",
+   "pts": 100.5,
+   "left": 37.6
+  },
+  "bench": {
+   "id": "2577417",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 35.9
+  }
+ },
+ "standings": [
+  {
+   "id": 10,
+   "name": "Manifestation",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1328.7,
+   "odds": 100
+  },
+  {
+   "id": 2,
+   "name": "Mudd Dawgzzz",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1310.7,
+   "odds": 99.9
+  },
+  {
+   "id": 4,
+   "name": "Courtney's Calculated Team",
+   "w": 7,
+   "l": 4,
+   "t": 0,
+   "pf": 1332.5,
+   "odds": 98.7
+  },
+  {
+   "id": 5,
+   "name": "Chicken n burritos ",
+   "w": 7,
+   "l": 4,
+   "t": 0,
+   "pf": 1328.4,
+   "odds": 97.7
+  },
+  {
+   "id": 8,
+   "name": "Tung tung tung sahur",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1298.1,
+   "odds": 83
+  },
+  {
+   "id": 7,
+   "name": "Thomas's Talented Team",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1256.5,
+   "odds": 55.6
+  },
+  {
+   "id": 9,
+   "name": "Bennett's Best Team",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1238.2,
+   "odds": 57.1
+  },
+  {
+   "id": 1,
+   "name": "Korey's Top-Notch Team",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1222.6,
+   "odds": 8
+  },
+  {
+   "id": 3,
+   "name": "Antonio's Angry Team",
+   "w": 3,
+   "l": 8,
+   "t": 0,
+   "pf": 1150.6,
+   "odds": 0
+  },
+  {
+   "id": 6,
+   "name": "Sandra's Smart Team",
+   "w": 0,
+   "l": 11,
+   "t": 0,
+   "pf": 863.9,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 12,
+  "a": "Bennett's Best Team",
+  "b": "Manifestation",
+  "pa": 131.6,
+  "pb": 132.9,
+  "wa": 0.485
+ },
+ "roast": {
+  "highlow": "Manifestation scored 158.8 while Sandra's Smart Team managed 74.3. Smart is a stretch.",
+  "mvp": "Jonah Coleman dropped 34.9 for Manifestation. Whoever started him, take a bow.",
+  "blunder": "Chicken n burritos benched Dak Prescott and his 35.9. Dak is the burrito."
+ }
+}
