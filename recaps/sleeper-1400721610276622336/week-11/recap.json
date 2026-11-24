@@ -1,0 +1,265 @@
+{
+ "platform": "sleeper",
+ "league": "JV Gooners ",
+ "week": 11,
+ "myTeamId": 10,
+ "games": [
+  {
+   "win": {
+    "id": 5,
+    "name": "danny879",
+    "pts": 181.2,
+    "left": 1.9
+   },
+   "lose": {
+    "id": 6,
+    "name": "carsonismylilho",
+    "pts": 149.8,
+    "left": 2.2
+   },
+   "margin": 31.4
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Pharoh20",
+    "pts": 173.7,
+    "left": 10.2
+   },
+   "lose": {
+    "id": 1,
+    "name": "Steeler Virginity ",
+    "pts": 138.9,
+    "left": 0
+   },
+   "margin": 34.8
+  },
+  {
+   "win": {
+    "id": 8,
+    "name": "K1rkOchainz",
+    "pts": 171.5,
+    "left": 20.1
+   },
+   "lose": {
+    "id": 3,
+    "name": "perez411",
+    "pts": 58.8,
+    "left": 34.6
+   },
+   "margin": 112.7
+  },
+  {
+   "win": {
+    "id": 9,
+    "name": "Ocho",
+    "pts": 165.9,
+    "left": 0
+   },
+   "lose": {
+    "id": 2,
+    "name": "Shaw has feet for hands ",
+    "pts": 126.4,
+    "left": 47.1
+   },
+   "margin": 39.6
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "WhyBebe805",
+    "pts": 139.3,
+    "left": 14.5
+   },
+   "lose": {
+    "id": 7,
+    "name": "galardih",
+    "pts": 73.8,
+    "left": 20.6
+   },
+   "margin": 65.5
+  }
+ ],
+ "high": {
+  "id": 5,
+  "name": "danny879",
+  "pts": 181.2,
+  "left": 1.9,
+  "star": {
+   "id": "13345",
+   "n": "Jonah Coleman",
+   "pos": "RB",
+   "nfl": "DEN",
+   "act": 38.4
+  }
+ },
+ "low": {
+  "id": 3,
+  "name": "perez411",
+  "pts": 58.8,
+  "left": 34.6
+ },
+ "close": {
+  "win": {
+   "id": 5,
+   "name": "danny879",
+   "pts": 181.2,
+   "left": 1.9
+  },
+  "lose": {
+   "id": 6,
+   "name": "carsonismylilho",
+   "pts": 149.8,
+   "left": 2.2
+  },
+  "margin": 31.4
+ },
+ "blow": {
+  "win": {
+   "id": 8,
+   "name": "K1rkOchainz",
+   "pts": 171.5,
+   "left": 20.1
+  },
+  "lose": {
+   "id": 3,
+   "name": "perez411",
+   "pts": 58.8,
+   "left": 34.6
+  },
+  "margin": 112.7
+ },
+ "mvp": {
+  "player": {
+   "id": "3294",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 57.2
+  },
+  "team": {
+   "id": 4,
+   "name": "Pharoh20",
+   "pts": 173.7,
+   "left": 10.2
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 2,
+   "name": "Shaw has feet for hands ",
+   "pts": 126.4,
+   "left": 47.1
+  },
+  "bench": {
+   "id": "4983",
+   "n": "DJ Moore",
+   "pos": "WR",
+   "nfl": "BUF",
+   "act": 31.6
+  }
+ },
+ "standings": [
+  {
+   "id": 6,
+   "name": "carsonismylilho",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 2289.2,
+   "odds": 100
+  },
+  {
+   "id": 5,
+   "name": "danny879",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1892.7,
+   "odds": 100
+  },
+  {
+   "id": 10,
+   "name": "WhyBebe805",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1818.7,
+   "odds": 100
+  },
+  {
+   "id": 8,
+   "name": "K1rkOchainz",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1789.9,
+   "odds": 100
+  },
+  {
+   "id": 4,
+   "name": "Pharoh20",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1671.3,
+   "odds": 93.1
+  },
+  {
+   "id": 2,
+   "name": "Shaw has feet for hands ",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1704,
+   "odds": 71.8
+  },
+  {
+   "id": 1,
+   "name": "Steeler Virginity ",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1637.9,
+   "odds": 30.4
+  },
+  {
+   "id": 3,
+   "name": "perez411",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1433.6,
+   "odds": 3.4
+  },
+  {
+   "id": 9,
+   "name": "Ocho",
+   "w": 3,
+   "l": 8,
+   "t": 0,
+   "pf": 1200.2,
+   "odds": 1.4
+  },
+  {
+   "id": 7,
+   "name": "galardih",
+   "w": 2,
+   "l": 9,
+   "t": 0,
+   "pf": 1018.9,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 12,
+  "a": "danny879",
+  "b": "K1rkOchainz",
+  "pa": 206.7,
+  "pb": 199.9,
+  "wa": 0.549
+ },
+ "roast": {
+  "blunder": "Shaw has feet for hands benched DJ Moore's 31.6 and left 47.1 on the bench."
+ }
+}
