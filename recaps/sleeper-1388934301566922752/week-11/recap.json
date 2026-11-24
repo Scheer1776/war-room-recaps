@@ -1,0 +1,267 @@
+{
+ "platform": "sleeper",
+ "league": "Elite’s FFL",
+ "week": 11,
+ "myTeamId": 8,
+ "games": [
+  {
+   "win": {
+    "id": 3,
+    "name": "Taken these DakShotz",
+    "pts": 156.3,
+    "left": 13.6
+   },
+   "lose": {
+    "id": 8,
+    "name": "Ryan’s Daddy",
+    "pts": 93,
+    "left": 12.7
+   },
+   "margin": 63.3
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "CDs Dak Shots",
+    "pts": 147.6,
+    "left": 5.6
+   },
+   "lose": {
+    "id": 9,
+    "name": "Rice place, wrong time",
+    "pts": 113.2,
+    "left": 22.2
+   },
+   "margin": 34.4
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Booty Bandits",
+    "pts": 129.6,
+    "left": 0
+   },
+   "lose": {
+    "id": 5,
+    "name": "gibbbaayyyyyyy ",
+    "pts": 128.5,
+    "left": 12.5
+   },
+   "margin": 1.1
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Maye Dicker Down",
+    "pts": 127.5,
+    "left": 0
+   },
+   "lose": {
+    "id": 7,
+    "name": "Cornhole Taint",
+    "pts": 125.2,
+    "left": 23.2
+   },
+   "margin": 2.3
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "BAD BEAT",
+    "pts": 120.9,
+    "left": 4.3
+   },
+   "lose": {
+    "id": 6,
+    "name": "Jeremiyah Loves trash",
+    "pts": 120.1,
+    "left": 5.6
+   },
+   "margin": 0.8
+  }
+ ],
+ "high": {
+  "id": 3,
+  "name": "Taken these DakShotz",
+  "pts": 156.3,
+  "left": 13.6,
+  "star": {
+   "id": "3294",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 35.9
+  }
+ },
+ "low": {
+  "id": 8,
+  "name": "Ryan’s Daddy",
+  "pts": 93,
+  "left": 12.7
+ },
+ "close": {
+  "win": {
+   "id": 2,
+   "name": "BAD BEAT",
+   "pts": 120.9,
+   "left": 4.3
+  },
+  "lose": {
+   "id": 6,
+   "name": "Jeremiyah Loves trash",
+   "pts": 120.1,
+   "left": 5.6
+  },
+  "margin": 0.8
+ },
+ "blow": {
+  "win": {
+   "id": 3,
+   "name": "Taken these DakShotz",
+   "pts": 156.3,
+   "left": 13.6
+  },
+  "lose": {
+   "id": 8,
+   "name": "Ryan’s Daddy",
+   "pts": 93,
+   "left": 12.7
+  },
+  "margin": 63.3
+ },
+ "mvp": {
+  "player": {
+   "id": "3294",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 35.9
+  },
+  "team": {
+   "id": 3,
+   "name": "Taken these DakShotz",
+   "pts": 156.3,
+   "left": 13.6
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 7,
+   "name": "Cornhole Taint",
+   "pts": 125.2,
+   "left": 23.2
+  },
+  "bench": {
+   "id": "8183",
+   "n": "Brock Purdy",
+   "pos": "QB",
+   "nfl": "SF",
+   "act": 22.2
+  }
+ },
+ "standings": [
+  {
+   "id": 4,
+   "name": "Maye Dicker Down",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1628.5,
+   "odds": 100
+  },
+  {
+   "id": 1,
+   "name": "CDs Dak Shots",
+   "w": 7,
+   "l": 4,
+   "t": 0,
+   "pf": 1552.9,
+   "odds": 98.7
+  },
+  {
+   "id": 10,
+   "name": "Booty Bandits",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1566.4,
+   "odds": 92.2
+  },
+  {
+   "id": 5,
+   "name": "gibbbaayyyyyyy ",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1559.9,
+   "odds": 96.3
+  },
+  {
+   "id": 3,
+   "name": "Taken these DakShotz",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1474.7,
+   "odds": 74.4
+  },
+  {
+   "id": 7,
+   "name": "Cornhole Taint",
+   "w": 5,
+   "l": 6,
+   "t": 0,
+   "pf": 1386.8,
+   "odds": 38.2
+  },
+  {
+   "id": 9,
+   "name": "Rice place, wrong time",
+   "w": 5,
+   "l": 6,
+   "t": 0,
+   "pf": 1386.8,
+   "odds": 45.7
+  },
+  {
+   "id": 2,
+   "name": "BAD BEAT",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1515.6,
+   "odds": 27.6
+  },
+  {
+   "id": 6,
+   "name": "Jeremiyah Loves trash",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1463.8,
+   "odds": 18.4
+  },
+  {
+   "id": 8,
+   "name": "Ryan’s Daddy",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1371.9,
+   "odds": 8.4
+  }
+ ],
+ "next": {
+  "week": 12,
+  "a": "CDs Dak Shots",
+  "b": "Maye Dicker Down",
+  "pa": 150.6,
+  "pb": 155.5,
+  "wa": 0.453
+ },
+ "roast": {
+  "highlow": "DakShotz hit 156.3 while Ryan's Daddy limped to 93. Ouch.",
+  "mvp": "Dak Prescott dropped 35.9 for Taken these DakShotz. Start him, obviously.",
+  "blunder": "Cornhole Taint benched Brock Purdy's 22.2 and left 23.2 points on the bench."
+ }
+}
