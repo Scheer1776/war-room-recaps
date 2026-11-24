@@ -1,0 +1,300 @@
+{
+ "platform": "espn",
+ "league": "Dylons League 26-27",
+ "week": 11,
+ "myTeamId": 2,
+ "games": [
+  {
+   "win": {
+    "id": 6,
+    "name": "FORE RIGHT ",
+    "pts": 141.4,
+    "left": 5
+   },
+   "lose": {
+    "id": 5,
+    "name": "Codys team",
+    "pts": 83.8,
+    "left": 2.3
+   },
+   "margin": 57.7
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "JAHMYRACLE WORKERS",
+    "pts": 132.7,
+    "left": 8.2
+   },
+   "lose": {
+    "id": 8,
+    "name": "The goat ",
+    "pts": 78.4,
+    "left": 38.1
+   },
+   "margin": 54.3
+  },
+  {
+   "win": {
+    "id": 2,
+    "name": "4th and Delusional",
+    "pts": 124.9,
+    "left": 14.1
+   },
+   "lose": {
+    "id": 10,
+    "name": "Trust the Process... Again ",
+    "pts": 123,
+    "left": 0.8
+   },
+   "margin": 1.9
+  },
+  {
+   "win": {
+    "id": 1,
+    "name": "Dictators Death Squad",
+    "pts": 120.5,
+    "left": 10.8
+   },
+   "lose": {
+    "id": 11,
+    "name": "Belt To Ass",
+    "pts": 97.9,
+    "left": 6.2
+   },
+   "margin": 22.6
+  },
+  {
+   "win": {
+    "id": 9,
+    "name": "Fourth and Freaking Out",
+    "pts": 114.5,
+    "left": 12.8
+   },
+   "lose": {
+    "id": 7,
+    "name": "My Ball Zach Ertz",
+    "pts": 83.4,
+    "left": 0
+   },
+   "margin": 31.1
+  },
+  {
+   "win": {
+    "id": 3,
+    "name": "Fly Eagles Fly ",
+    "pts": 111.9,
+    "left": 10.4
+   },
+   "lose": {
+    "id": 12,
+    "name": "Rocco's Rowdy Team",
+    "pts": 90,
+    "left": 4.5
+   },
+   "margin": 21.9
+  }
+ ],
+ "high": {
+  "id": 6,
+  "name": "FORE RIGHT ",
+  "pts": 141.4,
+  "left": 5,
+  "star": {
+   "id": "15847",
+   "n": "Travis Kelce",
+   "pos": "TE",
+   "nfl": "KC",
+   "act": 25.4
+  }
+ },
+ "low": {
+  "id": 8,
+  "name": "The goat ",
+  "pts": 78.4,
+  "left": 38.1
+ },
+ "close": {
+  "win": {
+   "id": 2,
+   "name": "4th and Delusional",
+   "pts": 124.9,
+   "left": 14.1
+  },
+  "lose": {
+   "id": 10,
+   "name": "Trust the Process... Again ",
+   "pts": 123,
+   "left": 0.8
+  },
+  "margin": 1.9
+ },
+ "blow": {
+  "win": {
+   "id": 6,
+   "name": "FORE RIGHT ",
+   "pts": 141.4,
+   "left": 5
+  },
+  "lose": {
+   "id": 5,
+   "name": "Codys team",
+   "pts": 83.8,
+   "left": 2.3
+  },
+  "margin": 57.7
+ },
+ "mvp": {
+  "player": {
+   "id": "2577417",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 35.9
+  },
+  "team": {
+   "id": 2,
+   "name": "4th and Delusional",
+   "pts": 124.9,
+   "left": 14.1
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 8,
+   "name": "The goat ",
+   "pts": 78.4,
+   "left": 38.1
+  },
+  "bench": {
+   "id": "3925357",
+   "n": "Calvin Ridley",
+   "pos": "WR",
+   "nfl": "TEN",
+   "act": 17.8
+  }
+ },
+ "standings": [
+  {
+   "id": 3,
+   "name": "Fly Eagles Fly ",
+   "w": 10,
+   "l": 1,
+   "t": 0,
+   "pf": 1329.9,
+   "odds": 100
+  },
+  {
+   "id": 9,
+   "name": "Fourth and Freaking Out",
+   "w": 9,
+   "l": 2,
+   "t": 0,
+   "pf": 1240.8,
+   "odds": 100
+  },
+  {
+   "id": 12,
+   "name": "Rocco's Rowdy Team",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1465.1,
+   "odds": 100
+  },
+  {
+   "id": 2,
+   "name": "4th and Delusional",
+   "w": 7,
+   "l": 4,
+   "t": 0,
+   "pf": 1391,
+   "odds": 100
+  },
+  {
+   "id": 10,
+   "name": "Trust the Process... Again ",
+   "w": 7,
+   "l": 4,
+   "t": 0,
+   "pf": 1231.8,
+   "odds": 89.9
+  },
+  {
+   "id": 4,
+   "name": "JAHMYRACLE WORKERS",
+   "w": 5,
+   "l": 6,
+   "t": 0,
+   "pf": 1260.8,
+   "odds": 57.9
+  },
+  {
+   "id": 1,
+   "name": "Dictators Death Squad",
+   "w": 5,
+   "l": 6,
+   "t": 0,
+   "pf": 1242.1,
+   "odds": 31.4
+  },
+  {
+   "id": 11,
+   "name": "Belt To Ass",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1239.8,
+   "odds": 17.6
+  },
+  {
+   "id": 8,
+   "name": "The goat ",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1141.8,
+   "odds": 0.8
+  },
+  {
+   "id": 7,
+   "name": "My Ball Zach Ertz",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1073.5,
+   "odds": 2.1
+  },
+  {
+   "id": 6,
+   "name": "FORE RIGHT ",
+   "w": 3,
+   "l": 8,
+   "t": 0,
+   "pf": 1236.2,
+   "odds": 0.4
+  },
+  {
+   "id": 5,
+   "name": "Codys team",
+   "w": 0,
+   "l": 11,
+   "t": 0,
+   "pf": 1032.6,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 12,
+  "a": "Fly Eagles Fly ",
+  "b": "Fourth and Freaking Out",
+  "pa": 131.8,
+  "pb": 131.6,
+  "wa": 0.502
+ },
+ "roast": {
+  "highlow": "FORE RIGHT hit 141.4 while The goat limped in at 78.4. Ouch.",
+  "mvp": "Dak Prescott dropped 35.9 for 4th and Delusional. Someone did their homework.",
+  "blunder": "The goat benched Calvin Ridley (17.8) and left 38.1 pts on the bench. Wow."
+ }
+}
