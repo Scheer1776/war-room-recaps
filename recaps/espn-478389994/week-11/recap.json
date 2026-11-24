@@ -1,0 +1,333 @@
+{
+ "platform": "espn",
+ "league": "Ball on the Spectrum",
+ "week": 11,
+ "myTeamId": 11,
+ "games": [
+  {
+   "win": {
+    "id": 7,
+    "name": "Injured Team Enjoy Free Win",
+    "pts": 182,
+    "left": 0
+   },
+   "lose": {
+    "id": 5,
+    "name": "Rigger JEW'Marr",
+    "pts": 86.1,
+    "left": 3
+   },
+   "margin": 95.9
+  },
+  {
+   "win": {
+    "id": 6,
+    "name": "Jacking Goff",
+    "pts": 159.9,
+    "left": 10.1
+   },
+   "lose": {
+    "id": 1,
+    "name": "PUKACHUUUUU",
+    "pts": 97.2,
+    "left": 12.4
+   },
+   "margin": 62.6
+  },
+  {
+   "win": {
+    "id": 10,
+    "name": "Herbo the Turbo",
+    "pts": 126.6,
+    "left": 7.4
+   },
+   "lose": {
+    "id": 16,
+    "name": "Prime Time Miggy",
+    "pts": 104.9,
+    "left": 0.6
+   },
+   "margin": 21.7
+  },
+  {
+   "win": {
+    "id": 4,
+    "name": "Veiny dih",
+    "pts": 119.2,
+    "left": 10.9
+   },
+   "lose": {
+    "id": 2,
+    "name": "DIGGA D",
+    "pts": 110.8,
+    "left": 6.4
+   },
+   "margin": 8.4
+  },
+  {
+   "win": {
+    "id": 11,
+    "name": "🥜So Much I Phillip Rivers",
+    "pts": 118.3,
+    "left": 10.7
+   },
+   "lose": {
+    "id": 12,
+    "name": "See Y'all at the Casino ",
+    "pts": 102.6,
+    "left": 0
+   },
+   "margin": 15.7
+  },
+  {
+   "win": {
+    "id": 15,
+    "name": "Strib Club💈",
+    "pts": 105.2,
+    "left": 0
+   },
+   "lose": {
+    "id": 9,
+    "name": "Skattebubu",
+    "pts": 95.5,
+    "left": 1.9
+   },
+   "margin": 9.7
+  },
+  {
+   "win": {
+    "id": 13,
+    "name": "Nerdy Diggers",
+    "pts": 102.7,
+    "left": 0
+   },
+   "lose": {
+    "id": 14,
+    "name": "Rugntuggies",
+    "pts": 101.5,
+    "left": 6.6
+   },
+   "margin": 1.1
+  }
+ ],
+ "high": {
+  "id": 7,
+  "name": "Injured Team Enjoy Free Win",
+  "pts": 182,
+  "left": 0,
+  "star": {
+   "id": "2577417",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 50.1
+  }
+ },
+ "low": {
+  "id": 5,
+  "name": "Rigger JEW'Marr",
+  "pts": 86.1,
+  "left": 3
+ },
+ "close": {
+  "win": {
+   "id": 13,
+   "name": "Nerdy Diggers",
+   "pts": 102.7,
+   "left": 0
+  },
+  "lose": {
+   "id": 14,
+   "name": "Rugntuggies",
+   "pts": 101.5,
+   "left": 6.6
+  },
+  "margin": 1.1
+ },
+ "blow": {
+  "win": {
+   "id": 7,
+   "name": "Injured Team Enjoy Free Win",
+   "pts": 182,
+   "left": 0
+  },
+  "lose": {
+   "id": 5,
+   "name": "Rigger JEW'Marr",
+   "pts": 86.1,
+   "left": 3
+  },
+  "margin": 95.9
+ },
+ "mvp": {
+  "player": {
+   "id": "2577417",
+   "n": "Dak Prescott",
+   "pos": "QB",
+   "nfl": "DAL",
+   "act": 50.1
+  },
+  "team": {
+   "id": 7,
+   "name": "Injured Team Enjoy Free Win",
+   "pts": 182,
+   "left": 0
+  }
+ },
+ "blunder": {
+  "team": {
+   "id": 1,
+   "name": "PUKACHUUUUU",
+   "pts": 97.2,
+   "left": 12.4
+  },
+  "bench": {
+   "id": "4433970",
+   "n": "J.J. McCarthy",
+   "pos": "QB",
+   "nfl": "NYG",
+   "act": 18.7
+  }
+ },
+ "standings": [
+  {
+   "id": 11,
+   "name": "🥜So Much I Phillip Rivers",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1525.9,
+   "odds": 100
+  },
+  {
+   "id": 7,
+   "name": "Injured Team Enjoy Free Win",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1390,
+   "odds": 100
+  },
+  {
+   "id": 4,
+   "name": "Veiny dih",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1378.4,
+   "odds": 100
+  },
+  {
+   "id": 13,
+   "name": "Nerdy Diggers",
+   "w": 8,
+   "l": 3,
+   "t": 0,
+   "pf": 1310.4,
+   "odds": 99.5
+  },
+  {
+   "id": 6,
+   "name": "Jacking Goff",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1366.6,
+   "odds": 68
+  },
+  {
+   "id": 16,
+   "name": "Prime Time Miggy",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1316.3,
+   "odds": 88.7
+  },
+  {
+   "id": 15,
+   "name": "Strib Club💈",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1250.7,
+   "odds": 37
+  },
+  {
+   "id": 10,
+   "name": "Herbo the Turbo",
+   "w": 6,
+   "l": 5,
+   "t": 0,
+   "pf": 1241.4,
+   "odds": 53.9
+  },
+  {
+   "id": 5,
+   "name": "Rigger JEW'Marr",
+   "w": 5,
+   "l": 6,
+   "t": 0,
+   "pf": 1345.8,
+   "odds": 48.7
+  },
+  {
+   "id": 2,
+   "name": "DIGGA D",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1254.1,
+   "odds": 3.7
+  },
+  {
+   "id": 12,
+   "name": "See Y'all at the Casino ",
+   "w": 4,
+   "l": 7,
+   "t": 0,
+   "pf": 1091.8,
+   "odds": 0.6
+  },
+  {
+   "id": 1,
+   "name": "PUKACHUUUUU",
+   "w": 3,
+   "l": 8,
+   "t": 0,
+   "pf": 1168.2,
+   "odds": 0
+  },
+  {
+   "id": 14,
+   "name": "Rugntuggies",
+   "w": 3,
+   "l": 8,
+   "t": 0,
+   "pf": 1158.3,
+   "odds": 0
+  },
+  {
+   "id": 9,
+   "name": "Skattebubu",
+   "w": 2,
+   "l": 9,
+   "t": 0,
+   "pf": 1197.9,
+   "odds": 0
+  }
+ ],
+ "next": {
+  "week": 12,
+  "a": "Injured Team Enjoy Free Win",
+  "b": "Nerdy Diggers",
+  "pa": 134.2,
+  "pb": 132.1,
+  "wa": 0.523
+ },
+ "roast": {
+  "highlow": "Injured Team scored 182 while Rigger JEW'Marr limped to 86.1",
+  "mvp": "Dak Prescott dropped 50.1 for Injured Team Enjoy Free Win, which is a lot of free wins",
+  "blunder": "PUKACHUUUUU benched J.J. McCarthy with 18.7 pts and left 12.4 on the bench"
+ }
+}
