@@ -1,0 +1,465 @@
+{
+ "clips": [
+  {
+   "id": 50609218,
+   "headline": "Kansas City Chiefs vs. Buffalo Bills: Game Highlight",
+   "published": "2026-11-27T04:54:02Z",
+   "gameId": "401873082",
+   "playIds": [
+    "401873082870"
+   ],
+   "duration": 68,
+   "athletes": [
+    {
+     "id": "3917232",
+     "name": "Tyler Bass"
+    },
+    {
+     "id": "4379399",
+     "name": "James Cook III"
+    },
+    {
+     "id": "4610705",
+     "name": "Nohl Williams"
+    },
+    {
+     "id": "4037235",
+     "name": "Greg Dortch"
+    },
+    {
+     "id": "4426659",
+     "name": "George Karlaftis"
+    },
+    {
+     "id": "4832955",
+     "name": "Emmett Johnson"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/998419b4-a7f9-43d7-be52-01414d164d22/998419b4-a7f9-43d7-be52-01414d164d22.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/998419b4-a7f9-43d7-be52-01414d164d22/998419b4-a7f9-43d7-be52-01414d164d22/playlist.m3u8"
+  },
+  {
+   "id": 50609150,
+   "headline": "Bills capitalize on blocked punt with winning FG as time expires",
+   "published": "2026-11-27T04:40:47Z",
+   "gameId": "401873082",
+   "playIds": [
+    "4018730823934"
+   ],
+   "duration": 68,
+   "athletes": [
+    {
+     "id": "3917232",
+     "name": "Tyler Bass"
+    },
+    {
+     "id": "4037235",
+     "name": "Greg Dortch"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/ffdc2ffe-037b-40d4-8c50-65f243769cc4/ffdc2ffe-037b-40d4-8c50-65f243769cc4.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/ffdc2ffe-037b-40d4-8c50-65f243769cc4/ffdc2ffe-037b-40d4-8c50-65f243769cc4/playlist.m3u8"
+  },
+  {
+   "id": 50608845,
+   "headline": "Josh Allen's pass ricochets off Khalil Shakir for his second INT",
+   "published": "2026-11-27T03:51:36Z",
+   "gameId": "401873082",
+   "playIds": [
+    "4018730822468"
+   ],
+   "duration": 40,
+   "athletes": [
+    {
+     "id": "4610705",
+     "name": "Nohl Williams"
+    },
+    {
+     "id": "3918298",
+     "name": "Josh Allen"
+    },
+    {
+     "id": "4373678",
+     "name": "Khalil Shakir"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/1b32bd69-d907-4bd2-b65c-74ce3b3c6ce6/1b32bd69-d907-4bd2-b65c-74ce3b3c6ce6.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/1b32bd69-d907-4bd2-b65c-74ce3b3c6ce6/1b32bd69-d907-4bd2-b65c-74ce3b3c6ce6/playlist.m3u8"
+  },
+  {
+   "id": 50608653,
+   "headline": "Chiefs take the lead with Emmett Johnson TD",
+   "published": "2026-11-27T03:21:06Z",
+   "gameId": "401873082",
+   "playIds": [
+    "4018730822144"
+   ],
+   "duration": 31,
+   "athletes": [
+    {
+     "id": "4832955",
+     "name": "Emmett Johnson"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/bab6828d-9044-4774-ba33-d82ac7a0b135/bab6828d-9044-4774-ba33-d82ac7a0b135.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/bab6828d-9044-4774-ba33-d82ac7a0b135/bab6828d-9044-4774-ba33-d82ac7a0b135/playlist.m3u8"
+  },
+  {
+   "id": 50608223,
+   "headline": "Josh Allen picked off in the end zone",
+   "published": "2026-11-27T02:33:41Z",
+   "gameId": "401873082",
+   "playIds": [
+    "4018730821294"
+   ],
+   "duration": 16,
+   "athletes": [
+    {
+     "id": "4426659",
+     "name": "George Karlaftis"
+    },
+    {
+     "id": "3918298",
+     "name": "Josh Allen"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/e14c19e7-46ab-40b0-be18-263d4fc560b3/e14c19e7-46ab-40b0-be18-263d4fc560b3.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/e14c19e7-46ab-40b0-be18-263d4fc560b3/e14c19e7-46ab-40b0-be18-263d4fc560b3/playlist.m3u8"
+  },
+  {
+   "id": 50608117,
+   "headline": "Stephen A. can't stop laughing at Cowboys after Thanksgiving collapse",
+   "published": "2026-11-27T02:16:50Z",
+   "gameId": "",
+   "playIds": [],
+   "duration": 83,
+   "athletes": [],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1126/ss_20261126_211651365_3762692/ss_20261126_211651365_3762692.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50608111,
+   "headline": "James Cook III finds an opening for a Bills TD",
+   "published": "2026-11-27T02:15:17Z",
+   "gameId": "401873082",
+   "playIds": [
+    "401873082870"
+   ],
+   "duration": 24,
+   "athletes": [
+    {
+     "id": "4379399",
+     "name": "James Cook III"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/6c1f1ff9-2b87-44e6-b4fd-6e14c1f28a15/6c1f1ff9-2b87-44e6-b4fd-6e14c1f28a15.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/6c1f1ff9-2b87-44e6-b4fd-6e14c1f28a15/6c1f1ff9-2b87-44e6-b4fd-6e14c1f28a15/playlist.m3u8"
+  },
+  {
+   "id": 50607884,
+   "headline": "Eagles stun Cowboys with largest-ever Thanksgiving game comeback",
+   "published": "2026-11-27T01:51:58Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730801853"
+   ],
+   "duration": 85,
+   "athletes": [
+    {
+     "id": "3050478",
+     "name": "Jake Elliott"
+    },
+    {
+     "id": "4361579",
+     "name": "Javonte Williams"
+    },
+    {
+     "id": "4241478",
+     "name": "DeVonta Smith"
+    },
+    {
+     "id": "4218312",
+     "name": "Kenny Moore II"
+    },
+    {
+     "id": "2577417",
+     "name": "Dak Prescott"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/452c2dab-cd99-4b19-a7b6-f7dfeb3668e1/452c2dab-cd99-4b19-a7b6-f7dfeb3668e1.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/452c2dab-cd99-4b19-a7b6-f7dfeb3668e1/452c2dab-cd99-4b19-a7b6-f7dfeb3668e1/playlist.m3u8"
+  },
+  {
+   "id": 50607820,
+   "headline": "Eagles make 59-yard FG to stun Cowboys, complete remarkable comeback",
+   "published": "2026-11-27T01:39:41Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730804781"
+   ],
+   "duration": 22,
+   "athletes": [
+    {
+     "id": "3050478",
+     "name": "Jake Elliott"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/6d0430b1-f764-4cf8-b234-28dea5d0a1c8/6d0430b1-f764-4cf8-b234-28dea5d0a1c8.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/6d0430b1-f764-4cf8-b234-28dea5d0a1c8/6d0430b1-f764-4cf8-b234-28dea5d0a1c8/playlist.m3u8"
+  },
+  {
+   "id": 50607700,
+   "headline": "Eagles inch closer with late TD, but fail on 2-point conversion",
+   "published": "2026-11-27T01:22:34Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730804312"
+   ],
+   "duration": 18,
+   "athletes": [
+    {
+     "id": "4870795",
+     "name": "Makai Lemon"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/44381e80-17d8-424b-8316-2384056ec0e6/44381e80-17d8-424b-8316-2384056ec0e6.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/44381e80-17d8-424b-8316-2384056ec0e6/44381e80-17d8-424b-8316-2384056ec0e6/playlist.m3u8"
+  },
+  {
+   "id": 50607562,
+   "headline": "Airborne Dak Prescott reaches for the pylon through contact for wild TD",
+   "published": "2026-11-27T00:48:39Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730803546"
+   ],
+   "duration": 21,
+   "athletes": [
+    {
+     "id": "2577417",
+     "name": "Dak Prescott"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/6292659d-aa4e-41a1-8d3b-aee387f9314b/6292659d-aa4e-41a1-8d3b-aee387f9314b.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/6292659d-aa4e-41a1-8d3b-aee387f9314b/6292659d-aa4e-41a1-8d3b-aee387f9314b/playlist.m3u8"
+  },
+  {
+   "id": 50607558,
+   "headline": "Joe Milton III finds DeVonta Smith for another Eagles TD",
+   "published": "2026-11-27T00:48:20Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730803115"
+   ],
+   "duration": 28,
+   "athletes": [
+    {
+     "id": "4241478",
+     "name": "DeVonta Smith"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/24e2e220-a9b8-4f7f-a343-7036720d9833/24e2e220-a9b8-4f7f-a343-7036720d9833.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/24e2e220-a9b8-4f7f-a343-7036720d9833/24e2e220-a9b8-4f7f-a343-7036720d9833/playlist.m3u8"
+  },
+  {
+   "id": 50607524,
+   "headline": "Eagles block Cowboys' punt, return it to house for TD",
+   "published": "2026-11-27T00:43:25Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730803336"
+   ],
+   "duration": 27,
+   "athletes": [
+    {
+     "id": "4218312",
+     "name": "Kenny Moore II"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/4ab309f3-c07b-4621-80a2-11005111ddcd/4ab309f3-c07b-4621-80a2-11005111ddcd.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/4ab309f3-c07b-4621-80a2-11005111ddcd/4ab309f3-c07b-4621-80a2-11005111ddcd/playlist.m3u8"
+  },
+  {
+   "id": 50607220,
+   "headline": "Dan Campbell: Lions' Thanksgiving loss to Bears will 'sting for a while'",
+   "published": "2026-11-26T23:53:33Z",
+   "gameId": "401873081",
+   "playIds": [],
+   "duration": 73,
+   "athletes": [],
+   "teams": [
+    "DET"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1126/ss_20261126_185334549_3762586/ss_20261126_185334549_3762586.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50607202,
+   "headline": "Ben Johnson proud of TEs that stepped up after Colston Loveland injury",
+   "published": "2026-11-26T23:46:55Z",
+   "gameId": "401873081",
+   "playIds": [],
+   "duration": 51,
+   "athletes": [
+    {
+     "id": "4723086",
+     "name": "Colston Loveland"
+    },
+    {
+     "id": "4685504",
+     "name": "Sam Roush"
+    },
+    {
+     "id": "3948283",
+     "name": "Stephen Carlson"
+    }
+   ],
+   "teams": [
+    "CHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1126/ss_20261126_184656314_3762581/ss_20261126_184656314_3762581.mp4",
+   "hls916": null
+  },
+  {
+   "id": 50607100,
+   "headline": "Javonte Williams completes TD hat trick before halftime for Cowboys",
+   "published": "2026-11-26T23:32:36Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730802256"
+   ],
+   "duration": 29,
+   "athletes": [
+    {
+     "id": "4361579",
+     "name": "Javonte Williams"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1126/e349e3f6-1533-47ab-8148-65963675cc85/e349e3f6-1533-47ab-8148-65963675cc85.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1126/e349e3f6-1533-47ab-8148-65963675cc85/e349e3f6-1533-47ab-8148-65963675cc85/playlist.m3u8"
+  },
+  {
+   "id": 50607027,
+   "headline": "Joe Milton III launches 50-yard TD to DeVonta Smith",
+   "published": "2026-11-26T23:14:32Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730801853"
+   ],
+   "duration": 31,
+   "athletes": [
+    {
+     "id": "4241478",
+     "name": "DeVonta Smith"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1126/af044482-288a-4b7f-9f9f-dbd095f36007/af044482-288a-4b7f-9f9f-dbd095f36007.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1126/af044482-288a-4b7f-9f9f-dbd095f36007/af044482-288a-4b7f-9f9f-dbd095f36007/playlist.m3u8"
+  },
+  {
+   "id": 50607017,
+   "headline": "Live on FOX: Javonte Williams barrels in for another Cowboys TD",
+   "published": "2026-11-26T23:11:22Z",
+   "gameId": "401873080",
+   "playIds": [
+    "4018730801727"
+   ],
+   "duration": 25,
+   "athletes": [
+    {
+     "id": "4361579",
+     "name": "Javonte Williams"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1126/eabe33f3-1515-472a-81cb-74a10a6960fc/eabe33f3-1515-472a-81cb-74a10a6960fc.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1126/eabe33f3-1515-472a-81cb-74a10a6960fc/eabe33f3-1515-472a-81cb-74a10a6960fc/playlist.m3u8"
+  },
+  {
+   "id": 50606747,
+   "headline": "Live on FOX: KaVontae Turpin takes it to the house for Cowboys TD",
+   "published": "2026-11-26T22:35:23Z",
+   "gameId": "401873080",
+   "playIds": [
+    "401873080943"
+   ],
+   "duration": 30,
+   "athletes": [
+    {
+     "id": "3676833",
+     "name": "KaVontae Turpin"
+    }
+   ],
+   "teams": [
+    "DAL",
+    "PHI"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1126/8380e8cf-4549-4db8-9dc0-3c955d415da4/8380e8cf-4549-4db8-9dc0-3c955d415da4.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1126/8380e8cf-4549-4db8-9dc0-3c955d415da4/8380e8cf-4549-4db8-9dc0-3c955d415da4/playlist.m3u8"
+  }
+ ],
+ "updated": "2026-11-27T09:39:14.602Z"
+}
