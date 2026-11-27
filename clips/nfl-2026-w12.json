@@ -473,7 +473,29 @@
    ],
    "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/2026/1127/ss_20261127_081916781_3762913/ss_20261127_081916781_3762913.mp4",
    "hls916": null
+  },
+  {
+   "id": 50611502,
+   "headline": "Crucial Rashee Rice catch on third down overturned after review",
+   "published": "2026-11-27T13:49:34Z",
+   "gameId": "401873082",
+   "playIds": [
+    "4018730823574"
+   ],
+   "duration": 23,
+   "athletes": [
+    {
+     "id": "4428331",
+     "name": "Rashee Rice"
+    }
+   ],
+   "teams": [
+    "KC",
+    "BUF"
+   ],
+   "mp4": "https://espnmedia-cdn.akamaized.net/espn/media/16x9/wsc/2026/1127/4f5a4748-cf79-4e31-9d08-a37a58aad430/4f5a4748-cf79-4e31-9d08-a37a58aad430.mp4",
+   "hls916": "https://cmp-espn.media.dssott.com/opp/hls/espn/9x16/wsc/2026/1127/4f5a4748-cf79-4e31-9d08-a37a58aad430/4f5a4748-cf79-4e31-9d08-a37a58aad430/playlist.m3u8"
   }
  ],
- "updated": "2026-11-27T13:30:01.735Z"
+ "updated": "2026-11-27T13:52:25.511Z"
 }
